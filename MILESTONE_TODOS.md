@@ -12,23 +12,23 @@ Status options:
 
 Goal: Confirm the project direction and make sure the team understands the problem.
 
-- [ ] Brittany: Confirm the project title and summary.
-- [ ] Brittany: Create or update project notes in `PROJECT_PLAN.md`.
-- [ ] Brittany: Keep a list of team decisions from the first meeting.
+- [x] Brittany: Confirm the project title and summary.
+- [x] Brittany: Create or update project notes in `PROJECT_PLAN.md`.
+- [x] Brittany: Keep a list of team decisions from the first meeting.
 - [ ] Garrett: Confirm technical setup needs for backend and LLM integration.
 - [ ] Mike: Confirm technical setup needs for frontend development.
-- [ ] Team: Agree on the minimum version of the prototype.
+- [~] Team: Agree on the minimum version of the prototype.
 
 Deliverable:
 
-- [ ] Team: Project topic, team roles, and MVP are confirmed.
+- [x] Team: Project topic, team roles, and MVP are confirmed.
 
 ## Week 2: Development Environment and Prototype Structure
 
 Goal: Make sure everyone can open, edit, and run the starter prototype.
 
-- [ ] Brittany: Verify that project files are organized and easy to understand.
-- [ ] Brittany: Create a basic team task tracking system.
+- [~] Brittany: Verify that project files are organized and easy to understand.
+- [x] Brittany: Create a basic team task tracking system.
 - [ ] Garrett: Install Python and confirm the backend starter file can run.
 - [ ] Garrett: Review `prototype/backend/app.py` and identify backend changes needed.
 - [ ] Mike: Open `prototype/frontend/index.html` in a browser.
@@ -43,9 +43,9 @@ Deliverable:
 
 Goal: Define what information the user must enter before generating a report.
 
-- [ ] Brittany: Create at least two realistic sample incidents.
-- [ ] Brittany: Review the form fields and decide if any required fields are missing.
-- [ ] Brittany: Write simple user instructions for the demo workflow.
+- [x] Brittany: Create at least two realistic sample incidents.
+- [x] Brittany: Review the form fields and decide if any required fields are missing.
+- [] Brittany: Write simple user instructions for the demo workflow.
 - [ ] Garrett: Define the JSON structure the backend expects.
 - [ ] Garrett: List the data needed for root-cause analysis and 5 Whys.
 - [ ] Mike: Create or update the wireframe for the form and report output.
