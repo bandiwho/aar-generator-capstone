@@ -12,23 +12,23 @@ Status options:
 
 Goal: Confirm the project direction and make sure the team understands the problem.
 
-- [ ] Brittany: Confirm the project title and summary.
-- [ ] Brittany: Create or update project notes in `PROJECT_PLAN.md`.
-- [ ] Brittany: Keep a list of team decisions from the first meeting.
+- [x] Brittany: Confirm the project title and summary.
+- [x] Brittany: Create or update project notes in `PROJECT_PLAN.md`.
+- [x] Brittany: Keep a list of team decisions from the first meeting.
 - [ ] Garrett: Confirm technical setup needs for backend and LLM integration.
 - [ ] Mike: Confirm technical setup needs for frontend development.
-- [ ] Team: Agree on the minimum version of the prototype.
+- [~] Team: Agree on the minimum version of the prototype.
 
 Deliverable:
 
-- [ ] Team: Project topic, team roles, and MVP are confirmed.
+- [x] Team: Project topic, team roles, and MVP are confirmed.
 
 ## Week 2: Development Environment and Prototype Structure
 
 Goal: Make sure everyone can open, edit, and run the starter prototype.
 
-- [ ] Brittany: Verify that project files are organized and easy to understand.
-- [ ] Brittany: Create a basic team task tracking system.
+- [~] Brittany: Verify that project files are organized and easy to understand.
+- [x] Brittany: Create a basic team task tracking system.
 - [ ] Garrett: Install Python and confirm the backend starter file can run.
 - [ ] Garrett: Review `prototype/backend/app.py` and identify backend changes needed.
 - [ ] Mike: Open `prototype/frontend/index.html` in a browser.
