@@ -45,7 +45,7 @@ Goal: Define what information the user must enter before generating a report.
 
 - [x] Brittany: Create at least two realistic sample incidents.
 - [x] Brittany: Review the form fields and decide if any required fields are missing.
-- [] Brittany: Write simple user instructions for the demo workflow.
+- [x] Brittany: Write simple user instructions for the demo workflow.
 - [ ] Garrett: Define the JSON structure the backend expects.
 - [ ] Garrett: List the data needed for root-cause analysis and 5 Whys.
 - [ ] Mike: Create or update the wireframe for the form and report output.
