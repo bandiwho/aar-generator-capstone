@@ -4,9 +4,9 @@
 
 Our team project is a Security Incident Postmortem: Automated After-Action Report (AAR) Generator.
 
-The purpose of this project is to help organizations create a professional after-action report after a cybersecurity incident. The user enters incident details such as a timeline, log snippets, affected systems, known impact, and remediation steps. The prototype then generates a structured report draft with sections for summary, timeline, root cause, 5 Whys analysis, lessons learned, and recommendations.
+The purpose of this project is to help organizations create professional after-action reports after cybersecurity incidents. Users will enter incident details such as raw log data, incident timelines, affected systems, known impact, and remediation steps. The prototype will use an intuitive frontend interface, a backend powered by an LLM, and a structured output engine to generate professional report drafts.
 
-This project is for CSC 482 Capstone Project II.
+The LLM will help parse the incident information, organize the timeline, support root-cause analysis using the 5 Whys method, and provide lessons learned and customized recommendations. The final tool will support multiple reporting styles, including technical reports for IT/security teams and executive summaries for leadership.
 
 ## Description of Each Team Member
 
