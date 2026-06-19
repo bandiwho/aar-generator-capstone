@@ -17,7 +17,7 @@ Goal: Confirm the project direction and make sure the team understands the probl
 - [x] Brittany: Keep a list of team decisions from the first meeting.
 - [ ] Garrett: Confirm technical setup needs for backend and LLM integration.
 - [ ] Mike: Confirm technical setup needs for frontend development.
-- [~] Team: Agree on the minimum version of the prototype.
+- [x] Team: Agree on the minimum version of the prototype.
 
 Deliverable:
 
@@ -33,11 +33,11 @@ Goal: Make sure everyone can open, edit, and run the starter prototype.
 - [ ] Garrett: Review `prototype/backend/app.py` and identify backend changes needed.
 - [ ] Mike: Open `prototype/frontend/index.html` in a browser.
 - [ ] Mike: Review frontend files and identify UI changes needed.
-- [ ] Team: Confirm Git, Python, Node.js, and VS Code are installed.
+- [x] Team: Confirm Git, Python, Node.js, and VS Code are installed.
 
 Deliverable:
 
-- [ ] Team: Everyone can access the prototype and understands their assigned files.
+- [x] Team: Everyone can access the prototype and understands their assigned files.
 
 ## Week 3: Wireframe, Inputs, and Sample Incidents
 
