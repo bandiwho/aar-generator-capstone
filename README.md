@@ -46,11 +46,11 @@ Complete:
 - Created the shared deliverables checklist.
 - Reviewed the GitHub repository assignment requirements.
 - Prepared README content for the assignment.
-
-To be completed:
-
 - Create or confirm the public GitHub repository.
 - Add the GitHub repository URL to Canvas.
+  
+To be completed:
+
 - Add the GitHub repository URL to the weekly journal and team homepage.
 - Review grammar and formatting before submission.
 - Collect screenshots for the weekly journal PDF.
