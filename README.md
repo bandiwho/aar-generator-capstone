@@ -39,47 +39,54 @@ Mike is responsible for frontend development and the demo workflow. He focuses o
 
 ### Brittany
 
-Complete:
+Completed:
 
 - Organized the project documents.
 - Created the weekly team checklist.
 - Created the shared deliverables checklist.
 - Reviewed the GitHub repository assignment requirements.
 - Prepared README content for the assignment.
-- Create or confirm the public GitHub repository.
-- Add the GitHub repository URL to Canvas.
+- Created or confirm the public GitHub repository.
+- Added the GitHub repository URL to Canvas.
+- Added the GitHub repository URL to the weekly journal and team homepage.
+- Review grammar and formatting before submission.
+- Collect screenshots for the weekly journal PDF.
   
 To be completed:
 
-- Add the GitHub repository URL to the weekly journal and team homepage.
-- Review grammar and formatting before submission.
-- Collect screenshots for the weekly journal PDF.
+- Start working on next weeks tasks for each team member using milestone TODO.
+- Update README on Sunday to reflect milestones.
+- Review work from teammates
 
 ### Garrett
 
-Complete:
+Completed:
 
 - Reviewed backend responsibilities.
 - Helped define report-generation needs.
-- Backend files are included in the updated prototype.
+- Add backend progress notes for the weekly journal.
 
 To be completed:
 
+- Backend files are included in the updated prototype.
 - Test report generation with sample incident data.
 - Improve backend report logic.
 - Help verify technical and executive report outputs.
-- Add backend progress notes for the weekly journal.
 
 ### Mike
 
-Complete:
+Completed:
 
 - Provided prototype work that was combined into the updated prototype.
-- Frontend files are included in the updated prototype.
-- Demo workflow responsibilities are identified.
+- Contributed to planning the user interface
+- Reviewed the expected frontend requirements
+- Identified the layout needed for users to enter incident details.
+
 
 To be completed:
 
+- Demo workflow responsibilities are identified.
+- Frontend files are included in the updated prototype.
 - Review the browser form and report output.
 - Improve the user interface if needed.
 - Confirm the demo flow works.
