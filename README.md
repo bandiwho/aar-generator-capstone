@@ -72,8 +72,6 @@ To be completed:
 
 ### Mike
 
-Mike is contributing to prototype integration, frontend review, documentation, and demo preparation.
-
 Complete:
 
 - Provided prototype work that was combined into the updated prototype.
