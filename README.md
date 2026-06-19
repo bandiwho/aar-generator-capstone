@@ -4,9 +4,9 @@
 
 Our team project is a Security Incident Postmortem: Automated After-Action Report (AAR) Generator.
 
-The purpose of this project is to help organizations create a professional after-action report after a cybersecurity incident. The user enters incident details such as a timeline, log snippets, affected systems, known impact, and remediation steps. The prototype then generates a structured report draft with sections for summary, timeline, root cause, 5 Whys analysis, lessons learned, and recommendations.
+The purpose of this project is to help organizations create professional after-action reports after cybersecurity incidents. Users will enter incident details such as raw log data, incident timelines, affected systems, known impact, and remediation steps. The prototype will use an intuitive frontend interface, a backend powered by an LLM, and a structured output engine to generate professional report drafts.
 
-This project is for CSC 482 Capstone Project II.
+The LLM will help parse the incident information, organize the timeline, support root-cause analysis using the 5 Whys method, and provide lessons learned and customized recommendations. The final tool will support multiple reporting styles, including technical reports for IT/security teams and executive summaries for leadership.
 
 ## Description of Each Team Member
 
@@ -39,49 +39,54 @@ Mike is responsible for frontend development and the demo workflow. He focuses o
 
 ### Brittany
 
-Complete:
+Completed:
 
 - Organized the project documents.
 - Created the weekly team checklist.
 - Created the shared deliverables checklist.
 - Reviewed the GitHub repository assignment requirements.
 - Prepared README content for the assignment.
-
-To be completed:
-
-- Create or confirm the public GitHub repository.
-- Add the GitHub repository URL to Canvas.
-- Add the GitHub repository URL to the weekly journal and team homepage.
+- Created or confirm the public GitHub repository.
+- Added the GitHub repository URL to Canvas.
+- Added the GitHub repository URL to the weekly journal and team homepage.
 - Review grammar and formatting before submission.
 - Collect screenshots for the weekly journal PDF.
+  
+To be completed:
+
+- Start working on next weeks tasks for each team member using milestone TODO.
+- Update README on Sunday to reflect milestones.
+- Review work from teammates
 
 ### Garrett
 
-Complete:
+Completed:
 
 - Reviewed backend responsibilities.
 - Helped define report-generation needs.
-- Backend files are included in the updated prototype.
+- Add backend progress notes for the weekly journal.
 
 To be completed:
 
+- Backend files are included in the updated prototype.
 - Test report generation with sample incident data.
 - Improve backend report logic.
 - Help verify technical and executive report outputs.
-- Add backend progress notes for the weekly journal.
 
 ### Mike
 
-Mike is contributing to prototype integration, frontend review, documentation, and demo preparation.
-
-Complete:
+Completed:
 
 - Provided prototype work that was combined into the updated prototype.
-- Frontend files are included in the updated prototype.
-- Demo workflow responsibilities are identified.
+- Contributed to planning the user interface
+- Reviewed the expected frontend requirements
+- Identified the layout needed for users to enter incident details.
+
 
 To be completed:
 
+- Demo workflow responsibilities are identified.
+- Frontend files are included in the updated prototype.
 - Review the browser form and report output.
 - Improve the user interface if needed.
 - Confirm the demo flow works.

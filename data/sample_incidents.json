@@ -17,7 +17,7 @@
         "10:15 AM - Mailbox rules removed and message trace review started."
       ],
       "logs": [
-        "AzureAD SignIn: user=employee result=success location=unfamiliar_ip",
+        "AzureAD SignIn: user=brittany.employee result=success location=unfamiliar_ip",
         "Exchange Audit: New-InboxRule created forwarding external address",
         "Defender Alert: Phishing URL clicked by user",
         "Message Trace: Similar phishing email delivered to 14 users"

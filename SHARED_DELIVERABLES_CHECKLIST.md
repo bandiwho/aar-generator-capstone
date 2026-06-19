@@ -14,65 +14,65 @@ Class: CSC 482 Capstone Project II
 
 ## 1. Team Setup
 
-- [ ] Everyone has a GitHub account.
-- [ ] Everyone has Git installed.
-- [ ] Everyone has VS Code installed.
-- [ ] Everyone can open the project folder in VS Code.
-- [ ] Everyone can clone or access the shared GitHub repository.
-- [ ] Everyone understands the branch, commit, pull request, and merge workflow.
+- [x] Everyone has a GitHub account.
+- [x] Everyone has Git installed.
+- [x] Everyone has VS Code installed.
+- [x] Everyone can open the project folder in VS Code.
+- [x] Everyone can clone or access the shared GitHub repository.
+- [x] Everyone understands the branch, commit, pull request, and merge workflow.
 
 ## 2. GitHub Repository
 
-- [ ] Public GitHub repository created by Brittany.
-- [ ] Initial prototype source code uploaded.
-- [ ] `README.md` created with project description.
-- [ ] Garrett added as repository collaborator.
-- [ ] Mike added as repository collaborator.
-- [ ] `.gitignore` added so temporary files are not uploaded.
-- [ ] Team practiced editing the README through branches and pull requests.
-- [ ] GitHub repository URL copied for Canvas submission.
-- [ ] GitHub repository URL added to the weekly journal.
-- [ ] GitHub repository URL added to the Canvas team homepage.
-- [ ] Repository is public or readable by the instructor.
+- [x] Public GitHub repository created by Brittany.
+- [x] Initial prototype source code uploaded.
+- [x] `README.md` created with project description.
+- [x] Garrett added as repository collaborator.
+- [x] Mike added as repository collaborator.
+- [x] `.gitignore` added so temporary files are not uploaded.
+- [~] Team practiced editing the README through branches and pull requests.
+- [x] GitHub repository URL copied for Canvas submission.
+- [~] GitHub repository URL added to the weekly journal.
+- [x] GitHub repository URL added to the Canvas team homepage.
+- [~] Repository is public or readable by the instructor.
 
 ## 3. README Collaboration Exercise
 
-- [ ] Brittany added her self-description.
-- [ ] Garrett added his self-description.
-- [ ] Mike added his self-description.
-- [ ] Project description added.
-- [ ] Team roles added.
-- [ ] Project milestones added.
-- [ ] Timeline and schedule added.
-- [ ] Achieved milestones listed.
-- [ ] Remaining milestones listed.
-- [ ] Weekly completed tasks listed.
-- [ ] Weekly remaining tasks listed.
+- [x] Brittany added her self-description.
+- [~] Garrett added his self-description.
+- [x] Mike added his self-description.
+- [x] Project description added.
+- [x] Team roles added.
+- [x] Project milestones added.
+- [x] Timeline and schedule added.
+- [x] Achieved milestones listed.
+- [x] Remaining milestones listed.
+- [x] Weekly completed tasks listed.
+- [x] Weekly remaining tasks listed.
 
 ## 4. Planning Documents
 
-- [ ] Project plan completed.
-- [ ] Weekly team plan completed.
-- [ ] Shared deliverables checklist completed.
-- [ ] Team schedule includes named owners.
-- [ ] Brittany reviewed grammar and formatting.
-- [ ] Risks and blockers are listed.
+- [x] Project plan completed.
+- [x] Weekly team plan completed.
+- [x] Shared deliverables checklist completed.
+- [x] Team schedule includes named owners.
+- [~] Brittany reviewed grammar and formatting.
+- [~] Risks and blockers are listed.
 - [ ] Final scope is clear and realistic.
 
 ## 5. Prototype Deliverables
 
-- [ ] Original prototype saved.
-- [ ] Updated prototype folder created.
-- [ ] Prototype includes a working web form.
+- [x] Original prototype saved.
+- [x] Updated prototype folder created.
+- [x] Prototype includes a working web form.
 - [ ] Prototype accepts incident summary, timeline, logs, impact, and remediation notes.
 - [ ] Prototype supports technical audience report style.
 - [ ] Prototype supports executive audience report style.
 - [ ] Prototype can generate a mock report without an API key.
 - [ ] Prototype can connect to the OpenAI API when configured.
-- [ ] Prototype includes sample incident data.
+- [x] Prototype includes sample incident data.
 - [ ] Prototype has setup instructions.
-- [ ] Prototype has run instructions for Windows.
-- [ ] Prototype has run instructions for Ubuntu.
+- [x] Prototype has run instructions for Windows.
+- [x] Prototype has run instructions for Ubuntu.
 
 ## 6. Testing Evidence
 
@@ -146,17 +146,17 @@ Class: CSC 482 Capstone Project II
 Due: Sunday by 11:59 PM
 Submission type: Website URL
 
-- [ ] Create a GitHub repository for the project app source code.
-- [ ] Make the repository public or readable by the instructor.
-- [ ] Upload the merged initial project prototype source code.
-- [ ] Add a README file.
-- [ ] README includes a description of the team project.
-- [ ] README includes a description of each team member.
-- [ ] README includes milestones completed and milestones still to be completed each week.
-- [ ] README includes tasks completed and tasks still to be completed by each team member.
+- [x] Create a GitHub repository for the project app source code.
+- [x] Make the repository public or readable by the instructor.
+- [x] Upload the merged initial project prototype source code.
+- [x] Add a README file.
+- [x] README includes a description of the team project.
+- [x] README includes a description of each team member.
+- [x] README includes milestones completed and milestones still to be completed each week.
+- [x] README includes tasks completed and tasks still to be completed by each team member.
 - [ ] Submit the GitHub repository URL in Canvas.
 - [ ] Add the GitHub repository URL to the weekly journal.
-- [ ] Add the GitHub repository URL to the Canvas team homepage.
+- [x] Add the GitHub repository URL to the Canvas team homepage.
 
 ### Weekly Journal Assignment
 
@@ -180,7 +180,7 @@ Submission type: PDF file upload
 
 ### Brittany
 
-- [ ] Keep checklist updated.
+- [x] Keep checklist updated.
 - [ ] Review grammar, formatting, and organization.
 - [ ] Confirm final documents match class requirements.
 - [ ] Lead final submission check.
@@ -205,9 +205,13 @@ Use this section during team meetings.
 
 ### Week 3
 
-- Completed:
+- Completed: Creating and submitting Github URL
 - Still needed:
+  - Establish basic frontend layout (Mike)
+  - Set up backend environment and report-generation logic (Garrett)
+  - Align frontend input fields with backend "5 Whys" data requirements (Brittany)
 - Blockers:
+  - Awaiting initial frontend/backend setups and finalized data definitions to begin the Week 4 integration phase.
 
 ### Week 4
 
