@@ -26,6 +26,21 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - Demo workflow documentation for presentation practice.
 - GitHub repository for shared source code and documentation.
 
+## Current Project Status
+
+- [x] GitHub repository created for the team project.
+- [x] Updated prototype folder organized.
+- [x] README polished to match the instructor's expected format.
+- [x] Project description, team member descriptions, timeline, milestones, and tasks added to the README.
+- [x] Project plan converted into Markdown for GitHub viewing.
+- [x] Checkboxes added for weekly tasks, MVP requirements, testing, deliverables, and completion criteria.
+- [x] Shared deliverables checklist added.
+- [x] Demo workflow instructions added.
+- [x] Form field review completed.
+- [x] Realistic sample incidents added for testing and demo use.
+- [x] Sample incidents page created in Markdown for easier GitHub viewing.
+- [x] Backend schema work added to define incident input and report output structure.
+
 ## Team Member Descriptions
 
 | Member | Role | Contribution Focus |
@@ -59,8 +74,9 @@ Goal: Set up the GitHub repository, organize the prototype, and document the Wee
 | [x] | Brittany | Review form fields | `FORM_FIELD_REVIEW.md` | Required MVP fields confirmed |
 | [x] | Brittany | Write demo workflow instructions | `DEMO_WORKFLOW_INSTRUCTIONS.md` | Demo steps are clear enough for the team to follow |
 | [x] | Brittany | Create realistic sample incidents | `data/sample_incidents.json` | Multiple security incident scenarios are available for testing |
-| [~] | Garrett | Review backend responsibilities | Backend planning notes and JSON structure direction | Backend work is scoped for report-generation logic |
-| [~] | Mike | Plan frontend workflow | Frontend layout direction and weekend build plan | Interface work is scoped for the demo workflow |
+| [x] | Garrett | Review backend responsibilities | Backend planning notes and JSON structure direction | Backend work is scoped for report-generation logic |
+| [x] | Garrett | Add backend schema work | Backend schema definitions for incident input and report output | Data structure is ready for report-generation integration |
+| [x] | Mike | Plan frontend workflow | Frontend layout direction and weekend build plan | Interface work is scoped for the demo workflow |
 
 ### Milestone 2: Backend and Frontend Foundation
 
@@ -147,3 +163,14 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 | Testing | At least three realistic sample incidents are tested |
 | Documentation | README, demo workflow instructions, sample data, and journal evidence are included |
 | Final demo | Team can demonstrate the full workflow during the final presentation |
+
+## Supporting Project Files
+
+| File | Purpose |
+|---|---|
+| [`PROJECT_PLAN.md`](PROJECT_PLAN.md) | Full Markdown project plan with weekly checkboxes, task ownership, testing plan, and deliverables |
+| [`MILESTONE_TODOS.md`](MILESTONE_TODOS.md) | Detailed milestone and weekly task tracking |
+| [`SHARED_DELIVERABLES_CHECKLIST.md`](SHARED_DELIVERABLES_CHECKLIST.md) | Shared checklist for assignment and project deliverables |
+| [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
+| [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
+| [`FORM_FIELD_REVIEW.md`](FORM_FIELD_REVIEW.md) | Review of required form fields for the MVP workflow |
