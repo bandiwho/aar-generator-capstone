@@ -168,8 +168,8 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 
 | File | Purpose |
 |---|---|
-| [`PROJECT_PLAN.md`](PROJECT_PLAN.md) | Full Markdown project plan with weekly checkboxes, task ownership, testing plan, and deliverables |
-| [`MILESTONE_TODOS.md`](MILESTONE_TODOS.md) | Detailed milestone and weekly task tracking |
+| [`PROJECT_PLAN.md`](PROJECT_PLAN.md) | Full project plan with weekly, task ownership, testing plan, and deliverables |
+| [`MILESTONE_TODOS.md`](MILESTONE_TODOS.md) | Detailed milestone and weekly task tracked with checkmarking. |
 | [`SHARED_DELIVERABLES_CHECKLIST.md`](SHARED_DELIVERABLES_CHECKLIST.md) | Shared checklist for assignment and project deliverables |
 | [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
 | [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
