@@ -29,15 +29,15 @@ This project addresses that problem by providing a guided tool that helps turn r
 
 ## Main Objectives
 
-- [ ] Build a web interface for entering or pasting incident details.
-- [ ] Allow users to include timelines, log snippets, affected systems, known impact, and remediation steps.
-- [ ] Create a backend workflow that organizes the input and prepares it for report generation.
-- [ ] Use structured prompting to generate consistent report sections.
-- [ ] Include a 5 Whys root-cause analysis section.
-- [ ] Support both technical and executive reporting styles.
-- [ ] Allow basic review, revision, or regeneration of report content.
-- [ ] Use realistic sample incidents to test the prototype.
-- [ ] Prepare documentation, screenshots, and a final demo.
+- Build a web interface for entering or pasting incident details.
+- Allow users to include timelines, log snippets, affected systems, known impact, and remediation steps.
+- Create a backend workflow that organizes the input and prepares it for report generation.
+- Use structured prompting to generate consistent report sections.
+- Include a 5 Whys root-cause analysis section.
+- Support both technical and executive reporting styles.
+- Allow basic review, revision, or regeneration of report content.
+- Use realistic sample incidents to test the prototype.
+- Prepare documentation, screenshots, and a final demo.
 
 ## Project Scope
 
@@ -101,24 +101,24 @@ This project addresses that problem by providing a guided tool that helps turn r
 
 The minimum viable product should include:
 
-- [ ] A web form or pasted-input area for incident details.
-- [ ] A button or workflow to generate a report draft.
-- [ ] A structured AAR output with clear sections.
-- [ ] Technical and executive audience options.
-- [ ] A 5 Whys root-cause analysis section.
-- [ ] Basic revision or regeneration support.
-- [ ] At least one realistic sample incident for testing and demo use.
+- A web form or pasted-input area for incident details.
+- A button or workflow to generate a report draft.
+- A structured AAR output with clear sections.
+- Technical and executive audience options.
+- A 5 Whys root-cause analysis section.
+- Basic revision or regeneration support.
+- At least one realistic sample incident for testing and demo use.
 
 ## Stretch Goals
 
-- [ ] PDF export.
-- [ ] DOCX export.
-- [ ] Saved report history.
-- [ ] Multiple incident templates.
-- [ ] Severity scoring.
-- [ ] MITRE ATT&CK mapping.
-- [ ] NIST or ISO 27001 mapping.
-- [ ] Dashboard-style summary page.
+- PDF export.
+- DOCX export.
+- Saved report history.
+- Multiple incident templates.
+- Severity scoring.
+- MITRE ATT&CK mapping.
+- NIST or ISO 27001 mapping.
+- Dashboard-style summary page.
 
 ## Project Timeline
 
@@ -135,74 +135,74 @@ The minimum viable product should include:
 
 ## Completed So Far
 
-- [x] GitHub repository created for the team project.
-- [x] Updated prototype folder organized.
-- [x] README polished to better match the instructor's expected format.
-- [x] Project description, team member descriptions, timeline, milestones, and tasks added to the README.
-- [x] Signed project plan converted into this Markdown project plan.
-- [x] Checkboxes added for weekly tasks, MVP requirements, testing, deliverables, and completion criteria.
-- [x] Shared deliverables checklist added.
-- [x] Demo workflow instructions added.
-- [x] Form field review completed.
-- [x] Realistic sample incidents added for testing and demo use.
-- [x] Sample incidents page created in Markdown for easier GitHub viewing.
-- [x] Backend schema work added to define incident input and report output structure.
+- GitHub repository created for the team project.
+- Updated prototype folder organized.
+- README polished to better match the instructor's expected format.
+- Project description, team member descriptions, timeline, milestones, and tasks added to the README.
+- Signed project plan converted into this Markdown project plan.
+- Checkboxes added for weekly tasks, MVP requirements, testing, deliverables, and completion criteria.
+- Shared deliverables checklist added.
+- Demo workflow instructions added.
+- Form field review completed.
+- Realistic sample incidents added for testing and demo use.
+- Sample incidents page created in Markdown for easier GitHub viewing.
+- Backend schema work added to define incident input and report output structure.
 
 ## Weekly Task Checklist
 
 ### Week 3: June 15-21
 
-- [x] Brittany: Finalize user needs, documentation structure, and project requirements.
-- [x] Brittany: Review sample incident data and confirm it supports the demo workflow.
-- [x] Garrett: Add backend schemas and define report-generation data structures.
-- [x] Garrett: Outline backend build tasks for report-generation logic.
-- [x] Mike: Plan frontend layout and demo workflow.
-- [x] Mike: Identify form fields needed for the prototype.
+- Brittany: Finalize user needs, documentation structure, and project requirements.
+- Brittany: Review sample incident data and confirm it supports the demo workflow.
+- Garrett: Add backend schemas and define report-generation data structures.
+- Garrett: Outline backend build tasks for report-generation logic.
+- Mike: Plan frontend layout and demo workflow.
+- Mike: Identify form fields needed for the prototype.
 
 ### Week 4: June 22-28
 
-- [ ] Brittany: Review executive-audience wording and report clarity.
-- [ ] Brittany: Keep README, project plan, and weekly documentation updated.
-- [ ] Garrett: Build or improve the backend route for report generation.
-- [ ] Garrett: Connect structured incident data to the report-generation workflow.
-- [ ] Mike: Build or refine the input form and report display page.
-- [ ] Mike: Connect frontend fields to the backend workflow.
+- Brittany: Review executive-audience wording and report clarity.
+- Brittany: Keep README, project plan, and weekly documentation updated.
+- Garrett: Build or improve the backend route for report generation.
+- Garrett: Connect structured incident data to the report-generation workflow.
+- Mike: Build or refine the input form and report display page.
+- Mike: Connect frontend fields to the backend workflow.
 
 ### Week 5: June 29-July 5
 
-- [ ] Brittany: Test the pasted incident input workflow using sample incidents.
-- [ ] Brittany: Record screenshots and notes for the weekly journal.
-- [ ] Garrett: Improve report-generation pipeline and output formatting.
-- [ ] Garrett: Add or refine the 5 Whys section.
-- [ ] Mike: Add technical and executive style selection to the interface.
-- [ ] Mike: Improve page readability and demo flow.
+- Brittany: Test the pasted incident input workflow using sample incidents.
+- Brittany: Record screenshots and notes for the weekly journal.
+- Garrett: Improve report-generation pipeline and output formatting.
+- Garrett: Add or refine the 5 Whys section.
+- Mike: Add technical and executive style selection to the interface.
+- Mike: Improve page readability and demo flow.
 
 ### Week 6: July 6-12
 
-- [ ] Brittany: Create feedback review criteria for generated reports.
-- [ ] Brittany: Review report quality against the project plan.
-- [ ] Garrett: Add feedback-based revision or regeneration support.
-- [ ] Garrett: Improve backend error handling.
-- [ ] Mike: Add validation, loading states, and user-facing error messages.
-- [ ] Mike: Test the full workflow with multiple sample incidents.
+- Brittany: Create feedback review criteria for generated reports.
+- Brittany: Review report quality against the project plan.
+- Garrett: Add feedback-based revision or regeneration support.
+- Garrett: Improve backend error handling.
+- Mike: Add validation, loading states, and user-facing error messages.
+- Mike: Test the full workflow with multiple sample incidents.
 
 ### Week 7: July 13-19
 
-- [ ] Brittany: Write user guide, testing notes, and quality review.
-- [ ] Brittany: Organize screenshots for the final presentation.
-- [ ] Garrett: Improve backend reliability and formatting.
-- [ ] Garrett: Support final testing and bug fixes.
-- [ ] Mike: Polish the interface and report display.
-- [ ] Mike: Prepare demo screenshots and display checks.
+- Brittany: Write user guide, testing notes, and quality review.
+- Brittany: Organize screenshots for the final presentation.
+- Garrett: Improve backend reliability and formatting.
+- Garrett: Support final testing and bug fixes.
+- Mike: Polish the interface and report display.
+- Mike: Prepare demo screenshots and display checks.
 
 ### Week 8: July 20-28
 
-- [ ] Brittany: Finalize documentation, final report, and presentation slides.
-- [ ] Brittany: Coordinate final demo flow and team speaking order.
-- [ ] Garrett: Prepare demo-ready backend and report-generation workflow.
-- [ ] Garrett: Confirm technical and executive report outputs work.
-- [ ] Mike: Prepare final frontend demo flow.
-- [ ] Mike: Confirm the prototype is ready for presentation.
+- Brittany: Finalize documentation, final report, and presentation slides.
+- Brittany: Coordinate final demo flow and team speaking order.
+- Garrett: Prepare demo-ready backend and report-generation workflow.
+- Garrett: Confirm technical and executive report outputs work.
+- Mike: Prepare final frontend demo flow.
+- Mike: Confirm the prototype is ready for presentation.
 
 ## Milestone Assignments
 
@@ -220,30 +220,30 @@ The minimum viable product should include:
 
 ### Functional Testing
 
-- [ ] Confirm the application opens successfully.
-- [ ] Confirm the incident form accepts user input.
-- [ ] Confirm sample incident data can be entered or loaded.
-- [ ] Confirm the report draft displays after generation.
-- [ ] Confirm technical and executive styles produce different report language.
-- [ ] Confirm required report sections are included.
-- [ ] Confirm missing or incomplete fields do not crash the prototype.
+- Confirm the application opens successfully.
+- Confirm the incident form accepts user input.
+- Confirm sample incident data can be entered or loaded.
+- Confirm the report draft displays after generation.
+- Confirm technical and executive styles produce different report language.
+- Confirm required report sections are included.
+- Confirm missing or incomplete fields do not crash the prototype.
 
 ### Prompt and Scenario Testing
 
 The prototype should be tested with realistic cybersecurity incident scenarios, including:
 
-- [ ] Unauthorized VPN login attempt.
-- [ ] Phishing incident.
-- [ ] Malware infection.
-- [ ] Ransomware incident.
-- [ ] Accidental data exposure.
+- Unauthorized VPN login attempt.
+- Phishing incident.
+- Malware infection.
+- Ransomware incident.
+- Accidental data exposure.
 
 ### Usability Testing
 
-- [ ] Confirm the workflow is understandable for a new user.
-- [ ] Confirm the form labels are clear.
-- [ ] Confirm generated output is readable.
-- [ ] Confirm the demo workflow can be completed smoothly.
+- Confirm the workflow is understandable for a new user.
+- Confirm the form labels are clear.
+- Confirm generated output is readable.
+- Confirm the demo workflow can be completed smoothly.
 
 ### Quality Measurements
 
@@ -270,24 +270,24 @@ The prototype should be tested with realistic cybersecurity incident scenarios, 
 
 ### Recommended Project Files
 
-- [x] `README.md`
-- [x] `PROJECT_PLAN.md`
-- [x] `MILESTONE_TODOS.md`
-- [x] `SHARED_DELIVERABLES_CHECKLIST.md`
-- [x] `SAMPLE_INCIDENTS.md`
-- [x] `DEMO_WORKFLOW_INSTRUCTIONS.md`
-- [x] `FORM_FIELD_REVIEW.md`
-- [ ] Final report or presentation files as required by the course
+- `README.md`
+- `PROJECT_PLAN.md`
+- `MILESTONE_TODOS.md`
+- `SHARED_DELIVERABLES_CHECKLIST.md`
+- `SAMPLE_INCIDENTS.md`
+- `DEMO_WORKFLOW_INSTRUCTIONS.md`
+- `FORM_FIELD_REVIEW.md`
+- Final report or presentation files as required by the course
 
 ### Final Deliverables
 
-- [ ] Working prototype.
-- [x] GitHub repository with source code and documentation.
-- [x] README with team project description, team member descriptions, milestones, and tasks.
-- [x] Sample incident data.
-- [x] Demo workflow instructions.
-- [ ] Testing notes and screenshots.
-- [ ] Final presentation and demo.
+- Working prototype.
+- GitHub repository with source code and documentation.
+- README with team project description, team member descriptions, milestones, and tasks.
+- Sample incident data.
+- Demo workflow instructions.
+- Testing notes and screenshots.
+- Final presentation and demo.
 
 ## Demo Plan
 
@@ -305,20 +305,20 @@ Recommended demo scenario: Unauthorized VPN Login Attempt.
 
 The project is considered complete when:
 
-- [ ] The prototype accepts incident details.
-- [ ] The prototype generates a structured AAR draft.
-- [ ] The report includes the required sections.
-- [ ] The user can choose technical or executive style.
-- [ ] Sample incidents are available for testing.
-- [ ] The team can demonstrate the workflow clearly.
-- [ ] Documentation is organized in the repository.
-- [ ] The final presentation explains the problem, solution, architecture, demo, results, and future improvements.
+- The prototype accepts incident details.
+- The prototype generates a structured AAR draft.
+- The report includes the required sections.
+- The user can choose technical or executive style.
+- Sample incidents are available for testing.
+- The team can demonstrate the workflow clearly.
+- Documentation is organized in the repository.
+- The final presentation explains the problem, solution, architecture, demo, results, and future improvements.
 
 ## Team Organization Plan
 
-- [ ] Use GitHub to store shared source code and documentation.
-- [ ] Use Markdown files to track milestones, weekly tasks, sample incidents, and demo instructions.
-- [ ] Keep README focused on the public project overview.
-- [ ] Keep PROJECT_PLAN focused on the signed team plan.
-- [ ] Keep weekly journal entries aligned with the project timeline and schedule.
-- [ ] Use screenshots as evidence for completed prototype testing.
+- Use GitHub to store shared source code and documentation.
+- Use Markdown files to track milestones, weekly tasks, sample incidents, and demo instructions.
+- Keep README focused on the public project overview.
+- Keep PROJECT_PLAN focused on the signed team plan.
+- Keep weekly journal entries aligned with the project timeline and schedule.
+- Use screenshots as evidence for completed prototype testing.
