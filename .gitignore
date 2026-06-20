@@ -8,3 +8,4 @@ __pycache__/
 dist/
 build/
 README2.md
+.vscode/
