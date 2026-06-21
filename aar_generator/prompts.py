@@ -35,22 +35,29 @@ Audience guidance:
 Required report sections:
 1. Executive Summary
 2. Incident Overview
-3. Timeline of Events
-4. Impact Assessment
-5. Evidence and Log Observations
-6. 5 Whys Root Cause Analysis
-7. Technical Root Cause
-8. Process and Communication Gaps
-9. Remediation Completed
-10. Recommendations and Owners
-11. Open Questions
+3. Detection and Escalation
+4. Timeline of Events
+5. Impact Assessment
+6. Evidence and Log Observations
+7. 5 Whys Root Cause Analysis
+8. Technical Root Cause
+9. Process and Communication Gaps
+10. Remediation Completed
+11. Recommendations and Owners
 12. Lessons Learned
+13. Open Questions
 
 Incident title:
 {data.title}
 
 Incident date:
 {data.incident_date}
+
+Detection source:
+{data.detection_source or "Not provided."}
+
+Affected assets:
+{data.affected_assets or "Unknown or not provided."}
 
 Incident summary:
 {data.incident_summary}
@@ -67,13 +74,17 @@ Remediation steps:
 Known impact:
 {data.known_impact or "Unknown or not provided."}
 
+Lessons learned:
+{data.lessons_learned or "None provided."}
+
 Open questions:
 {data.open_questions or "None provided."}
 
 Rules:
 - Do not claim certainty when the evidence is incomplete.
-- Put assumptions in the Open Questions section.
+- Put assumptions and missing evidence in the Open Questions section.
 - Keep recommendations actionable.
+- Assign likely owners or owner groups for recommendations when the input supports it.
 - Use Markdown headings and bullet lists.
 """.strip()
 
