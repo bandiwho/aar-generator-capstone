@@ -23,71 +23,97 @@
         <form method="post" action="/generate-form" class="panel">
           <div class="panel-heading">
             <h2>Incident Details</h2>
-            <p>Use the sample text for a quick demo or replace it with your own incident notes.</p>
+            <p>Capture the facts needed for the AAR draft, then choose the audience for the report output.</p>
           </div>
 
-          <label>
-            Incident title
-            <input name="title" required minlength="3" value="Unauthorized VPN Login Attempt" placeholder="Example: Unauthorized VPN access investigation">
-          </label>
-
-          <div class="row">
+          <fieldset>
+            <legend>Incident Overview</legend>
             <label>
-              Incident date
-              <input name="incident_date" required value="2026-06-15" placeholder="2026-06-15">
+              Incident title
+              <input name="title" required minlength="3" value="Unauthorized VPN Login Attempt" placeholder="Example: Unauthorized VPN access investigation">
             </label>
 
+            <div class="row">
+              <label>
+                Incident date
+                <input name="incident_date" required value="2026-06-15" placeholder="2026-06-15">
+              </label>
+
+              <label>
+                Audience
+                <select name="audience" required>
+                  {% for audience in audiences %}
+                    <option value="{{ audience }}">{{ audience }}</option>
+                  {% endfor %}
+                </select>
+              </label>
+            </div>
+
             <label>
-              Audience
-              <select name="audience" required>
-                {% for audience in audiences %}
-                  <option value="{{ audience }}">{{ audience }}</option>
-                {% endfor %}
-              </select>
+              Incident summary
+              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status.">Security monitoring detected repeated failed VPN logins followed by one successful login from an unusual location. The affected account was disabled, the password was reset, and MFA was enabled.</textarea>
             </label>
-          </div>
+          </fieldset>
 
-          <label>
-            Incident summary
-            <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status.">Security monitoring detected repeated failed VPN logins followed by one successful login from an unusual location. The affected account was disabled, the password was reset, and MFA was enabled.</textarea>
-          </label>
+          <fieldset>
+            <legend>Evidence and Impact</legend>
+            <div class="row">
+              <label>
+                Detection source
+                <input name="detection_source" value="VPN anomaly alert and SIEM correlation rule" placeholder="Example: SIEM alert, help desk ticket, EDR alert">
+              </label>
 
-          <label>
-            Timeline
-            <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed VPN logs&#10;10:05 Account disabled">8:42 AM - Multiple failed login attempts detected from a foreign IP address.
+              <label>
+                Affected assets
+                <input name="affected_assets" value="Employee VPN account and remote access service" placeholder="Example: VPN, endpoint, database, cloud account">
+              </label>
+            </div>
+
+            <label>
+              Timeline
+              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed VPN logs&#10;10:05 Account disabled">8:42 AM - Multiple failed login attempts detected from a foreign IP address.
 8:48 AM - Successful VPN login occurred using employee credentials.
 8:52 AM - Security alert triggered due to unusual location.
 9:05 AM - Account was disabled.
 9:20 AM - Password reset completed.
 9:45 AM - MFA was enabled.</textarea>
-          </label>
+            </label>
 
-          <label>
-            Log snippets
-            <textarea name="log_snippets" rows="5" placeholder="Paste relevant logs, alerts, or ticket excerpts.">Failed login from 185.22.xxx.xxx
+            <label>
+              Log snippets
+              <textarea name="log_snippets" rows="5" placeholder="Paste relevant logs, alerts, or ticket excerpts.">Failed login from 185.22.xxx.xxx
 Successful VPN login from 185.22.xxx.xxx
 Geo-location anomaly detected
 Account disabled by administrator</textarea>
-          </label>
+            </label>
 
-          <label>
-            Remediation steps
-            <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions.">Disabled affected user account.
+            <label>
+              Known impact
+              <textarea name="known_impact" rows="4" placeholder="Affected systems, users, data, downtime, or business impact.">No confirmed data loss at this stage. One employee account and VPN access path were affected.</textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Response and Follow-Up</legend>
+            <label>
+              Remediation steps
+              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions.">Disabled affected user account.
 Reset user password.
 Enabled MFA.
 Reviewed VPN access logs.
 Blocked suspicious IP address.</textarea>
-          </label>
+            </label>
 
-          <label>
-            Known impact
-            <textarea name="known_impact" rows="4" placeholder="Affected systems, users, data, downtime, or business impact.">No confirmed data loss at this stage. One employee account and VPN access path were affected.</textarea>
-          </label>
+            <label>
+              Lessons learned
+              <textarea name="lessons_learned" rows="4" placeholder="What should the organization improve next time?">VPN alerts need clearer ownership and MFA status should be verified earlier during triage.</textarea>
+            </label>
 
-          <label>
-            Open questions
-            <textarea name="open_questions" rows="4" placeholder="Facts that still need confirmation.">Confirm whether MFA was required before the login. Confirm whether any internal systems were accessed after VPN connection.</textarea>
-          </label>
+            <label>
+              Open questions
+              <textarea name="open_questions" rows="4" placeholder="Facts that still need confirmation.">Confirm whether MFA was required before the login. Confirm whether any internal systems were accessed after VPN connection.</textarea>
+            </label>
+          </fieldset>
 
           <button type="submit">Generate Report Draft</button>
         </form>
@@ -101,10 +127,26 @@ Blocked suspicious IP address.</textarea>
               <h2>{{ result.title }}</h2>
               <span>{{ result.audience.value }} audience | {{ result.model_used }} | mock mode: {{ result.mock_mode }}</span>
             </div>
-            <pre>{{ result.report_markdown }}</pre>
+            <div class="report-toolbar" aria-label="Report review checklist">
+              <span>Executive Summary</span>
+              <span>Timeline</span>
+              <span>5 Whys</span>
+              <span>Recommendations</span>
+            </div>
+            <article class="report-preview">
+              <pre>{{ result.report_markdown }}</pre>
+            </article>
           {% else %}
             <h2>Report Draft</h2>
-            <p class="empty">Generated report text will appear here after you submit the form.</p>
+            <div class="empty-state">
+              <p class="empty">Generated report text will appear here after you submit the form.</p>
+              <ul>
+                <li>Executive summary</li>
+                <li>Timeline and evidence observations</li>
+                <li>5 Whys root cause analysis</li>
+                <li>Remediation and recommendations</li>
+              </ul>
+            </div>
           {% endif %}
         </aside>
       </section>

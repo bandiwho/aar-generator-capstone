@@ -56,11 +56,14 @@ def generate_report_form(
     title: str = Form(...),
     incident_date: str = Form(...),
     audience: AudienceStyle = Form(...),
+    detection_source: str = Form(""),
+    affected_assets: str = Form(""),
     incident_summary: str = Form(...),
     timeline: str = Form(...),
     log_snippets: str = Form(""),
     remediation_steps: str = Form(...),
     known_impact: str = Form(""),
+    lessons_learned: str = Form(""),
     open_questions: str = Form(""),
 ) -> HTMLResponse:
     try:
@@ -68,11 +71,14 @@ def generate_report_form(
             title=title,
             incident_date=incident_date,
             audience=audience,
+            detection_source=detection_source,
+            affected_assets=affected_assets,
             incident_summary=incident_summary,
             timeline=timeline,
             log_snippets=log_snippets,
             remediation_steps=remediation_steps,
             known_impact=known_impact,
+            lessons_learned=lessons_learned,
             open_questions=open_questions,
         )
         result = ReportService(get_settings()).generate_report(incident)

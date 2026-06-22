@@ -16,7 +16,7 @@ Goal: Confirm the project direction and make sure the team understands the probl
 - [x] Brittany: Create or update project notes in `PROJECT_PLAN.md`.
 - [x] Brittany: Keep a list of team decisions from the first meeting.
 - [ ] Garrett: Confirm technical setup needs for backend and LLM integration.
-- [ ] Mike: Confirm technical setup needs for frontend development.
+- [x] Mike: Confirm technical setup needs for frontend development.
 - [x] Team: Agree on the minimum version of the prototype.
 
 Deliverable:
@@ -31,8 +31,8 @@ Goal: Make sure everyone can open, edit, and run the starter prototype.
 - [x] Brittany: Create a basic team task tracking system.
 - [ ] Garrett: Install Python and confirm the backend starter file can run.
 - [ ] Garrett: Review `prototype/backend/app.py` and identify backend changes needed.
-- [ ] Mike: Open `prototype/frontend/index.html` in a browser.
-- [ ] Mike: Review frontend files and identify UI changes needed.
+- [x] Mike: Open `prototype/frontend/index.html` in a browser.
+- [x] Mike: Review frontend files and identify UI changes needed.
 - [x] Team: Confirm Git, Python, Node.js, and VS Code are installed.
 
 Deliverable:
@@ -48,8 +48,8 @@ Goal: Define what information the user must enter before generating a report.
 - [x] Brittany: Write simple user instructions for the demo workflow.
 - [ ] Garrett: Define the JSON structure the backend expects.
 - [ ] Garrett: List the data needed for root-cause analysis and 5 Whys.
-- [ ] Mike: Create or update the wireframe for the form and report output.
-- [ ] Mike: Improve the frontend form layout if needed.
+- [x] Mike: Create or update the wireframe for the form and report output.
+- [x] Mike: Improve the frontend form layout if needed.
 
 Deliverable:
 

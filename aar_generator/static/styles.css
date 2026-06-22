@@ -107,6 +107,22 @@ form {
   gap: 16px;
 }
 
+fieldset {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+legend {
+  color: var(--steel);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 6px;
+}
+
 label {
   display: grid;
   gap: 6px;
@@ -172,6 +188,39 @@ button:hover {
 
 .output-meta span,
 .empty {
+  color: var(--muted);
+}
+
+.report-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.report-toolbar span {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #f6f8fa;
+  color: var(--steel);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 8px;
+}
+
+.report-preview {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.empty-state {
+  display: grid;
+  gap: 12px;
+}
+
+.empty-state ul {
+  margin: 0;
+  padding-left: 20px;
   color: var(--muted);
 }
 
