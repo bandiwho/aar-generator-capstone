@@ -5,9 +5,11 @@ Optional fields: log_snippets, known_impact, open_questions
 
 ```json
 {
-  "incident_title": "string",
+  "title": "string",
   "incident_date": "2026-06-19",
-  "audience_style": "technical | executive",
+  "audience": "technical | executive",
+  "detection_source": "string",
+  "affected_assets": "string",
   "incident_summary": "string",
   "timeline": [
     { "time": "8:10 AM", "event": "string" }
@@ -15,6 +17,7 @@ Optional fields: log_snippets, known_impact, open_questions
   "remediation_steps": ["string"],
   "log_snippets": ["string"],
   "known_impact": "string",
+  "lessons_learned": ["string"],
   "open_questions": ["string"]
 }
 ```
