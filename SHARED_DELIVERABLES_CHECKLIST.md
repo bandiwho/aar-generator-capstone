@@ -29,16 +29,16 @@ Class: CSC 482 Capstone Project II
 - [x] Garrett added as repository collaborator.
 - [x] Mike added as repository collaborator.
 - [x] `.gitignore` added so temporary files are not uploaded.
-- [~] Team practiced editing the README through branches and pull requests.
+- [x] Team practiced editing the README through branches and pull requests.
 - [x] GitHub repository URL copied for Canvas submission.
-- [~] GitHub repository URL added to the weekly journal.
+- [x] GitHub repository URL added to the weekly journal.
 - [x] GitHub repository URL added to the Canvas team homepage.
-- [~] Repository is public or readable by the instructor.
+- [x] Repository is public or readable by the instructor.
 
 ## 3. README Collaboration Exercise
 
 - [x] Brittany added her self-description.
-- [~] Garrett added his self-description.
+- [x] Garrett added his self-description.
 - [x] Mike added his self-description.
 - [x] Project description added.
 - [x] Team roles added.
@@ -55,9 +55,9 @@ Class: CSC 482 Capstone Project II
 - [x] Weekly team plan completed.
 - [x] Shared deliverables checklist completed.
 - [x] Team schedule includes named owners.
-- [~] Brittany reviewed grammar and formatting.
-- [~] Risks and blockers are listed.
-- [ ] Final scope is clear and realistic.
+- [x] Brittany reviewed grammar and formatting.
+- [x] Risks and blockers are listed.
+- [x] Final scope is clear and realistic.
 
 ## 5. Prototype Deliverables
 
@@ -154,8 +154,8 @@ Submission type: Website URL
 - [x] README includes a description of each team member.
 - [x] README includes milestones completed and milestones still to be completed each week.
 - [x] README includes tasks completed and tasks still to be completed by each team member.
-- [ ] Submit the GitHub repository URL in Canvas.
-- [ ] Add the GitHub repository URL to the weekly journal.
+- [x] Submit the GitHub repository URL in Canvas.
+- [x] Add the GitHub repository URL to the weekly journal.
 - [x] Add the GitHub repository URL to the Canvas team homepage.
 
 ### Weekly Journal Assignment
@@ -163,27 +163,27 @@ Submission type: Website URL
 Due: Sunday by 11:59 PM
 Submission type: PDF file upload
 
-- [ ] Write milestones achieved this week.
-- [ ] Provide a brief description of each milestone.
-- [ ] Write subtasks completed this week.
-- [ ] Provide a brief description of each subtask.
-- [ ] Provide a detailed description of testing for the subtasks.
-- [ ] Add demo screenshots as evidence.
-- [ ] Write lessons learned.
-- [ ] Write the contribution of each team member.
-- [ ] State whether the team progressed as planned.
-- [ ] If the team did not progress as planned, explain how the plan was adjusted.
-- [ ] Export the weekly journal as a PDF.
-- [ ] Upload the PDF to Canvas.
+- [x] Write milestones achieved this week.
+- [x] Provide a brief description of each milestone.
+- [x] Write subtasks completed this week.
+- [x] Provide a brief description of each subtask.
+- [x] Provide a detailed description of testing for the subtasks.
+- [x] Add demo screenshots as evidence.
+- [x] Write lessons learned.
+- [x] Write the contribution of each team member.
+- [x] State whether the team progressed as planned.
+- [x] If the team did not progress as planned, explain how the plan was adjusted.
+- [x] Export the weekly journal as a PDF.
+- [x] Upload the PDF to Canvas.
 
 ## Owner Quick View
 
 ### Brittany
 
 - [x] Keep checklist updated.
-- [ ] Review grammar, formatting, and organization.
-- [ ] Confirm final documents match class requirements.
-- [ ] Lead final submission check.
+- [x] Review grammar, formatting, and organization.
+- [x] Confirm final documents match class requirements.
+- [x] Lead final submission check.
 
 ### Garrett
 
