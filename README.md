@@ -41,6 +41,12 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Sample incidents page created in Markdown for easier GitHub viewing.
 - [x] Backend schema work added to define incident input and report output structure.
 
+## Current Week Focus
+
+Week 4 focus: code and test the planned project tasks, push completed work to GitHub, update the README as progress changes, and prepare the team midterm report.
+
+The midterm report will summarize milestones achieved, subtasks completed, testing evidence with demo screenshots, lessons learned, each team member's contribution, progress compared to the project plan, and any needed plan adjustments.
+
 ## Team Member Descriptions
 
 | Member | Role | Contribution Focus |

@@ -59,6 +59,9 @@ Deliverable:
 
 Goal: Connect the frontend to the backend and generate a first report draft.
 
+- [ ] Team: Code and test assigned project tasks as planned.
+- [ ] Team: Push completed achievements to GitHub.
+- [ ] Team: Update the README to reflect current progress.
 - [ ] Garrett: Replace the frontend mock report with a backend API call.
 - [ ] Garrett: Update `/generate-report` to accept incident data from the frontend.
 - [ ] Garrett: Create an initial prompt template for report generation.
@@ -67,10 +70,22 @@ Goal: Connect the frontend to the backend and generate a first report draft.
 - [ ] Mike: Add an error message if the backend fails.
 - [ ] Brittany: Test the first generated report using a sample incident.
 - [ ] Brittany: Write review notes on what is missing or unclear.
+- [ ] Brittany: Collect demo screenshots as evidence of testing.
+- [ ] Brittany: Prepare the team midterm report draft.
+- [ ] Brittany: Add the GitHub repository URL as the report subtitle.
+- [ ] Brittany: Document milestones achieved with brief descriptions.
+- [ ] Brittany: Document subtasks completed with brief descriptions.
+- [ ] Brittany: Add detailed testing descriptions with screenshots as evidence.
+- [ ] Brittany: Add lessons learned.
+- [ ] Brittany: Add each team member's contribution.
+- [ ] Brittany: Explain whether the team progressed as planned.
+- [ ] Brittany: Explain any plan adjustments if needed.
+- [ ] Team: Review and sign the midterm report before submission.
 
 Deliverable:
 
 - [ ] Team: The frontend can send incident data to the backend and display a report draft.
+- [ ] Team: The team midterm report is complete, signed by each member, exported as a PDF, and submitted.
 
 ## Week 5: Report Styles and Root-Cause Analysis
 
