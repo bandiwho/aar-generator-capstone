@@ -3,7 +3,8 @@
     {
       "incidentTitle": "Phishing Email Led to Microsoft 365 Account Compromise",
       "incidentType": "Phishing and Account Compromise",
-      "affectedSystems": "Microsoft 365, Outlook, SharePoint, Employee Account",
+      "detectionSource": "Employee report, Microsoft Defender phishing alert, and Azure AD sign-in review",
+      "affectedAssets": "Microsoft 365, Outlook, SharePoint, Employee Account",
       "incidentDate": "2026-06-16",
       "incidentSummary": "An employee reported a suspicious email after entering credentials into a fake Microsoft 365 login page. Security review showed successful mailbox access from an unfamiliar IP address and several suspicious inbox rules.",
       "timeline": [
@@ -42,7 +43,8 @@
     {
       "incidentTitle": "Ransomware Detected on Shared File Server",
       "incidentType": "Ransomware and File Encryption",
-      "affectedSystems": "Windows File Server, Shared Department Drive, Endpoint Workstation",
+      "detectionSource": "Help desk reports, endpoint protection alert, and file server activity logs",
+      "affectedAssets": "Windows File Server, Shared Department Drive, Endpoint Workstation",
       "incidentDate": "2026-06-17",
       "incidentSummary": "Users reported that shared documents would not open and file extensions had changed. Endpoint protection alerted on ransomware behavior from one workstation connected to a shared department drive.",
       "timeline": [
@@ -82,7 +84,8 @@
     {
       "incidentTitle": "Public Cloud Storage Bucket Exposed Customer Files",
       "incidentType": "Cloud Misconfiguration and Data Exposure",
-      "affectedSystems": "Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration",
+      "detectionSource": "Cloud security scan, storage access policy review, and object access logs",
+      "affectedAssets": "Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration",
       "incidentDate": "2026-06-18",
       "incidentSummary": "A routine cloud security scan found that a storage bucket used by the customer support portal allowed public read access. The bucket contained uploaded support attachments, including screenshots and troubleshooting files.",
       "timeline": [
@@ -120,7 +123,8 @@
     {
       "incidentTitle": "Malware Alert on Finance Workstation",
       "incidentType": "Endpoint Malware Detection",
-      "affectedSystems": "Finance Workstation, Endpoint Detection Tool, Shared Finance Folder",
+      "detectionSource": "Endpoint detection alert, DNS logs, and email gateway review",
+      "affectedAssets": "Finance Workstation, Endpoint Detection Tool, Shared Finance Folder",
       "incidentDate": "2026-06-19",
       "incidentSummary": "Endpoint detection alerted on a suspicious PowerShell command running from a finance workstation. The workstation had recently opened an email attachment that appeared to be an invoice.",
       "timeline": [
@@ -159,7 +163,8 @@
     {
       "incidentTitle": "SQL Injection Attempt Against Customer Portal",
       "incidentType": "Web Application Attack",
-      "affectedSystems": "Customer Portal, Web Application Firewall, Application Database",
+      "detectionSource": "Web application firewall alert, application logs, and database audit review",
+      "affectedAssets": "Customer Portal, Web Application Firewall, Application Database",
       "incidentDate": "2026-06-20",
       "incidentSummary": "The web application firewall detected repeated SQL injection attempts against the customer portal login and search pages. Most requests were blocked, but application logs need review to confirm whether any request reached the database.",
       "timeline": [
