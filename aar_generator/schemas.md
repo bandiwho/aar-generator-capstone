@@ -1,7 +1,7 @@
 ## Request JSON (frontend → backend)
 
-Required fields: incident_title, incident_date, audience_style, incident_summary, timeline, remediation_steps
-Optional fields: log_snippets, known_impact, open_questions
+Required fields: title, incident_date, audience, incident_summary, timeline, remediation_steps
+Optional fields: detection_source, affected_assets, log_snippets, known_impact, lessons_learned, open_questions
 
 ```json
 {
