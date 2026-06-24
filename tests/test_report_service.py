@@ -26,4 +26,10 @@ def test_report_service_returns_mock_report():
     assert result.mock_mode is True
     assert result.model_used == "test-model"
     assert "5 Whys Root Cause Analysis" in result.report_markdown
-
+    assert "Audience style: Technical" in result.report_markdown
+    assert "Assign an incident owner" in result.report_markdown
+    assert "Assign the security operations team" in result.report_markdown
+    assert "Assign a process owner" in result.report_markdown
+    assert "Garrett:" not in result.report_markdown
+    assert "Mike:" not in result.report_markdown
+    assert "Brittany:" not in result.report_markdown
