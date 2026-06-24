@@ -1,11 +1,12 @@
 # Sample Incidents
 
-These sample incidents are used to test and demonstrate the Security Incident AAR Generator. They give the team realistic incident data for timelines, logs, known impact, remediation steps, open questions, and report style testing.
+These sample incidents are used to test and demonstrate the Security Incident AAR Generator. They give the team realistic incident data for detection source, affected assets, timelines, logs, known impact, remediation steps, open questions, and report style testing.
 
 ## 1. Phishing Email Led to Microsoft 365 Account Compromise
 
 **Incident type:** Phishing and Account Compromise  
-**Affected systems:** Microsoft 365, Outlook, SharePoint, Employee Account  
+**Detection source:** Employee report, Microsoft Defender phishing alert, and Azure AD sign-in review  
+**Affected assets:** Microsoft 365, Outlook, SharePoint, Employee Account  
 **Incident date:** 2026-06-16  
 **Report style:** Technical
 
@@ -54,7 +55,8 @@ One employee mailbox was accessed. No confirmed data exfiltration at this stage,
 ## 2. Ransomware Detected on Shared File Server
 
 **Incident type:** Ransomware and File Encryption  
-**Affected systems:** Windows File Server, Shared Department Drive, Endpoint Workstation  
+**Detection source:** Help desk reports, endpoint protection alert, and file server activity logs  
+**Affected assets:** Windows File Server, Shared Department Drive, Endpoint Workstation  
 **Incident date:** 2026-06-17  
 **Report style:** Executive
 
@@ -104,7 +106,8 @@ A shared department drive was partially encrypted. Initial review suggests the a
 ## 3. Public Cloud Storage Bucket Exposed Customer Files
 
 **Incident type:** Cloud Misconfiguration and Data Exposure  
-**Affected systems:** Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration  
+**Detection source:** Cloud security scan, storage access policy review, and object access logs  
+**Affected assets:** Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration  
 **Incident date:** 2026-06-18  
 **Report style:** Executive
 
@@ -152,7 +155,8 @@ A customer support storage bucket was exposed to public read access. Two anonymo
 ## 4. Malware Alert on Finance Workstation
 
 **Incident type:** Endpoint Malware Detection  
-**Affected systems:** Finance Workstation, Endpoint Detection Tool, Shared Finance Folder  
+**Detection source:** Endpoint detection alert, DNS logs, and email gateway review  
+**Affected assets:** Finance Workstation, Endpoint Detection Tool, Shared Finance Folder  
 **Incident date:** 2026-06-19  
 **Report style:** Technical
 
@@ -201,7 +205,8 @@ One workstation was affected. There is no confirmed lateral movement, but shared
 ## 5. SQL Injection Attempt Against Customer Portal
 
 **Incident type:** Web Application Attack  
-**Affected systems:** Customer Portal, Web Application Firewall, Application Database  
+**Detection source:** Web application firewall alert, application logs, and database audit review  
+**Affected assets:** Customer Portal, Web Application Firewall, Application Database  
 **Incident date:** 2026-06-20  
 **Report style:** Technical
 
