@@ -26,6 +26,7 @@ class ReportService:
         )
 
     def _build_mock_report(self, incident: IncidentInput) -> str:
+        audience_label = incident.audience.value.title()
         audience_note = {
             "technical": "This draft keeps technical evidence, system details, and remediation tasks visible.",
             "executive": "This draft emphasizes business impact, risk, accountability, and decision points.",
@@ -39,7 +40,7 @@ class ReportService:
 ## Incident Overview
 
 - Incident date: {incident.incident_date}
-- Audience style: {incident.audience.value}
+- Audience style: {audience_label}
 - Summary: {incident.incident_summary}
 
 ## Timeline of Events
@@ -78,9 +79,9 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
 
 ## Recommendations and Owners
 
-- Garrett: Validate backend report-generation behavior and evidence handling.
-- Mike: Verify the interface supports the full demo workflow.
-- Brittany: Review the final report for clarity, grammar, completeness, and class requirements.
+- Assign an incident owner to confirm the final root cause using timeline, log, and remediation evidence.
+- Assign the security operations team to verify affected accounts, systems, data exposure, and containment status.
+- Assign a process owner to track remediation tasks, due dates, validation evidence, and follow-up review.
 
 ## Open Questions
 
