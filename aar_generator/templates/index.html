@@ -43,7 +43,7 @@
                 Audience
                 <select name="audience" required>
                   {% for audience in audiences %}
-                    <option value="{{ audience }}">{{ audience }}</option>
+                    <option value="{{ audience }}">{{ audience|capitalize }}</option>
                   {% endfor %}
                 </select>
               </label>
@@ -125,7 +125,7 @@ Blocked suspicious IP address.</textarea>
           {% elif result %}
             <div class="output-meta">
               <h2>{{ result.title }}</h2>
-              <span>{{ result.audience.value }} audience | {{ result.model_used }} | mock mode: {{ result.mock_mode }}</span>
+              <span>{{ result.audience.value|capitalize }} audience | {{ result.model_used }} | mock mode: {{ result.mock_mode }}</span>
             </div>
             <div class="report-toolbar" aria-label="Report review checklist">
               <span>Executive Summary</span>

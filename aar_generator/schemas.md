@@ -1,13 +1,15 @@
 ## Request JSON (frontend → backend)
 
-Required fields: incident_title, incident_date, audience_style, incident_summary, timeline, remediation_steps
-Optional fields: log_snippets, known_impact, open_questions
+Required fields: title, incident_date, audience, incident_summary, timeline, remediation_steps
+Optional fields: detection_source, affected_assets, log_snippets, known_impact, lessons_learned, open_questions
 
 ```json
 {
-  "incident_title": "string",
+  "title": "string",
   "incident_date": "2026-06-19",
-  "audience_style": "technical | executive",
+  "audience": "technical | executive",
+  "detection_source": "string",
+  "affected_assets": "string",
   "incident_summary": "string",
   "timeline": [
     { "time": "8:10 AM", "event": "string" }
@@ -15,6 +17,7 @@ Optional fields: log_snippets, known_impact, open_questions
   "remediation_steps": ["string"],
   "log_snippets": ["string"],
   "known_impact": "string",
+  "lessons_learned": ["string"],
   "open_questions": ["string"]
 }
 ```
