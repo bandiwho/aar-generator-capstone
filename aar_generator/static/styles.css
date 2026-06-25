@@ -10,6 +10,8 @@
   --steel: #283845;
   --gold: #b7791f;
   --field: #fbfcfe;
+  --danger: #b42318;
+  --danger-bg: #fff4f2;
 }
 
 * {
@@ -169,6 +171,24 @@ button:hover {
   background: var(--accent-dark);
 }
 
+button:disabled {
+  background: #7f9d9b;
+  cursor: wait;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.submit-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .output {
   position: sticky;
   top: 16px;
@@ -222,6 +242,25 @@ button:hover {
   margin: 0;
   padding-left: 20px;
   color: var(--muted);
+}
+
+.error-message {
+  display: grid;
+  gap: 10px;
+  border: 1px solid #f2b8b5;
+  border-radius: 8px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  padding: 14px;
+}
+
+.error-message p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.error-message pre {
+  color: var(--danger);
 }
 
 pre {

@@ -66,8 +66,8 @@ Goal: Connect the frontend to the backend and generate a first report draft.
 - [ ] Garrett: Update `/generate-report` to accept incident data from the frontend.
 - [ ] Garrett: Create an initial prompt template for report generation.
 - [ ] Garrett: Return a structured draft report from the backend.
-- [ ] Mike: Add a loading state while the report is generating.
-- [ ] Mike: Add an error message if the backend fails.
+- [x ] Mike: Add a loading state while the report is generating.
+- [x ] Mike: Add an error message if the backend fails.
 - [ ] Brittany: Test the first generated report using a sample incident.
 - [ ] Brittany: Write review notes on what is missing or unclear.
 - [ ] Brittany: Collect demo screenshots as evidence of testing.

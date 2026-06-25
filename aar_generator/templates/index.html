@@ -20,7 +20,7 @@
       </section>
 
       <section class="workspace">
-        <form method="post" action="/generate-form" class="panel">
+        <form method="post" action="/generate-form" class="panel" id="incident-form">
           <div class="panel-heading">
             <h2>Incident Details</h2>
             <p>Capture the facts needed for the AAR draft, then choose the audience for the report output.</p>
@@ -115,13 +115,19 @@ Blocked suspicious IP address.</textarea>
             </label>
           </fieldset>
 
-          <button type="submit">Generate Report Draft</button>
+          <div class="form-actions">
+            <button type="submit" id="generate-button">Generate Report Draft</button>
+            <p class="submit-status" id="submit-status" aria-live="polite"></p>
+          </div>
         </form>
 
         <aside class="panel output">
           {% if error %}
             <h2>Generation Error</h2>
-            <pre>{{ error }}</pre>
+            <div class="error-message" role="alert">
+              <p>The report could not be generated. Review the incident details and try again.</p>
+              <pre>{{ error }}</pre>
+            </div>
           {% elif result %}
             <div class="output-meta">
               <h2>{{ result.title }}</h2>
@@ -151,5 +157,16 @@ Blocked suspicious IP address.</textarea>
         </aside>
       </section>
     </main>
+    <script>
+      const form = document.getElementById("incident-form");
+      const button = document.getElementById("generate-button");
+      const status = document.getElementById("submit-status");
+
+      form.addEventListener("submit", () => {
+        button.disabled = true;
+        button.textContent = "Generating...";
+        status.textContent = "Generating report draft. This may take a moment.";
+      });
+    </script>
   </body>
 </html>
