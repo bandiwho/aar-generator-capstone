@@ -1,203 +1,74 @@
 {
   "incidents": [
     {
-      "incidentTitle": "Phishing Email Led to Microsoft 365 Account Compromise",
-      "incidentType": "Phishing and Account Compromise",
-      "detectionSource": "Employee report, Microsoft Defender phishing alert, and Azure AD sign-in review",
-      "affectedAssets": "Microsoft 365, Outlook, SharePoint, Employee Account",
-      "incidentDate": "2026-06-16",
-      "incidentSummary": "An employee reported a suspicious email after entering credentials into a fake Microsoft 365 login page. Security review showed successful mailbox access from an unfamiliar IP address and several suspicious inbox rules.",
-      "timeline": [
-        "8:10 AM - Employee received an email claiming their Microsoft 365 password would expire.",
-        "8:14 AM - Employee clicked the link and entered credentials into a fake login page.",
-        "8:26 AM - Successful Microsoft 365 login detected from an unfamiliar IP address.",
-        "8:31 AM - Suspicious inbox forwarding rule created.",
-        "8:50 AM - Employee reported the email to the help desk.",
-        "9:05 AM - Security team disabled the account and revoked active sessions.",
-        "9:25 AM - Password reset completed and MFA registration reviewed.",
-        "10:15 AM - Mailbox rules removed and message trace review started."
-      ],
-      "logs": [
-        "AzureAD SignIn: user=brittany.employee result=success location=unfamiliar_ip",
-        "Exchange Audit: New-InboxRule created forwarding external address",
-        "Defender Alert: Phishing URL clicked by user",
-        "Message Trace: Similar phishing email delivered to 14 users"
-      ],
-      "knownImpact": "One employee mailbox was accessed. No confirmed data exfiltration at this stage, but mailbox contents and SharePoint access require review.",
-      "remediation": [
-        "Disabled the affected account.",
-        "Revoked active Microsoft 365 sessions.",
-        "Reset the user password.",
-        "Removed suspicious mailbox forwarding rules.",
-        "Blocked the phishing URL and sender domain.",
-        "Started a message trace to identify other affected users.",
-        "Sent a warning notice to employees who received the same email."
-      ],
-      "openQuestions": [
-        "Was MFA challenged or bypassed during the suspicious login?",
-        "Did the attacker access or download SharePoint files?",
-        "Did any other users enter credentials into the phishing page?"
-      ],
-      "reportStyle": "technical"
+      "title": "Phishing Email Led to Microsoft 365 Account Compromise",
+      "incident_date": "2026-06-16",
+      "audience": "technical",
+      "detection_source": "Employee report, Microsoft Defender phishing alert, and Azure AD sign-in review",
+      "affected_assets": "Microsoft 365, Outlook, SharePoint, Employee Account",
+      "incident_summary": "An employee reported a suspicious email after entering credentials into a fake Microsoft 365 login page. Security review showed successful mailbox access from an unfamiliar IP address and several suspicious inbox rules.",
+      "timeline": "8:10 AM - Employee received an email claiming their Microsoft 365 password would expire.\n8:14 AM - Employee clicked the link and entered credentials into a fake login page.\n8:26 AM - Successful Microsoft 365 login detected from an unfamiliar IP address.\n8:31 AM - Suspicious inbox forwarding rule created.\n8:50 AM - Employee reported the email to the help desk.\n9:05 AM - Security team disabled the account and revoked active sessions.\n9:25 AM - Password reset completed and MFA registration reviewed.\n10:15 AM - Mailbox rules removed and message trace review started.",
+      "log_snippets": "AzureAD SignIn: user=brittany.employee result=success location=unfamiliar_ip\nExchange Audit: New-InboxRule created forwarding external address\nDefender Alert: Phishing URL clicked by user\nMessage Trace: Similar phishing email delivered to 14 users",
+      "remediation_steps": "Disabled the affected account.\nRevoked active Microsoft 365 sessions.\nReset the user password.\nRemoved suspicious mailbox forwarding rules.\nBlocked the phishing URL and sender domain.\nStarted a message trace to identify other affected users.\nSent a warning notice to employees who received the same email.",
+      "known_impact": "One employee mailbox was accessed. No confirmed data exfiltration at this stage, but mailbox contents and SharePoint access require review.",
+      "lessons_learned": "",
+      "open_questions": "Was MFA challenged or bypassed during the suspicious login?\nDid the attacker access or download SharePoint files?\nDid any other users enter credentials into the phishing page?"
     },
     {
-      "incidentTitle": "Ransomware Detected on Shared File Server",
-      "incidentType": "Ransomware and File Encryption",
-      "detectionSource": "Help desk reports, endpoint protection alert, and file server activity logs",
-      "affectedAssets": "Windows File Server, Shared Department Drive, Endpoint Workstation",
-      "incidentDate": "2026-06-17",
-      "incidentSummary": "Users reported that shared documents would not open and file extensions had changed. Endpoint protection alerted on ransomware behavior from one workstation connected to a shared department drive.",
-      "timeline": [
-        "2:05 PM - Help desk received reports that shared files would not open.",
-        "2:11 PM - Endpoint protection generated a ransomware behavior alert.",
-        "2:16 PM - Security team identified one workstation modifying many files rapidly.",
-        "2:20 PM - Workstation was isolated from the network.",
-        "2:28 PM - File share access was temporarily disabled.",
-        "2:45 PM - Server snapshots and backups were checked.",
-        "3:30 PM - Affected file paths were documented.",
-        "4:15 PM - Restore plan was approved by IT leadership."
-      ],
-      "logs": [
-        "EDR Alert: Mass file rename activity detected on WORKSTATION-22",
-        "File Server Event: High volume write activity from WORKSTATION-22",
-        "Windows Security Log: User account accessed shared drive before encryption activity",
-        "Backup System: Last successful snapshot completed at 1:00 PM"
-      ],
-      "knownImpact": "A shared department drive was partially encrypted. Initial review suggests the affected files can be restored from backup. No confirmed evidence of data theft at this stage.",
-      "remediation": [
-        "Isolated the affected workstation.",
-        "Disabled file share access temporarily.",
-        "Preserved logs for review.",
-        "Checked backup availability.",
-        "Restored affected files from the last clean snapshot.",
-        "Reset credentials for the affected user account.",
-        "Scheduled malware scan and workstation rebuild."
-      ],
-      "openQuestions": [
-        "How did the ransomware execute on the workstation?",
-        "Was the initial entry point phishing, malicious download, or exposed remote access?",
-        "Were any files copied out before encryption started?",
-        "Were backup and restore procedures completed within the expected recovery time?"
-      ],
-      "reportStyle": "executive"
+      "title": "Ransomware Detected on Shared File Server",
+      "incident_date": "2026-06-17",
+      "audience": "executive",
+      "detection_source": "Help desk reports, endpoint protection alert, and file server activity logs",
+      "affected_assets": "Windows File Server, Shared Department Drive, Endpoint Workstation",
+      "incident_summary": "Users reported that shared documents would not open and file extensions had changed. Endpoint protection alerted on ransomware behavior from one workstation connected to a shared department drive.",
+      "timeline": "2:05 PM - Help desk received reports that shared files would not open.\n2:11 PM - Endpoint protection generated a ransomware behavior alert.\n2:16 PM - Security team identified one workstation modifying many files rapidly.\n2:20 PM - Workstation was isolated from the network.\n2:28 PM - File share access was temporarily disabled.\n2:45 PM - Server snapshots and backups were checked.\n3:30 PM - Affected file paths were documented.\n4:15 PM - Restore plan was approved by IT leadership.",
+      "log_snippets": "EDR Alert: Mass file rename activity detected on WORKSTATION-22\nFile Server Event: High volume write activity from WORKSTATION-22\nWindows Security Log: User account accessed shared drive before encryption activity\nBackup System: Last successful snapshot completed at 1:00 PM",
+      "remediation_steps": "Isolated the affected workstation.\nDisabled file share access temporarily.\nPreserved logs for review.\nChecked backup availability.\nRestored affected files from the last clean snapshot.\nReset credentials for the affected user account.\nScheduled malware scan and workstation rebuild.",
+      "known_impact": "A shared department drive was partially encrypted. Initial review suggests the affected files can be restored from backup. No confirmed evidence of data theft at this stage.",
+      "lessons_learned": "",
+      "open_questions": "How did the ransomware execute on the workstation?\nWas the initial entry point phishing, malicious download, or exposed remote access?\nWere any files copied out before encryption started?\nWere backup and restore procedures completed within the expected recovery time?"
     },
     {
-      "incidentTitle": "Public Cloud Storage Bucket Exposed Customer Files",
-      "incidentType": "Cloud Misconfiguration and Data Exposure",
-      "detectionSource": "Cloud security scan, storage access policy review, and object access logs",
-      "affectedAssets": "Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration",
-      "incidentDate": "2026-06-18",
-      "incidentSummary": "A routine cloud security scan found that a storage bucket used by the customer support portal allowed public read access. The bucket contained uploaded support attachments, including screenshots and troubleshooting files.",
-      "timeline": [
-        "9:00 AM - Cloud security scan detected public read access on a storage bucket.",
-        "9:12 AM - Security team confirmed the bucket was reachable without authentication.",
-        "9:20 AM - Public access was disabled.",
-        "9:35 AM - Cloud access logs were exported for review.",
-        "10:10 AM - Support team identified the business process that used the bucket.",
-        "11:00 AM - Security team started reviewing whether files were accessed externally.",
-        "1:30 PM - New bucket policy review rule was added to prevent public access."
-      ],
-      "logs": [
-        "Cloud Security Finding: storage_bucket_public_read=true",
-        "Object Access Log: anonymous GET request observed for two files",
-        "Policy Change: public read access disabled by security-admin",
-        "IAM Review: support-app-role has write permissions"
-      ],
-      "knownImpact": "A customer support storage bucket was exposed to public read access. Two anonymous file access events were observed, but the full impact requires log review.",
-      "remediation": [
-        "Disabled public read access immediately.",
-        "Exported cloud access logs.",
-        "Reviewed bucket policy and IAM permissions.",
-        "Enabled a cloud policy rule to block public bucket access.",
-        "Started file review to determine whether sensitive information was present.",
-        "Opened follow-up ticket for support portal upload workflow review."
-      ],
-      "openQuestions": [
-        "Which files were accessed anonymously?",
-        "Did the exposed files contain personal or sensitive information?",
-        "How long was the bucket publicly readable?",
-        "Why was the public access policy not blocked earlier?"
-      ],
-      "reportStyle": "executive"
+      "title": "Public Cloud Storage Bucket Exposed Customer Files",
+      "incident_date": "2026-06-18",
+      "audience": "executive",
+      "detection_source": "Cloud security scan, storage access policy review, and object access logs",
+      "affected_assets": "Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration",
+      "incident_summary": "A routine cloud security scan found that a storage bucket used by the customer support portal allowed public read access. The bucket contained uploaded support attachments, including screenshots and troubleshooting files.",
+      "timeline": "9:00 AM - Cloud security scan detected public read access on a storage bucket.\n9:12 AM - Security team confirmed the bucket was reachable without authentication.\n9:20 AM - Public access was disabled.\n9:35 AM - Cloud access logs were exported for review.\n10:10 AM - Support team identified the business process that used the bucket.\n11:00 AM - Security team started reviewing whether files were accessed externally.\n1:30 PM - New bucket policy review rule was added to prevent public access.",
+      "log_snippets": "Cloud Security Finding: storage_bucket_public_read=true\nObject Access Log: anonymous GET request observed for two files\nPolicy Change: public read access disabled by security-admin\nIAM Review: support-app-role has write permissions",
+      "remediation_steps": "Disabled public read access immediately.\nExported cloud access logs.\nReviewed bucket policy and IAM permissions.\nEnabled a cloud policy rule to block public bucket access.\nStarted file review to determine whether sensitive information was present.\nOpened follow-up ticket for support portal upload workflow review.",
+      "known_impact": "A customer support storage bucket was exposed to public read access. Two anonymous file access events were observed, but the full impact requires log review.",
+      "lessons_learned": "",
+      "open_questions": "Which files were accessed anonymously?\nDid the exposed files contain personal or sensitive information?\nHow long was the bucket publicly readable?\nWhy was the public access policy not blocked earlier?"
     },
     {
-      "incidentTitle": "Malware Alert on Finance Workstation",
-      "incidentType": "Endpoint Malware Detection",
-      "detectionSource": "Endpoint detection alert, DNS logs, and email gateway review",
-      "affectedAssets": "Finance Workstation, Endpoint Detection Tool, Shared Finance Folder",
-      "incidentDate": "2026-06-19",
-      "incidentSummary": "Endpoint detection alerted on a suspicious PowerShell command running from a finance workstation. The workstation had recently opened an email attachment that appeared to be an invoice.",
-      "timeline": [
-        "10:22 AM - Finance user opened an invoice attachment from an external sender.",
-        "10:25 AM - Endpoint detection flagged suspicious PowerShell execution.",
-        "10:27 AM - Workstation attempted to connect to a known suspicious domain.",
-        "10:30 AM - Security team isolated the workstation from the network.",
-        "10:45 AM - User account password was reset.",
-        "11:15 AM - Malware scan completed and suspicious file was quarantined.",
-        "12:10 PM - Email gateway search found three other users received the same attachment."
-      ],
-      "logs": [
-        "EDR Alert: powershell.exe executed encoded command",
-        "DNS Log: workstation attempted connection to suspicious-example-domain.com",
-        "Email Gateway: attachment invoice_update.xlsm delivered to four users",
-        "EDR Action: file quarantined successfully"
-      ],
-      "knownImpact": "One workstation was affected. There is no confirmed lateral movement, but shared finance folder access needs review.",
-      "remediation": [
-        "Isolated the workstation.",
-        "Quarantined the suspicious file.",
-        "Reset the affected user's password.",
-        "Blocked the suspicious domain.",
-        "Searched email gateway logs for similar messages.",
-        "Warned other recipients not to open the attachment.",
-        "Scheduled workstation rebuild if malware persistence is confirmed."
-      ],
-      "openQuestions": [
-        "Did the malware create persistence on the workstation?",
-        "Did the user have access to sensitive finance files during the incident?",
-        "Did any other recipients open the attachment?",
-        "Was the attachment blocked by email security after detection?"
-      ],
-      "reportStyle": "technical"
+      "title": "Malware Alert on Finance Workstation",
+      "incident_date": "2026-06-19",
+      "audience": "technical",
+      "detection_source": "Endpoint detection alert, DNS logs, and email gateway review",
+      "affected_assets": "Finance Workstation, Endpoint Detection Tool, Shared Finance Folder",
+      "incident_summary": "Endpoint detection alerted on a suspicious PowerShell command running from a finance workstation. The workstation had recently opened an email attachment that appeared to be an invoice.",
+      "timeline": "10:22 AM - Finance user opened an invoice attachment from an external sender.\n10:25 AM - Endpoint detection flagged suspicious PowerShell execution.\n10:27 AM - Workstation attempted to connect to a known suspicious domain.\n10:30 AM - Security team isolated the workstation from the network.\n10:45 AM - User account password was reset.\n11:15 AM - Malware scan completed and suspicious file was quarantined.\n12:10 PM - Email gateway search found three other users received the same attachment.",
+      "log_snippets": "EDR Alert: powershell.exe executed encoded command\nDNS Log: workstation attempted connection to suspicious-example-domain.com\nEmail Gateway: attachment invoice_update.xlsm delivered to four users\nEDR Action: file quarantined successfully",
+      "remediation_steps": "Isolated the workstation.\nQuarantined the suspicious file.\nReset the affected user's password.\nBlocked the suspicious domain.\nSearched email gateway logs for similar messages.\nWarned other recipients not to open the attachment.\nScheduled workstation rebuild if malware persistence is confirmed.",
+      "known_impact": "One workstation was affected. There is no confirmed lateral movement, but shared finance folder access needs review.",
+      "lessons_learned": "",
+      "open_questions": "Did the malware create persistence on the workstation?\nDid the user have access to sensitive finance files during the incident?\nDid any other recipients open the attachment?\nWas the attachment blocked by email security after detection?"
     },
     {
-      "incidentTitle": "SQL Injection Attempt Against Customer Portal",
-      "incidentType": "Web Application Attack",
-      "detectionSource": "Web application firewall alert, application logs, and database audit review",
-      "affectedAssets": "Customer Portal, Web Application Firewall, Application Database",
-      "incidentDate": "2026-06-20",
-      "incidentSummary": "The web application firewall detected repeated SQL injection attempts against the customer portal login and search pages. Most requests were blocked, but application logs need review to confirm whether any request reached the database.",
-      "timeline": [
-        "6:40 PM - Web application firewall detected SQL injection patterns.",
-        "6:43 PM - Multiple requests targeted the login and search endpoints.",
-        "6:50 PM - WAF rule moved from monitor mode to block mode.",
-        "7:05 PM - Source IP addresses were blocked at the firewall.",
-        "7:30 PM - Application logs were collected for review.",
-        "8:15 PM - Database audit logs were checked for unusual queries.",
-        "9:00 PM - Development team opened a ticket to review input validation."
-      ],
-      "logs": [
-        "WAF Alert: SQLi pattern detected on /login",
-        "WAF Alert: SQLi pattern detected on /search",
-        "Firewall Action: blocked source IP 203.0.113.xxx",
-        "Database Audit: no confirmed unauthorized SELECT queries found during initial review"
-      ],
-      "knownImpact": "No confirmed data loss at this stage. The attack was mostly blocked by the web application firewall, but logs must be reviewed to verify whether any request bypassed protection.",
-      "remediation": [
-        "Enabled blocking mode for the relevant WAF rule.",
-        "Blocked attacking source IP addresses.",
-        "Collected web server and application logs.",
-        "Reviewed database audit logs.",
-        "Opened development ticket for input validation review.",
-        "Scheduled follow-up vulnerability scan."
-      ],
-      "openQuestions": [
-        "Did any SQL injection request bypass the WAF?",
-        "Are login and search inputs fully parameterized?",
-        "Were any database errors exposed to the attacker?",
-        "Should additional WAF rules be enabled before the next scan?"
-      ],
-      "reportStyle": "technical"
+      "title": "SQL Injection Attempt Against Customer Portal",
+      "incident_date": "2026-06-20",
+      "audience": "technical",
+      "detection_source": "Web application firewall alert, application logs, and database audit review",
+      "affected_assets": "Customer Portal, Web Application Firewall, Application Database",
+      "incident_summary": "The web application firewall detected repeated SQL injection attempts against the customer portal login and search pages. Most requests were blocked, but application logs need review to confirm whether any request reached the database.",
+      "timeline": "6:40 PM - Web application firewall detected SQL injection patterns.\n6:43 PM - Multiple requests targeted the login and search endpoints.\n6:50 PM - WAF rule moved from monitor mode to block mode.\n7:05 PM - Source IP addresses were blocked at the firewall.\n7:30 PM - Application logs were collected for review.\n8:15 PM - Database audit logs were checked for unusual queries.\n9:00 PM - Development team opened a ticket to review input validation.",
+      "log_snippets": "WAF Alert: SQLi pattern detected on /login\nWAF Alert: SQLi pattern detected on /search\nFirewall Action: blocked source IP 203.0.113.xxx\nDatabase Audit: no confirmed unauthorized SELECT queries found during initial review",
+      "remediation_steps": "Enabled blocking mode for the relevant WAF rule.\nBlocked attacking source IP addresses.\nCollected web server and application logs.\nReviewed database audit logs.\nOpened development ticket for input validation review.\nScheduled follow-up vulnerability scan.",
+      "known_impact": "No confirmed data loss at this stage. The attack was mostly blocked by the web application firewall, but logs must be reviewed to verify whether any request bypassed protection.",
+      "lessons_learned": "",
+      "open_questions": "Did any SQL injection request bypass the WAF?\nAre login and search inputs fully parameterized?\nWere any database errors exposed to the attacker?\nShould additional WAF rules be enabled before the next scan?"
     }
   ]
 }
