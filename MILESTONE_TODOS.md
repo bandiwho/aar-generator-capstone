@@ -59,32 +59,35 @@ Deliverable:
 
 Goal: Connect the frontend to the backend and generate a first report draft.
 
-- [ ] Team: Code and test assigned project tasks as planned.
+- [x] Team: Code and test assigned project tasks as planned.
 - [ ] Team: Push completed achievements to GitHub.
-- [ ] Team: Update the README to reflect current progress.
-- [ ] Garrett: Replace the frontend mock report with a backend API call.
-- [ ] Garrett: Update `/generate-report` to accept incident data from the frontend.
-- [ ] Garrett: Create an initial prompt template for report generation.
-- [ ] Garrett: Return a structured draft report from the backend.
-- [x ] Mike: Add a loading state while the report is generating.
-- [x ] Mike: Add an error message if the backend fails.
-- [ ] Brittany: Test the first generated report using a sample incident.
-- [ ] Brittany: Write review notes on what is missing or unclear.
+- [x] Team: Update the README to reflect current progress.
+- [x] Garrett: Replace the frontend mock report with a backend API call.
+- [x] Garrett: Update `/generate-report` to accept incident data from the frontend.
+- [x] Garrett: Create an initial prompt template for report generation.
+- [x] Garrett: Return a structured draft report from the backend.
+- [x] Garrett: Configure real LLM mode to use automatic model selection from the class API project.
+- [x] Garrett: Keep mock fallback available if the OpenAI API is unavailable.
+- [x] Mike: Add a loading state while the report is generating.
+- [x] Mike: Add an error message if the backend fails.
+- [x] Mike: Display the generated report and model/mock-mode metadata in the browser.
+- [x] Brittany: Test the first generated report using a sample incident.
+- [x] Brittany: Write review notes on what is missing or unclear.
 - [ ] Brittany: Collect demo screenshots as evidence of testing.
-- [ ] Brittany: Prepare the team midterm report draft.
-- [ ] Brittany: Add the GitHub repository URL as the report subtitle.
-- [ ] Brittany: Document milestones achieved with brief descriptions.
-- [ ] Brittany: Document subtasks completed with brief descriptions.
+- [x] Brittany: Prepare the team midterm report draft.
+- [x] Brittany: Add the GitHub repository URL as the report subtitle.
+- [x] Brittany: Document milestones achieved with brief descriptions.
+- [x] Brittany: Document subtasks completed with brief descriptions.
 - [ ] Brittany: Add detailed testing descriptions with screenshots as evidence.
-- [ ] Brittany: Add lessons learned.
-- [ ] Brittany: Add each team member's contribution.
-- [ ] Brittany: Explain whether the team progressed as planned.
-- [ ] Brittany: Explain any plan adjustments if needed.
+- [x] Brittany: Add lessons learned.
+- [x] Brittany: Add each team member's contribution.
+- [x] Brittany: Explain whether the team progressed as planned.
+- [x] Brittany: Explain any plan adjustments if needed.
 - [ ] Team: Review and sign the midterm report before submission.
 
 Deliverable:
 
-- [ ] Team: The frontend can send incident data to the backend and display a report draft.
+- [x] Team: The frontend can send incident data to the backend and display a report draft.
 - [ ] Team: The team midterm report is complete, signed by each member, exported as a PDF, and submitted.
 
 ## Week 5: Report Styles and Root-Cause Analysis

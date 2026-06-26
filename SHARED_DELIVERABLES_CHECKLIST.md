@@ -64,13 +64,13 @@ Class: CSC 482 Capstone Project II
 - [x] Original prototype saved.
 - [x] Updated prototype folder created.
 - [x] Prototype includes a working web form.
-- [ ] Prototype accepts incident summary, timeline, logs, impact, and remediation notes.
-- [ ] Prototype supports technical audience report style.
-- [ ] Prototype supports executive audience report style.
-- [ ] Prototype can generate a mock report without an API key.
-- [ ] Prototype can connect to the OpenAI API when configured.
+- [x] Prototype accepts incident summary, timeline, logs, impact, and remediation notes.
+- [x] Prototype supports technical audience report style.
+- [x] Prototype supports executive audience report style.
+- [x] Prototype can generate a mock report without an API key.
+- [x] Prototype can connect to the OpenAI API when configured.
 - [x] Prototype includes sample incident data.
-- [ ] Prototype has setup instructions.
+- [x] Prototype has setup instructions.
 - [x] Prototype has run instructions for Windows.
 - [x] Prototype has run instructions for Ubuntu.
 
@@ -79,10 +79,10 @@ Class: CSC 482 Capstone Project II
 - [x] Backend/report-generation test passes.
 - [x] Homepage loads successfully.
 - [x] Report form generates output.
-- [ ] Technical report style tested.
+- [x] Technical report style tested.
 - [ ] Executive report style tested.
 - [x] Sample incident tested.
-- [ ] Error handling tested with missing or weak input.
+- [x] Error handling tested with API/model fallback behavior.
 - [ ] Screenshots saved for final documentation.
 - [ ] Test notes saved for final submission.
 
@@ -181,19 +181,19 @@ Submission type: PDF file upload
 Due: Sunday by 11:59 PM  
 Submission type: PDF file upload
 
-- [ ] Code and test assigned team project tasks as planned.
+- [x] Code and test assigned team project tasks as planned.
 - [ ] Push completed achievements to GitHub.
-- [ ] Update the README to reflect current progress.
-- [ ] Add the GitHub repository URL as the subtitle of the midterm report.
-- [ ] Write milestones achieved so far with brief descriptions.
-- [ ] Write subtasks completed so far with brief descriptions.
-- [ ] Provide detailed testing descriptions for completed subtasks.
+- [x] Update the README to reflect current progress.
+- [x] Add the GitHub repository URL as the subtitle of the midterm report.
+- [x] Write milestones achieved so far with brief descriptions.
+- [x] Write subtasks completed so far with brief descriptions.
+- [ ] Provide detailed testing descriptions for completed subtasks with screenshots.
 - [ ] Add demo screenshots as evidence.
-- [ ] Write lessons learned.
-- [ ] Write the contribution of each team member.
-- [ ] State whether the team progressed as planned.
-- [ ] If the team did not progress as planned, explain how the plan was adjusted.
-- [ ] Confirm the report conforms to the project plan, timeline, and schedule unless adjusted.
+- [x] Write lessons learned.
+- [x] Write the contribution of each team member.
+- [x] State whether the team progressed as planned.
+- [x] If the team did not progress as planned, explain how the plan was adjusted.
+- [x] Confirm the report conforms to the project plan, timeline, and schedule unless adjusted.
 - [ ] Each team member signs the report before submission.
 - [ ] Export the midterm report as a PDF.
 - [ ] Upload the PDF to Canvas.
@@ -209,16 +209,16 @@ Submission type: PDF file upload
 
 ### Garrett
 
-- [ ] Keep backend and report-generation work updated.
-- [ ] Confirm tests pass.
-- [ ] Document backend setup and technical behavior.
+- [x] Keep backend and report-generation work updated.
+- [x] Confirm tests pass.
+- [x] Document backend setup and technical behavior.
 - [ ] Prepare backend explanation for demo.
 
 ### Mike
 
-- [ ] Keep frontend and demo workflow updated.
-- [ ] Confirm interface works during demo practice.
-- [ ] Document frontend usage.
+- [x] Keep frontend and demo workflow updated.
+- [x] Confirm interface works during demo practice.
+- [x] Document frontend usage.
 - [ ] Prepare frontend explanation for demo.
 
 ## Weekly Review Notes
@@ -241,17 +241,22 @@ Use this section during team meetings.
   - Frontend form connects to backend route.
   - Backend schema matches frontend form fields.
   - Sample incident JSON was aligned with the backend schema.
+  - Sample incident Markdown was updated for easier demo copying and screenshot evidence.
+  - Prompt-building workflow was added for structured AAR generation.
+  - OpenAI API mode was configured to use automatic model selection from the class API project.
+  - Real LLM generation was tested with `mock_mode=False`.
+  - Mock fallback behavior was kept for demo reliability.
   - Backend/report-generation test passed.
   - Homepage loads successfully.
   - Report form generates output.
 - Still needed:
-  - Test technical report style.
   - Test executive report style.
   - Save screenshots for midterm report evidence.
   - Write testing notes and review notes.
   - Complete and sign the team midterm report.
+  - Push completed achievements to GitHub.
 - Blockers:
-  - Confirm whether final midterm evidence will use mock mode or real LLM mode.
+  - Final screenshot evidence still needs to avoid showing the API key.
 
 ### Week 5
 
