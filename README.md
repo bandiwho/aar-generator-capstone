@@ -40,10 +40,17 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Realistic sample incidents added for testing and demo use.
 - [x] Sample incidents page created in Markdown for easier GitHub viewing.
 - [x] Backend schema work added to define incident input and report output structure.
+- [x] FastAPI backend route added for JSON report generation.
+- [x] Frontend form route added so users can submit incident details from the browser.
+- [x] Prompt-building workflow added for structured AAR generation.
+- [x] Real LLM mode tested with the class API key project using automatic model selection.
+- [x] Mock fallback kept available so the demo can still run if the API is unavailable.
+- [x] Backend tests added and passing.
+- [x] Sample incidents Markdown updated to match the prototype form fields.
 
 ## Current Week Focus
 
-Week 4 focus: code and test the planned project tasks, push completed work to GitHub, update the README as progress changes, and prepare the team midterm report.
+Week 4 focus: code and test the planned project tasks, push completed achievements to GitHub, update the README as progress changes, capture screenshot evidence, and prepare the team midterm report.
 
 The midterm report will summarize milestones achieved, subtasks completed, testing evidence with demo screenshots, lessons learned, each team member's contribution, progress compared to the project plan, and any needed plan adjustments.
 
@@ -60,7 +67,7 @@ The midterm report will summarize milestones achieved, subtasks completed, testi
 | Done | Dates | Milestone | Scheduled Work |
 |---|---|---|---|
 | [x] | June 15 - June 21 | Milestone 1 | Repository setup, README, sample incidents, form field review, and demo workflow instructions |
-| [ ] | June 22 - June 28 | Milestone 2 | Backend data structure, report-generation workflow, and frontend form refinement |
+| [x] | June 22 - June 28 | Milestone 2 | Backend data structure, report-generation workflow, frontend form refinement, and first LLM-generated report draft |
 | [ ] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, and output formatting |
 | [ ] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, and sample incident review |
 | [ ] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, and demo script |
@@ -91,11 +98,11 @@ Goal: Define the data structure, improve the form, and connect the workflow need
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
-| [ ] | Garrett | Define JSON structure for incident input | Request/response structure for report generation | Data fields support timeline, logs, impact, remediation, and open questions |
-| [ ] | Garrett | Build report-generation workflow | Backend service logic and prompt workflow | Prototype can produce structured report sections |
-| [ ] | Mike | Improve frontend form layout | Updated form layout and clearer input sections | Users can enter incident details without confusion |
-| [ ] | Mike | Improve report output display | Cleaner generated report output area | Generated report is readable during demo |
-| [ ] | Brittany | Review output quality | Notes on missing, unclear, or weak report sections | Review notes are ready for Garrett and Mike |
+| [x] | Garrett | Define JSON structure for incident input | Request/response structure for report generation | Data fields support timeline, logs, impact, remediation, and open questions |
+| [x] | Garrett | Build report-generation workflow | Backend service logic, prompt workflow, OpenAI client integration, and mock fallback | Prototype can produce structured report sections |
+| [x] | Mike | Improve frontend form layout | Updated form layout and clearer input sections | Users can enter incident details without confusion |
+| [x] | Mike | Improve report output display | Cleaner generated report output area with report metadata | Generated report is readable during demo |
+| [x] | Brittany | Review output quality | Sample incidents, checklist updates, and midterm report draft notes | Review notes are ready for Garrett and Mike |
 
 ### Milestone 3: Report Style and Root-Cause Analysis
 
