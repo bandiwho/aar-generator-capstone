@@ -11,7 +11,7 @@
       "log_snippets": "AzureAD SignIn: user=brittany.employee result=success location=unfamiliar_ip\nExchange Audit: New-InboxRule created forwarding external address\nDefender Alert: Phishing URL clicked by user\nMessage Trace: Similar phishing email delivered to 14 users",
       "remediation_steps": "Disabled the affected account.\nRevoked active Microsoft 365 sessions.\nReset the user password.\nRemoved suspicious mailbox forwarding rules.\nBlocked the phishing URL and sender domain.\nStarted a message trace to identify other affected users.\nSent a warning notice to employees who received the same email.",
       "known_impact": "One employee mailbox was accessed. No confirmed data exfiltration at this stage, but mailbox contents and SharePoint access require review.",
-      "lessons_learned": "",
+      "lessons_learned": "Phishing reporting worked, but MFA enforcement and inbox rule monitoring should be reviewed. Employees need continued phishing awareness training and security should confirm whether suspicious mailbox rules are detected quickly.",
       "open_questions": "Was MFA challenged or bypassed during the suspicious login?\nDid the attacker access or download SharePoint files?\nDid any other users enter credentials into the phishing page?"
     },
     {
@@ -25,7 +25,7 @@
       "log_snippets": "EDR Alert: Mass file rename activity detected on WORKSTATION-22\nFile Server Event: High volume write activity from WORKSTATION-22\nWindows Security Log: User account accessed shared drive before encryption activity\nBackup System: Last successful snapshot completed at 1:00 PM",
       "remediation_steps": "Isolated the affected workstation.\nDisabled file share access temporarily.\nPreserved logs for review.\nChecked backup availability.\nRestored affected files from the last clean snapshot.\nReset credentials for the affected user account.\nScheduled malware scan and workstation rebuild.",
       "known_impact": "A shared department drive was partially encrypted. Initial review suggests the affected files can be restored from backup. No confirmed evidence of data theft at this stage.",
-      "lessons_learned": "",
+      "lessons_learned": "Rapid isolation helped limit ransomware spread, but the team should improve early detection of unusual file activity and confirm backup restoration procedures are tested regularly.",
       "open_questions": "How did the ransomware execute on the workstation?\nWas the initial entry point phishing, malicious download, or exposed remote access?\nWere any files copied out before encryption started?\nWere backup and restore procedures completed within the expected recovery time?"
     },
     {
@@ -39,7 +39,7 @@
       "log_snippets": "Cloud Security Finding: storage_bucket_public_read=true\nObject Access Log: anonymous GET request observed for two files\nPolicy Change: public read access disabled by security-admin\nIAM Review: support-app-role has write permissions",
       "remediation_steps": "Disabled public read access immediately.\nExported cloud access logs.\nReviewed bucket policy and IAM permissions.\nEnabled a cloud policy rule to block public bucket access.\nStarted file review to determine whether sensitive information was present.\nOpened follow-up ticket for support portal upload workflow review.",
       "known_impact": "A customer support storage bucket was exposed to public read access. Two anonymous file access events were observed, but the full impact requires log review.",
-      "lessons_learned": "",
+      "lessons_learned": "Cloud storage policies need stronger preventive controls. Public access should be blocked by default, and storage buckets should be reviewed before being connected to customer-facing workflows.",
       "open_questions": "Which files were accessed anonymously?\nDid the exposed files contain personal or sensitive information?\nHow long was the bucket publicly readable?\nWhy was the public access policy not blocked earlier?"
     },
     {
@@ -53,7 +53,7 @@
       "log_snippets": "EDR Alert: powershell.exe executed encoded command\nDNS Log: workstation attempted connection to suspicious-example-domain.com\nEmail Gateway: attachment invoice_update.xlsm delivered to four users\nEDR Action: file quarantined successfully",
       "remediation_steps": "Isolated the workstation.\nQuarantined the suspicious file.\nReset the affected user's password.\nBlocked the suspicious domain.\nSearched email gateway logs for similar messages.\nWarned other recipients not to open the attachment.\nScheduled workstation rebuild if malware persistence is confirmed.",
       "known_impact": "One workstation was affected. There is no confirmed lateral movement, but shared finance folder access needs review.",
-      "lessons_learned": "",
+      "lessons_learned": "Endpoint detection identified the malware quickly, but email attachment controls and user awareness should be improved. Finance workstations should receive extra monitoring because they may access sensitive files.",
       "open_questions": "Did the malware create persistence on the workstation?\nDid the user have access to sensitive finance files during the incident?\nDid any other recipients open the attachment?\nWas the attachment blocked by email security after detection?"
     },
     {
@@ -67,7 +67,7 @@
       "log_snippets": "WAF Alert: SQLi pattern detected on /login\nWAF Alert: SQLi pattern detected on /search\nFirewall Action: blocked source IP 203.0.113.xxx\nDatabase Audit: no confirmed unauthorized SELECT queries found during initial review",
       "remediation_steps": "Enabled blocking mode for the relevant WAF rule.\nBlocked attacking source IP addresses.\nCollected web server and application logs.\nReviewed database audit logs.\nOpened development ticket for input validation review.\nScheduled follow-up vulnerability scan.",
       "known_impact": "No confirmed data loss at this stage. The attack was mostly blocked by the web application firewall, but logs must be reviewed to verify whether any request bypassed protection.",
-      "lessons_learned": "",
+      "lessons_learned": "The web application firewall helped reduce risk, but application input validation and database error handling need continued review. Security and development teams should coordinate after suspicious web traffic is detected.",
       "open_questions": "Did any SQL injection request bypass the WAF?\nAre login and search inputs fully parameterized?\nWere any database errors exposed to the attacker?\nShould additional WAF rules be enabled before the next scan?"
     }
   ]

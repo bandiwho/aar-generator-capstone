@@ -25,13 +25,13 @@
             <legend>Incident Overview</legend>
             <label>
               Incident title
-              <input name="title" required minlength="3" value="Unauthorized VPN Login Attempt" placeholder="Example: Unauthorized VPN access investigation">
+              <input name="title" required minlength="3" placeholder="Example: Phishing email investigation">
             </label>
 
             <div class="row">
               <label>
                 Incident date
-                <input name="incident_date" required value="2026-06-15" placeholder="2026-06-15">
+                <input name="incident_date" required placeholder="2026-06-15">
               </label>
 
               <label>
@@ -46,7 +46,7 @@
 
             <label>
               Incident summary
-              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status.">Security monitoring detected repeated failed VPN logins followed by one successful login from an unusual location. The affected account was disabled, the password was reset, and MFA was enabled.</textarea>
+              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status."></textarea>
             </label>
           </fieldset>
 
@@ -55,36 +55,28 @@
             <div class="row">
               <label>
                 Detection source
-                <input name="detection_source" value="VPN anomaly alert and SIEM correlation rule" placeholder="Example: SIEM alert, help desk ticket, EDR alert">
+                <input name="detection_source" placeholder="Example: SIEM alert, help desk ticket, EDR alert">
               </label>
 
               <label>
                 Affected assets
-                <input name="affected_assets" value="Employee VPN account and remote access service" placeholder="Example: VPN, endpoint, database, cloud account">
+                <input name="affected_assets" placeholder="Example: VPN, endpoint, database, cloud account">
               </label>
             </div>
 
             <label>
               Timeline
-              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed VPN logs&#10;10:05 Account disabled">8:42 AM - Multiple failed login attempts detected from a foreign IP address.
-8:48 AM - Successful VPN login occurred using employee credentials.
-8:52 AM - Security alert triggered due to unusual location.
-9:05 AM - Account was disabled.
-9:20 AM - Password reset completed.
-9:45 AM - MFA was enabled.</textarea>
+              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed logs&#10;10:05 Containment action completed"></textarea>
             </label>
 
             <label>
               Log snippets
-              <textarea name="log_snippets" rows="5" placeholder="Paste relevant logs, alerts, or ticket excerpts.">Failed login from 185.22.xxx.xxx
-Successful VPN login from 185.22.xxx.xxx
-Geo-location anomaly detected
-Account disabled by administrator</textarea>
+              <textarea name="log_snippets" rows="5" placeholder="Paste relevant logs, alerts, or ticket excerpts."></textarea>
             </label>
 
             <label>
               Known impact
-              <textarea name="known_impact" rows="4" placeholder="Affected systems, users, data, downtime, or business impact.">No confirmed data loss at this stage. One employee account and VPN access path were affected.</textarea>
+              <textarea name="known_impact" rows="4" placeholder="Affected systems, users, data, downtime, or business impact."></textarea>
             </label>
           </fieldset>
 
@@ -92,21 +84,17 @@ Account disabled by administrator</textarea>
             <legend>Response and Follow-Up</legend>
             <label>
               Remediation steps
-              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions.">Disabled affected user account.
-Reset user password.
-Enabled MFA.
-Reviewed VPN access logs.
-Blocked suspicious IP address.</textarea>
+              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions."></textarea>
             </label>
 
             <label>
               Lessons learned
-              <textarea name="lessons_learned" rows="4" placeholder="What should the organization improve next time?">VPN alerts need clearer ownership and MFA status should be verified earlier during triage.</textarea>
+              <textarea name="lessons_learned" rows="4" placeholder="What should the organization improve next time?"></textarea>
             </label>
 
             <label>
               Open questions
-              <textarea name="open_questions" rows="4" placeholder="Facts that still need confirmation.">Confirm whether MFA was required before the login. Confirm whether any internal systems were accessed after VPN connection.</textarea>
+              <textarea name="open_questions" rows="4" placeholder="Facts that still need confirmation."></textarea>
             </label>
           </fieldset>
 

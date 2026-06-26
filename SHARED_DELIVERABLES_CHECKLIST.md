@@ -76,12 +76,12 @@ Class: CSC 482 Capstone Project II
 
 ## 6. Testing Evidence
 
-- [ ] Backend/report-generation test passes.
-- [ ] Homepage loads successfully.
-- [ ] Report form generates output.
+- [x] Backend/report-generation test passes.
+- [x] Homepage loads successfully.
+- [x] Report form generates output.
 - [ ] Technical report style tested.
 - [ ] Executive report style tested.
-- [ ] Sample incident tested.
+- [x] Sample incident tested.
 - [ ] Error handling tested with missing or weak input.
 - [ ] Screenshots saved for final documentation.
 - [ ] Test notes saved for final submission.
@@ -176,6 +176,28 @@ Submission type: PDF file upload
 - [x] Export the weekly journal as a PDF.
 - [x] Upload the PDF to Canvas.
 
+## 12. Week 4 Canvas Assignment: Midterm Report
+
+Due: Sunday by 11:59 PM  
+Submission type: PDF file upload
+
+- [ ] Code and test assigned team project tasks as planned.
+- [ ] Push completed achievements to GitHub.
+- [ ] Update the README to reflect current progress.
+- [ ] Add the GitHub repository URL as the subtitle of the midterm report.
+- [ ] Write milestones achieved so far with brief descriptions.
+- [ ] Write subtasks completed so far with brief descriptions.
+- [ ] Provide detailed testing descriptions for completed subtasks.
+- [ ] Add demo screenshots as evidence.
+- [ ] Write lessons learned.
+- [ ] Write the contribution of each team member.
+- [ ] State whether the team progressed as planned.
+- [ ] If the team did not progress as planned, explain how the plan was adjusted.
+- [ ] Confirm the report conforms to the project plan, timeline, and schedule unless adjusted.
+- [ ] Each team member signs the report before submission.
+- [ ] Export the midterm report as a PDF.
+- [ ] Upload the PDF to Canvas.
+
 ## Owner Quick View
 
 ### Brittany
@@ -216,8 +238,20 @@ Use this section during team meetings.
 ### Week 4
 
 - Completed:
+  - Frontend form connects to backend route.
+  - Backend schema matches frontend form fields.
+  - Sample incident JSON was aligned with the backend schema.
+  - Backend/report-generation test passed.
+  - Homepage loads successfully.
+  - Report form generates output.
 - Still needed:
+  - Test technical report style.
+  - Test executive report style.
+  - Save screenshots for midterm report evidence.
+  - Write testing notes and review notes.
+  - Complete and sign the team midterm report.
 - Blockers:
+  - Confirm whether final midterm evidence will use mock mode or real LLM mode.
 
 ### Week 5
 

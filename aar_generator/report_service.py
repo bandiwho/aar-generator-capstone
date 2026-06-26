@@ -13,15 +13,22 @@ class ReportService:
         # TODO: Week 4 - Validate generated report sections before returning to the UI.
         # TODO: Week 6 - Add export adapters for Markdown, DOCX, and PDF.
         prompt = build_report_prompt(incident)
+        used_mock = self.settings.mock_llm or not self.settings.openai_api_key
+        model_used = self.settings.openai_model
         if self.settings.mock_llm or not self.settings.openai_api_key:
             report_markdown = self._build_mock_report(incident)
         else:
-            report_markdown = self.llm_client.generate(prompt)
+            try:
+                report_markdown = self.llm_client.generate(prompt)
+                model_used = self.llm_client.last_model_used or self.settings.openai_model
+            except Exception:
+                report_markdown = self._build_mock_report(incident)
+                used_mock = True
         return ReportResponse(
             title=incident.title,
             audience=incident.audience,
-            model_used=self.settings.openai_model,
-            mock_mode=self.settings.mock_llm or not self.settings.openai_api_key,
+            model_used=model_used,
+            mock_mode=used_mock,
             report_markdown=report_markdown,
         )
 
