@@ -2,6 +2,7 @@
   "incidents": [
     {
       "title": "Phishing Email Led to Microsoft 365 Account Compromise",
+      "incident_type": "Phishing and account compromise",
       "incident_date": "2026-06-16",
       "audience": "technical",
       "detection_source": "Employee report, Microsoft Defender phishing alert, and Azure AD sign-in review",
@@ -16,6 +17,7 @@
     },
     {
       "title": "Ransomware Detected on Shared File Server",
+      "incident_type": "Ransomware and file encryption",
       "incident_date": "2026-06-17",
       "audience": "executive",
       "detection_source": "Help desk reports, endpoint protection alert, and file server activity logs",
@@ -30,6 +32,7 @@
     },
     {
       "title": "Public Cloud Storage Bucket Exposed Customer Files",
+      "incident_type": "Cloud misconfiguration and data exposure",
       "incident_date": "2026-06-18",
       "audience": "executive",
       "detection_source": "Cloud security scan, storage access policy review, and object access logs",
@@ -44,6 +47,7 @@
     },
     {
       "title": "Malware Alert on Finance Workstation",
+      "incident_type": "Endpoint malware detection",
       "incident_date": "2026-06-19",
       "audience": "technical",
       "detection_source": "Endpoint detection alert, DNS logs, and email gateway review",
@@ -58,6 +62,7 @@
     },
     {
       "title": "SQL Injection Attempt Against Customer Portal",
+      "incident_type": "Web application attack",
       "incident_date": "2026-06-20",
       "audience": "technical",
       "detection_source": "Web application firewall alert, application logs, and database audit review",

@@ -13,13 +13,17 @@ The prototype can generate a useful after-action report draft because it collect
 ## Current Form Fields
 
 - Incident title
+- Incident type
 - Incident date
 - Audience style: technical or executive
+- Detection source
+- Affected assets
 - Incident summary
 - Timeline
 - Log snippets
 - Remediation steps
 - Known impact
+- Lessons learned
 - Open questions
 
 ## Required Fields
@@ -37,13 +41,17 @@ These fields should stay required:
 
 These fields can stay optional because the user may not know the answers at the beginning of an incident review:
 
+- Incident type
+- Detection source
+- Affected assets
 - Log snippets
 - Known impact
+- Lessons learned
 - Open questions
 
 ## Missing Fields Decision
 
-No required fields are missing for the MVP.
+Incident type was added as an optional field because it helps classify the scenario before report generation. It is useful for testing and screenshots, but it does not need to be required because the incident title and summary can still describe the situation.
 
 The current fields support these AAR sections:
 

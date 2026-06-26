@@ -7,14 +7,25 @@ from aar_generator.prompts import SYSTEM_PROMPT
 class LlmClient:
     def __init__(self, settings: Settings):
         self.settings = settings
+        self.last_model_used: str | None = None
+
+    def resolve_model(self, client: OpenAI) -> str:
+        configured_model = self.settings.openai_model.strip()
+        if configured_model.lower() != "auto":
+            return configured_model
+
+        models = client.models.list()
+        return models.data[0].id
 
     def generate(self, prompt: str) -> str:
         if self.settings.mock_llm or not self.settings.openai_api_key:
             return self._mock_report()
 
         client = OpenAI(api_key=self.settings.openai_api_key)
+        model = self.resolve_model(client)
+        self.last_model_used = model
         response = client.responses.create(
-            model=self.settings.openai_model,
+            model=model,
             instructions=SYSTEM_PROMPT,
             input=prompt,
         )

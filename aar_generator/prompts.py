@@ -50,6 +50,9 @@ Required report sections:
 Incident title:
 {data.title}
 
+Incident type:
+{data.incident_type or "Not provided."}
+
 Incident date:
 {data.incident_date}
 

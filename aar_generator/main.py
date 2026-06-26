@@ -54,6 +54,7 @@ def generate_report(payload: IncidentInput) -> ReportResponse:
 def generate_report_form(
     request: Request,
     title: str = Form(...),
+    incident_type: str = Form(""),
     incident_date: str = Form(...),
     audience: AudienceStyle = Form(...),
     detection_source: str = Form(""),
@@ -69,6 +70,7 @@ def generate_report_form(
     try:
         incident = IncidentInput(
             title=title,
+            incident_type=incident_type,
             incident_date=incident_date,
             audience=audience,
             detection_source=detection_source,
