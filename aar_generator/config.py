@@ -8,7 +8,7 @@ from pydantic import BaseModel
 class Settings(BaseModel):
     app_env: str = "development"
     openai_api_key: str | None = None
-    openai_model: str = "gpt-5.4-mini"
+    openai_model: str = "auto"
     mock_llm: bool = True
 
 
@@ -24,7 +24,6 @@ def get_settings() -> Settings:
     return Settings(
         app_env=getenv("APP_ENV", "development"),
         openai_api_key=getenv("OPENAI_API_KEY") or None,
-        openai_model=getenv("OPENAI_MODEL", "gpt-5.4-mini"),
+        openai_model=getenv("OPENAI_MODEL", "auto"),
         mock_llm=_as_bool(getenv("MOCK_LLM"), True),
     )
-

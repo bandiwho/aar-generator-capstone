@@ -78,14 +78,14 @@ Windows:
 
 ```powershell
 $env:OPENAI_API_KEY="your_api_key_here"
-$env:OPENAI_MODEL="gpt-5.4-mini"
+$env:OPENAI_MODEL="auto"
 ```
 
 Ubuntu:
 
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_MODEL="gpt-5.4-mini"
+export OPENAI_MODEL="auto"
 ```
 
 Do not put your real API key in screenshots, Word files, PDFs, or GitHub.
