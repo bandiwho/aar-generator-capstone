@@ -47,6 +47,7 @@ class ReportService:
 ## Incident Overview
 
 - Incident date: {incident.incident_date}
+- Incident type: {incident.incident_type or "Not provided"}
 - Audience style: {audience_label}
 - Summary: {incident.incident_summary}
 

@@ -10,6 +10,7 @@ class AudienceStyle(str, Enum):
 
 class IncidentInput(BaseModel):
     title: str = Field(..., min_length=3, max_length=160)
+    incident_type: str = Field(default="")
     incident_date: str = Field(..., min_length=4, max_length=40)
     audience: AudienceStyle = AudienceStyle.technical
     detection_source: str = Field(default="")
