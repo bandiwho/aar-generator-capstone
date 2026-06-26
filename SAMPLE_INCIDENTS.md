@@ -1,16 +1,42 @@
-# Sample Incidents
+# Sample Incidents for Testing and Demo
 
-These sample incidents are used to test and demonstrate the Security Incident AAR Generator. They give the team realistic incident data for detection source, affected assets, timelines, logs, known impact, remediation steps, open questions, and report style testing.
+These sample incidents are used to test and demonstrate the Security Incident AAR Generator. They match the prototype form fields so the team can copy the information into the app, generate an after-action report, and compare the technical and executive report styles.
+
+## How To Use These Samples
+
+1. Open the prototype app.
+2. Choose one sample incident.
+3. Copy the incident title, date, audience, summary, timeline, log evidence, known impact, remediation, lessons learned, and open questions into the form.
+4. Generate the report.
+5. Save a screenshot of the completed form and the generated report output.
+6. Review whether the report includes the executive summary, timeline, evidence observations, 5 Whys analysis, root cause, remediation, recommendations, lessons learned, and open questions.
+
+## Form Field Checklist
+
+Use this checklist before generating a report:
+
+- Incident title is specific.
+- Incident date is included.
+- Audience is set to technical or executive.
+- Detection source is listed.
+- Affected assets are listed.
+- Incident summary explains what happened.
+- Timeline has clear time-based events.
+- Log evidence includes realistic alerts, audit events, or system records.
+- Known impact separates confirmed facts from unknowns.
+- Remediation steps describe containment, recovery, and follow-up.
+- Lessons learned explain what should improve.
+- Open questions identify facts that still need confirmation.
 
 ## 1. Phishing Email Led to Microsoft 365 Account Compromise
 
-**Incident type:** Phishing and Account Compromise  
+**Incident type:** Phishing and account compromise  
 **Detection source:** Employee report, Microsoft Defender phishing alert, and Azure AD sign-in review  
-**Affected assets:** Microsoft 365, Outlook, SharePoint, Employee Account  
+**Affected assets:** Microsoft 365, Outlook, SharePoint, employee account  
 **Incident date:** 2026-06-16  
-**Report style:** Technical
+**Report audience:** Technical
 
-### Summary
+### Incident Summary
 
 An employee reported a suspicious email after entering credentials into a fake Microsoft 365 login page. Security review showed successful mailbox access from an unfamiliar IP address and several suspicious inbox rules.
 
@@ -27,16 +53,16 @@ An employee reported a suspicious email after entering credentials into a fake M
 
 ### Log Evidence
 
-- AzureAD SignIn: user=employee result=success location=unfamiliar_ip
+- AzureAD SignIn: user=brittany.employee result=success location=unfamiliar_ip
 - Exchange Audit: New-InboxRule created forwarding external address
 - Defender Alert: Phishing URL clicked by user
 - Message Trace: Similar phishing email delivered to 14 users
 
 ### Known Impact
 
-One employee mailbox was accessed. No confirmed data exfiltration at this stage, but mailbox contents and SharePoint access require review.
+One employee mailbox was accessed. No confirmed data exfiltration has been identified at this stage, but mailbox contents and SharePoint access require review.
 
-### Remediation
+### Remediation Steps
 
 - Disabled the affected account.
 - Revoked active Microsoft 365 sessions.
@@ -46,6 +72,10 @@ One employee mailbox was accessed. No confirmed data exfiltration at this stage,
 - Started a message trace to identify other affected users.
 - Sent a warning notice to employees who received the same email.
 
+### Lessons Learned
+
+Phishing reporting worked, but MFA enforcement and inbox rule monitoring should be reviewed. Employees need continued phishing awareness training, and the security team should confirm whether suspicious mailbox rules are detected quickly.
+
 ### Open Questions
 
 - Was MFA challenged or bypassed during the suspicious login?
@@ -54,13 +84,13 @@ One employee mailbox was accessed. No confirmed data exfiltration at this stage,
 
 ## 2. Ransomware Detected on Shared File Server
 
-**Incident type:** Ransomware and File Encryption  
+**Incident type:** Ransomware and file encryption  
 **Detection source:** Help desk reports, endpoint protection alert, and file server activity logs  
-**Affected assets:** Windows File Server, Shared Department Drive, Endpoint Workstation  
+**Affected assets:** Windows file server, shared department drive, endpoint workstation  
 **Incident date:** 2026-06-17  
-**Report style:** Executive
+**Report audience:** Executive
 
-### Summary
+### Incident Summary
 
 Users reported that shared documents would not open and file extensions had changed. Endpoint protection alerted on ransomware behavior from one workstation connected to a shared department drive.
 
@@ -84,9 +114,9 @@ Users reported that shared documents would not open and file extensions had chan
 
 ### Known Impact
 
-A shared department drive was partially encrypted. Initial review suggests the affected files can be restored from backup. No confirmed evidence of data theft at this stage.
+A shared department drive was partially encrypted. Initial review suggests the affected files can be restored from backup. No confirmed evidence of data theft has been identified at this stage.
 
-### Remediation
+### Remediation Steps
 
 - Isolated the affected workstation.
 - Disabled file share access temporarily.
@@ -95,6 +125,10 @@ A shared department drive was partially encrypted. Initial review suggests the a
 - Restored affected files from the last clean snapshot.
 - Reset credentials for the affected user account.
 - Scheduled malware scan and workstation rebuild.
+
+### Lessons Learned
+
+Rapid isolation helped limit ransomware spread, but the team should improve early detection of unusual file activity and confirm that backup restoration procedures are tested regularly.
 
 ### Open Questions
 
@@ -105,13 +139,13 @@ A shared department drive was partially encrypted. Initial review suggests the a
 
 ## 3. Public Cloud Storage Bucket Exposed Customer Files
 
-**Incident type:** Cloud Misconfiguration and Data Exposure  
+**Incident type:** Cloud misconfiguration and data exposure  
 **Detection source:** Cloud security scan, storage access policy review, and object access logs  
-**Affected assets:** Cloud Storage Bucket, Customer Support Portal, Access Policy Configuration  
+**Affected assets:** Cloud storage bucket, customer support portal, access policy configuration  
 **Incident date:** 2026-06-18  
-**Report style:** Executive
+**Report audience:** Executive
 
-### Summary
+### Incident Summary
 
 A routine cloud security scan found that a storage bucket used by the customer support portal allowed public read access. The bucket contained uploaded support attachments, including screenshots and troubleshooting files.
 
@@ -136,7 +170,7 @@ A routine cloud security scan found that a storage bucket used by the customer s
 
 A customer support storage bucket was exposed to public read access. Two anonymous file access events were observed, but the full impact requires log review.
 
-### Remediation
+### Remediation Steps
 
 - Disabled public read access immediately.
 - Exported cloud access logs.
@@ -144,6 +178,10 @@ A customer support storage bucket was exposed to public read access. Two anonymo
 - Enabled a cloud policy rule to block public bucket access.
 - Started file review to determine whether sensitive information was present.
 - Opened follow-up ticket for support portal upload workflow review.
+
+### Lessons Learned
+
+Cloud storage policies need stronger preventive controls. Public access should be blocked by default, and storage buckets should be reviewed before being connected to customer-facing workflows.
 
 ### Open Questions
 
@@ -154,13 +192,13 @@ A customer support storage bucket was exposed to public read access. Two anonymo
 
 ## 4. Malware Alert on Finance Workstation
 
-**Incident type:** Endpoint Malware Detection  
+**Incident type:** Endpoint malware detection  
 **Detection source:** Endpoint detection alert, DNS logs, and email gateway review  
-**Affected assets:** Finance Workstation, Endpoint Detection Tool, Shared Finance Folder  
+**Affected assets:** Finance workstation, endpoint detection tool, shared finance folder  
 **Incident date:** 2026-06-19  
-**Report style:** Technical
+**Report audience:** Technical
 
-### Summary
+### Incident Summary
 
 Endpoint detection alerted on a suspicious PowerShell command running from a finance workstation. The workstation had recently opened an email attachment that appeared to be an invoice.
 
@@ -185,7 +223,7 @@ Endpoint detection alerted on a suspicious PowerShell command running from a fin
 
 One workstation was affected. There is no confirmed lateral movement, but shared finance folder access needs review.
 
-### Remediation
+### Remediation Steps
 
 - Isolated the workstation.
 - Quarantined the suspicious file.
@@ -194,6 +232,10 @@ One workstation was affected. There is no confirmed lateral movement, but shared
 - Searched email gateway logs for similar messages.
 - Warned other recipients not to open the attachment.
 - Scheduled workstation rebuild if malware persistence is confirmed.
+
+### Lessons Learned
+
+Endpoint detection identified the malware quickly, but email attachment controls and user awareness should be improved. Finance workstations should receive extra monitoring because they may access sensitive files.
 
 ### Open Questions
 
@@ -204,13 +246,13 @@ One workstation was affected. There is no confirmed lateral movement, but shared
 
 ## 5. SQL Injection Attempt Against Customer Portal
 
-**Incident type:** Web Application Attack  
+**Incident type:** Web application attack  
 **Detection source:** Web application firewall alert, application logs, and database audit review  
-**Affected assets:** Customer Portal, Web Application Firewall, Application Database  
+**Affected assets:** Customer portal, web application firewall, application database  
 **Incident date:** 2026-06-20  
-**Report style:** Technical
+**Report audience:** Technical
 
-### Summary
+### Incident Summary
 
 The web application firewall detected repeated SQL injection attempts against the customer portal login and search pages. Most requests were blocked, but application logs need review to confirm whether any request reached the database.
 
@@ -233,9 +275,9 @@ The web application firewall detected repeated SQL injection attempts against th
 
 ### Known Impact
 
-No confirmed data loss at this stage. The attack was mostly blocked by the web application firewall, but logs must be reviewed to verify whether any request bypassed protection.
+No confirmed data loss has been identified at this stage. The attack was mostly blocked by the web application firewall, but logs must be reviewed to verify whether any request bypassed protection.
 
-### Remediation
+### Remediation Steps
 
 - Enabled blocking mode for the relevant WAF rule.
 - Blocked attacking source IP addresses.
@@ -244,9 +286,29 @@ No confirmed data loss at this stage. The attack was mostly blocked by the web a
 - Opened development ticket for input validation review.
 - Scheduled follow-up vulnerability scan.
 
+### Lessons Learned
+
+The web application firewall helped reduce risk, but application input validation and database error handling need continued review. Security and development teams should coordinate after suspicious web traffic is detected.
+
 ### Open Questions
 
 - Did any SQL injection request bypass the WAF?
 - Are login and search inputs fully parameterized?
 - Were any database errors exposed to the attacker?
 - Should additional WAF rules be enabled before the next scan?
+
+## Recommended Demo Coverage
+
+For the midterm report or final presentation, use at least three scenarios:
+
+- One technical report: Phishing account compromise or SQL injection attempt.
+- One executive report: Ransomware or cloud storage exposure.
+- One endpoint-focused report: Malware alert on finance workstation.
+
+## Screenshot Evidence To Save
+
+- The prototype form before data entry.
+- The prototype form filled with one sample incident.
+- The generated report output.
+- The section showing the model used and `mock mode: False` when using the real LLM.
+- Any terminal output showing tests passing.
