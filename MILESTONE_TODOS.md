@@ -98,8 +98,8 @@ Goal: Make the generated report more useful and add audience-specific output.
 - [ ] Garrett: Add executive report style generation.
 - [ ] Garrett: Add 5 Whys root-cause analysis.
 - [ ] Garrett: Add recommendations based on the incident details.
-- [ ] Mike: Add clear style selection controls in the frontend.
-- [ ] Mike: Improve report formatting in the output area.
+- [x] Mike: Add clear style selection controls in the frontend.
+- [x] Mike: Improve report formatting in the output area.
 - [ ] Brittany: Compare technical and executive reports for tone and clarity.
 - [ ] Brittany: Review recommendations to make sure they are realistic.
 

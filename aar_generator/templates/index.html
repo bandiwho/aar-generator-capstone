@@ -39,15 +39,25 @@
                 <input name="incident_date" required placeholder="2026-06-15">
               </label>
 
-              <label>
-                Audience
-                <select name="audience" required>
-                  {% for audience in audiences %}
-                    <option value="{{ audience }}">{{ audience|capitalize }}</option>
-                  {% endfor %}
-                </select>
-              </label>
             </div>
+
+            <fieldset class="audience-selector">
+              <legend>Audience style</legend>
+              <label class="audience-option">
+                <input type="radio" name="audience" value="technical" required checked>
+                <span>
+                  <strong>Technical</strong>
+                  <small>Detailed timeline, evidence, root cause, and remediation tasks.</small>
+                </span>
+              </label>
+              <label class="audience-option">
+                <input type="radio" name="audience" value="executive" required>
+                <span>
+                  <strong>Executive</strong>
+                  <small>Business impact, risk, accountability, and high-level actions.</small>
+                </span>
+              </label>
+            </fieldset>
 
             <label>
               Incident summary
@@ -105,6 +115,7 @@
 
           <div class="form-actions">
             <button type="submit" id="generate-button">Generate Report Draft</button>
+            <button type="button" class="secondary-button" id="clear-form">Clear Form</button>
             <p class="submit-status" id="submit-status" aria-live="polite"></p>
           </div>
         </form>
@@ -118,17 +129,32 @@
             </div>
           {% elif result %}
             <div class="output-meta">
-              <h2>{{ result.title }}</h2>
-              <span>{{ result.audience.value|capitalize }} audience | {{ result.model_used }} | mock mode: {{ result.mock_mode }}</span>
+              <div>
+                <h2>{{ result.title }}</h2>
+                <span>{{ result.audience.value|capitalize }} audience</span>
+              </div>
+              <dl class="report-facts">
+                <div>
+                  <dt>Model</dt>
+                  <dd>{{ result.model_used }}</dd>
+                </div>
+                <div>
+                  <dt>Mode</dt>
+                  <dd>{% if result.mock_mode %}Mock{% else %}Live{% endif %}</dd>
+                </div>
+              </dl>
             </div>
-            <div class="report-toolbar" aria-label="Report review checklist">
-              <span>Executive Summary</span>
+            <div class="report-toolbar" aria-label="Report review sections">
+              <span>Summary</span>
               <span>Timeline</span>
+              <span>Impact</span>
               <span>5 Whys</span>
+              <span>Root Cause</span>
               <span>Recommendations</span>
+              <button type="button" class="secondary-button" id="copy-report">Copy Report</button>
             </div>
             <article class="report-preview">
-              <pre>{{ result.report_markdown }}</pre>
+              <pre id="report-text">{{ result.report_markdown }}</pre>
             </article>
           {% else %}
             <h2>Report Draft</h2>
@@ -148,6 +174,7 @@
     <script>
       const form = document.getElementById("incident-form");
       const button = document.getElementById("generate-button");
+      const clearButton = document.getElementById("clear-form");
       const status = document.getElementById("submit-status");
 
       form.addEventListener("submit", () => {
@@ -155,6 +182,29 @@
         button.textContent = "Generating...";
         status.textContent = "Generating report draft. This may take a moment.";
       });
+
+      clearButton.addEventListener("click", () => {
+        form.reset();
+        const technicalAudience = form.querySelector('input[name="audience"][value="technical"]');
+        technicalAudience.checked = true;
+        button.disabled = false;
+        button.textContent = "Generate Report Draft";
+        status.textContent = "";
+        form.querySelector("input, textarea, select").focus();
+      });
+
+      const copyButton = document.getElementById("copy-report");
+      const reportText = document.getElementById("report-text");
+
+      if (copyButton && reportText) {
+        copyButton.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(reportText.textContent);
+          copyButton.textContent = "Copied";
+          setTimeout(() => {
+            copyButton.textContent = "Copy Report";
+          }, 1800);
+        });
+      }
     </script>
   </body>
 </html>
