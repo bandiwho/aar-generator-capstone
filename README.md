@@ -206,6 +206,7 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 | [`MILESTONE_TODOS.md`](MILESTONE_TODOS.md) | Detailed milestone and weekly task tracked with checkmarking. |
 | [`SHARED_DELIVERABLES_CHECKLIST.md`](SHARED_DELIVERABLES_CHECKLIST.md) | Shared checklist for assignment and project deliverables |
 | [`MEETING_LOG.md`](MEETING_LOG.md) | Weekly meeting minutes, attendance, assigned tasks, and contribution evidence |
+| [`AREAS_TO_IMPROVE.md`](AREAS_TO_IMPROVE.md) | Improvement chart showing needed work, owners, priority, and evidence |
 | [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
 | [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
 | [`FORM_FIELD_REVIEW.md`](FORM_FIELD_REVIEW.md) | Review of required form fields for the MVP workflow |
