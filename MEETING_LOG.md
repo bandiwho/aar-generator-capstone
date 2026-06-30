@@ -25,8 +25,9 @@ Team 1 meets every Tuesday to review project progress, assign next steps, and ch
 
 ### Week 4 Meeting
 
-Date and time: Tuesday, June 23, 2026, 6:30PM: Team meeting and Microsoft Teams follow-up chat  
-Attended: Brittany, Garrett, Mike  
+Date and time: Tuesday, June 23, 2026, 6:30 PM
+Location: Team meeting and Microsoft Teams follow-up chat
+Attended: Brittany, Garrett, Mike
 Absent: None
 
 Topics discussed:
@@ -47,8 +48,9 @@ Tasks assigned and completion status:
 
 ### Week 5 Meeting
 
-Date and time: Tuesday, June 30, 2026, 6:30PM: Team meeting and Microsoft Teams follow-up chat  
-Planned attendees: Brittany, Garrett, Mike  
+Date and time: Tuesday, June 30, 2026, 6:30 PM
+Location: Team meeting and Microsoft Teams follow-up chat
+Planned attendees: Brittany, Garrett, Mike
 Absences: To be recorded after meeting
 
 Planned topics:
@@ -70,8 +72,9 @@ Planned tasks:
 
 ### Week 6 Meeting
 
-Date and time: Tuesday, July 7, 2026, 6:30PM: Team meeting and Microsoft Teams follow-up chat  
-Planned attendees: Brittany, Garrett, Mike  
+Date and time: Tuesday, July 7, 2026, 6:30 PM
+Location: Team meeting and Microsoft Teams follow-up chat
+Planned attendees: Brittany, Garrett, Mike
 Absences: To be recorded after meeting
 
 Planned topics:
@@ -92,8 +95,9 @@ Planned tasks:
 
 ### Week 7 Meeting
 
-Date and time: Tuesday, July 14, 2026, 6:30PM: Team meeting and Microsoft Teams follow-up chat  
-Planned attendees: Brittany, Garrett, Mike  
+Date and time: Tuesday, July 14, 2026, 6:30 PM
+Location: Team meeting and Microsoft Teams follow-up chat
+Planned attendees: Brittany, Garrett, Mike
 Absences: To be recorded after meeting
 
 Planned topics:
@@ -114,8 +118,9 @@ Planned tasks:
 
 ### Week 8 Meeting
 
-Date and time: Tuesday, July 21, 2026, 6:30PM: Team meeting and Microsoft Teams follow-up chat  
-Planned attendees: Brittany, Garrett, Mike  
+Date and time: Tuesday, July 21, 2026, 6:30 PM
+Location: Team meeting and Microsoft Teams follow-up chat
+Planned attendees: Brittany, Garrett, Mike
 Absences: To be recorded after meeting
 
 Planned topics:
