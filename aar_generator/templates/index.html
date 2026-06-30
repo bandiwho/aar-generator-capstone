@@ -25,18 +25,18 @@
             <legend>Incident Overview</legend>
             <label>
               Incident title
-              <input name="title" required minlength="3" placeholder="Example: Phishing email investigation">
+              <input name="title" required minlength="3" value="{{ form_values.title|default('') }}" placeholder="Example: Phishing email investigation">
             </label>
 
             <div class="row">
               <label>
                 Incident type
-                <input name="incident_type" placeholder="Example: Phishing, ransomware, cloud exposure">
+                <input name="incident_type" value="{{ form_values.incident_type|default('') }}" placeholder="Example: Phishing, ransomware, cloud exposure">
               </label>
 
               <label>
                 Incident date
-                <input name="incident_date" required placeholder="YYYY-MM-DD">
+                <input name="incident_date" required value="{{ form_values.incident_date|default('') }}" placeholder="YYYY-MM-DD">
               </label>
 
             </div>
@@ -44,14 +44,14 @@
             <fieldset class="audience-selector">
               <legend>Audience style</legend>
               <label class="audience-option">
-                <input type="radio" name="audience" value="technical" required checked>
+                <input type="radio" name="audience" value="technical" required {% if form_values.audience|default('technical') == 'technical' %}checked{% endif %}>
                 <span>
                   <strong>Technical</strong>
                   <small>Detailed timeline, evidence, root cause, and remediation tasks.</small>
                 </span>
               </label>
               <label class="audience-option">
-                <input type="radio" name="audience" value="executive" required>
+                <input type="radio" name="audience" value="executive" required {% if form_values.audience|default('technical') == 'executive' %}checked{% endif %}>
                 <span>
                   <strong>Executive</strong>
                   <small>Business impact, risk, accountability, and high-level actions.</small>
@@ -61,7 +61,7 @@
 
             <label>
               Incident summary
-              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status."></textarea>
+              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status.">{{ form_values.incident_summary|default('') }}</textarea>
             </label>
           </fieldset>
 
@@ -70,28 +70,28 @@
             <div class="row">
               <label>
                 Detection source
-                <input name="detection_source" placeholder="Example: SIEM alert, help desk ticket, EDR alert">
+                <input name="detection_source" value="{{ form_values.detection_source|default('') }}" placeholder="Example: SIEM alert, help desk ticket, EDR alert">
               </label>
 
               <label>
                 Affected assets
-                <input name="affected_assets" placeholder="Example: VPN, endpoint, database, cloud account">
+                <input name="affected_assets" value="{{ form_values.affected_assets|default('') }}" placeholder="Example: VPN, endpoint, database, cloud account">
               </label>
             </div>
 
             <label>
               Timeline
-              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed logs&#10;10:05 Containment action completed"></textarea>
+              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed logs&#10;10:05 Containment action completed">{{ form_values.timeline|default('') }}</textarea>
             </label>
 
             <label>
               Log snippets
-              <textarea name="log_snippets" rows="5" placeholder="Paste relevant logs, alerts, or ticket excerpts."></textarea>
+              <textarea name="log_snippets" rows="5" placeholder="Paste relevant logs, alerts, or ticket excerpts.">{{ form_values.log_snippets|default('') }}</textarea>
             </label>
 
             <label>
               Known impact
-              <textarea name="known_impact" rows="4" placeholder="Affected systems, users, data, downtime, or business impact."></textarea>
+              <textarea name="known_impact" rows="4" placeholder="Affected systems, users, data, downtime, or business impact.">{{ form_values.known_impact|default('') }}</textarea>
             </label>
           </fieldset>
 
@@ -99,17 +99,17 @@
             <legend>Response and Follow-Up</legend>
             <label>
               Remediation steps
-              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions."></textarea>
+              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions.">{{ form_values.remediation_steps|default('') }}</textarea>
             </label>
 
             <label>
               Lessons learned
-              <textarea name="lessons_learned" rows="4" placeholder="What should the organization improve next time?"></textarea>
+              <textarea name="lessons_learned" rows="4" placeholder="What should the organization improve next time?">{{ form_values.lessons_learned|default('') }}</textarea>
             </label>
 
             <label>
               Open questions
-              <textarea name="open_questions" rows="4" placeholder="Facts that still need confirmation."></textarea>
+              <textarea name="open_questions" rows="4" placeholder="Facts that still need confirmation.">{{ form_values.open_questions|default('') }}</textarea>
             </label>
           </fieldset>
 
@@ -184,7 +184,9 @@
       });
 
       clearButton.addEventListener("click", () => {
-        form.reset();
+        form.querySelectorAll("input:not([type='radio']), textarea").forEach((field) => {
+          field.value = "";
+        });
         const technicalAudience = form.querySelector('input[name="audience"][value="technical"]');
         technicalAudience.checked = true;
         button.disabled = false;

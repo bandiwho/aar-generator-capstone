@@ -40,6 +40,7 @@ def index(request: Request) -> HTMLResponse:
             "audiences": [style.value for style in AudienceStyle],
             "result": None,
             "error": None,
+            "form_values": {"audience": AudienceStyle.technical.value},
         },
     )
 
@@ -67,6 +68,22 @@ def generate_report_form(
     lessons_learned: str = Form(""),
     open_questions: str = Form(""),
 ) -> HTMLResponse:
+    form_values = {
+        "title": title,
+        "incident_type": incident_type,
+        "incident_date": incident_date,
+        "audience": audience.value,
+        "detection_source": detection_source,
+        "affected_assets": affected_assets,
+        "incident_summary": incident_summary,
+        "timeline": timeline,
+        "log_snippets": log_snippets,
+        "remediation_steps": remediation_steps,
+        "known_impact": known_impact,
+        "lessons_learned": lessons_learned,
+        "open_questions": open_questions,
+    }
+
     try:
         incident = IncidentInput(
             title=title,
@@ -97,5 +114,6 @@ def generate_report_form(
             "audiences": [style.value for style in AudienceStyle],
             "result": result,
             "error": error,
+            "form_values": form_values,
         },
     )
