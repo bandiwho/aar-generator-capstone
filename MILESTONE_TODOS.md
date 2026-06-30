@@ -92,25 +92,45 @@ Deliverable:
 
 ## Week 5: Report Styles and Root-Cause Analysis
 
-Goal: Make the generated report more useful and add audience-specific output.
+Goal: Make the generated report more useful, add audience-specific output, test the week's work, and document team contributions for the Week 5 journal.
 
+- [ ] Team: Code and test assigned project tasks as planned for Week 5.
+- [ ] Team: Push completed achievements to GitHub.
+- [x] Team: Update the README to reflect current Week 5 progress.
+- [x] Team: Add a weekly meeting log for attendance, topics, assigned tasks, and completion status.
+- [ ] Team: Include meeting log information in the Week 5 journal.
+- [ ] Team: Collect testing screenshots without showing the OpenAI API key.
 - [ ] Garrett: Add technical report style generation.
 - [ ] Garrett: Add executive report style generation.
 - [ ] Garrett: Add 5 Whys root-cause analysis.
 - [ ] Garrett: Add recommendations based on the incident details.
+- [ ] Garrett: Confirm backend tests pass after Week 5 report-style changes.
 - [ ] Mike: Add clear style selection controls in the frontend.
 - [ ] Mike: Improve report formatting in the output area.
+- [ ] Mike: Help capture frontend demo screenshots for the weekly journal.
 - [ ] Brittany: Compare technical and executive reports for tone and clarity.
 - [ ] Brittany: Review recommendations to make sure they are realistic.
+- [x] Brittany: Update README, milestone todos, and shared deliverables checklist for the Week 5 assignment.
+- [x] Brittany: Create `MEETING_LOG.md` to make Garrett and Mike's contributions visible.
+- [ ] Brittany: Write the Week 5 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [ ] Brittany: Export the Week 5 journal as a PDF for Canvas submission.
 
 Deliverable:
 
 - [ ] Team: The app generates technical and executive reports with root-cause analysis.
+- [ ] Team: GitHub shows current README, todos, deliverables, and meeting log updates.
+- [ ] Team: The Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 6: Revision Feature, Validation, and Testing
 
 Goal: Improve reliability and make the app easier to use.
 
+- [ ] Team: Code and test assigned project tasks as planned for Week 6.
+- [ ] Team: Push completed achievements to GitHub.
+- [ ] Team: Update the README to reflect Week 6 progress.
+- [ ] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
+- [ ] Team: Include meeting log information in the Week 6 journal.
+- [ ] Team: Collect testing screenshots without showing the OpenAI API key.
 - [ ] Garrett: Add a way to revise or regenerate report sections.
 - [ ] Garrett: Improve backend error handling.
 - [ ] Garrett: Add fallback mock generation if the LLM is unavailable.
@@ -119,15 +139,24 @@ Goal: Improve reliability and make the app easier to use.
 - [ ] Mike: Make the frontend easier to use on smaller screens.
 - [ ] Brittany: Test the app with at least three incident scenarios.
 - [ ] Brittany: Track bugs and unclear output in a testing notes file.
+- [ ] Brittany: Write the Week 6 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [ ] Brittany: Export the Week 6 journal as a PDF for Canvas submission.
 
 Deliverable:
 
 - [ ] Team: The app handles errors, validates inputs, and works with multiple test incidents.
+- [ ] Team: The Week 6 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 7: Polish, Documentation, and Demo Preparation
 
 Goal: Prepare the project for final presentation.
 
+- [ ] Team: Code and test assigned project tasks as planned for Week 7.
+- [ ] Team: Push completed achievements to GitHub.
+- [ ] Team: Update the README to reflect Week 7 progress.
+- [ ] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
+- [ ] Team: Include meeting log information in the Week 7 journal.
+- [ ] Team: Collect demo screenshots without showing the OpenAI API key.
 - [ ] Brittany: Finalize project documentation.
 - [ ] Brittany: Write the final demo script.
 - [ ] Brittany: Prepare presentation slides.
@@ -137,28 +166,49 @@ Goal: Prepare the project for final presentation.
 - [ ] Mike: Polish the homepage and report display.
 - [ ] Mike: Confirm the topographical homepage image displays correctly.
 - [ ] Team: Practice the demo from start to finish.
+- [ ] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [ ] Brittany: Export the Week 7 journal as a PDF for Canvas submission.
 
 Deliverable:
 
 - [ ] Team: The app, documentation, slides, and demo script are ready for final review.
+- [ ] Team: The Week 7 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 8: Final Testing and Submission
 
-Goal: Finish, test, present, and submit the project.
+Goal: Finish the final report, presentation slides, final presentation preparation, final testing, and submission package.
 
 - [ ] Brittany: Run the final quality review.
 - [ ] Brittany: Confirm grammar, formatting, and documentation quality.
 - [ ] Brittany: Confirm the team can explain each project section.
+- [ ] Brittany: Finalize the final report.
+- [ ] Brittany: Confirm the final report includes milestones, testing evidence, lessons learned, team contributions, and meeting log evidence.
+- [ ] Brittany: Finalize the presentation slides.
+- [ ] Brittany: Confirm the slides include project problem, solution, prototype workflow, screenshots, testing, lessons learned, and team roles.
 - [ ] Garrett: Confirm backend and LLM generation are working.
 - [ ] Garrett: Prepare a backup plan if the LLM service fails during the demo.
+- [ ] Garrett: Prepare the backend and LLM explanation for the final presentation.
 - [ ] Mike: Confirm the frontend works on the presentation machine.
 - [ ] Mike: Confirm the final demo flow is smooth.
+- [ ] Mike: Prepare the frontend and demo workflow explanation for the final presentation.
 - [ ] Team: Complete final presentation practice.
+- [ ] Team: Prepare final presentation roles for July 27-28.
 - [ ] Team: Submit final files.
 
 Deliverable:
 
 - [ ] Team: Final application, report, slides, and demo are complete.
+
+## Final Presentation: July 27 - July 28
+
+Goal: Present the completed AAR Generator and demonstrate the working prototype.
+
+- [ ] Brittany: Present project purpose, documentation, final report, quality review, and team organization.
+- [ ] Garrett: Present backend workflow, LLM integration, testing evidence, and fallback plan.
+- [ ] Mike: Present frontend workflow, user input form, generated report display, and live demo flow.
+- [ ] Team: Complete the live prototype demonstration.
+- [ ] Team: Answer questions about project scope, testing, lessons learned, and future improvements.
+- [ ] Team: Use backup screenshots or a backup generated report if the live demo has technical issues.
 
 ## Optional Stretch Goal TODOs
 

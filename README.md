@@ -47,12 +47,14 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Mock fallback kept available so the demo can still run if the API is unavailable.
 - [x] Backend tests added and passing.
 - [x] Sample incidents Markdown updated to match the prototype form fields.
+- [x] Meeting log added to document weekly attendance, topics, assigned tasks, and contribution evidence.
+- [x] Week 5 README, todos, and shared deliverables checklist updated for the weekly journal requirements.
 
 ## Current Week Focus
 
-Week 4 focus: code and test the planned project tasks, push completed achievements to GitHub, update the README as progress changes, capture screenshot evidence, and prepare the team midterm report.
+Week 5 focus: code and test the planned project tasks, push completed achievements to GitHub, keep the README updated, maintain weekly meeting minutes, capture screenshot evidence, and prepare the team weekly journal as a PDF.
 
-The midterm report will summarize milestones achieved, subtasks completed, testing evidence with demo screenshots, lessons learned, each team member's contribution, progress compared to the project plan, and any needed plan adjustments.
+The Week 5 journal will summarize milestones achieved, subtasks completed, detailed testing evidence with demo screenshots, lessons learned, each team member's contribution, meeting attendance, progress compared to the project plan, and any needed plan adjustments.
 
 ## Team Member Descriptions
 
@@ -68,10 +70,10 @@ The midterm report will summarize milestones achieved, subtasks completed, testi
 |---|---|---|---|
 | [x] | June 15 - June 21 | Milestone 1 | Repository setup, README, sample incidents, form field review, and demo workflow instructions |
 | [x] | June 22 - June 28 | Milestone 2 | Backend data structure, report-generation workflow, frontend form refinement, and first LLM-generated report draft |
-| [ ] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, and output formatting |
-| [ ] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, and sample incident review |
-| [ ] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, and demo script |
-| [ ] | July 20 - July 24 | Milestone 6 | Final polish, final testing, submission package, and presentation practice |
+| [ ] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, output formatting, testing screenshots, and meeting log evidence |
+| [ ] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, sample incident review, weekly journal, and meeting log evidence |
+| [ ] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, demo script, weekly journal, and meeting log evidence |
+| [ ] | July 20 - July 24 | Milestone 6 | Final report, presentation slides, final presentation preparation, final polish, and submission package |
 | [ ] | July 27 - July 28 | Final Presentation | Final presentation and live demonstration |
 
 ## Milestone Task Plan
@@ -107,32 +109,36 @@ Goal: Define the data structure, improve the form, and connect the workflow need
 ### Milestone 3: Report Style and Root-Cause Analysis
 
 Dates: June 29 - July 5, 2026  
-Goal: Improve the generated report and support different reporting audiences.
+Goal: Improve the generated report, support different reporting audiences, test the Week 5 work, and document team contributions.
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
 | [ ] | Garrett | Add technical report style support | Technical report generation path | Output includes technical details and evidence references |
 | [ ] | Garrett | Add executive report style support | Executive report generation path | Output summarizes impact, risk, and recommendations clearly |
-| [ ] | Garrett | Improve 5 Whys analysis | Root-cause analysis section | 5 Whys section connects incident evidence to likely causes |
+| [ ] | Garrett | Improve 5 Whys analysis and recommendations | Root-cause and recommendation sections | 5 Whys and recommendations connect incident evidence to likely causes |
 | [ ] | Mike | Add or improve style controls | Technical/executive selection in UI | User can choose report audience style |
-| [ ] | Brittany | Compare report tone and clarity | Quality review notes | Technical and executive outputs match their audiences |
+| [ ] | Mike | Improve report formatting | Cleaner report display | Generated report is easy to read and screenshot |
+| [x] | Brittany | Add meeting log for contribution evidence | `MEETING_LOG.md` | Weekly minutes show attendance, discussion topics, assigned tasks, and completion status |
+| [x] | Brittany | Update README, todos, and deliverables for Week 5 | Updated GitHub documentation | GitHub pages match the Week 5 assignment requirements |
+| [ ] | Brittany | Compare report tone and clarity | Quality review notes and screenshots | Technical and executive outputs match their audiences |
 
 ### Milestone 4: Testing and Validation
 
 Dates: July 6 - July 12, 2026  
-Goal: Test the prototype with multiple incidents and improve reliability.
+Goal: Test the prototype with multiple incidents, improve reliability, and document Week 6 journal evidence.
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
 | [ ] | Brittany | Test app with sample incidents | Testing notes and screenshots | At least three incident scenarios are tested |
 | [ ] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
 | [ ] | Mike | Improve frontend validation | Required-field behavior and user-facing messages | Users understand what information is missing |
+| [ ] | Brittany | Prepare Week 6 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 6 journal is ready to export as a PDF |
 | [ ] | Team | Review test results | Bug list and improvement notes | Issues are documented and assigned |
 
 ### Milestone 5: Documentation and Demo Preparation
 
 Dates: July 13 - July 19, 2026  
-Goal: Prepare the project for final presentation and demonstration.
+Goal: Prepare the project for final presentation and demonstration while documenting Week 7 journal evidence.
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
@@ -140,18 +146,33 @@ Goal: Prepare the project for final presentation and demonstration.
 | [ ] | Brittany | Prepare presentation outline | Slide outline and speaker notes | Presentation covers problem, solution, prototype, and lessons learned |
 | [ ] | Garrett | Prepare backend explanation | Backend workflow summary | Team can explain how report generation works |
 | [ ] | Mike | Prepare demo flow | Demo script and frontend walkthrough | Demo can be completed smoothly |
+| [ ] | Team | Prepare Week 7 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 7 journal is ready to export as a PDF |
 
 ### Milestone 6: Final Polish and Submission
 
 Dates: July 20 - July 24, 2026  
-Goal: Finish the prototype, documentation, screenshots, and final submission package.
+Goal: Finish the prototype, final report, presentation slides, screenshots, and final presentation preparation before the July 27-28 final presentation.
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
 | [ ] | Brittany | Run final quality review | Final grammar, formatting, and requirement check | Submission materials are clean and organized |
+| [ ] | Brittany | Finalize final report | Final report PDF and supporting evidence | Report includes project summary, milestones, testing, lessons learned, and team contributions |
+| [ ] | Brittany | Finalize presentation slides | Completed presentation deck | Slides cover problem, solution, demo workflow, testing, lessons learned, and contributions |
 | [ ] | Garrett | Confirm backend/report generation | Final backend test notes | Report generation works with final demo data |
 | [ ] | Mike | Confirm frontend/demo workflow | Final interface check and demo screenshots | Prototype is ready for presentation |
-| [ ] | Team | Practice final demo | Full demo rehearsal | Team can present within the assigned time |
+| [ ] | Team | Complete final presentation preparation | Full demo rehearsal, speaker roles, and backup plan | Team can present within the assigned time on July 27-28 |
+
+### Final Presentation
+
+Dates: July 27 - July 28, 2026  
+Goal: Present the final AAR Generator project and demonstrate the working prototype.
+
+| Done | Member | Task | Outputs Produced | Measurement |
+|---|---|---|---|---|
+| [ ] | Brittany | Present project purpose, documentation, and quality review | Speaking notes | Audience understands the problem, requirements, and team organization |
+| [ ] | Garrett | Present backend and LLM workflow | Backend explanation and test evidence | Audience understands how report generation works |
+| [ ] | Mike | Present frontend and demo workflow | Live demo walkthrough | Audience can see the user workflow from incident input to generated report |
+| [ ] | Team | Complete final live demonstration | Final presentation and demo | Presentation is completed during the July 27-28 final window |
 
 ## Proposed Demo Scenario
 
@@ -184,6 +205,7 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 | [`PROJECT_PLAN.md`](PROJECT_PLAN.md) | Full project plan with weekly, task ownership, testing plan, and deliverables |
 | [`MILESTONE_TODOS.md`](MILESTONE_TODOS.md) | Detailed milestone and weekly task tracked with checkmarking. |
 | [`SHARED_DELIVERABLES_CHECKLIST.md`](SHARED_DELIVERABLES_CHECKLIST.md) | Shared checklist for assignment and project deliverables |
+| [`MEETING_LOG.md`](MEETING_LOG.md) | Weekly meeting minutes, attendance, assigned tasks, and contribution evidence |
 | [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
 | [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
 | [`FORM_FIELD_REVIEW.md`](FORM_FIELD_REVIEW.md) | Review of required form fields for the MVP workflow |
