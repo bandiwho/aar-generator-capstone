@@ -11,9 +11,6 @@ Create one Word file with two screenshots:
 
 Then convert the Word file to PDF and upload the PDF.
 
-Better sentence for your assignment note:
-
-> This is my individual initial prototype framework. The team will meet next week to compare all three individual prototypes and merge them into one finalized team version.
 
 ## Screenshot 1: Windows Server 2025 VM
 
