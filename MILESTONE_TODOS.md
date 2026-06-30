@@ -108,6 +108,8 @@ Goal: Make the generated report more useful, add audience-specific output, test 
 - [ ] Mike: Add clear style selection controls in the frontend.
 - [ ] Mike: Improve report formatting in the output area.
 - [ ] Mike: Help capture frontend demo screenshots for the weekly journal.
+- [x] Mike: Add clear style selection controls in the frontend.
+- [x] Mike: Improve report formatting in the output area.
 - [ ] Brittany: Compare technical and executive reports for tone and clarity.
 - [ ] Brittany: Review recommendations to make sure they are realistic.
 - [x] Brittany: Update README, milestone todos, and shared deliverables checklist for the Week 5 assignment.
