@@ -51,7 +51,7 @@ Tasks assigned and completion status:
 Date and time: Tuesday, June 30, 2026, 6:30 PM
 Location: Team meeting and Microsoft Teams follow-up chat
 Planned attendees: Brittany, Garrett, Mike
-Absences: To be recorded after meeting
+Absences: Everyone was present by 6:29PM meeting ended at 7:12PM
 
 Planned topics:
 
@@ -70,6 +70,21 @@ Planned tasks:
 | Garrett | Continue backend report style logic, 5 Whys analysis, recommendations, OpenAI integration, and test coverage. | In progress |
 | Mike | Continue frontend style controls, report output formatting, demo workflow, and screenshot support. | In progress |
 
+## During Meeting/Afterthoughts Topics:
+- Discussed Layout 
+- Update dropdown audience to clickable audience button for readability.
+- Change Executive Summary to matched the correct audience.
+- Layout of submit = Generate button- We decided placement is fine.
+- Discussed Addition on Areas of Improvement page = Help show which Improvements were more importand and where Brittany should take screenshots to provide evidence of improvements.
+- There was suggestion of keeping a database of logged past incident reports. It is beyond scope. We will focus on requirement output and if we have extra time we may implement.                   - Helper text to indicate to user who report is written for.
+- Section of output shows buttons. Depending on time they may be labels or buttons that show summary. 
+- Make Sample incidents follow design of layout and more descriptive.
+## Chat Topics
+06/30 -
+- Improving GitHub layout
+- Changing datye field
+- Adding visual hints to required fields that need to be filled out.
+- Hiding errors from users
 ### Week 6 Meeting
 
 Date and time: Tuesday, July 7, 2026, 6:30 PM
