@@ -1,0 +1,213 @@
+{"kind":"deck","id":"pr/pw7he0","name":"Deck"}
+{"kind":"layout","layoutId":"6b1193a3-495c-419a-a5fd-4fb840618040","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"5ed0b556-2058-4bc3-854d-cdecbfe635b2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dfqejl","slide":1,"title":"Security Incident Postmortem","textShapes":7}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"Security Incident Postmortem","textPreview":"Security Incident Postmortem","textChars":28,"textLines":1,"bbox":[42,58,900,58]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"Automated After-Action Report Generator","textPreview":"Automated After-Action Report Generator","textChars":39,"textLines":1,"bbox":[42,150,1020,190]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":1,"text":"CSC 482 Capstone Project II | Team 1: Brittany, Garrett, Mike","textPreview":"CSC 482 Capstone Project II | Team 1: Brittany, Garrett, Mike","textChars":61,"textLines":1,"bbox":[42,384,900,44]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":1,"text":"Final presentation window: July 27-28, 2026","textPreview":"Final presentation window: July 27-28, 2026","textChars":43,"textLines":1,"bbox":[42,438,700,38]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[850,110,280,390]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"AAR","textPreview":"AAR","textChars":3,"textLines":1,"bbox":[895,190,190,82]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":1,"text":"Incident facts\nto LLM draft\nto review-ready report","textPreview":"Incident facts | to LLM draft | to review-ready report","textChars":50,"textLines":3,"bbox":[888,298,210,110]}
+{"kind":"shape","id":"sh/1orytsvu","slide":1,"bbox":[42,620,1196,2]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/dfqejl","slide":1,"text":""}
+{"kind":"slide","id":"sl/35lyri","slide":2,"title":"CSC 482 Capstone Project II | Team 1","textShapes":10}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":2,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/val87ed8","slide":2,"text":"Problem We Are Solving","textPreview":"Problem We Are Solving","textChars":22,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/6psfil0r","slide":2,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":2,"text":"After a security incident, teams must explain what happened, why it happened, what was affected, and what should change. That report process is often slow and inconsistent.","textPreview":"After a security incident, teams must explain what happened, why it happened, what was affected, and what should change. That report proc...","textChars":172,"textLines":1,"bbox":[54,190,760,84]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":2,"bbox":[54,330,350,190]}
+{"kind":"textbox","id":"sh/vixczed8","slide":2,"text":"Manual reports take time","textPreview":"Manual reports take time","textChars":24,"textLines":1,"bbox":[76,350,306,34]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":2,"text":"Teams must collect timelines, logs, impact notes, root causes, remediation steps, and lessons learned.","textPreview":"Teams must collect timelines, logs, impact notes, root causes, remediation steps, and lessons learned.","textChars":102,"textLines":1,"bbox":[76,396,306,106]}
+{"kind":"shape","id":"sh/d0z61032","slide":2,"bbox":[464,330,350,190]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":2,"text":"Details can be missed","textPreview":"Details can be missed","textChars":21,"textLines":1,"bbox":[486,350,306,34]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":2,"text":"Important facts may be scattered across chats, notes, tickets, alerts, or memory after the incident.","textPreview":"Important facts may be scattered across chats, notes, tickets, alerts, or memory after the incident.","textChars":100,"textLines":1,"bbox":[486,396,306,106]}
+{"kind":"shape","id":"sh/r65wjudg","slide":2,"bbox":[874,330,350,190]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"Audience needs differ","textPreview":"Audience needs differ","textChars":21,"textLines":1,"bbox":[896,350,306,34]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"text":"Technical staff need evidence and root cause detail. Leaders need impact, risk, and decisions.","textPreview":"Technical staff need evidence and root cause detail. Leaders need impact, risk, and decisions.","textChars":94,"textLines":1,"bbox":[896,396,306,106]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/35lyri","slide":2,"text":""}
+{"kind":"slide","id":"sl/wycmwa","slide":3,"title":"CSC 482 Capstone Project II | Team 1","textShapes":10}
+{"kind":"textbox","id":"sh/u54zidon","slide":3,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":3,"text":"Our Solution","textPreview":"Our Solution","textChars":12,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/cbulwval","slide":3,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":3,"text":"A lightweight web application that turns incident details into a structured after-action report draft.","textPreview":"A lightweight web application that turns incident details into a structured after-action report draft.","textChars":102,"textLines":1,"bbox":[54,190,920,54]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":3,"bbox":[54,292,350,220]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":3,"text":"Input","textPreview":"Input","textChars":5,"textLines":1,"bbox":[76,312,306,34]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":3,"text":"User enters incident title, type, date, summary, timeline, logs, impact, remediation, lessons learned, and open questions.","textPreview":"User enters incident title, type, date, summary, timeline, logs, impact, remediation, lessons learned, and open questions.","textChars":122,"textLines":1,"bbox":[76,358,306,136]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":3,"bbox":[464,292,350,220]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":3,"text":"Generate","textPreview":"Generate","textChars":8,"textLines":1,"bbox":[486,312,306,34]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":3,"text":"Backend organizes the data into an LLM prompt and requests an AAR draft using the selected audience style.","textPreview":"Backend organizes the data into an LLM prompt and requests an AAR draft using the selected audience style.","textChars":106,"textLines":1,"bbox":[486,358,306,136]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":3,"bbox":[874,292,350,220]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":3,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[896,312,306,34]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":3,"text":"Team reviews the draft for clarity, accuracy, 5 Whys root cause, recommendations, and lessons learned.","textPreview":"Team reviews the draft for clarity, accuracy, 5 Whys root cause, recommendations, and lessons learned.","textChars":102,"textLines":1,"bbox":[896,358,306,136]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/wycmwa","slide":3,"text":""}
+{"kind":"slide","id":"sl/0770bt","slide":4,"title":"CSC 482 Capstone Project II | Team 1","textShapes":6}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":4,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":4,"text":"Core Capabilities","textPreview":"Core Capabilities","textChars":17,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":4,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":4,"text":"• Incident detail entry through a clear frontend form\n• Support for timelines, log snippets, impact notes, and remediation steps\n• LLM-supported report generation workflow\n• 5 Whys root-cause analysis\n• Technical and executive reporting styles\n• Realistic sample incident data for testing and demo use","textPreview":"• Incident detail entry through a clear frontend form | • Support for timelines, log snippets, impact notes, and remediation steps | • LL...","textChars":301,"textLines":6,"bbox":[78,205,620,360]}
+{"kind":"shape","id":"sh/ulwval87","slide":4,"bbox":[780,198,380,290]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":4,"text":"Prototype screenshot placeholder","textPreview":"Prototype screenshot placeholder","textChars":32,"textLines":1,"bbox":[830,278,280,40]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":4,"text":"Add a screenshot of the form or generated report here before final submission.","textPreview":"Add a screenshot of the form or generated report here before final submission.","textChars":78,"textLines":1,"bbox":[835,338,270,72]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/0770bt","slide":4,"text":""}
+{"kind":"slide","id":"sl/a9aji5","slide":5,"title":"CSC 482 Capstone Project II | Team 1","textShapes":23}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":5,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":5,"text":"Prototype Workflow","textPreview":"Prototype Workflow","textChars":18,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/58z25kb6","slide":5,"bbox":[42,152,1196,2]}
+{"kind":"shape","id":"sh/y90je9cv","slide":5,"bbox":[72,258,150,150]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[124,282,46,44]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":5,"text":"Incident input","textPreview":"Incident input","textChars":14,"textLines":1,"bbox":[82,338,130,38]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":5,"text":"Facts, timeline, logs","textPreview":"Facts, timeline, logs","textChars":21,"textLines":1,"bbox":[82,382,130,40]}
+{"kind":"shape","id":"sh/u54zidon","slide":5,"bbox":[240,328,80,3]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":5,"text":"?","textPreview":"?","textChars":1,"textLines":1,"bbox":[276,298,40,48]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":5,"bbox":[324,258,150,150]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[376,282,46,44]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"Backend schema","textPreview":"Backend schema","textChars":14,"textLines":1,"bbox":[334,338,130,38]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"text":"Structured fields","textPreview":"Structured fields","textChars":17,"textLines":1,"bbox":[334,382,130,40]}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[492,328,80,3]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":5,"text":"?","textPreview":"?","textChars":1,"textLines":1,"bbox":[528,298,40,48]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[576,258,150,150]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[628,282,46,44]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":5,"text":"LLM prompt","textPreview":"LLM prompt","textChars":10,"textLines":1,"bbox":[586,338,130,38]}
+{"kind":"textbox","id":"sh/61032lsz","slide":5,"text":"Audience guidance","textPreview":"Audience guidance","textChars":17,"textLines":1,"bbox":[586,382,130,40]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":5,"bbox":[744,328,80,3]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":5,"text":"?","textPreview":"?","textChars":1,"textLines":1,"bbox":[780,298,40,48]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":5,"bbox":[828,258,150,150]}
+{"kind":"textbox","id":"sh/lwval87e","slide":5,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[880,282,46,44]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":5,"text":"AAR draft","textPreview":"AAR draft","textChars":9,"textLines":1,"bbox":[838,338,130,38]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":5,"text":"Report sections","textPreview":"Report sections","textChars":15,"textLines":1,"bbox":[838,382,130,40]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":5,"bbox":[996,328,80,3]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":5,"text":"?","textPreview":"?","textChars":1,"textLines":1,"bbox":[1032,298,40,48]}
+{"kind":"shape","id":"sh/at47y1kr","slide":5,"bbox":[1080,258,150,150]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1132,282,46,44]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":5,"text":"Team review","textPreview":"Team review","textChars":11,"textLines":1,"bbox":[1090,338,130,38]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":5,"text":"Screenshots + notes","textPreview":"Screenshots + notes","textChars":19,"textLines":1,"bbox":[1090,382,130,40]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":5,"text":"The workflow keeps the human review step visible: the app produces a draft, not an automatically final report.","textPreview":"The workflow keeps the human review step visible: the app produces a draft, not an automatically final report.","textChars":110,"textLines":1,"bbox":[118,510,1040,60]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/a9aji5","slide":5,"text":""}
+{"kind":"slide","id":"sl/utnz28","slide":6,"title":"CSC 482 Capstone Project II | Team 1","textShapes":23}
+{"kind":"textbox","id":"sh/72x4nap4","slide":6,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":6,"text":"Milestone Progress","textPreview":"Milestone Progress","textChars":18,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":6,"bbox":[42,152,1196,2]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":6,"bbox":[54,190,150,56]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":6,"text":"Done","textPreview":"Done","textChars":4,"textLines":1,"bbox":[76,205,110,24]}
+{"kind":"textbox","id":"sh/0z61032l","slide":6,"text":"June 15-21","textPreview":"June 15-21","textChars":10,"textLines":1,"bbox":[230,198,180,28]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":6,"text":"Milestone 1","textPreview":"Milestone 1","textChars":11,"textLines":1,"bbox":[430,198,170,28]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":6,"text":"Repository setup, README, sample incidents, form field review","textPreview":"Repository setup, README, sample incidents, form field review","textChars":61,"textLines":1,"bbox":[620,198,580,40]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":6,"bbox":[54,264,150,56]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":6,"text":"Done","textPreview":"Done","textChars":4,"textLines":1,"bbox":[76,279,110,24]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":6,"text":"June 22-28","textPreview":"June 22-28","textChars":10,"textLines":1,"bbox":[230,272,180,28]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":6,"text":"Milestone 2","textPreview":"Milestone 2","textChars":11,"textLines":1,"bbox":[430,272,170,28]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":6,"text":"Backend data structure, frontend form, first LLM-generated report draft","textPreview":"Backend data structure, frontend form, first LLM-generated report draft","textChars":71,"textLines":1,"bbox":[620,272,580,40]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":6,"bbox":[54,338,150,56]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":6,"text":"Current","textPreview":"Current","textChars":7,"textLines":1,"bbox":[76,353,110,24]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":6,"text":"June 29-July 5","textPreview":"June 29-July 5","textChars":14,"textLines":1,"bbox":[230,346,180,28]}
+{"kind":"textbox","id":"sh/83itgfml","slide":6,"text":"Milestone 3","textPreview":"Milestone 3","textChars":11,"textLines":1,"bbox":[430,346,170,28]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":6,"text":"Technical/executive styles, 5 Whys, testing screenshots","textPreview":"Technical/executive styles, 5 Whys, testing screenshots","textChars":55,"textLines":1,"bbox":[620,346,580,40]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":6,"bbox":[54,412,150,56]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":6,"text":"Next","textPreview":"Next","textChars":4,"textLines":1,"bbox":[76,427,110,24]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":6,"text":"July 6-12","textPreview":"July 6-12","textChars":9,"textLines":1,"bbox":[230,420,180,28]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":6,"text":"Milestone 4","textPreview":"Milestone 4","textChars":11,"textLines":1,"bbox":[430,420,170,28]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":6,"text":"Validation, error handling, and testing with multiple incidents","textPreview":"Validation, error handling, and testing with multiple incidents","textChars":63,"textLines":1,"bbox":[620,420,580,40]}
+{"kind":"shape","id":"sh/u9knih4b","slide":6,"bbox":[54,486,150,56]}
+{"kind":"textbox","id":"sh/judg7ads","slide":6,"text":"Final","textPreview":"Final","textChars":5,"textLines":1,"bbox":[76,501,110,24]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":6,"text":"July 20-24","textPreview":"July 20-24","textChars":10,"textLines":1,"bbox":[230,494,180,28]}
+{"kind":"textbox","id":"sh/1032lszq","slide":6,"text":"Milestone 6","textPreview":"Milestone 6","textChars":11,"textLines":1,"bbox":[430,494,170,28]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":6,"text":"Final report, presentation slides, and final presentation preparation","textPreview":"Final report, presentation slides, and final presentation preparation","textChars":69,"textLines":1,"bbox":[620,494,580,40]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/utnz28","slide":6,"text":""}
+{"kind":"slide","id":"sl/1mzi8z","slide":7,"title":"CSC 482 Capstone Project II | Team 1","textShapes":10}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":7,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":7,"text":"Team Contributions","textPreview":"Team Contributions","textChars":18,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":7,"bbox":[42,152,1196,2]}
+{"kind":"shape","id":"sh/s72x4nap","slide":7,"bbox":[54,205,350,265]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":7,"text":"Brittany","textPreview":"Brittany","textChars":8,"textLines":1,"bbox":[76,225,306,34]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":7,"text":"Project leader, documentation lead, quality reviewer. Maintains checklists, meeting log, journal evidence, report wording, screenshots, and final submission organization.","textPreview":"Project leader, documentation lead, quality reviewer. Maintains checklists, meeting log, journal evidence, report wording, screenshots, a...","textChars":170,"textLines":1,"bbox":[76,271,306,181]}
+{"kind":"shape","id":"sh/3m94fu18","slide":7,"bbox":[464,205,350,265]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":7,"text":"Garrett","textPreview":"Garrett","textChars":7,"textLines":1,"bbox":[486,225,306,34]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":7,"text":"Backend development and report-generation architecture. Owns schema, LLM prompt workflow, model behavior, 5 Whys, recommendations, fallback behavior, and backend testing.","textPreview":"Backend development and report-generation architecture. Owns schema, LLM prompt workflow, model behavior, 5 Whys, recommendations, fallba...","textChars":170,"textLines":1,"bbox":[486,271,306,181]}
+{"kind":"shape","id":"sh/58z25kb6","slide":7,"bbox":[874,205,350,265]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":7,"text":"Mike","textPreview":"Mike","textChars":4,"textLines":1,"bbox":[896,225,306,34]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":7,"text":"Frontend development and demo workflow. Owns form usability, audience selector polish, generated report display, frontend error behavior, screenshots, and live demo flow.","textPreview":"Frontend development and demo workflow. Owns form usability, audience selector polish, generated report display, frontend error behavior,...","textChars":170,"textLines":1,"bbox":[896,271,306,181]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":7,"text":"Meeting log evidence tracks attendance, assigned work, and status each week.","textPreview":"Meeting log evidence tracks attendance, assigned work, and status each week.","textChars":76,"textLines":1,"bbox":[90,545,1100,42]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/1mzi8z","slide":7,"text":""}
+{"kind":"slide","id":"sl/rpbzfp","slide":8,"title":"CSC 482 Capstone Project II | Team 1","textShapes":10}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":8,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":8,"text":"Testing Evidence Plan","textPreview":"Testing Evidence Plan","textChars":21,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/svu9knih","slide":8,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":8,"text":"The weekly journal and final report need proof that the team tested completed tasks.","textPreview":"The weekly journal and final report need proof that the team tested completed tasks.","textChars":84,"textLines":1,"bbox":[54,190,880,44]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":8,"bbox":[54,285,360,230]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":8,"text":"Screenshots","textPreview":"Screenshots","textChars":11,"textLines":1,"bbox":[76,305,316,34]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":8,"text":"Homepage/form, completed incident input, generated technical report, generated executive report, and any clear error/fallback message.","textPreview":"Homepage/form, completed incident input, generated technical report, generated executive report, and any clear error/fallback message.","textChars":134,"textLines":1,"bbox":[76,351,316,146]}
+{"kind":"shape","id":"sh/3m94fu18","slide":8,"bbox":[460,285,360,230]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":8,"text":"Test notes","textPreview":"Test notes","textChars":10,"textLines":1,"bbox":[482,305,316,34]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":8,"text":"What was tested, expected result, actual result, issues found, and whether the output was usable for an AAR draft.","textPreview":"What was tested, expected result, actual result, issues found, and whether the output was usable for an AAR draft.","textChars":114,"textLines":1,"bbox":[482,351,316,146]}
+{"kind":"shape","id":"sh/d0z61032","slide":8,"bbox":[866,285,360,230]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":8,"text":"Safety","textPreview":"Safety","textChars":6,"textLines":1,"bbox":[888,305,316,34]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":8,"text":"No API key, .env file, or secret value should appear in screenshots, report files, slides, or uploads.","textPreview":"No API key, .env file, or secret value should appear in screenshots, report files, slides, or uploads.","textChars":102,"textLines":1,"bbox":[888,351,316,146]}
+{"kind":"textbox","id":"sh/knih4byh","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/rpbzfp","slide":8,"text":""}
+{"kind":"slide","id":"sl/mbcfdd","slide":9,"title":"CSC 482 Capstone Project II | Team 1","textShapes":27}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":9,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/7u54zido","slide":9,"text":"Areas To Improve Before Final Demo","textPreview":"Areas To Improve Before Final Demo","textChars":34,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/ed8bat47","slide":9,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":9,"text":"Priority","textPreview":"Priority","textChars":8,"textLines":1,"bbox":[66,176,110,24]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":9,"text":"Area","textPreview":"Area","textChars":4,"textLines":1,"bbox":[202,176,190,24]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":9,"text":"Task","textPreview":"Task","textChars":4,"textLines":1,"bbox":[430,176,520,24]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":9,"text":"Owner","textPreview":"Owner","textChars":5,"textLines":1,"bbox":[1010,176,140,24]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":9,"bbox":[54,218,1170,58]}
+{"kind":"textbox","id":"sh/wval87ed","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[72,236,90,24]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":9,"text":"Report variation","textPreview":"Report variation","textChars":16,"textLines":1,"bbox":[202,236,190,24]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":9,"text":"Make technical and executive outputs clearly different","textPreview":"Make technical and executive outputs clearly different","textChars":54,"textLines":1,"bbox":[430,232,520,30]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":9,"text":"Garrett","textPreview":"Garrett","textChars":7,"textLines":1,"bbox":[1010,236,140,24]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":9,"bbox":[54,290,1170,58]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[72,308,90,24]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":9,"text":"Report structure","textPreview":"Report structure","textChars":16,"textLines":1,"bbox":[202,308,190,24]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":9,"text":"Improve 5 Whys, root cause, recommendations, lessons learned","textPreview":"Improve 5 Whys, root cause, recommendations, lessons learned","textChars":60,"textLines":1,"bbox":[430,304,520,30]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":9,"text":"Garrett","textPreview":"Garrett","textChars":7,"textLines":1,"bbox":[1010,308,140,24]}
+{"kind":"shape","id":"sh/61032lsz","slide":9,"bbox":[54,362,1170,58]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":9,"text":"Medium","textPreview":"Medium","textChars":6,"textLines":1,"bbox":[72,380,90,24]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":9,"text":"Frontend polish","textPreview":"Frontend polish","textChars":15,"textLines":1,"bbox":[202,380,190,24]}
+{"kind":"textbox","id":"sh/u54zidon","slide":9,"text":"Clean labels, spacing, output display, screenshot readiness","textPreview":"Clean labels, spacing, output display, screenshot readiness","textChars":59,"textLines":1,"bbox":[430,376,520,30]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":9,"text":"Mike","textPreview":"Mike","textChars":4,"textLines":1,"bbox":[1010,380,140,24]}
+{"kind":"shape","id":"sh/cbulwval","slide":9,"bbox":[54,434,1170,58]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[72,452,90,24]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":9,"text":"Testing evidence","textPreview":"Testing evidence","textChars":16,"textLines":1,"bbox":[202,452,190,24]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":9,"text":"Compare both report styles and capture screenshots","textPreview":"Compare both report styles and capture screenshots","textChars":50,"textLines":1,"bbox":[430,448,520,30]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":9,"text":"Brittany","textPreview":"Brittany","textChars":8,"textLines":1,"bbox":[1010,452,140,24]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":9,"bbox":[54,506,1170,58]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[72,524,90,24]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":9,"text":"Final readiness","textPreview":"Final readiness","textChars":15,"textLines":1,"bbox":[202,524,190,24]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":9,"text":"Final report, slides, speaking roles, backup screenshots","textPreview":"Final report, slides, speaking roles, backup screenshots","textChars":56,"textLines":1,"bbox":[430,520,520,30]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":9,"text":"Team","textPreview":"Team","textChars":4,"textLines":1,"bbox":[1010,524,140,24]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/mbcfdd","slide":9,"text":""}
+{"kind":"slide","id":"sl/hcqb7s","slide":10,"title":"CSC 482 Capstone Project II | Team 1","textShapes":10}
+{"kind":"textbox","id":"sh/idonyd0z","slide":10,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":10,"text":"Final Presentation Preparation","textPreview":"Final Presentation Preparation","textChars":30,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/0je9cvix","slide":10,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":10,"text":"Final presentation window: July 27-28, 2026","textPreview":"Final presentation window: July 27-28, 2026","textChars":43,"textLines":1,"bbox":[54,190,860,44]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":10,"bbox":[54,285,360,230]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":10,"text":"Final Report","textPreview":"Final Report","textChars":12,"textLines":1,"bbox":[76,305,316,34]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":10,"text":"Project summary, milestones, completed subtasks, testing evidence, lessons learned, contributions, and meeting log evidence.","textPreview":"Project summary, milestones, completed subtasks, testing evidence, lessons learned, contributions, and meeting log evidence.","textChars":124,"textLines":1,"bbox":[76,351,316,146]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":10,"bbox":[460,285,360,230]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":10,"text":"Slides","textPreview":"Slides","textChars":6,"textLines":1,"bbox":[482,305,316,34]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":10,"text":"Problem, solution, prototype workflow, screenshots, testing summary, lessons learned, team roles, and final demo plan.","textPreview":"Problem, solution, prototype workflow, screenshots, testing summary, lessons learned, team roles, and final demo plan.","textChars":118,"textLines":1,"bbox":[482,351,316,146]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":10,"bbox":[866,285,360,230]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":10,"text":"Live Demo","textPreview":"Live Demo","textChars":9,"textLines":1,"bbox":[888,305,316,34]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":10,"text":"Run the app, submit a sample incident, show the generated report, explain technical vs executive output, and use backups if needed.","textPreview":"Run the app, submit a sample incident, show the generated report, explain technical vs executive output, and use backups if needed.","textChars":131,"textLines":1,"bbox":[888,351,316,146]}
+{"kind":"textbox","id":"sh/sji5snel","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/hcqb7s","slide":10,"text":""}
+{"kind":"slide","id":"sl/07njfm","slide":11,"title":"CSC 482 Capstone Project II | Team 1","textShapes":5}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":11,"text":"CSC 482 Capstone Project II | Team 1","textPreview":"CSC 482 Capstone Project II | Team 1","textChars":36,"textLines":1,"bbox":[42,32,700,26]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":11,"text":"What Success Looks Like","textPreview":"What Success Looks Like","textChars":23,"textLines":1,"bbox":[42,70,950,72]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":11,"bbox":[42,152,1196,2]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":11,"text":"By the final presentation, Team 1 should be able to demonstrate a working AAR Generator that produces useful draft reports from incident details.","textPreview":"By the final presentation, Team 1 should be able to demonstrate a working AAR Generator that produces useful draft reports from incident ...","textChars":145,"textLines":1,"bbox":[74,190,1040,96]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":11,"text":"• The prototype accepts realistic incident data\n• The generated report includes timeline, evidence, 5 Whys, root cause, remediation, recommendations, and lessons learned\n• Technical and executive audience options are clearly different\n• Testing evidence and screenshots support the final report\n• Each team member can explain their contribution","textPreview":"• The prototype accepts realistic incident data | • The generated report includes timeline, evidence, 5 Whys, root cause, remediation, re...","textChars":344,"textLines":5,"bbox":[96,330,980,220]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1180,664,60,24]}
+{"kind":"notes","id":"nt/07njfm","slide":11,"text":""}
