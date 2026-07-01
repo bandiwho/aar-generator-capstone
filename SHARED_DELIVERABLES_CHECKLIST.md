@@ -81,7 +81,7 @@ Class: CSC 482 Capstone Project II
 - [x] Homepage loads successfully.
 - [x] Report form generates output.
 - [x] Technical report style tested.
-- [ ] Executive report style tested.
+- [x] Executive report style tested.
 - [x] Sample incident tested.
 - [x] Error handling tested with API/model fallback behavior.
 - [ ] Screenshots saved for final documentation.
@@ -167,7 +167,7 @@ Submission type: Website URL
 - [x] Add the GitHub repository URL to the weekly journal.
 - [x] Add the GitHub repository URL to the Canvas team homepage.
 
-### Weekly Journal Assignment
+### Weekly 3 Journal Assignment
 
 Due: Sunday by 11:59 PM
 Submission type: PDF file upload
@@ -191,21 +191,21 @@ Due: Sunday by 11:59 PM
 Submission type: PDF file upload
 
 - [x] Code and test assigned team project tasks as planned.
-- [ ] Push completed achievements to GitHub.
+- [x] Push completed achievements to GitHub.
 - [x] Update the README to reflect current progress.
 - [x] Add the GitHub repository URL as the subtitle of the midterm report.
 - [x] Write milestones achieved so far with brief descriptions.
 - [x] Write subtasks completed so far with brief descriptions.
-- [ ] Provide detailed testing descriptions for completed subtasks with screenshots.
-- [ ] Add demo screenshots as evidence.
+- [x] Provide detailed testing descriptions for completed subtasks with screenshots.
+- [x] Add demo screenshots as evidence.
 - [x] Write lessons learned.
 - [x] Write the contribution of each team member.
 - [x] State whether the team progressed as planned.
 - [x] If the team did not progress as planned, explain how the plan was adjusted.
 - [x] Confirm the report conforms to the project plan, timeline, and schedule unless adjusted.
-- [ ] Each team member signs the report before submission.
-- [ ] Export the midterm report as a PDF.
-- [ ] Upload the PDF to Canvas.
+- [x] Each team member signs the report before submission.
+- [x] Export the midterm report as a PDF.
+- [x] Upload the PDF to Canvas.
 
 ## 13. Week 5 Canvas Assignment: Weekly Journal
 
@@ -213,17 +213,17 @@ Due: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [ ] Code and test planned project tasks for Week 5.
-- [ ] Push completed achievements to GitHub.
+- [~] Code and test planned project tasks for Week 5.
+- [~] Push completed achievements to GitHub.
 - [x] Update the README to reflect current progress.
 - [x] Add a meeting log that records date/time, attendance, topics, assigned tasks, and completion status.
-- [ ] Include meeting log information in the Week 5 journal.
-- [ ] Write milestones achieved this week with brief descriptions.
-- [ ] Write subtasks completed this week with brief descriptions.
-- [ ] Provide detailed testing descriptions for completed subtasks.
-- [ ] Add demo screenshots as evidence.
-- [ ] Write lessons learned.
-- [ ] Document the contribution of Brittany, Garrett, and Mike.
+- [~] Include meeting log information in the Week 5 journal.
+- [~] Write milestones achieved this week with brief descriptions.
+- [~] Write subtasks completed this week with brief descriptions.
+- [~] Provide detailed testing descriptions for completed subtasks.
+- [~] Add demo screenshots as evidence.
+- [~] Write lessons learned.
+- [~] Document the contribution of Brittany, Garrett, and Mike.
 - [ ] State whether the team progressed as planned.
 - [ ] If the team did not progress as planned, explain the adjustment.
 - [ ] Confirm no API key is visible in screenshots.
@@ -382,15 +382,16 @@ Use this section during team meetings.
   - Milestone todos updated for Week 5 coding, testing, GitHub, journal, and meeting-log tasks.
   - Shared deliverables checklist updated with Week 5 journal requirements.
 - Still needed:
-  - Push completed achievements to GitHub.
-  - Add exact meeting time after the Tuesday meeting.
-  - Finish technical and executive report-style improvements.
-  - Capture demo screenshots without showing the API key.
-  - Write detailed test descriptions for the weekly journal.
-  - Export the weekly journal as a PDF.
-- Blockers:
-  - Avoid exposing the OpenAI API key in screenshots or uploaded files.
-
+  - [~] Push completed achievements to GitHub.
+  - [x] Add exact meeting time after the Tuesday meeting. 
+  - [~] Finish technical and executive report-style improvements.
+  - [~] Capture demo screenshots without showing the API key.
+  - [ ] Write detailed test descriptions for the weekly journal.
+  - [ ] Export the weekly journal as a PDF.
+- Blockers: 
+  - [~] Avoid exposing the OpenAI API key in screenshots or uploaded files.
+  - [~] Brittany needs to finish Sample incident refinements so Mike can add autofill button for demo.
+  - [~] Audience needs variation added for screenshots by end of week.
 ### Week 6
 
 - Completed:
