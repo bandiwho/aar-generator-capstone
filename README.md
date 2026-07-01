@@ -17,14 +17,14 @@ Build a lightweight web-based tool that helps users create professional after-ac
 
 ## Core Capabilities
 
-- Incident detail entry through a clear frontend form.
-- Support for timelines, log snippets, impact notes, and remediation steps.
-- LLM-supported report generation workflow.
-- 5 Whys root-cause analysis.
-- Technical and executive reporting styles.
-- Realistic sample incident data for testing.
-- Demo workflow documentation for presentation practice.
-- GitHub repository for shared source code and documentation.
+- [~] Incident detail entry through a clear frontend form.
+- [x] Support for timelines, log snippets, impact notes, and remediation steps.
+- [x] LLM-supported report generation workflow.
+- [ ] 5 Whys root-cause analysis.
+- [x] Technical and executive reporting styles.
+- [~] Realistic sample incident data for testing.
+- [ ] Demo workflow documentation for presentation practice.
+- [x] GitHub repository for shared source code and documentation.
 
 ## Current Project Status
 
@@ -70,7 +70,7 @@ The Week 5 journal will summarize milestones achieved, subtasks completed, detai
 |---|---|---|---|
 | [x] | June 15 - June 21 | Milestone 1 | Repository setup, README, sample incidents, form field review, and demo workflow instructions |
 | [x] | June 22 - June 28 | Milestone 2 | Backend data structure, report-generation workflow, frontend form refinement, and first LLM-generated report draft |
-| [ ] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, output formatting, testing screenshots, and meeting log evidence |
+| [~] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, output formatting, testing screenshots, and meeting log evidence |
 | [ ] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, sample incident review, weekly journal, and meeting log evidence |
 | [ ] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, demo script, weekly journal, and meeting log evidence |
 | [ ] | July 20 - July 24 | Milestone 6 | Final report, presentation slides, final presentation preparation, final polish, and submission package |
@@ -113,11 +113,11 @@ Goal: Improve the generated report, support different reporting audiences, test 
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
-| [ ] | Garrett | Add technical report style support | Technical report generation path | Output includes technical details and evidence references |
-| [ ] | Garrett | Add executive report style support | Executive report generation path | Output summarizes impact, risk, and recommendations clearly |
+| [~] | Garrett | Add technical report style support | Technical report generation path | Output includes technical details and evidence references |
+| [~] | Garrett | Add executive report style support | Executive report generation path | Output summarizes impact, risk, and recommendations clearly |
 | [ ] | Garrett | Improve 5 Whys analysis and recommendations | Root-cause and recommendation sections | 5 Whys and recommendations connect incident evidence to likely causes |
-| [ ] | Mike | Add or improve style controls | Technical/executive selection in UI | User can choose report audience style |
-| [ ] | Mike | Improve report formatting | Cleaner report display | Generated report is easy to read and screenshot |
+| [x] | Mike | Add or improve style controls | Technical/executive selection in UI | User can choose report audience style |
+| [~] | Mike | Improve report formatting | Cleaner report display | Generated report is easy to read and screenshot |
 | [x] | Brittany | Add meeting log for contribution evidence | `MEETING_LOG.md` | Weekly minutes show attendance, discussion topics, assigned tasks, and completion status |
 | [x] | Brittany | Update README, todos, and deliverables for Week 5 | Updated GitHub documentation | GitHub pages match the Week 5 assignment requirements |
 | [ ] | Brittany | Compare report tone and clarity | Quality review notes and screenshots | Technical and executive outputs match their audiences |
