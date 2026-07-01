@@ -60,7 +60,7 @@ Deliverable:
 Goal: Connect the frontend to the backend and generate a first report draft.
 
 - [x] Team: Code and test assigned project tasks as planned.
-- [ ] Team: Push completed achievements to GitHub.
+- [x] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect current progress.
 - [x] Garrett: Replace the frontend mock report with a backend API call.
 - [x] Garrett: Update `/generate-report` to accept incident data from the frontend.
@@ -73,42 +73,42 @@ Goal: Connect the frontend to the backend and generate a first report draft.
 - [x] Mike: Display the generated report and model/mock-mode metadata in the browser.
 - [x] Brittany: Test the first generated report using a sample incident.
 - [x] Brittany: Write review notes on what is missing or unclear.
-- [ ] Brittany: Collect demo screenshots as evidence of testing.
+- [x] Brittany: Collect demo screenshots as evidence of testing.
 - [x] Brittany: Prepare the team midterm report draft.
 - [x] Brittany: Add the GitHub repository URL as the report subtitle.
 - [x] Brittany: Document milestones achieved with brief descriptions.
 - [x] Brittany: Document subtasks completed with brief descriptions.
-- [ ] Brittany: Add detailed testing descriptions with screenshots as evidence.
+- [x] Brittany: Add detailed testing descriptions with screenshots as evidence.
 - [x] Brittany: Add lessons learned.
 - [x] Brittany: Add each team member's contribution.
 - [x] Brittany: Explain whether the team progressed as planned.
 - [x] Brittany: Explain any plan adjustments if needed.
-- [ ] Team: Review and sign the midterm report before submission.
+- [x] Team: Review and sign the midterm report before submission.
 
 Deliverable:
 
 - [x] Team: The frontend can send incident data to the backend and display a report draft.
-- [ ] Team: The team midterm report is complete, signed by each member, exported as a PDF, and submitted.
+- [x] Team: The team midterm report is complete, signed by each member, exported as a PDF, and submitted.
 
 ## Week 5: Report Styles and Root-Cause Analysis
 
 Goal: Make the generated report more useful, add audience-specific output, test the week's work, and document team contributions for the Week 5 journal.
 
-- [ ] Team: Code and test assigned project tasks as planned for Week 5.
+- [~] Team: Code and test assigned project tasks as planned for Week 5.
 - [ ] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect current Week 5 progress.
 - [x] Team: Add a weekly meeting log for attendance, topics, assigned tasks, and completion status.
-- [ ] Team: Include meeting log information in the Week 5 journal.
-- [ ] Team: Collect testing screenshots without showing the OpenAI API key.
-- [ ] Garrett: Add technical report style generation.
-- [ ] Garrett: Add executive report style generation.
+- [~] Team: Include meeting log information in the Week 5 journal.
+- [~] Team: Collect testing screenshots without showing the OpenAI API key.
+- [~] Garrett: Add technical report style generation.
+- [~] Garrett: Add executive report style generation.
 - [ ] Garrett: Add 5 Whys root-cause analysis.
 - [ ] Garrett: Add recommendations based on the incident details.
-- [ ] Garrett: Confirm backend tests pass after Week 5 report-style changes.
+- [~] Garrett: Confirm backend tests pass after Week 5 report-style changes.
 - [ ] Mike: Help capture frontend demo screenshots for the weekly journal.
 - [x] Mike: Add clear style selection controls in the frontend.
 - [x] Mike: Improve report formatting in the output area.
-- [ ] Brittany: Compare technical and executive reports for tone and clarity.
+- [~] Brittany: Compare technical and executive reports for tone and clarity.
 - [ ] Brittany: Review recommendations to make sure they are realistic.
 - [x] Brittany: Update README, milestone todos, and shared deliverables checklist for the Week 5 assignment.
 - [x] Brittany: Create `MEETING_LOG.md` to make Garrett and Mike's contributions visible.
@@ -117,9 +117,9 @@ Goal: Make the generated report more useful, add audience-specific output, test 
 
 Deliverable:
 
-- [ ] Team: The app generates technical and executive reports with root-cause analysis.
-- [ ] Team: GitHub shows current README, todos, deliverables, and meeting log updates.
-- [ ] Team: The Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike.
+- [~] Team: The app generates technical and executive reports with root-cause analysis.
+- [x] Team: GitHub shows current README, todos, deliverables, and meeting log updates.
+- [~] Team: The Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 6: Revision Feature, Validation, and Testing
 
