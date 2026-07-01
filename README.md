@@ -47,6 +47,7 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Mock fallback kept available so the demo can still run if the API is unavailable.
 - [x] Backend tests added and passing.
 - [x] Sample incidents Markdown updated to match the prototype form fields.
+- [x] Testing checklist added to document sample incident validation and pass/fail criteria.
 - [x] Meeting log added to document weekly attendance, topics, assigned tasks, and contribution evidence.
 - [x] Week 5 README, todos, and shared deliverables checklist updated for the weekly journal requirements.
 
