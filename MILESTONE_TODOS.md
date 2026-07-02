@@ -108,6 +108,14 @@ Goal: Make the generated report more useful, add audience-specific output, test 
 - [ ] Mike: Help capture frontend demo screenshots for the weekly journal.
 - [x] Mike: Add clear style selection controls in the frontend.
 - [x] Mike: Improve report formatting in the output area.
+- [x] Mike: Preserve form values after report generation.
+- [x] Mike: Change the incident date field to a date picker.
+- [x] Mike: Add required-field hints and inline validation messages.
+- [x] Mike: Add clearer loading feedback while reports generate.
+- [x] Mike: Add sample incident autofill with rotating sample data.
+- [x] Mike: Show which sample incident was loaded.
+- [x] Mike: Render Markdown output as a cleaner formatted report preview.
+- [x] Mike: Improve Evidence, Timeline, Remediation, and Open Questions formatting.
 - [~] Brittany: Compare technical and executive reports for tone and clarity.
 - [ ] Brittany: Review recommendations to make sure they are realistic.
 - [x] Brittany: Update README, milestone todos, and shared deliverables checklist for the Week 5 assignment.
