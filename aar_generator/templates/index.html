@@ -20,12 +20,17 @@
             <h2>Incident Details</h2>
             <p>Capture the facts needed for the AAR draft, then choose the audience for the report output.</p>
           </div>
+          <div class="form-tools">
+            <button type="button" class="secondary-button" id="load-sample">Load Sample Incident</button>
+            <p class="sample-status" id="sample-status" aria-live="polite"></p>
+          </div>
 
           <fieldset>
             <legend>Incident Overview</legend>
             <label>
-              Incident title
-              <input name="title" required minlength="3" value="{{ form_values.title|default('') }}" placeholder="Example: Phishing email investigation">
+              <span class="label-row">Incident title <span class="required-hint">Required</span></span>
+              <input name="title" required minlength="3" value="{{ form_values.title|default('') }}" placeholder="Example: Phishing email investigation" aria-describedby="title-validation">
+              <span class="field-validation" id="title-validation" data-validation-for="title" aria-live="polite"></span>
             </label>
 
             <div class="row">
@@ -35,14 +40,15 @@
               </label>
 
               <label>
-                Incident date
-                <input name="incident_date" required value="{{ form_values.incident_date|default('') }}" placeholder="YYYY-MM-DD">
+                <span class="label-row">Incident date <span class="required-hint">Required</span></span>
+                <input type="date" name="incident_date" required value="{{ form_values.incident_date|default('') }}" aria-describedby="incident-date-validation">
+                <span class="field-validation" id="incident-date-validation" data-validation-for="incident_date" aria-live="polite"></span>
               </label>
 
             </div>
 
             <fieldset class="audience-selector">
-              <legend>Audience style</legend>
+              <legend>Audience style <span class="required-hint">Required</span></legend>
               <label class="audience-option">
                 <input type="radio" name="audience" value="technical" required {% if form_values.audience|default('technical') == 'technical' %}checked{% endif %}>
                 <span>
@@ -60,8 +66,9 @@
             </fieldset>
 
             <label>
-              Incident summary
-              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status.">{{ form_values.incident_summary|default('') }}</textarea>
+              <span class="label-row">Incident summary <span class="required-hint">Required</span></span>
+              <textarea name="incident_summary" required minlength="20" rows="5" placeholder="Describe what happened, how it was detected, and the current status." aria-describedby="incident-summary-validation">{{ form_values.incident_summary|default('') }}</textarea>
+              <span class="field-validation" id="incident-summary-validation" data-validation-for="incident_summary" aria-live="polite"></span>
             </label>
           </fieldset>
 
@@ -80,8 +87,9 @@
             </div>
 
             <label>
-              Timeline
-              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed logs&#10;10:05 Containment action completed">{{ form_values.timeline|default('') }}</textarea>
+              <span class="label-row">Timeline <span class="required-hint">Required</span></span>
+              <textarea name="timeline" required minlength="20" rows="7" placeholder="09:15 Alert fired&#10;09:28 Analyst reviewed logs&#10;10:05 Containment action completed" aria-describedby="timeline-validation">{{ form_values.timeline|default('') }}</textarea>
+              <span class="field-validation" id="timeline-validation" data-validation-for="timeline" aria-live="polite"></span>
             </label>
 
             <label>
@@ -98,8 +106,9 @@
           <fieldset>
             <legend>Response and Follow-Up</legend>
             <label>
-              Remediation steps
-              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions.">{{ form_values.remediation_steps|default('') }}</textarea>
+              <span class="label-row">Remediation steps <span class="required-hint">Required</span></span>
+              <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions." aria-describedby="remediation-steps-validation">{{ form_values.remediation_steps|default('') }}</textarea>
+              <span class="field-validation" id="remediation-steps-validation" data-validation-for="remediation_steps" aria-live="polite"></span>
             </label>
 
             <label>
@@ -125,7 +134,7 @@
             <h2>Generation Error</h2>
             <div class="error-message" role="alert">
               <p>The report could not be generated. Review the incident details and try again.</p>
-              <pre>{{ error }}</pre>
+              <span>Technical details were logged on the server.</span>
             </div>
           {% elif result %}
             <div class="output-meta">
@@ -133,31 +142,33 @@
                 <h2>{{ result.title }}</h2>
                 <span>{{ result.audience.value|capitalize }} audience</span>
               </div>
-              <dl class="report-facts">
-                <div>
-                  <dt>Model</dt>
-                  <dd>{{ result.model_used }}</dd>
-                </div>
-                <div>
-                  <dt>Mode</dt>
-                  <dd>{% if result.mock_mode %}Mock{% else %}Live{% endif %}</dd>
-                </div>
-              </dl>
             </div>
-            <div class="report-toolbar" aria-label="Report review sections">
-              <span>Summary</span>
-              <span>Timeline</span>
-              <span>Impact</span>
-              <span>5 Whys</span>
-              <span>Root Cause</span>
-              <span>Recommendations</span>
-              <button type="button" class="secondary-button" id="copy-report">Copy Report</button>
+            <div class="report-toolbar" aria-label="Report controls">
+              <div class="report-control-group" aria-label="Report review sections">
+                <button type="button" class="section-jump" data-section-target="executive-summary">Summary</button>
+                <button type="button" class="section-jump" data-section-target="timeline-of-events">Timeline</button>
+                <button type="button" class="section-jump" data-section-target="impact-assessment">Impact</button>
+                <button type="button" class="section-jump" data-section-target="5-whys-root-cause-analysis">5 Whys</button>
+                <button type="button" class="section-jump" data-section-target="technical-root-cause">Root Cause</button>
+                <button type="button" class="section-jump" data-section-target="recommendations-and-owners">Recommendations</button>
+              </div>
+              <div class="report-control-group report-actions" aria-label="Report actions">
+                <button type="button" class="secondary-button" id="copy-report">Copy Report</button>
+                <button type="button" class="secondary-button" id="download-report">Download Report</button>
+                <button type="button" class="secondary-button" id="print-report">Print Report</button>
+                <button type="button" class="secondary-button" id="new-incident">New Incident</button>
+              </div>
             </div>
             <article class="report-preview">
-              <pre id="report-text">{{ result.report_markdown }}</pre>
+              <pre id="report-text" hidden>{{ result.report_markdown }}</pre>
+              <div id="report-rendered" class="rendered-report"></div>
             </article>
           {% else %}
             <h2>Report Draft</h2>
+            <div class="loading-state" id="loading-state" hidden aria-live="polite">
+              <div class="loading-bar"></div>
+              <p>Generating report draft. This may take a moment.</p>
+            </div>
             <div class="empty-state">
               <p class="empty">Generated report text will appear here after you submit the form.</p>
               <ul>
@@ -175,12 +186,67 @@
       const form = document.getElementById("incident-form");
       const button = document.getElementById("generate-button");
       const clearButton = document.getElementById("clear-form");
+      const loadSampleButton = document.getElementById("load-sample");
+      const sampleStatus = document.getElementById("sample-status");
       const status = document.getElementById("submit-status");
+      const loadingState = document.getElementById("loading-state");
+      const emptyState = document.querySelector(".empty-state");
+      const validationFields = Array.from(form.querySelectorAll("[required]"));
 
-      form.addEventListener("submit", () => {
+      function getValidationMessage(field) {
+        const labelText = field.closest("label")?.querySelector(".label-row")?.firstChild?.textContent?.trim() || "This field";
+        const valueLength = field.value.trim().length;
+        const minimumLength = Number.parseInt(field.getAttribute("minlength") || "0", 10);
+
+        if (!valueLength) {
+          return `${labelText} is required.`;
+        }
+
+        if (minimumLength && valueLength < minimumLength) {
+          return `${labelText} needs at least ${minimumLength} characters.`;
+        }
+
+        return "";
+      }
+
+      function updateFieldValidation(field) {
+        const message = getValidationMessage(field);
+        const messageTarget = form.querySelector(`[data-validation-for="${field.name}"]`);
+
+        if (messageTarget) {
+          messageTarget.textContent = message;
+        }
+
+        field.classList.toggle("field-invalid", Boolean(message));
+        field.setAttribute("aria-invalid", String(Boolean(message)));
+        return !message;
+      }
+
+      validationFields.forEach((field) => {
+        field.addEventListener("input", () => updateFieldValidation(field));
+        field.addEventListener("blur", () => updateFieldValidation(field));
+      });
+
+      form.addEventListener("submit", (event) => {
+        const validationResults = validationFields.map((field) => updateFieldValidation(field));
+        const isFormValid = validationResults.every(Boolean);
+        if (!isFormValid) {
+          event.preventDefault();
+          const firstInvalidField = validationFields.find((field) => field.classList.contains("field-invalid"));
+          firstInvalidField?.focus();
+          status.textContent = "Review the highlighted required fields before generating the report.";
+          return;
+        }
+
         button.disabled = true;
         button.textContent = "Generating...";
         status.textContent = "Generating report draft. This may take a moment.";
+        if (loadingState) {
+          loadingState.hidden = false;
+        }
+        if (emptyState) {
+          emptyState.hidden = true;
+        }
       });
 
       clearButton.addEventListener("click", () => {
@@ -192,19 +258,229 @@
         button.disabled = false;
         button.textContent = "Generate Report Draft";
         status.textContent = "";
+        if (sampleStatus) {
+          sampleStatus.textContent = "";
+        }
+        if (loadingState) {
+          loadingState.hidden = true;
+        }
+        if (emptyState) {
+          emptyState.hidden = false;
+        }
+        validationFields.forEach((field) => updateFieldValidation(field));
         form.querySelector("input, textarea, select").focus();
       });
 
+      if (loadSampleButton) {
+        loadSampleButton.addEventListener("click", async () => {
+          loadSampleButton.disabled = true;
+          loadSampleButton.textContent = "Loading...";
+
+          try {
+            const response = await fetch("/sample-incidents");
+            if (!response.ok) {
+              throw new Error("Sample incident request failed");
+            }
+
+            const data = await response.json();
+            const incidents = data.incidents || [];
+            const nextSampleIndex = Number.parseInt(sessionStorage.getItem("nextSampleIndex") || "0", 10);
+            const sample = incidents[nextSampleIndex % incidents.length];
+            if (!sample) {
+              throw new Error("No sample incident found");
+            }
+            sessionStorage.setItem("nextSampleIndex", String((nextSampleIndex + 1) % incidents.length));
+
+            Object.entries(sample).forEach(([name, value]) => {
+              const field = form.elements[name];
+              if (!field) {
+                return;
+              }
+
+              if (name === "audience") {
+                const option = form.querySelector(`input[name="audience"][value="${value}"]`);
+                if (option) {
+                  option.checked = true;
+                }
+                return;
+              }
+
+              field.value = value;
+            });
+
+            status.textContent = "Sample incident loaded. Review the fields, then generate the report.";
+            if (sampleStatus) {
+              sampleStatus.textContent = `Sample loaded: ${sample.title}`;
+            }
+            validationFields.forEach((field) => updateFieldValidation(field));
+          } catch (error) {
+            status.textContent = "Sample incident could not be loaded.";
+            if (sampleStatus) {
+              sampleStatus.textContent = "";
+            }
+          } finally {
+            loadSampleButton.disabled = false;
+            loadSampleButton.textContent = "Load Sample Incident";
+          }
+        });
+      }
+
       const copyButton = document.getElementById("copy-report");
+      const downloadButton = document.getElementById("download-report");
+      const printButton = document.getElementById("print-report");
+      const newIncidentButton = document.getElementById("new-incident");
       const reportText = document.getElementById("report-text");
+      const reportRendered = document.getElementById("report-rendered");
+      const sectionJumpButtons = document.querySelectorAll("[data-section-target]");
+
+      function slugifyHeading(text) {
+        return text
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+      }
+
+      function buildReportFilename() {
+        const reportTitle = document.querySelector(".output-meta h2")?.textContent || "after-action-report";
+        const filenameBase = slugifyHeading(reportTitle) || "after-action-report";
+        return `${filenameBase}.md`;
+      }
+
+      function appendParagraph(container, lines) {
+        if (!lines.length) {
+          return;
+        }
+
+        const paragraph = document.createElement("p");
+        paragraph.textContent = lines.join(" ");
+        container.appendChild(paragraph);
+        lines.length = 0;
+      }
+
+      function renderMarkdownPreview(markdown, container) {
+        const paragraphLines = [];
+        const lineItemSections = new Set([
+          "timeline of events",
+          "evidence and log observations",
+          "remediation completed",
+          "open questions",
+        ]);
+        let activeHeading = "";
+        let list = null;
+
+        function appendListItem(text) {
+          appendParagraph(container, paragraphLines);
+          if (!list || list.tagName !== "UL") {
+            list = document.createElement("ul");
+            container.appendChild(list);
+          }
+          const item = document.createElement("li");
+          item.textContent = text;
+          list.appendChild(item);
+        }
+
+        markdown.split(/\r?\n/).forEach((line) => {
+          const trimmed = line.trim();
+
+          if (!trimmed) {
+            appendParagraph(container, paragraphLines);
+            list = null;
+            return;
+          }
+
+          const heading = trimmed.match(/^(#{1,3})\s+(.+)/);
+          if (heading) {
+            appendParagraph(container, paragraphLines);
+            list = null;
+            const level = Math.min(heading[1].length + 2, 4);
+            const element = document.createElement(`h${level}`);
+            element.textContent = heading[2];
+            element.id = slugifyHeading(heading[2]);
+            element.tabIndex = -1;
+            container.appendChild(element);
+            activeHeading = heading[2].toLowerCase();
+            return;
+          }
+
+          const bullet = trimmed.match(/^[-*]\s+(.+)/);
+          const numbered = trimmed.match(/^\d+\.\s+(.+)/);
+          if (bullet || numbered) {
+            appendParagraph(container, paragraphLines);
+            if (!list || list.tagName !== (bullet ? "UL" : "OL")) {
+              list = document.createElement(bullet ? "ul" : "ol");
+              container.appendChild(list);
+            }
+            const item = document.createElement("li");
+            item.textContent = bullet ? bullet[1] : numbered[1];
+            list.appendChild(item);
+            return;
+          }
+
+          if (lineItemSections.has(activeHeading)) {
+            appendListItem(trimmed);
+            return;
+          }
+
+          paragraphLines.push(trimmed);
+        });
+
+        appendParagraph(container, paragraphLines);
+      }
+
+      if (reportText && reportRendered) {
+        renderMarkdownPreview(reportText.textContent, reportRendered);
+      }
+
+      sectionJumpButtons.forEach((jumpButton) => {
+        jumpButton.addEventListener("click", () => {
+          const target = document.getElementById(jumpButton.dataset.sectionTarget);
+          if (!target) {
+            return;
+          }
+
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          target.focus({ preventScroll: true });
+        });
+      });
 
       if (copyButton && reportText) {
         copyButton.addEventListener("click", async () => {
-          await navigator.clipboard.writeText(reportText.textContent);
-          copyButton.textContent = "Copied";
-          setTimeout(() => {
-            copyButton.textContent = "Copy Report";
-          }, 1800);
+          try {
+            await navigator.clipboard.writeText(reportText.textContent);
+            copyButton.textContent = "Copied";
+          } catch (error) {
+            copyButton.textContent = "Copy Failed";
+          } finally {
+            setTimeout(() => {
+              copyButton.textContent = "Copy Report";
+            }, 1800);
+          }
+        });
+      }
+
+      if (newIncidentButton) {
+        newIncidentButton.addEventListener("click", () => {
+          window.location.href = "/";
+        });
+      }
+
+      if (printButton) {
+        printButton.addEventListener("click", () => {
+          window.print();
+        });
+      }
+
+      if (downloadButton && reportText) {
+        downloadButton.addEventListener("click", () => {
+          const reportBlob = new Blob([reportText.textContent], { type: "text/markdown" });
+          const reportUrl = URL.createObjectURL(reportBlob);
+          const downloadLink = document.createElement("a");
+          downloadLink.href = reportUrl;
+          downloadLink.download = buildReportFilename();
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          downloadLink.remove();
+          URL.revokeObjectURL(reportUrl);
         });
       }
     </script>

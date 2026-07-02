@@ -1,5 +1,7 @@
+import json
+import logging
 from fastapi import FastAPI, Form, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
@@ -9,6 +11,8 @@ from aar_generator.report_service import ReportService
 from aar_generator.schemas import AudienceStyle, IncidentInput, ReportResponse
 
 BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR.parent / "data"
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Security Incident AAR Generator",
@@ -49,6 +53,12 @@ def index(request: Request) -> HTMLResponse:
 def generate_report(payload: IncidentInput) -> ReportResponse:
     service = ReportService(get_settings())
     return service.generate_report(payload)
+
+
+@app.get("/sample-incidents")
+def sample_incidents() -> JSONResponse:
+    with (DATA_DIR / "sample_incidents.json").open(encoding="utf-8") as sample_file:
+        return JSONResponse(json.load(sample_file))
 
 
 @app.post("/generate-form", response_class=HTMLResponse)
@@ -102,10 +112,10 @@ def generate_report_form(
         )
         result = ReportService(get_settings()).generate_report(incident)
         error = None
-    except Exception as exc:
-        # TODO: Week 6 - Replace broad display with user-safe error handling and server logging.
+    except Exception:
+        logger.exception("Report generation failed")
         result = None
-        error = str(exc)
+        error = True
 
     return templates.TemplateResponse(
         request,
