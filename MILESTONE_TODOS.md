@@ -94,17 +94,17 @@ Deliverable:
 
 Goal: Make the generated report more useful, add audience-specific output, test the week's work, and document team contributions for the Week 5 journal.
 
-- [~] Team: Code and test assigned project tasks as planned for Week 5.
-- [ ] Team: Push completed achievements to GitHub.
+- [x] Team: Code and test assigned project tasks as planned for Week 5.
+- [x] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect current Week 5 progress.
 - [x] Team: Add a weekly meeting log for attendance, topics, assigned tasks, and completion status.
-- [~] Team: Include meeting log information in the Week 5 journal.
-- [~] Team: Collect testing screenshots without showing the OpenAI API key.
-- [~] Garrett: Add technical report style generation.
-- [~] Garrett: Add executive report style generation.
-- [ ] Garrett: Add 5 Whys root-cause analysis.
-- [ ] Garrett: Add recommendations based on the incident details.
-- [~] Garrett: Confirm backend tests pass after Week 5 report-style changes.
+- [x] Team: Include meeting log information in the Week 5 journal.
+- [x] Team: Collect testing screenshots without showing the OpenAI API key.
+- [x] Garrett: Add technical report style generation.
+- [x] Garrett: Add executive report style generation.
+- [x] Garrett: Add 5 Whys root-cause analysis.
+- [x] Garrett: Add recommendations based on the incident details.
+- [x] Garrett: Confirm backend tests pass after Week 5 report-style changes.
 - [X] Mike: Help capture frontend demo screenshots for the weekly journal.
 - [x] Mike: Add clear style selection controls in the frontend.
 - [x] Mike: Improve report formatting in the output area.
@@ -116,18 +116,18 @@ Goal: Make the generated report more useful, add audience-specific output, test 
 - [x] Mike: Show which sample incident was loaded.
 - [x] Mike: Render Markdown output as a cleaner formatted report preview.
 - [x] Mike: Improve Evidence, Timeline, Remediation, and Open Questions formatting.
-- [~] Brittany: Compare technical and executive reports for tone and clarity.
-- [ ] Brittany: Review recommendations to make sure they are realistic.
+- [x] Brittany: Compare technical and executive reports for tone and clarity.
+- [x] Brittany: Review recommendations to make sure they are realistic.
 - [x] Brittany: Update README, milestone todos, and shared deliverables checklist for the Week 5 assignment.
 - [x] Brittany: Create `MEETING_LOG.md` to make Garrett and Mike's contributions visible.
-- [ ] Brittany: Write the Week 5 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
-- [ ] Brittany: Export the Week 5 journal as a PDF for Canvas submission.
+- [x] Brittany: Write the Week 5 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [x] Brittany: Export the Week 5 journal as a PDF for Canvas submission.
 
 Deliverable:
 
-- [~] Team: The app generates technical and executive reports with root-cause analysis.
+- [x] Team: The app generates technical and executive reports with root-cause analysis.
 - [x] Team: GitHub shows current README, todos, deliverables, and meeting log updates.
-- [~] Team: The Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike.
+- [x] Team: The Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 6: Revision Feature, Validation, and Testing
 
@@ -222,8 +222,6 @@ Goal: Present the completed AAR Generator and demonstrate the working prototype.
 
 Only work on these after the MVP is complete.
 
-- [ ] Garrett: Add PDF export.
-- [ ] Garrett: Add DOCX export.
 - [ ] Garrett: Add saved report history.
 - [ ] Mike: Add a report template selection screen.
 - [ ] Mike: Add a dashboard for previous reports.
