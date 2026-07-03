@@ -359,10 +359,96 @@
           .replace(/^-|-$/g, "");
       }
 
-      function buildReportFilename() {
+      function buildReportFilename(extension = "html") {
         const reportTitle = document.querySelector(".output-meta h2")?.textContent || "after-action-report";
         const filenameBase = slugifyHeading(reportTitle) || "after-action-report";
-        return `${filenameBase}.md`;
+        return `${filenameBase}.${extension}`;
+      }
+
+      function escapeHtml(text) {
+        const element = document.createElement("div");
+        element.textContent = text;
+        return element.innerHTML;
+      }
+
+      function buildDownloadableReportHtml() {
+        const reportTitle = document.querySelector(".output-meta h2")?.textContent || "After-Action Report";
+        const audience = document.querySelector(".output-meta span")?.textContent || "";
+        const generatedStatus = reportStatus?.textContent || "";
+        const reportBody = reportRendered?.cloneNode(true);
+
+        reportBody?.querySelectorAll("[id], [tabindex]").forEach((element) => {
+          element.removeAttribute("id");
+          element.removeAttribute("tabindex");
+        });
+
+        return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>${escapeHtml(reportTitle)}</title>
+    <style>
+      body {
+        max-width: 820px;
+        margin: 32px auto;
+        padding: 0 24px;
+        color: #111827;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.55;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .meta {
+        margin: 0 0 20px;
+        border-bottom: 1px solid #d1d5db;
+        padding-bottom: 12px;
+        color: #4b5563;
+        font-weight: 700;
+      }
+
+      h3 {
+        margin: 22px 0 8px;
+        color: #1f2937;
+        font-size: 20px;
+      }
+
+      h4 {
+        margin: 18px 0 8px;
+        color: #1f2937;
+        font-size: 17px;
+      }
+
+      p,
+      ul,
+      ol {
+        margin: 0 0 12px;
+      }
+
+      li + li {
+        margin-top: 5px;
+      }
+
+      @media print {
+        body {
+          margin: 0;
+          max-width: none;
+          padding: 0;
+          font-size: 11pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>${escapeHtml(reportTitle)}</h1>
+    <p class="meta">${escapeHtml(audience)}${generatedStatus ? ` | ${escapeHtml(generatedStatus)}` : ""}</p>
+    ${reportBody?.innerHTML || ""}
+  </body>
+</html>`;
       }
 
       function appendParagraph(container, lines) {
@@ -503,7 +589,7 @@
 
       if (downloadButton && reportText) {
         downloadButton.addEventListener("click", () => {
-          const reportBlob = new Blob([reportText.textContent], { type: "text/markdown" });
+          const reportBlob = new Blob([buildDownloadableReportHtml()], { type: "text/html" });
           const reportUrl = URL.createObjectURL(reportBlob);
           const downloadLink = document.createElement("a");
           downloadLink.href = reportUrl;
