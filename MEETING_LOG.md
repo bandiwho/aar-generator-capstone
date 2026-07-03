@@ -78,22 +78,31 @@ Planned tasks:
 - Discussed Addition on Areas of Improvement page = Help show which Improvements were more importand and where Brittany should take screenshots to provide evidence of improvements.
 - There was suggestion of keeping a database of logged past incident reports. It is beyond scope. We will focus on requirement output and if we have extra time we may implement.                   - Helper text to indicate to user who report is written for.
 - Section of output shows buttons. Depending on time they may be labels or buttons that show summary. 
-- Make Sample incidents follow design of layout and more descriptive.
-## Chat Topics
-06/30 -
+- Make Sample incidents follow design of layout and more descriDiptive.
+
+## Chat Topics:
+
+6/29
+
+- Preparation for meeting
+  
+06/30
 - Improving GitHub layout
 - Changing datye field
 - Adding visual hints to required fields that need to be filled out.
 - Hiding errors from users
+  
 07/01
 - Discuss Progress
 - Blocker - sample incidents update had been resolved.
+  
 07/02
 - Garrett updated backend
 - Progression details
 - Testing started
 - Mike Added Copy button
 - Blocker - Frontend updates resolved. Screenshot are able to be taken.
+  
 07/03
 - View Journal
 - Last minute updates for Journal
