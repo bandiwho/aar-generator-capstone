@@ -114,14 +114,14 @@ Goal: Improve the generated report, support different reporting audiences, test 
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
-| [~] | Garrett | Add technical report style support | Technical report generation path | Output includes technical details and evidence references |
-| [~] | Garrett | Add executive report style support | Executive report generation path | Output summarizes impact, risk, and recommendations clearly |
-| [ ] | Garrett | Improve 5 Whys analysis and recommendations | Root-cause and recommendation sections | 5 Whys and recommendations connect incident evidence to likely causes |
+| [x] | Garrett | Add technical report style support | Technical report generation path | Output includes technical details and evidence references |
+| [x] | Garrett | Add executive report style support | Executive report generation path | Output summarizes impact, risk, and recommendations clearly |
+| [x] | Garrett | Improve 5 Whys analysis and recommendations | Root-cause and recommendation sections | 5 Whys and recommendations connect incident evidence to likely causes |
 | [x] | Mike | Add or improve style controls | Technical/executive selection in UI | User can choose report audience style |
-| [~] | Mike | Improve report formatting | Cleaner report display | Generated report is easy to read and screenshot |
+| [x] | Mike | Improve report formatting | Cleaner report display | Generated report is easy to read and screenshot |
 | [x] | Brittany | Add meeting log for contribution evidence | `MEETING_LOG.md` | Weekly minutes show attendance, discussion topics, assigned tasks, and completion status |
 | [x] | Brittany | Update README, todos, and deliverables for Week 5 | Updated GitHub documentation | GitHub pages match the Week 5 assignment requirements |
-| [ ] | Brittany | Compare report tone and clarity | Quality review notes and screenshots | Technical and executive outputs match their audiences |
+| [x] | Brittany | Compare report tone and clarity | Quality review notes and screenshots | Technical and executive outputs match their audiences |
 
 ### Milestone 4: Testing and Validation
 

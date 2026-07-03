@@ -84,8 +84,8 @@ Class: CSC 482 Capstone Project II
 - [x] Executive report style tested.
 - [x] Sample incident tested.
 - [x] Error handling tested with API/model fallback behavior.
-- [ ] Screenshots saved for final documentation.
-- [ ] Test notes saved for final submission.
+- [x] Screenshots saved for final documentation.
+- [~] Test notes saved for final submission.
 
 ## 7. Documentation Deliverables
 
@@ -94,8 +94,8 @@ Class: CSC 482 Capstone Project II
 - [ ] Solution summary written.
 - [ ] Tool features listed.
 - [ ] Technology stack listed.
-- [ ] Setup instructions written.
-- [ ] Usage instructions written.
+- [x] Setup instructions written.
+- [x] Usage instructions written.
 - [ ] Testing summary written.
 - [ ] Known limitations written.
 - [ ] Future improvements written.
@@ -103,7 +103,7 @@ Class: CSC 482 Capstone Project II
 - [ ] Final report completed.
 - [ ] Final report exported as a PDF.
 - [x] Weekly meeting log created.
-- [ ] Weekly meeting log included or summarized in the weekly journal, midterm report, and final report.
+- [~] Weekly meeting log included or summarized in the weekly journal, midterm report, and final report.
 
 ## 8. Presentation Deliverables
 
@@ -213,22 +213,22 @@ Due: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [~] Code and test planned project tasks for Week 5.
-- [~] Push completed achievements to GitHub.
+- [x] Code and test planned project tasks for Week 5.
+- [x] Push completed achievements to GitHub.
 - [x] Update the README to reflect current progress.
 - [x] Add a meeting log that records date/time, attendance, topics, assigned tasks, and completion status.
-- [~] Include meeting log information in the Week 5 journal.
-- [~] Write milestones achieved this week with brief descriptions.
-- [~] Write subtasks completed this week with brief descriptions.
-- [~] Provide detailed testing descriptions for completed subtasks.
-- [~] Add demo screenshots as evidence.
-- [~] Write lessons learned.
-- [~] Document the contribution of Brittany, Garrett, and Mike.
-- [ ] State whether the team progressed as planned.
-- [ ] If the team did not progress as planned, explain the adjustment.
-- [ ] Confirm no API key is visible in screenshots.
-- [ ] Export the Week 5 journal as a PDF.
-- [ ] Submit the PDF before Friday if possible, or by the Sunday deadline.
+- [x] Include meeting log information in the Week 5 journal.
+- [x] Write milestones achieved this week with brief descriptions.
+- [x] Write subtasks completed this week with brief descriptions.
+- [x] Provide detailed testing descriptions for completed subtasks.
+- [x] Add demo screenshots as evidence.
+- [x] Write lessons learned.
+- [x] Document the contribution of Brittany, Garrett, and Mike.
+- [x] State whether the team progressed as planned.
+- [x] If the team did not progress as planned, explain the adjustment.
+- [x] Confirm no API key is visible in screenshots.
+- [x] Export the Week 5 journal as a PDF.
+- [x] Submit the PDF before Friday if possible, or by the Sunday deadline.
 
 ## 14. Week 6 Canvas Assignment: Weekly Journal
 
@@ -316,7 +316,7 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Lead final submission check.
 - [x] Create Week 5 meeting log.
 - [x] Update README, todos, and deliverables for Week 5.
-- [ ] Collect screenshot evidence and write Week 5 journal sections.
+- [x] Collect screenshot evidence and write Week 5 journal sections.
 
 ### Garrett
 
@@ -324,9 +324,9 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Confirm tests pass.
 - [x] Document backend setup and technical behavior.
 - [ ] Prepare backend explanation for demo.
-- [ ] Continue technical/executive report-style backend work.
-- [ ] Continue 5 Whys and recommendation logic.
-- [ ] Confirm tests pass after Week 5 changes.
+- [~] Continue technical/executive report-style backend work.
+- [~] Continue 5 Whys and recommendation logic.
+- [~] Confirm tests pass after Week 5 changes.
 
 ### Mike
 
@@ -334,8 +334,8 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Confirm interface works during demo practice.
 - [x] Document frontend usage.
 - [ ] Prepare frontend explanation for demo.
-- [ ] Continue style selection controls and report output formatting.
-- [ ] Help capture frontend screenshots for testing evidence.
+- [~] Continue style selection controls and report output formatting.
+- [~] Help capture frontend screenshots for testing evidence.
 
 ## Weekly Review Notes
 
@@ -382,16 +382,16 @@ Use this section during team meetings.
   - Milestone todos updated for Week 5 coding, testing, GitHub, journal, and meeting-log tasks.
   - Shared deliverables checklist updated with Week 5 journal requirements.
 - Still needed:
-  - [~] Push completed achievements to GitHub.
+  - [x] Push completed achievements to GitHub.
   - [x] Add exact meeting time after the Tuesday meeting. 
-  - [~] Finish technical and executive report-style improvements.
-  - [~] Capture demo screenshots without showing the API key.
-  - [ ] Write detailed test descriptions for the weekly journal.
-  - [ ] Export the weekly journal as a PDF.
+  - [x] Finish technical and executive report-style improvements.
+  - [x] Capture demo screenshots without showing the API key.
+  - [x] Write detailed test descriptions for the weekly journal.
+  - [x] Export the weekly journal as a PDF.
 - Blockers: 
-  - [~] Avoid exposing the OpenAI API key in screenshots or uploaded files.
-  - [~] Brittany needs to finish Sample incident refinements so Mike can add autofill button for demo.
-  - [~] Audience needs variation added for screenshots by end of week.
+  - [x] Avoid exposing the OpenAI API key in screenshots or uploaded files.
+  - [x] Brittany needs to finish Sample incident refinements so Mike can add autofill button for demo.
+  - [x] Audience needs variation added for screenshots by end of week.
 ### Week 6
 
 - Completed:

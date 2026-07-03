@@ -66,9 +66,9 @@ Planned tasks:
 
 | Team member | Assigned work | Status |
 |---|---|---|
-| Brittany | Keep weekly meeting log current, update documentation, collect screenshots, compare report tone, and prepare weekly journal content. | In progress |
-| Garrett | Continue backend report style logic, 5 Whys analysis, recommendations, OpenAI integration, and test coverage. | In progress |
-| Mike | Continue frontend style controls, report output formatting, demo workflow, and screenshot support. | In progress |
+| Brittany | Keep weekly meeting log current, update documentation, collect screenshots, compare report tone, and prepare weekly journal content. | In Progress |
+| Garrett | Continue backend report style logic, 5 Whys analysis, recommendations, OpenAI integration, and test coverage. | Complete |
+| Mike | Continue frontend style controls, report output formatting, demo workflow, and screenshot support. | Complete |
 
 ## During Meeting/Afterthoughts Topics:
 - Discussed Layout 
@@ -85,6 +85,21 @@ Planned tasks:
 - Changing datye field
 - Adding visual hints to required fields that need to be filled out.
 - Hiding errors from users
+07/01
+- Discuss Progress
+- Blocker - sample incidents update had been resolved.
+07/02
+- Garrett updated backend
+- Progression details
+- Testing started
+- Mike Added Copy button
+- Blocker - Frontend updates resolved. Screenshot are able to be taken.
+07/03
+- View Journal
+- Last minute updates for Journal
+- Signatures
+- Premtive Discussion For Next Goals
+
 ### Week 6 Meeting
 
 Date and time: Tuesday, July 7, 2026, 6:30 PM
