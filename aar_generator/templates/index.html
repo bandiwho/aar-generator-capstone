@@ -141,6 +141,7 @@
               <div>
                 <h2>{{ result.title }}</h2>
                 <span>{{ result.audience.value|capitalize }} audience</span>
+                <p class="report-status" id="report-status">Report generated successfully</p>
               </div>
             </div>
             <div class="report-toolbar" aria-label="Report controls">
@@ -158,10 +159,12 @@
                 <button type="button" class="secondary-button" id="print-report">Print Report</button>
                 <button type="button" class="secondary-button" id="new-incident">New Incident</button>
               </div>
+              <p class="report-action-status" id="report-action-status" aria-live="polite"></p>
             </div>
             <article class="report-preview">
               <pre id="report-text" hidden>{{ result.report_markdown }}</pre>
               <div id="report-rendered" class="rendered-report"></div>
+              <button type="button" class="back-to-top" id="back-to-report-top">Back to Top</button>
             </article>
           {% else %}
             <h2>Report Draft</h2>
@@ -332,6 +335,22 @@
       const reportText = document.getElementById("report-text");
       const reportRendered = document.getElementById("report-rendered");
       const sectionJumpButtons = document.querySelectorAll("[data-section-target]");
+      const reportStatus = document.getElementById("report-status");
+      const reportActionStatus = document.getElementById("report-action-status");
+      const backToReportTopButton = document.getElementById("back-to-report-top");
+
+      if (reportStatus) {
+        reportStatus.textContent = `Report generated successfully on ${new Date().toLocaleString([], {
+          dateStyle: "medium",
+          timeStyle: "short",
+        })}`;
+      }
+
+      function setReportActionStatus(message) {
+        if (reportActionStatus) {
+          reportActionStatus.textContent = message;
+        }
+      }
 
       function slugifyHeading(text) {
         return text
@@ -396,6 +415,9 @@
             const element = document.createElement(`h${level}`);
             element.textContent = heading[2];
             element.id = slugifyHeading(heading[2]);
+            if (element.id === "open-questions") {
+              element.classList.add("attention-heading");
+            }
             element.tabIndex = -1;
             container.appendChild(element);
             activeHeading = heading[2].toLowerCase();
@@ -448,8 +470,10 @@
           try {
             await navigator.clipboard.writeText(reportText.textContent);
             copyButton.textContent = "Copied";
+            setReportActionStatus("Report copied to clipboard.");
           } catch (error) {
             copyButton.textContent = "Copy Failed";
+            setReportActionStatus("Report could not be copied.");
           } finally {
             setTimeout(() => {
               copyButton.textContent = "Copy Report";
@@ -466,7 +490,14 @@
 
       if (printButton) {
         printButton.addEventListener("click", () => {
+          setReportActionStatus("Print dialog opened.");
           window.print();
+        });
+      }
+
+      if (backToReportTopButton && reportRendered) {
+        backToReportTopButton.addEventListener("click", () => {
+          reportRendered.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       }
 
@@ -481,6 +512,7 @@
           downloadLink.click();
           downloadLink.remove();
           URL.revokeObjectURL(reportUrl);
+          setReportActionStatus(`Report downloaded as ${downloadLink.download}.`);
         });
       }
     </script>

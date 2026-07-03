@@ -321,6 +321,13 @@ button:disabled,
   color: var(--muted);
 }
 
+.report-status {
+  margin: 8px 0 0;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .report-toolbar {
   display: grid;
   gap: 10px;
@@ -336,6 +343,14 @@ button:disabled,
 
 .report-actions {
   padding-top: 2px;
+}
+
+.report-action-status {
+  min-height: 20px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .section-jump {
@@ -367,20 +382,25 @@ button:disabled,
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fcfdff;
-  padding: 16px;
+  padding: 18px;
 }
 
 .rendered-report {
   display: grid;
-  gap: 12px;
+  gap: 14px;
   color: var(--text);
 }
 
 .rendered-report h3,
 .rendered-report h4 {
-  margin: 8px 0 0;
+  margin: 14px 0 0;
   color: var(--steel);
   line-height: 1.25;
+}
+
+.rendered-report h3:first-child,
+.rendered-report h4:first-child {
+  margin-top: 0;
 }
 
 .rendered-report h3 {
@@ -402,8 +422,43 @@ button:disabled,
   padding-left: 22px;
 }
 
+.rendered-report p,
+.rendered-report li {
+  max-width: 78ch;
+}
+
 .rendered-report li + li {
   margin-top: 5px;
+}
+
+.attention-heading {
+  border-top: 1px solid #e6c981;
+  padding-top: 14px;
+  color: #725012;
+}
+
+.attention-heading + ul,
+.attention-heading + ol,
+.attention-heading + p {
+  border-left: 3px solid #e6c981;
+  background: #fffaf0;
+  padding: 10px 12px;
+}
+
+.back-to-top {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--steel);
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  border-color: var(--accent);
+  background: #eef8f7;
+  color: var(--accent-dark);
 }
 
 .empty-state {
@@ -581,6 +636,9 @@ pre {
   .intro,
   #incident-form,
   .report-toolbar,
+  .report-status,
+  .report-action-status,
+  .back-to-top,
   .loading-state,
   .empty-state,
   .error-message {
@@ -656,5 +714,19 @@ pre {
   .rendered-report ol {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .attention-heading {
+    border-top: 0;
+    padding-top: 0;
+    color: #000000;
+  }
+
+  .attention-heading + ul,
+  .attention-heading + ol,
+  .attention-heading + p {
+    border-left: 0;
+    background: transparent;
+    padding: 0;
   }
 }

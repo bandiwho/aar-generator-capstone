@@ -105,7 +105,7 @@ Goal: Make the generated report more useful, add audience-specific output, test 
 - [ ] Garrett: Add 5 Whys root-cause analysis.
 - [ ] Garrett: Add recommendations based on the incident details.
 - [~] Garrett: Confirm backend tests pass after Week 5 report-style changes.
-- [ ] Mike: Help capture frontend demo screenshots for the weekly journal.
+- [X] Mike: Help capture frontend demo screenshots for the weekly journal.
 - [x] Mike: Add clear style selection controls in the frontend.
 - [x] Mike: Improve report formatting in the output area.
 - [x] Mike: Preserve form values after report generation.
