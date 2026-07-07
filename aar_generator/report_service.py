@@ -1,3 +1,5 @@
+import re
+
 from aar_generator.config import Settings
 from aar_generator.llm_client import LlmClient
 from aar_generator.prompts import build_report_prompt
@@ -24,6 +26,7 @@ class ReportService:
             except Exception:
                 report_markdown = self._build_mock_report(incident)
                 used_mock = True
+        report_markdown = self._clean_repetitive_bullet_labels(report_markdown)
         return ReportResponse(
             title=incident.title,
             audience=incident.audience,
@@ -131,3 +134,19 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _sentence_fragment(value: str) -> str:
         return value.strip().rstrip(".")
+
+    @staticmethod
+    def _clean_repetitive_bullet_labels(report_markdown: str) -> str:
+        label_pattern = re.compile(
+            r"^(\s*[-*]\s+)(?:\*\*)?(Gap|Task):(?:\*\*)?\s+",
+            re.IGNORECASE | re.MULTILINE,
+        )
+        report_markdown = label_pattern.sub(r"\1", report_markdown)
+        security_team_pattern = re.compile(
+            r"^(\s*(?:[-*]\s+)?)(The security team\s+)([a-z])",
+            re.IGNORECASE | re.MULTILINE,
+        )
+        return security_team_pattern.sub(
+            lambda match: f"{match.group(1)}{match.group(3).upper()}",
+            report_markdown,
+        )

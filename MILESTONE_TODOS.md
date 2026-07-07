@@ -146,6 +146,7 @@ Goal: Improve reliability and make the app easier to use.
 - [ ] Garrett: Add fallback mock generation if the LLM is unavailable.
 - [ ] Mike: Add required-field validation to the form.
 - [ ] Mike: Improve copy/export behavior for the generated report.
+- [ ] Mike: Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
 - [ ] Mike: Make the frontend easier to use on smaller screens.
 - [ ] Brittany: Test the app with at least three incident scenarios.
 - [ ] Brittany: Track bugs and unclear output in a testing notes file.

@@ -16,9 +16,10 @@ The most important Week 6 work is to prove the prototype is reliable. The team s
 |---|---|---|---|
 | 1 | Sample incident testing and testing notes | Brittany | The Week 6 journal needs real testing evidence, not only task descriptions. |
 | 2 | Frontend validation screenshots | Mike | Validation proves the app guides users when required information is missing. |
-| 3 | Backend error handling and fallback behavior | Garrett | Fallback behavior protects the final demo if the LLM or API connection fails. |
-| 4 | Meeting and contribution evidence | Brittany | The instructor needs proof of each member's work and attendance. |
-| 5 | Backup demo evidence | Team | Backup screenshots and saved reports reduce final presentation risk. |
+| 3 | Copy/download and report layout evidence | Mike | Export evidence proves the team can save reports, but layout should be clean enough for journal or final report use. |
+| 4 | Backend error handling and fallback behavior | Garrett | Fallback behavior protects the final demo if the LLM or API connection fails. |
+| 5 | Meeting and contribution evidence | Brittany | The instructor needs proof of each member's work and attendance. |
+| 6 | Backup demo evidence | Team | Backup screenshots and saved reports reduce final presentation risk. |
 
 ## Improvement Chart
 
@@ -31,7 +32,7 @@ The most important Week 6 work is to prove the prototype is reliable. The team s
 | Backend error handling | The app should handle API failures or weak input without confusing the user. | Garrett | Planned | Improve backend error handling, keep mock fallback available, and confirm the report service returns a usable response when the LLM is unavailable. | High | Test result or screenshot showing fallback/mock behavior without exposing the API key. |
 | Technical vs executive output review | The advanced component depends on clear audience differences. | Brittany and Garrett | In progress | Compare technical and executive reports for the same or similar incident and note whether the tone is different enough. | High | Side-by-side notes or screenshots of technical and executive outputs. |
 | 5 Whys and recommendations quality | The report should connect root cause and recommendations to the incident details. | Garrett | In progress | Review whether 5 Whys, root cause, and recommendations reference timeline, evidence, impact, and remediation details. | High | Generated report screenshot showing incident-specific 5 Whys and recommendations. |
-| Copy/export behavior | The team needs clean evidence and backup reports for demo and submission. | Mike | Planned | Improve copy, download, print, or export behavior so generated reports are easy to save. | Medium | Screenshot or saved report file showing copy/download/print behavior. |
+| Copy/export behavior | The team needs clean evidence and backup reports for demo and submission. | Mike | In progress | Confirm Copy Report and Download Report work, then review whether the downloaded HTML report layout is clean enough or should be replaced with Print/Save as PDF for polished evidence. | High | Screenshot showing copy/download status, saved HTML report file, and note about whether layout needs cleanup. |
 | Mobile and usability polish | The frontend should remain usable on smaller screens and during live demo practice. | Mike | Planned | Review layout spacing, responsive behavior, form controls, and generated report readability. | Medium | Screenshot of the app on a smaller browser width. |
 | Final demo risk reduction | The team needs backup evidence if the live API or demo environment fails. | Team | Planned | Prepare backup screenshots, a backup generated report, and notes explaining fallback behavior. | Medium | Backup screenshots, saved generated report file, and fallback explanation notes. |
 
@@ -41,7 +42,7 @@ The most important Week 6 work is to prove the prototype is reliable. The team s
 |---|---|---|
 | Brittany | Test at least three sample incidents, update Week 6 documentation, collect screenshots, track pass/fail notes, and prepare journal evidence. | Week 6 testing notes, updated checklists, meeting log evidence, and screenshots with no API key visible. |
 | Garrett | Improve backend error handling, fallback behavior, report revision support, 5 Whys quality, recommendation quality, and backend testing. | Stronger report-generation logic, fallback evidence, revision notes, and passing backend tests. |
-| Mike | Improve required-field validation, copy/export behavior, mobile usability, and frontend screenshot support. | Cleaner form validation, easier report saving, improved layout, and frontend evidence screenshots. |
+| Mike | Improve required-field validation, copy/export behavior, downloaded report layout, and frontend screenshot support. | Cleaner form validation, easier report saving, downloaded report layout notes, and frontend evidence screenshots. |
 | Team | Review test results, assign fixes, push completed achievements to GitHub, and confirm evidence is ready before Week 6 journal submission. | Bug list, improvement notes, GitHub updates, and clear owner assignments for remaining work. |
 
 ## Screenshot Targets
@@ -54,6 +55,7 @@ Use these screenshots for the Week 6 journal and final report evidence:
 - Required-field validation message.
 - Mock fallback or error-handling behavior.
 - Copy, download, print, or saved report behavior.
+- Downloaded HTML report layout, especially whether sections, lists, and 5 Whys are readable enough for final evidence.
 - Smaller-screen layout if mobile usability is improved.
 - Meeting log or checklist update showing Week 6 progress.
 

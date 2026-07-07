@@ -83,3 +83,76 @@ def test_report_service_falls_back_to_mock_report_when_api_fails(monkeypatch):
     assert "Recommendations and Owners" in result.report_markdown
     assert "Account compromise" in result.report_markdown
     assert "SIEM impossible travel alert" in result.report_markdown
+
+
+def test_report_service_cleans_repetitive_gap_and_task_bullet_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_repetitive_labels(prompt):
+        return """
+## Process and Communication Gaps
+
+- **Gap:** MFA effectiveness needs confirmation.
+- Gap: Escalation timing needs review.
+
+## Remediation Completed
+
+- **Task:** Disabled the affected account.
+- Task: Reset the user password.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_repetitive_labels)
+
+    result = service.generate_report(build_incident())
+
+    assert "- MFA effectiveness needs confirmation." in result.report_markdown
+    assert "- Escalation timing needs review." in result.report_markdown
+    assert "- Disabled the affected account." in result.report_markdown
+    assert "- Reset the user password." in result.report_markdown
+    assert "Gap:" not in result.report_markdown
+    assert "Task:" not in result.report_markdown
+
+
+def test_report_service_cleans_repeated_security_team_bullet_intro(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_repeated_intro(prompt):
+        return """
+## Remediation Completed
+
+- The security team disabled the affected account.
+- The security team revoked active Microsoft 365 sessions.
+- The security team reset the user password.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_repeated_intro)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Disabled the affected account." in result.report_markdown
+    assert "- Revoked active Microsoft 365 sessions." in result.report_markdown
+    assert "- Reset the user password." in result.report_markdown
+    assert "The security team" not in result.report_markdown
+
+
+def test_report_service_cleans_repeated_security_team_plain_line_intro(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_repeated_plain_intro(prompt):
+        return """
+## Remediation Completed
+
+The security team disabled the affected account.
+The security team revoked active Microsoft 365 sessions.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_repeated_plain_intro)
+
+    result = service.generate_report(build_incident())
+
+    assert "Disabled the affected account." in result.report_markdown
+    assert "Revoked active Microsoft 365 sessions." in result.report_markdown
+    assert "The security team" not in result.report_markdown
