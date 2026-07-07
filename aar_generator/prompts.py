@@ -95,5 +95,10 @@ Rules:
 - Let the section heading provide the category, then write clean bullet text underneath it.
 - Do not split one recommendation sentence into several lowercase bullet fragments.
 - If a recommendation has subconditions, keep them in the same bullet sentence or use capitalized sub-bullets.
+- End the report with the Open Questions section content only.
+- Do not add chat-style closing offers such as "If you share additional details, I can revise this draft."
+- In Open Questions, write the unresolved question first, followed by one short evidence note if needed.
+- Do not repeat lead-in labels such as "Open item:" or "Assumption:" in the Open Questions section.
+- Use "Evidence:" instead of "Evidence note:" when adding support under an open question.
 """.strip()
 

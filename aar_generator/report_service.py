@@ -26,7 +26,7 @@ class ReportService:
             except Exception:
                 report_markdown = self._build_mock_report(incident)
                 used_mock = True
-        report_markdown = self._clean_repetitive_bullet_labels(report_markdown)
+        report_markdown = self._clean_report_markdown(report_markdown)
         return ReportResponse(
             title=incident.title,
             audience=incident.audience,
@@ -136,7 +136,7 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
         return value.strip().rstrip(".")
 
     @staticmethod
-    def _clean_repetitive_bullet_labels(report_markdown: str) -> str:
+    def _clean_report_markdown(report_markdown: str) -> str:
         label_pattern = re.compile(
             r"^(\s*[-*]\s+)(?:\*\*)?(Gap|Task):(?:\*\*)?\s+",
             re.IGNORECASE | re.MULTILINE,
@@ -146,7 +146,22 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
             r"^(\s*(?:[-*]\s+)?)(The security team\s+)([a-z])",
             re.IGNORECASE | re.MULTILINE,
         )
-        return security_team_pattern.sub(
+        report_markdown = security_team_pattern.sub(
             lambda match: f"{match.group(1)}{match.group(3).upper()}",
             report_markdown,
         )
+        open_item_pattern = re.compile(
+            r"^(\s*(?:[-*]\s+)?)(?:\*\*)?(Open item|Assumption):(?:\*\*)?\s+",
+            re.IGNORECASE | re.MULTILINE,
+        )
+        report_markdown = open_item_pattern.sub(r"\1", report_markdown)
+        evidence_note_pattern = re.compile(
+            r"^(\s*(?:[-*]\s+)?(?:\*\*)?Evidence)\s+note(\s*:(?:\*\*)?\s+)",
+            re.IGNORECASE | re.MULTILINE,
+        )
+        report_markdown = evidence_note_pattern.sub(r"\1\2", report_markdown)
+        chat_closing_pattern = re.compile(
+            r"\n*\s*If you share additional[\s\S]*?(?:reduce assumptions|revise this draft)\.?\s*$",
+            re.IGNORECASE,
+        )
+        return chat_closing_pattern.sub("", report_markdown).rstrip()
