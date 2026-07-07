@@ -17,16 +17,18 @@
       <section class="workspace">
         <form method="post" action="/generate-form" class="panel" id="incident-form">
           <div class="panel-heading">
-            <h2>Incident Details</h2>
-            <p>Capture the facts needed for the AAR draft, then choose the audience for the report output.</p>
+            <h2>Incident Report Intake</h2>
+            <p>Enter the incident facts, choose an audience, then generate a draft after-action report.</p>
+            <p class="required-note">Fields marked Required must be completed before generation.</p>
           </div>
           <div class="form-tools">
+            <span class="form-tools-label">Need test data?</span>
             <button type="button" class="secondary-button" id="load-sample">Load Sample Incident</button>
             <p class="sample-status" id="sample-status" aria-live="polite"></p>
           </div>
 
           <fieldset>
-            <legend>Incident Overview</legend>
+            <legend>1. Incident Overview</legend>
             <label>
               <span class="label-row">Incident title <span class="required-hint">Required</span></span>
               <input name="title" required minlength="3" value="{{ form_values.title|default('') }}" placeholder="Example: Phishing email investigation" aria-describedby="title-validation">
@@ -53,14 +55,14 @@
                 <input type="radio" name="audience" value="technical" required {% if form_values.audience|default('technical') == 'technical' %}checked{% endif %}>
                 <span>
                   <strong>Technical</strong>
-                  <small>Detailed timeline, evidence, root cause, and remediation tasks.</small>
+                  <small>Detailed security report with evidence, timeline, root cause, and remediation tasks.</small>
                 </span>
               </label>
               <label class="audience-option">
                 <input type="radio" name="audience" value="executive" required {% if form_values.audience|default('technical') == 'executive' %}checked{% endif %}>
                 <span>
                   <strong>Executive</strong>
-                  <small>Business impact, risk, accountability, and high-level actions.</small>
+                  <small>Leadership-focused report with business impact, risk, response status, and decisions.</small>
                 </span>
               </label>
             </fieldset>
@@ -73,7 +75,7 @@
           </fieldset>
 
           <fieldset>
-            <legend>Evidence and Impact</legend>
+            <legend>2. Evidence and Impact</legend>
             <div class="row">
               <label>
                 Detection source
@@ -104,7 +106,7 @@
           </fieldset>
 
           <fieldset>
-            <legend>Response and Follow-Up</legend>
+            <legend>3. Response and Follow-Up</legend>
             <label>
               <span class="label-row">Remediation steps <span class="required-hint">Required</span></span>
               <textarea name="remediation_steps" required minlength="10" rows="5" placeholder="List containment, eradication, recovery, and follow-up actions." aria-describedby="remediation-steps-validation">{{ form_values.remediation_steps|default('') }}</textarea>
@@ -137,45 +139,67 @@
               <span>Technical details were logged on the server.</span>
             </div>
           {% elif result %}
-            <div class="output-meta">
+            <div
+              class="output-meta"
+              data-report-title="{{ result.title }}"
+              data-report-audience="{{ result.audience.value }}"
+              data-incident-date="{{ form_values.incident_date|default('') }}"
+            >
               <div>
                 <h2>{{ result.title }}</h2>
                 <span>{{ result.audience.value|capitalize }} audience</span>
                 <p class="report-status" id="report-status">Report generated successfully</p>
               </div>
+              <div class="new-incident-action">
+                <button type="button" class="secondary-button new-incident-button" id="new-incident">New Incident</button>
+                <p class="new-incident-helper">Returns to intake form.</p>
+              </div>
             </div>
             <div class="report-toolbar" aria-label="Report controls">
-              <div class="report-control-group" aria-label="Report review sections">
-                <button type="button" class="section-jump" data-section-target="executive-summary">Summary</button>
-                <button type="button" class="section-jump" data-section-target="timeline-of-events">Timeline</button>
-                <button type="button" class="section-jump" data-section-target="impact-assessment">Impact</button>
-                <button type="button" class="section-jump" data-section-target="5-whys-root-cause-analysis">5 Whys</button>
-                <button type="button" class="section-jump" data-section-target="technical-root-cause">Root Cause</button>
-                <button type="button" class="section-jump" data-section-target="recommendations-and-owners">Recommendations</button>
+              <div class="report-toolbar-section" aria-label="Report review sections">
+                <p class="toolbar-label">Review sections</p>
+                <div class="report-control-group">
+                  <button type="button" class="section-jump" data-section-target="executive-summary">Summary</button>
+                  <button type="button" class="section-jump" data-section-target="timeline-of-events">Timeline</button>
+                  <button type="button" class="section-jump" data-section-target="impact-assessment">Impact</button>
+                  <button type="button" class="section-jump" data-section-target="5-whys-root-cause-analysis">5 Whys</button>
+                  <button type="button" class="section-jump" data-section-target="technical-root-cause">Root Cause</button>
+                  <button type="button" class="section-jump" data-section-target="recommendations-and-owners">Recommendations</button>
+                </div>
               </div>
-              <div class="report-control-group report-actions" aria-label="Report actions">
-                <button type="button" class="secondary-button" id="copy-report">Copy Report</button>
-                <button type="button" class="secondary-button" id="download-report">Download Report</button>
-                <button type="button" class="secondary-button" id="print-report">Print Report</button>
-                <button type="button" class="secondary-button" id="new-incident">New Incident</button>
+              <div class="report-toolbar-section report-export-panel" aria-label="Copy and export report">
+                <div>
+                  <p class="toolbar-label">Copy and export</p>
+                  <p class="toolbar-help">Save or copy the generated report for testing, screenshots, or handoff.</p>
+                </div>
+                <div class="report-control-group report-actions">
+                  <button type="button" class="secondary-button" id="copy-report">Copy</button>
+                  <button type="button" class="secondary-button" id="download-markdown-report">Editable Text</button>
+                  <button type="button" class="secondary-button" id="download-html-report">HTML</button>
+                  <button type="button" class="secondary-button primary-export-button" id="print-report">Save as PDF</button>
+                </div>
               </div>
               <p class="report-action-status" id="report-action-status" aria-live="polite"></p>
             </div>
             <article class="report-preview">
+              <div class="report-preview-heading">
+                <p class="toolbar-label">Generated Report Preview</p>
+              </div>
               <pre id="report-text" hidden>{{ result.report_markdown }}</pre>
               <div id="report-rendered" class="rendered-report"></div>
               <button type="button" class="back-to-top" id="back-to-report-top">Back to Top</button>
             </article>
           {% else %}
-            <h2>Report Draft</h2>
+            <h2>Report Draft Preview</h2>
             <div class="loading-state" id="loading-state" hidden aria-live="polite">
               <div class="loading-bar"></div>
               <p>Generating report draft. This may take a moment.</p>
             </div>
             <div class="empty-state">
               <p class="empty">Generated report text will appear here after you submit the form.</p>
+              <p class="empty-state-label">Expected sections</p>
               <ul>
-                <li>Executive summary</li>
+                <li>Report summary</li>
                 <li>Timeline and evidence observations</li>
                 <li>5 Whys root cause analysis</li>
                 <li>Remediation and recommendations</li>
@@ -253,6 +277,11 @@
       });
 
       clearButton.addEventListener("click", () => {
+        const hasEnteredDetails = Array.from(form.querySelectorAll("input:not([type='radio']), textarea")).some((field) => field.value.trim());
+        if (hasEnteredDetails && !window.confirm("Clear all incident details?")) {
+          return;
+        }
+
         form.querySelectorAll("input:not([type='radio']), textarea").forEach((field) => {
           field.value = "";
         });
@@ -329,11 +358,13 @@
       }
 
       const copyButton = document.getElementById("copy-report");
-      const downloadButton = document.getElementById("download-report");
+      const downloadMarkdownButton = document.getElementById("download-markdown-report");
+      const downloadHtmlButton = document.getElementById("download-html-report");
       const printButton = document.getElementById("print-report");
       const newIncidentButton = document.getElementById("new-incident");
       const reportText = document.getElementById("report-text");
       const reportRendered = document.getElementById("report-rendered");
+      const outputMeta = document.querySelector(".output-meta");
       const sectionJumpButtons = document.querySelectorAll("[data-section-target]");
       const reportStatus = document.getElementById("report-status");
       const reportActionStatus = document.getElementById("report-action-status");
@@ -359,10 +390,27 @@
           .replace(/^-|-$/g, "");
       }
 
+      function getReportTitle() {
+        return outputMeta?.dataset.reportTitle || document.querySelector(".output-meta h2")?.textContent || "after-action-report";
+      }
+
+      function getReportAudience() {
+        return outputMeta?.dataset.reportAudience || document.querySelector(".output-meta span")?.textContent || "report";
+      }
+
+      function getIncidentDateSegment() {
+        const incidentDate = outputMeta?.dataset.incidentDate || "";
+        return /^\d{4}-\d{2}-\d{2}$/.test(incidentDate) ? incidentDate : "";
+      }
+
       function buildReportFilename(extension = "html") {
-        const reportTitle = document.querySelector(".output-meta h2")?.textContent || "after-action-report";
-        const filenameBase = slugifyHeading(reportTitle) || "after-action-report";
-        return `${filenameBase}.${extension}`;
+        const filenameParts = [
+          getIncidentDateSegment(),
+          slugifyHeading(getReportTitle()),
+          slugifyHeading(getReportAudience()),
+          "aar-report",
+        ].filter(Boolean);
+        return `${filenameParts.join("-")}.${extension}`;
       }
 
       function escapeHtml(text) {
@@ -372,7 +420,7 @@
       }
 
       function buildDownloadableReportHtml() {
-        const reportTitle = document.querySelector(".output-meta h2")?.textContent || "After-Action Report";
+        const reportTitle = getReportTitle();
         const audience = document.querySelector(".output-meta span")?.textContent || "";
         const generatedStatus = reportStatus?.textContent || "";
         const reportBody = reportRendered?.cloneNode(true);
@@ -449,6 +497,29 @@
     ${reportBody?.innerHTML || ""}
   </body>
 </html>`;
+      }
+
+      function buildDownloadableReportMarkdown() {
+        const reportTitle = getReportTitle();
+        const audience = document.querySelector(".output-meta span")?.textContent || "";
+        const generatedStatus = reportStatus?.textContent || "";
+        const metadata = [audience, generatedStatus].filter(Boolean).join(" | ");
+        const body = reportText?.textContent?.trim() || "";
+
+        return `# ${reportTitle}\n\n${metadata ? `${metadata}\n\n` : ""}${body}\n`;
+      }
+
+      function downloadReportFile(contents, filename, type) {
+        const reportBlob = new Blob([contents], { type });
+        const reportUrl = URL.createObjectURL(reportBlob);
+        const downloadLink = document.createElement("a");
+        downloadLink.href = reportUrl;
+        downloadLink.download = filename;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+        URL.revokeObjectURL(reportUrl);
+        setReportActionStatus(`Report downloaded as ${filename}.`);
       }
 
       function appendParagraph(container, lines) {
@@ -562,7 +633,7 @@
             setReportActionStatus("Report could not be copied.");
           } finally {
             setTimeout(() => {
-              copyButton.textContent = "Copy Report";
+              copyButton.textContent = "Copy";
             }, 1800);
           }
         });
@@ -576,7 +647,7 @@
 
       if (printButton) {
         printButton.addEventListener("click", () => {
-          setReportActionStatus("Print dialog opened.");
+          setReportActionStatus("Print dialog opened. Choose Save as PDF to export a PDF copy.");
           window.print();
         });
       }
@@ -587,18 +658,23 @@
         });
       }
 
-      if (downloadButton && reportText) {
-        downloadButton.addEventListener("click", () => {
-          const reportBlob = new Blob([buildDownloadableReportHtml()], { type: "text/html" });
-          const reportUrl = URL.createObjectURL(reportBlob);
-          const downloadLink = document.createElement("a");
-          downloadLink.href = reportUrl;
-          downloadLink.download = buildReportFilename();
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-          downloadLink.remove();
-          URL.revokeObjectURL(reportUrl);
-          setReportActionStatus(`Report downloaded as ${downloadLink.download}.`);
+      if (downloadMarkdownButton && reportText) {
+        downloadMarkdownButton.addEventListener("click", () => {
+          downloadReportFile(
+            buildDownloadableReportMarkdown(),
+            buildReportFilename("md"),
+            "text/markdown;charset=utf-8",
+          );
+        });
+      }
+
+      if (downloadHtmlButton && reportText) {
+        downloadHtmlButton.addEventListener("click", () => {
+          downloadReportFile(
+            buildDownloadableReportHtml(),
+            buildReportFilename("html"),
+            "text/html;charset=utf-8",
+          );
         });
       }
     </script>
