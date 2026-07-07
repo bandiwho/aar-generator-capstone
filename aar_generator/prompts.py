@@ -89,5 +89,11 @@ Rules:
 - Keep recommendations actionable.
 - Assign likely owners or owner groups for recommendations when the input supports it.
 - Use Markdown headings and bullet lists.
+- Start every bullet with a complete, capitalized sentence.
+- Do not repeat labels such as **Gap:**, **Task:**, or **Recommendation:** at the start of every bullet.
+- Do not start every remediation bullet with repeated phrases such as "The security team".
+- Let the section heading provide the category, then write clean bullet text underneath it.
+- Do not split one recommendation sentence into several lowercase bullet fragments.
+- If a recommendation has subconditions, keep them in the same bullet sentence or use capitalized sub-bullets.
 """.strip()
 

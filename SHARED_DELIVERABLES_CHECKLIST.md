@@ -246,6 +246,8 @@ Instructor focus: individual contribution, GitHub achievements, testing evidence
 - [ ] Write subtasks completed this week with brief descriptions.
 - [ ] Provide detailed testing descriptions for completed subtasks.
 - [ ] Add demo screenshots as evidence.
+- [ ] Test Copy Report and Download Report behavior.
+- [ ] Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
 - [ ] Write lessons learned.
 - [ ] Document the contribution of Brittany, Garrett, and Mike.
 - [ ] State whether the team progressed as planned.

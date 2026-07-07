@@ -122,6 +122,7 @@ Planned topics:
 - Confirm GitHub achievements are committed and pushed.
 - Review validation, error handling, fallback behavior, and sample incident testing.
 - Confirm testing screenshots and notes for the Week 6 journal.
+- Review Copy Report and Download Report behavior, including whether the downloaded HTML report layout is clean enough for final evidence.
 - Assign fixes from the Week 6 testing notes.
 
 Planned tasks:
@@ -130,14 +131,17 @@ Planned tasks:
 |---|---|---|
 | Brittany | Update meeting log, collect screenshots, test at least three incident scenarios, track bugs, and prepare Week 6 journal content. | Planned |
 | Garrett | Improve backend error handling, fallback behavior, revision support, and test coverage. | Planned |
-| Mike | Improve required-field validation, copy/export behavior, mobile usability, and frontend screenshot support. | Planned |
+| Mike | Improve required-field validation, copy/export behavior, downloaded report layout, and frontend screenshot support. | Planned |
 
 - This week is focusing on testing. Everything seems to be working. Just need to review to ensure quality. Mobile is a option. It is not a needed requirement. Other core focus is on wrapup. We need to decide who is going to talk about what and prepare for speeches. I would like to get most of slides established on what we are going to talk about I know we do not have the assignment yet but we can prepare. I will also like to start with the final report. That maybe a weekend thing because as this is not a crucial week we need to figure out where we are going to end our project.
+- Export review note: The Download Report feature successfully saves the generated report as an HTML file, but the layout should be reviewed before using it as a polished final artifact. Screenshots or Print/Save as PDF may be better for final evidence if the downloaded HTML formatting looks crowded or shows raw Markdown formatting.
   
 ## Chat Topics
 
 - 07/07/2026
-- 
+- Reviewed Copy Report and Download Report behavior.
+- Downloaded HTML report preserved the report title, audience, sections, 5 Whys, recommendations, and open questions.
+- Formatting concern: the downloaded HTML may show raw Markdown styling or crowded list formatting, so the team should use screenshots or Print/Save as PDF for polished evidence if needed.
 
 
 ### Week 7 Meeting

@@ -457,9 +457,30 @@
         }
 
         const paragraph = document.createElement("p");
-        paragraph.textContent = lines.join(" ");
+        appendInlineMarkdown(paragraph, lines.join(" "));
         container.appendChild(paragraph);
         lines.length = 0;
+      }
+
+      function appendInlineMarkdown(element, text) {
+        const pattern = /(\*\*([^*]+)\*\*|\*([^*]+)\*)/g;
+        let cursor = 0;
+        let match;
+
+        while ((match = pattern.exec(text)) !== null) {
+          if (match.index > cursor) {
+            element.appendChild(document.createTextNode(text.slice(cursor, match.index)));
+          }
+
+          const inlineElement = document.createElement(match[2] ? "strong" : "em");
+          inlineElement.textContent = match[2] || match[3];
+          element.appendChild(inlineElement);
+          cursor = pattern.lastIndex;
+        }
+
+        if (cursor < text.length) {
+          element.appendChild(document.createTextNode(text.slice(cursor)));
+        }
       }
 
       function renderMarkdownPreview(markdown, container) {
@@ -473,14 +494,35 @@
         let activeHeading = "";
         let list = null;
 
+        function capitalizeListText(text) {
+          return text.replace(/^([a-z])/, (match) => match.toUpperCase());
+        }
+
+        function shouldMergeWithPreviousListItem(text) {
+          if (!list || !list.lastElementChild || !/^[a-z]/.test(text)) {
+            return false;
+          }
+
+          return /[:,]$/.test(list.lastElementChild.innerText.trim());
+        }
+
+        function appendToPreviousListItem(text) {
+          list.lastElementChild.appendChild(document.createTextNode(" "));
+          appendInlineMarkdown(list.lastElementChild, text);
+        }
+
         function appendListItem(text) {
           appendParagraph(container, paragraphLines);
           if (!list || list.tagName !== "UL") {
             list = document.createElement("ul");
             container.appendChild(list);
           }
+          if (shouldMergeWithPreviousListItem(text)) {
+            appendToPreviousListItem(text);
+            return;
+          }
           const item = document.createElement("li");
-          item.textContent = text;
+          appendInlineMarkdown(item, capitalizeListText(text));
           list.appendChild(item);
         }
 
@@ -490,6 +532,24 @@
           if (!trimmed) {
             appendParagraph(container, paragraphLines);
             list = null;
+            return;
+          }
+
+          if (/^---+$/.test(trimmed)) {
+            appendParagraph(container, paragraphLines);
+            list = null;
+            container.appendChild(document.createElement("hr"));
+            return;
+          }
+
+          const blockquote = trimmed.match(/^>\s*(.+)/);
+          if (blockquote) {
+            appendParagraph(container, paragraphLines);
+            list = null;
+            const note = document.createElement("p");
+            note.classList.add("report-note");
+            appendInlineMarkdown(note, blockquote[1]);
+            container.appendChild(note);
             return;
           }
 
@@ -518,8 +578,13 @@
               list = document.createElement(bullet ? "ul" : "ol");
               container.appendChild(list);
             }
+            const itemText = bullet ? bullet[1] : numbered[1];
+            if (bullet && shouldMergeWithPreviousListItem(itemText)) {
+              appendToPreviousListItem(itemText);
+              return;
+            }
             const item = document.createElement("li");
-            item.textContent = bullet ? bullet[1] : numbered[1];
+            appendInlineMarkdown(item, capitalizeListText(itemText));
             list.appendChild(item);
             return;
           }
@@ -554,7 +619,8 @@
       if (copyButton && reportText) {
         copyButton.addEventListener("click", async () => {
           try {
-            await navigator.clipboard.writeText(reportText.textContent);
+            const cleanReportText = reportRendered?.innerText || reportText.textContent;
+            await navigator.clipboard.writeText(cleanReportText);
             copyButton.textContent = "Copied";
             setReportActionStatus("Report copied to clipboard.");
           } catch (error) {
