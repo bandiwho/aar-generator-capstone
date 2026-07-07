@@ -123,6 +123,14 @@ Planned tasks:
 | Garrett | Improve backend error handling, fallback behavior, revision support, and test coverage. | Planned |
 | Mike | Improve required-field validation, copy/export behavior, mobile usability, and frontend screenshot support. | Planned |
 
+- This week is focusing on testing. Everything seems to be working. Just need to review to ensure quality. Mobile is a option. It is not a needed requirement. Other core focus is on wrapup. We need to decide who is going to talk about what and prepare for speeches. I would like to get most of slides established on what we are going to talk about I know we do not have the assignment yet but we can prepare. I will also like to start with the final report. That maybe a weekend thing because as this is not a crucial week we need to figure out where we are going to end our project.
+  
+## Chat Topics
+
+- 07/07/2026
+- 
+
+
 ### Week 7 Meeting
 
 Date and time: Tuesday, July 14, 2026, 6:30 PM
