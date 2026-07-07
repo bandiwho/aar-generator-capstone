@@ -156,3 +156,72 @@ The security team revoked active Microsoft 365 sessions.
     assert "Disabled the affected account." in result.report_markdown
     assert "Revoked active Microsoft 365 sessions." in result.report_markdown
     assert "The security team" not in result.report_markdown
+
+
+def test_report_service_removes_chat_style_closing_offer(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_chat_closing(prompt):
+        return """
+## Open Questions
+
+- Was MFA challenged during the suspicious login?
+- Did the attacker access SharePoint files?
+
+If you share additional log fields (MFA sign-in result, exact rule removal time, SharePoint audit entries, and any authentication events for other users), I can revise this draft to tighten conclusions and reduce assumptions.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_chat_closing)
+
+    result = service.generate_report(build_incident())
+
+    assert "Was MFA challenged during the suspicious login?" in result.report_markdown
+    assert "Did the attacker access SharePoint files?" in result.report_markdown
+    assert "If you share additional" not in result.report_markdown
+    assert "I can revise this draft" not in result.report_markdown
+
+
+def test_report_service_removes_repeated_open_question_lead_in_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_open_question_labels(prompt):
+        return """
+## Open Questions
+
+- How long was the forwarding rule active before removal?
+Open item: Provided logs show creation at 8:31 AM and removal at 10:15 AM.
+
+- Was MFA challenged during the suspicious login?
+Assumption: MFA may not have prevented the sign-in, but the logs do not show the MFA result.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_open_question_labels)
+
+    result = service.generate_report(build_incident())
+
+    assert "Provided logs show creation at 8:31 AM and removal at 10:15 AM." in result.report_markdown
+    assert "MFA may not have prevented the sign-in" in result.report_markdown
+    assert "Open item:" not in result.report_markdown
+    assert "Assumption:" not in result.report_markdown
+
+
+def test_report_service_shortens_evidence_note_label(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_evidence_note_labels(prompt):
+        return """
+## Open Questions
+
+- Was MFA challenged during the suspicious login?
+Evidence note: MFA registration was reviewed, but authentication result details are missing.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_evidence_note_labels)
+
+    result = service.generate_report(build_incident())
+
+    assert "Evidence: MFA registration was reviewed" in result.report_markdown
+    assert "Evidence note:" not in result.report_markdown
