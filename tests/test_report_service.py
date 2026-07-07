@@ -53,6 +53,10 @@ def test_report_service_returns_mock_report():
     assert result.mock_mode is True
     assert result.model_used == "test-model"
     assert "5 Whys Root Cause Analysis" in result.report_markdown
+    assert "Account compromise" in result.report_markdown
+    assert "SIEM impossible travel alert" in result.report_markdown
+    assert "VPN account and remote access service" in result.report_markdown
+    assert "Need to confirm whether MFA was challenged." in result.report_markdown
     assert "Incident type: Account compromise" in result.report_markdown
     assert "Audience style: Technical" in result.report_markdown
     assert "Assign an incident owner" in result.report_markdown
@@ -77,3 +81,5 @@ def test_report_service_falls_back_to_mock_report_when_api_fails(monkeypatch):
     assert result.mock_mode is True
     assert "5 Whys Root Cause Analysis" in result.report_markdown
     assert "Recommendations and Owners" in result.report_markdown
+    assert "Account compromise" in result.report_markdown
+    assert "SIEM impossible travel alert" in result.report_markdown

@@ -228,7 +228,8 @@ Instructor focus: individual contribution, GitHub achievements, testing evidence
 - [x] If the team did not progress as planned, explain the adjustment.
 - [x] Confirm no API key is visible in screenshots.
 - [x] Export the Week 5 journal as a PDF.
-- [x] Submit the PDF before Friday if possible, or by the Sunday deadline.
+- [x] Review and sign the Week 5 journal.
+- [x] Submit the signed Week 5 journal PDF.
 
 ## 14. Week 6 Canvas Assignment: Weekly Journal
 
@@ -317,6 +318,7 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Create Week 5 meeting log.
 - [x] Update README, todos, and deliverables for Week 5.
 - [x] Collect screenshot evidence and write Week 5 journal sections.
+- [x] Confirm the signed Week 5 journal was turned in.
 
 ### Garrett
 
@@ -324,9 +326,10 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Confirm tests pass.
 - [x] Document backend setup and technical behavior.
 - [ ] Prepare backend explanation for demo.
-- [~] Continue technical/executive report-style backend work.
-- [~] Continue 5 Whys and recommendation logic.
-- [~] Confirm tests pass after Week 5 changes.
+- [x] Complete technical/executive report-style backend work.
+- [x] Add 5 Whys and recommendation logic.
+- [x] Confirm tests pass after Week 5 changes.
+- [~] Refine 5 Whys and recommendation quality during Week 6 testing.
 
 ### Mike
 
@@ -381,6 +384,7 @@ Use this section during team meetings.
   - README updated for the Week 5 assignment.
   - Milestone todos updated for Week 5 coding, testing, GitHub, journal, and meeting-log tasks.
   - Shared deliverables checklist updated with Week 5 journal requirements.
+  - Signed Week 5 journal turned in.
 - Still needed:
   - [x] Push completed achievements to GitHub.
   - [x] Add exact meeting time after the Tuesday meeting. 
@@ -388,6 +392,7 @@ Use this section during team meetings.
   - [x] Capture demo screenshots without showing the API key.
   - [x] Write detailed test descriptions for the weekly journal.
   - [x] Export the weekly journal as a PDF.
+  - [x] Review, sign, and submit the Week 5 journal.
 - Blockers: 
   - [x] Avoid exposing the OpenAI API key in screenshots or uploaded files.
   - [x] Brittany needs to finish Sample incident refinements so Mike can add autofill button for demo.

@@ -38,6 +38,7 @@ class ReportService:
             "technical": "This draft keeps technical evidence, system details, and remediation tasks visible.",
             "executive": "This draft emphasizes business impact, risk, accountability, and decision points.",
         }[incident.audience.value]
+        five_whys = self._build_five_whys(incident)
 
         return f"""
 ## Executive Summary
@@ -65,11 +66,7 @@ class ReportService:
 
 ## 5 Whys Root Cause Analysis
 
-1. Why did the incident happen? The available notes suggest a security control or process gap needs review.
-2. Why was the issue detected at that time? The timeline should be compared against monitoring and alerting coverage.
-3. Why was the impact limited or expanded? The team should verify affected systems, users, and data exposure.
-4. Why did existing controls not fully prevent the event? The team should review access controls, MFA, patching, and response procedures.
-5. Why could this happen again? Any repeated technical or process weakness should become a tracked recommendation.
+{five_whys}
 
 ## Technical Root Cause
 
@@ -102,3 +99,35 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
 - Track recommendations by owner and due date.
 - Preserve screenshots, logs, and test results for the final capstone documentation.
 """.strip()
+
+    def _build_five_whys(self, incident: IncidentInput) -> str:
+        incident_type = incident.incident_type or "the reported security incident"
+        detection_source = incident.detection_source or "the available monitoring and reporting sources"
+        affected_assets = incident.affected_assets or "the affected systems and users"
+        first_timeline_event = self._sentence_fragment(self._first_line(incident.timeline))
+        evidence_note = self._sentence_fragment(self._first_line(incident.log_snippets)) or "additional evidence should be collected before the final root cause is confirmed"
+        remediation_note = self._sentence_fragment(self._first_line(incident.remediation_steps))
+        impact_note = self._sentence_fragment(self._first_line(incident.known_impact)) or "impact still needs final confirmation"
+        open_question_note = self._sentence_fragment(self._first_line(incident.open_questions)) or "the team should document any remaining unknowns before final submission"
+
+        return "\n".join(
+            [
+                f"1. Why did the incident happen? The incident was recorded as {incident_type}. First known event: {first_timeline_event}",
+                f"2. Why was it detected? Detection came from {detection_source}. Supporting evidence: {evidence_note}",
+                f"3. Why did it affect the organization? Affected scope: {affected_assets}. Current impact notes: {impact_note}",
+                f"4. Why did existing controls not fully prevent it? Response action reviewed: {remediation_note}. This suggests controls, monitoring, or response steps need review.",
+                f"5. Why could it happen again? Remaining open issue: {open_question_note} This should become a tracked recommendation with an owner and due date.",
+            ]
+        )
+
+    @staticmethod
+    def _first_line(value: str) -> str:
+        for line in value.splitlines():
+            stripped = line.strip()
+            if stripped:
+                return stripped
+        return ""
+
+    @staticmethod
+    def _sentence_fragment(value: str) -> str:
+        return value.strip().rstrip(".")

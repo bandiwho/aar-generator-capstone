@@ -122,12 +122,14 @@ Goal: Make the generated report more useful, add audience-specific output, test 
 - [x] Brittany: Create `MEETING_LOG.md` to make Garrett and Mike's contributions visible.
 - [x] Brittany: Write the Week 5 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
 - [x] Brittany: Export the Week 5 journal as a PDF for Canvas submission.
+- [x] Team: Review and sign the Week 5 journal.
+- [x] Team: Submit the signed Week 5 journal.
 
 Deliverable:
 
 - [x] Team: The app generates technical and executive reports with root-cause analysis.
 - [x] Team: GitHub shows current README, todos, deliverables, and meeting log updates.
-- [x] Team: The Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike.
+- [x] Team: The signed Week 5 journal includes contribution evidence for Brittany, Garrett, and Mike and was turned in.
 
 ## Week 6: Revision Feature, Validation, and Testing
 
