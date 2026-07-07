@@ -15,11 +15,11 @@ This checklist tracks testing for the Security Incident AAR Generator prototype.
 
 | # | Sample Incident | Audience | Expected Result | Status | Notes |
 |---|---|---|---|---|---|
-| 1 | Phishing Email Led to Microsoft 365 Account Compromise | Technical | Report includes timeline, evidence, 5 Whys, root cause, remediation, lessons learned, and open questions. | Not Tested | |
-| 2 | Ransomware Detected on Shared File Server | Executive | Report explains business impact, response actions, recovery plan, and lessons learned in non-technical language. | Not Tested | |
-| 3 | Public Cloud Storage Bucket Exposed Customer Files | Executive | Report explains exposure risk, impact, containment, policy issue, and follow-up questions. | Not Tested | |
-| 4 | Malware Alert on Finance Workstation | Technical | Report includes endpoint evidence, suspicious command activity, containment, root cause, and next steps. | Not Tested | |
-| 5 | SQL Injection Attempt Against Customer Portal | Technical | Report includes WAF alerts, affected endpoints, database review, root cause, remediation, and recommendations. | Not Tested | |
+| 1 | Phishing Email Led to Microsoft 365 Account Compromise | Technical | Report includes timeline, evidence, 5 Whys, root cause, remediation, lessons learned, and open questions. | Passed but formatting errors | Revised. Will check again tonight |
+| 2 | Ransomware Detected on Shared File Server | Executive | Report explains business impact, response actions, recovery plan, and lessons learned in non-technical language. | Passed | I need to check the tech audience to see differences |
+| 3 | Public Cloud Storage Bucket Exposed Customer Files | Executive | Report explains exposure risk, impact, containment, policy issue, and follow-up questions. | Passed with minor revisions needed | |
+| 4 | Malware Alert on Finance Workstation | Technical | Report includes endpoint evidence, suspicious command activity, containment, root cause, and next steps. | Passed | Will run again to ensure quality of answers |
+| 5 | SQL Injection Attempt Against Customer Portal | Technical | Report includes WAF alerts, affected endpoints, database review, root cause, remediation, and recommendations. | Passed | |
 
 ## Pass Criteria
 
