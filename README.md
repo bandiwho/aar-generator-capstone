@@ -20,10 +20,10 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [~] Incident detail entry through a clear frontend form.
 - [x] Support for timelines, log snippets, impact notes, and remediation steps.
 - [x] LLM-supported report generation workflow.
-- [ ] 5 Whys root-cause analysis.
+- [x] 5 Whys root-cause analysis.
 - [x] Technical and executive reporting styles.
 - [~] Realistic sample incident data for testing.
-- [ ] Demo workflow documentation for presentation practice.
+- [x] Demo workflow documentation for presentation practice.
 - [x] GitHub repository for shared source code and documentation.
 
 ## Current Project Status
@@ -50,12 +50,24 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Testing checklist added to document sample incident validation and pass/fail criteria.
 - [x] Meeting log added to document weekly attendance, topics, assigned tasks, and contribution evidence.
 - [x] Week 5 README, todos, and shared deliverables checklist updated for the weekly journal requirements.
+- [x] Technical and executive report styles added for different reporting audiences.
+- [x] 5 Whys root-cause analysis and recommendations added to the generated report structure.
+- [~] Week 6 validation, error handling, fallback behavior, and sample incident testing are in progress.
 
 ## Current Week Focus
 
-Week 5 focus: code and test the planned project tasks, push completed achievements to GitHub, keep the README updated, maintain weekly meeting minutes, capture screenshot evidence, and prepare the team weekly journal as a PDF.
+Week 6 focus: improve prototype reliability through validation, error handling, fallback behavior, sample incident testing, and stronger screenshot evidence for the weekly journal.
 
-The Week 5 journal will summarize milestones achieved, subtasks completed, detailed testing evidence with demo screenshots, lessons learned, each team member's contribution, meeting attendance, progress compared to the project plan, and any needed plan adjustments.
+The Week 6 journal will summarize validation improvements, backend fallback behavior, sample incident test results, detailed screenshot evidence, lessons learned, each team member's contribution, meeting attendance, progress compared to the project plan, and any needed plan adjustments.
+
+Current Week 6 responsibilities:
+
+| Member | Current Focus | Evidence Needed |
+|---|---|---|
+| Brittany | Test at least three sample incidents, update testing notes, collect screenshots, update meeting evidence, and prepare the Week 6 journal. | Completed testing checklist notes, screenshots, meeting log updates, and journal draft content. |
+| Garrett | Improve backend error handling, fallback behavior, report revision support, and backend test coverage. | Passing backend tests, fallback evidence, and notes showing how errors are handled. |
+| Mike | Improve required-field validation, copy/export behavior, mobile usability, and frontend screenshot support. | Screenshots showing validation messages, report saving behavior, and smaller-screen usability. |
+| Team | Review test results, assign fixes, push completed achievements to GitHub, and confirm no API key appears in screenshots or uploaded files. | GitHub updates, bug notes, screenshots, and Week 6 contribution evidence. |
 
 ## Team Member Descriptions
 
@@ -71,8 +83,8 @@ The Week 5 journal will summarize milestones achieved, subtasks completed, detai
 |---|---|---|---|
 | [x] | June 15 - June 21 | Milestone 1 | Repository setup, README, sample incidents, form field review, and demo workflow instructions |
 | [x] | June 22 - June 28 | Milestone 2 | Backend data structure, report-generation workflow, frontend form refinement, and first LLM-generated report draft |
-| [~] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, output formatting, testing screenshots, and meeting log evidence |
-| [ ] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, sample incident review, weekly journal, and meeting log evidence |
+| [x] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, output formatting, testing screenshots, and meeting log evidence |
+| [~] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, sample incident review, weekly journal, and meeting log evidence |
 | [ ] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, demo script, weekly journal, and meeting log evidence |
 | [ ] | July 20 - July 24 | Milestone 6 | Final report, presentation slides, final presentation preparation, final polish, and submission package |
 | [ ] | July 27 - July 28 | Final Presentation | Final presentation and live demonstration |
