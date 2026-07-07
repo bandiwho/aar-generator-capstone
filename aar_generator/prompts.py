@@ -33,7 +33,7 @@ Audience guidance:
 {audience_guidance}
 
 Required report sections:
-1. Executive Summary
+1. Report Summary
 2. Incident Overview
 3. Detection and Escalation
 4. Timeline of Events

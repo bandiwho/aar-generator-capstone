@@ -44,7 +44,7 @@ class ReportService:
         five_whys = self._build_five_whys(incident)
 
         return f"""
-## Executive Summary
+## Report Summary
 
 {incident.title} was reviewed as a security incident after-action report draft. {audience_note}
 

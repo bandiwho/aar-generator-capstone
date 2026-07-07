@@ -34,7 +34,7 @@ class LlmClient:
     def _mock_report(self) -> str:
         # TODO: Week 7 - Replace this with multiple realistic demo incident fixtures.
         return """
-## Executive Summary
+## Report Summary
 
 This is a mock after-action report generated without calling the OpenAI API. It confirms that the prototype workflow is running.
 
