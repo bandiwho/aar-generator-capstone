@@ -90,8 +90,8 @@ Class: CSC 482 Capstone Project II
 ## 7. Documentation Deliverables
 
 - [ ] Final project description written.
-- [ ] Problem statement written.
-- [ ] Solution summary written.
+- [x] Problem statement written.
+- [x] Solution summary written.
 - [ ] Tool features listed.
 - [ ] Technology stack listed.
 - [x] Setup instructions written.
