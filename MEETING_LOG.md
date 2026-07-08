@@ -114,7 +114,8 @@ Planned tasks:
 Date and time: Tuesday, July 7, 2026, 6:30 PM
 Location: Team meeting and Microsoft Teams follow-up chat
 Planned attendees: Brittany, Garrett, Mike
-Absences: To be recorded after meeting
+Absences: No absences
+Meeting lasted 6:28 - 7:02 (34 Minutes) Meeting went well no huge blockers. Brittany did have an issue with vs code not getting a creditial token from github to do pulls. 
 
 Planned topics:
 
@@ -134,15 +135,21 @@ Planned tasks:
 | Mike | Improve required-field validation, copy/export behavior, downloaded report layout, and frontend screenshot support. | Planned |
 
 - This week is focusing on testing. Everything seems to be working. Just need to review to ensure quality. Mobile is a option. It is not a needed requirement. Other core focus is on wrapup. We need to decide who is going to talk about what and prepare for speeches. I would like to get most of slides established on what we are going to talk about I know we do not have the assignment yet but we can prepare. I will also like to start with the final report. That maybe a weekend thing because as this is not a crucial week we need to figure out where we are going to end our project.
-- Export review note: The Download Report feature successfully saves the generated report as an HTML file, but the layout should be reviewed before using it as a polished final artifact. Screenshots or Print/Save as PDF may be better for final evidence if the downloaded HTML formatting looks crowded or shows raw Markdown formatting.
+- Export review note: The Download Report feature successfully saves the generated report as an HTML file, but the layout should be reviewed before using it as a polished final report. Screenshots or Print/Save as PDF may be better for final evidence if the downloaded HTML formatting looks crowded or shows raw Markdown formatting.
   
 ## Chat Topics
 
-- 07/07/2026
+- 07/07
 - Reviewed Copy Report and Download Report behavior.
 - Downloaded HTML report preserved the report title, audience, sections, 5 Whys, recommendations, and open questions.
 - Formatting concern: the downloaded HTML may show raw Markdown styling or crowded list formatting, so the team should use screenshots or Print/Save as PDF for polished evidence if needed.
-
+- End of week we plan to revisit demo prep.
+- Focal point is polish ready and next week really a last minute change week allowing us to focus on final report and demo
+- May send message to teacher about early release of final report and slide so that we correctly create them.
+- Mike is looking into mobile view stretch goal.
+- Brittanys VS was not keeping up with github due to an inability to get credential tokens. Deletion of some updates occurred but the good thing at one point it said sync 139 things. Brittany closed out and logged out of everything and though some things were lost, 139 things were not altered with no guarantee what. Issue was resolved.
+  
+- 07/08
 
 ### Week 7 Meeting
 
