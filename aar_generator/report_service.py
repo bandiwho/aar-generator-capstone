@@ -137,17 +137,10 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
 
     @staticmethod
     def _clean_report_markdown(report_markdown: str) -> str:
-        mojibake_replacements = {
-            "â€œ": '"',
-            "â€": '"',
-            "â€˜": "'",
-            "â€™": "'",
-            "â€“": "-",
-            "â€”": "-",
-            "â€¦": "...",
-        }
-        for broken_text, clean_text in mojibake_replacements.items():
-            report_markdown = report_markdown.replace(broken_text, clean_text)
+        report_markdown = ReportService._normalize_report_text(report_markdown)
+        report_markdown = ReportService._interleave_five_whys_answers(report_markdown)
+        report_markdown = ReportService._pair_open_questions_with_evidence(report_markdown)
+        report_markdown = ReportService._indent_nested_bullet_groups(report_markdown)
 
         label_pattern = re.compile(
             r"^(\s*[-*]\s+)(?:\*\*)?(Gap|Task):(?:\*\*)?\s+",
@@ -177,3 +170,147 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
             re.IGNORECASE,
         )
         return chat_closing_pattern.sub("", report_markdown).rstrip()
+
+    @staticmethod
+    def _normalize_report_text(report_text: str) -> str:
+        try:
+            report_text = report_text.encode("cp1252").decode("utf-8")
+        except UnicodeError:
+            pass
+
+        replacements = {
+            "\u00e2\u20ac\u0153": '"',
+            "\u00e2\u20ac\u009d": '"',
+            "\u00e2\u20ac\u02dc": "'",
+            "\u00e2\u20ac\u2122": "'",
+            "\u00e2\u20ac\u201c": "-",
+            "\u00e2\u20ac\u201d": "-",
+            "\u00e2\u20ac\u00a6": "...",
+            "\u00e2\u2020\u2019": "->",
+            "\u201c": '"',
+            "\u201d": '"',
+            "\u2018": "'",
+            "\u2019": "'",
+            "\u2013": "-",
+            "\u2014": "-",
+            "\u2026": "...",
+            "\u2192": "->",
+        }
+        for original, replacement in replacements.items():
+            report_text = report_text.replace(original, replacement)
+        return report_text
+
+    @staticmethod
+    def _interleave_five_whys_answers(report_markdown: str) -> str:
+        section_pattern = re.compile(
+            r"(##\s+5 Whys Root Cause Analysis\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            re.IGNORECASE,
+        )
+
+        def rewrite_section(match: re.Match) -> str:
+            heading = match.group(1)
+            lines = [line.strip() for line in match.group(2).splitlines() if line.strip()]
+            question_pattern = re.compile(r"^(?:[-*]\s+)?(?:Why\s+)?(\d+)(?:\.|:)\s+(Why\b.+\?)$", re.IGNORECASE)
+            questions = []
+
+            for line in lines:
+                question = question_pattern.match(line)
+                if not question:
+                    break
+                questions.append(question.group(2))
+
+            if len(questions) < 2 or len(lines) <= len(questions):
+                return match.group(0)
+
+            answers = lines[len(questions):]
+            if len(answers) < len(questions):
+                return match.group(0)
+
+            rewritten = []
+            for index, question in enumerate(questions, start=1):
+                rewritten.append(f"{index}. {question} {answers[index - 1]}")
+
+            if len(answers) > len(questions):
+                rewritten.extend(answers[len(questions):])
+
+            return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
+
+        return section_pattern.sub(rewrite_section, report_markdown)
+
+    @staticmethod
+    def _indent_nested_bullet_groups(report_markdown: str) -> str:
+        rewritten = []
+        inside_label_group = False
+
+        for line in report_markdown.splitlines():
+            top_level_bullet = re.match(r"^([-*]\s+)(.+)$", line)
+
+            if not line.strip() or line.startswith("#") or re.match(r"^\d+\.\s+", line):
+                inside_label_group = False
+                rewritten.append(line)
+                continue
+
+            if top_level_bullet:
+                text = top_level_bullet.group(2).strip()
+                is_label = text.endswith(":")
+                if inside_label_group and not is_label:
+                    rewritten.append(f"  {line}")
+                    continue
+
+                rewritten.append(line)
+                inside_label_group = is_label
+                continue
+
+            if not line.startswith((" ", "\t")):
+                inside_label_group = False
+
+            rewritten.append(line)
+
+        return "\n".join(rewritten)
+
+    @staticmethod
+    def _pair_open_questions_with_evidence(report_markdown: str) -> str:
+        section_pattern = re.compile(
+            r"(##\s+Open Questions\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            re.IGNORECASE,
+        )
+
+        def rewrite_section(match: re.Match) -> str:
+            heading = match.group(1)
+            lines = [line.strip() for line in match.group(2).splitlines() if line.strip()]
+            question_pattern = re.compile(r"^[-*]\s+(.+\?)$")
+            evidence_pattern = re.compile(r"^(?:[-*]\s+)?Evidence:\s+(.+)$", re.IGNORECASE)
+            questions = []
+
+            for line in lines:
+                question = question_pattern.match(line)
+                if not question:
+                    break
+                questions.append(question.group(1))
+
+            if len(questions) < 2 or len(lines) <= len(questions):
+                return match.group(0)
+
+            evidence_lines = lines[len(questions):]
+            evidence = []
+            for line in evidence_lines:
+                evidence_match = evidence_pattern.match(line)
+                if not evidence_match:
+                    return match.group(0)
+                evidence.append(evidence_match.group(1))
+
+            if len(evidence) < len(questions):
+                return match.group(0)
+
+            rewritten = []
+            for question, evidence_text in zip(questions, evidence):
+                rewritten.append(f"- {question}")
+                rewritten.append(f"  Evidence: {evidence_text}")
+
+            if len(evidence) > len(questions):
+                for extra_evidence in evidence[len(questions):]:
+                    rewritten.append(f"  Evidence: {extra_evidence}")
+
+            return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
+
+        return section_pattern.sub(rewrite_section, report_markdown)

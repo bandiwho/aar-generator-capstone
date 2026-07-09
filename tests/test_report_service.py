@@ -235,7 +235,7 @@ def test_report_service_cleans_broken_smart_quote_encoding(monkeypatch):
         return """
 ## Impact Assessment
 
-SharePoint audit activity was marked as â€œreview pending,â€ and the employeeâ€™s report started the investigation.
+SharePoint audit activity was marked as â€œreview pending,â€ and the employeeâ€™s report started the investigation. Attack path: phish â†’ sign-in.
 """.strip()
 
     monkeypatch.setattr(service.llm_client, "generate", generate_with_broken_quotes)
@@ -244,5 +244,58 @@ SharePoint audit activity was marked as â€œreview pending,â€ and the em
 
     assert '"review pending,"' in result.report_markdown
     assert "employee's report" in result.report_markdown
+    assert "phish -> sign-in" in result.report_markdown
+
+
+def test_report_service_rewrites_five_whys_without_why_number_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_why_number_labels(prompt):
+        return """
+## 5 Whys Root Cause Analysis
+
+- Why 1: Why were shared documents encrypted?
+- Why 2: Why did ransomware-like software execute on WORKSTATION-22?
+- Why 3: Why was the workstation compromise not prevented earlier?
+Because ransomware-like software executed on WORKSTATION-22.
+Because the workstation was compromised before encryption activity.
+Because endpoint controls did not stop execution before file encryption attempts.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_why_number_labels)
+
+    result = service.generate_report(build_incident())
+
+    assert "1. Why were shared documents encrypted? Because ransomware-like software executed" in result.report_markdown
+    assert "2. Why did ransomware-like software execute on WORKSTATION-22? Because the workstation was compromised" in result.report_markdown
+    assert "- Why 1:" not in result.report_markdown
+    assert "Why 2:" not in result.report_markdown
+
+
+def test_report_service_pairs_open_question_evidence_with_each_question(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_separated_open_question_evidence(prompt):
+        return """
+## Open Questions
+
+- How did the ransomware execute on WORKSTATION-22?
+- Was the initial entry point phishing, malicious download, or exposed remote access?
+- Were any files copied out before encryption started?
+Evidence: Timeline confirms ransomware behavior but not the initial infection vector.
+Evidence: Windows Security Log shows shared drive access but not the entry method.
+Evidence: No outbound transfer logs are included in the provided snippets.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_separated_open_question_evidence)
+
+    result = service.generate_report(build_incident())
+
+    assert "- How did the ransomware execute on WORKSTATION-22?\n  Evidence: Timeline confirms ransomware behavior" in result.report_markdown
+    assert "- Was the initial entry point phishing, malicious download, or exposed remote access?\n  Evidence: Windows Security Log" in result.report_markdown
+    assert "- Were any files copied out before encryption started?\n  Evidence: No outbound transfer logs" in result.report_markdown
     assert "â€œ" not in result.report_markdown
     assert "â€™" not in result.report_markdown
+    assert "â†’" not in result.report_markdown

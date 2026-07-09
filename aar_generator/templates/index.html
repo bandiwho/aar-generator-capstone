@@ -419,6 +419,18 @@
         return element.innerHTML;
       }
 
+      function normalizeReportText(text) {
+        return String(text || "")
+          .replaceAll("â€œ", '"')
+          .replaceAll("â€", '"')
+          .replaceAll("â€˜", "'")
+          .replaceAll("â€™", "'")
+          .replaceAll("â€“", "-")
+          .replaceAll("â€”", "-")
+          .replaceAll("â€¦", "...")
+          .replaceAll("â†’", "->");
+      }
+
       function buildDownloadableReportHtml() {
         const reportTitle = getReportTitle();
         const audience = document.querySelector(".output-meta span")?.textContent || "";
@@ -428,6 +440,13 @@
         reportBody?.querySelectorAll("[id], [tabindex]").forEach((element) => {
           element.removeAttribute("id");
           element.removeAttribute("tabindex");
+        });
+        reportBody?.querySelectorAll("*").forEach((element) => {
+          Array.from(element.childNodes).forEach((node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              node.textContent = normalizeReportText(node.textContent);
+            }
+          });
         });
 
         return `<!doctype html>
@@ -500,10 +519,29 @@
       }
 
       function appendPlainTextLine(lines, text = "") {
+        const leadingSpaces = text.match(/^ */)?.[0] || "";
         const cleanText = text.replace(/\s+/g, " ").trim();
-        if (cleanText || lines[lines.length - 1] !== "") {
-          lines.push(cleanText);
+        const normalizedText = normalizeReportText(cleanText);
+        if (normalizedText || lines[lines.length - 1] !== "") {
+          lines.push(normalizedText ? `${leadingSpaces}${normalizedText}` : normalizedText);
         }
+      }
+
+      function getListItemOwnText(item) {
+        const itemClone = item.cloneNode(true);
+        itemClone.querySelectorAll("ul, ol").forEach((nestedList) => nestedList.remove());
+        return itemClone.textContent || "";
+      }
+
+      function appendListLines(lines, listElement, depth = 0) {
+        const listStart = listElement.tagName === "OL" ? Number.parseInt(listElement.getAttribute("start") || "1", 10) : 1;
+        Array.from(listElement.children).forEach((item, index) => {
+          const prefix = listElement.tagName === "OL" ? `${listStart + index}. ` : "- ";
+          appendPlainTextLine(lines, `${"  ".repeat(depth)}${prefix}${getListItemOwnText(item)}`);
+          Array.from(item.children)
+            .filter((child) => child.tagName === "UL" || child.tagName === "OL")
+            .forEach((nestedList) => appendListLines(lines, nestedList, depth + 1));
+        });
       }
 
       function buildPlainTextFromRenderedReport() {
@@ -522,10 +560,38 @@
           }
 
           if (element.tagName === "UL" || element.tagName === "OL") {
-            Array.from(element.children).forEach((item, index) => {
-              const prefix = element.tagName === "OL" ? `${index + 1}. ` : "- ";
-              appendPlainTextLine(lines, `${prefix}${item.textContent || ""}`);
-            });
+            appendListLines(lines, element);
+            return;
+          }
+
+          if (element.tagName === "HR") {
+            appendPlainTextLine(lines);
+            return;
+          }
+
+          appendPlainTextLine(lines, element.textContent || "");
+        });
+
+        return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+      }
+
+      function buildMarkdownFromRenderedReport() {
+        if (!reportRendered) {
+          return reportText?.textContent?.trim() || "";
+        }
+
+        const lines = [];
+        Array.from(reportRendered.children).forEach((element) => {
+          if (/^H[1-6]$/.test(element.tagName)) {
+            if (lines.length && lines[lines.length - 1] !== "") {
+              lines.push("");
+            }
+            appendPlainTextLine(lines, `## ${element.textContent || ""}`);
+            return;
+          }
+
+          if (element.tagName === "UL" || element.tagName === "OL") {
+            appendListLines(lines, element);
             return;
           }
 
@@ -545,7 +611,7 @@
         const audience = document.querySelector(".output-meta span")?.textContent || "";
         const generatedStatus = reportStatus?.textContent || "";
         const metadata = [audience, generatedStatus].filter(Boolean).join(" | ");
-        const body = buildPlainTextFromRenderedReport();
+        const body = buildMarkdownFromRenderedReport();
 
         return `# ${reportTitle}\n\n${metadata ? `${metadata}\n\n` : ""}${body}\n`;
       }
@@ -683,14 +749,29 @@
           }
 
           const bullet = trimmed.match(/^[-*]\s+(.+)/);
-          const numbered = trimmed.match(/^\d+\.\s+(.+)/);
+          const numbered = trimmed.match(/^(\d+)\.\s+(.+)/);
           if (bullet || numbered) {
             appendParagraph(container, paragraphLines);
+            const isIndentedBullet = bullet && /^\s+[-*]\s+/.test(line);
+            if (isIndentedBullet && list?.lastElementChild) {
+              let nestedList = Array.from(list.lastElementChild.children).find((child) => child.tagName === "UL");
+              if (!nestedList) {
+                nestedList = document.createElement("ul");
+                list.lastElementChild.appendChild(nestedList);
+              }
+              const nestedItem = document.createElement("li");
+              appendInlineMarkdown(nestedItem, capitalizeListText(bullet[1]));
+              nestedList.appendChild(nestedItem);
+              return;
+            }
             if (!list || list.tagName !== (bullet ? "UL" : "OL")) {
               list = document.createElement(bullet ? "ul" : "ol");
+              if (numbered) {
+                list.start = Number.parseInt(numbered[1], 10);
+              }
               container.appendChild(list);
             }
-            const itemText = bullet ? bullet[1] : numbered[1];
+            const itemText = bullet ? bullet[1] : numbered[2];
             if (bullet && shouldMergeWithPreviousListItem(itemText)) {
               appendToPreviousListItem(itemText);
               return;
