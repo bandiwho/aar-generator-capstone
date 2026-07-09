@@ -499,12 +499,53 @@
 </html>`;
       }
 
+      function appendPlainTextLine(lines, text = "") {
+        const cleanText = text.replace(/\s+/g, " ").trim();
+        if (cleanText || lines[lines.length - 1] !== "") {
+          lines.push(cleanText);
+        }
+      }
+
+      function buildPlainTextFromRenderedReport() {
+        if (!reportRendered) {
+          return reportText?.textContent?.trim() || "";
+        }
+
+        const lines = [];
+        Array.from(reportRendered.children).forEach((element) => {
+          if (/^H[1-6]$/.test(element.tagName)) {
+            if (lines.length && lines[lines.length - 1] !== "") {
+              lines.push("");
+            }
+            appendPlainTextLine(lines, element.textContent || "");
+            return;
+          }
+
+          if (element.tagName === "UL" || element.tagName === "OL") {
+            Array.from(element.children).forEach((item, index) => {
+              const prefix = element.tagName === "OL" ? `${index + 1}. ` : "- ";
+              appendPlainTextLine(lines, `${prefix}${item.textContent || ""}`);
+            });
+            return;
+          }
+
+          if (element.tagName === "HR") {
+            appendPlainTextLine(lines);
+            return;
+          }
+
+          appendPlainTextLine(lines, element.textContent || "");
+        });
+
+        return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+      }
+
       function buildDownloadableReportMarkdown() {
         const reportTitle = getReportTitle();
         const audience = document.querySelector(".output-meta span")?.textContent || "";
         const generatedStatus = reportStatus?.textContent || "";
         const metadata = [audience, generatedStatus].filter(Boolean).join(" | ");
-        const body = reportText?.textContent?.trim() || "";
+        const body = buildPlainTextFromRenderedReport();
 
         return `# ${reportTitle}\n\n${metadata ? `${metadata}\n\n` : ""}${body}\n`;
       }
@@ -690,7 +731,7 @@
       if (copyButton && reportText) {
         copyButton.addEventListener("click", async () => {
           try {
-            const cleanReportText = reportRendered?.innerText || reportText.textContent;
+            const cleanReportText = buildPlainTextFromRenderedReport();
             await navigator.clipboard.writeText(cleanReportText);
             copyButton.textContent = "Copied";
             setReportActionStatus("Report copied to clipboard.");

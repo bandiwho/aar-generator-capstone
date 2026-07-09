@@ -137,6 +137,18 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
 
     @staticmethod
     def _clean_report_markdown(report_markdown: str) -> str:
+        mojibake_replacements = {
+            "â€œ": '"',
+            "â€": '"',
+            "â€˜": "'",
+            "â€™": "'",
+            "â€“": "-",
+            "â€”": "-",
+            "â€¦": "...",
+        }
+        for broken_text, clean_text in mojibake_replacements.items():
+            report_markdown = report_markdown.replace(broken_text, clean_text)
+
         label_pattern = re.compile(
             r"^(\s*[-*]\s+)(?:\*\*)?(Gap|Task):(?:\*\*)?\s+",
             re.IGNORECASE | re.MULTILINE,
