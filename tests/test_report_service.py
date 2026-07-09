@@ -225,3 +225,24 @@ Evidence note: MFA registration was reviewed, but authentication result details 
 
     assert "Evidence: MFA registration was reviewed" in result.report_markdown
     assert "Evidence note:" not in result.report_markdown
+
+
+def test_report_service_cleans_broken_smart_quote_encoding(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_broken_quotes(prompt):
+        return """
+## Impact Assessment
+
+SharePoint audit activity was marked as â€œreview pending,â€ and the employeeâ€™s report started the investigation.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_broken_quotes)
+
+    result = service.generate_report(build_incident())
+
+    assert '"review pending,"' in result.report_markdown
+    assert "employee's report" in result.report_markdown
+    assert "â€œ" not in result.report_markdown
+    assert "â€™" not in result.report_markdown
