@@ -142,11 +142,11 @@ Goal: Test the prototype with multiple incidents, improve reliability, and docum
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
-| [ ] | Brittany | Test app with sample incidents | Testing notes and screenshots | At least three incident scenarios are tested |
-| [ ] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
-| [ ] | Mike | Improve frontend validation | Required-field behavior and user-facing messages | Users understand what information is missing |
-| [ ] | Brittany | Prepare Week 6 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 6 journal is ready to export as a PDF |
-| [ ] | Team | Review test results | Bug list and improvement notes | Issues are documented and assigned |
+| [x] | Brittany | Test app with sample incidents | Testing notes and screenshots | At least three incident scenarios are tested |
+| [~] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
+| [x] | Mike | Improve frontend validation | Required-field behavior and user-facing messages | Users understand what information is missing |
+| [x] | Brittany | Prepare Week 6 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 6 journal is ready to export as a PDF |
+| [x] | Team | Review test results | Bug list and improvement notes | Issues are documented and assigned |
 
 ### Milestone 5: Documentation and Demo Preparation
 

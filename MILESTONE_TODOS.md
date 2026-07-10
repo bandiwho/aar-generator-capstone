@@ -136,27 +136,27 @@ Deliverable:
 Goal: Improve reliability and make the app easier to use.
 
 - [x] Team: Code and test assigned project tasks as planned for Week 6.
-- [~] Team: Push completed achievements to GitHub.
+- [x] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect Week 6 progress.
 - [x] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
-- [~] Team: Include meeting log information in the Week 6 journal.
-- [~] Team: Collect testing screenshots without showing the OpenAI API key.
+- [x] Team: Include meeting log information in the Week 6 journal.
+- [x] Team: Collect testing screenshots without showing the OpenAI API key.
 - [~] Garrett: Add a way to revise or regenerate report sections.
 - [~] Garrett: Improve backend error handling.
 - [x] Garrett: Add fallback mock generation if the LLM is unavailable.
-- [~] Mike: Add required-field validation to the form.
-- [~] Mike: Improve copy/export behavior for the generated report.
-- [~] Mike: Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
-- [~] Mike: Make the frontend easier to use on smaller screens.
-- [~] Brittany: Test the app with at least three incident scenarios.
-- [~] Brittany: Track bugs and unclear output in a testing notes file.
-- [~] Brittany: Write the Week 6 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
-- [~] Brittany: Export the Week 6 journal as a PDF for Canvas submission.
+- [x] Mike: Add required-field validation to the form.
+- [x] Mike: Improve copy/export behavior for the generated report.
+- [x] Mike: Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
+- [x] Mike: Make the frontend easier to use on smaller screens.
+- [x] Brittany: Test the app with at least three incident scenarios.
+- [x] Brittany: Track bugs and unclear output in a testing notes file.
+- [x] Brittany: Write the Week 6 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [x] Brittany: Export the Week 6 journal as a PDF for Canvas submission.
 
 Deliverable:
 
-- [~] Team: The app handles errors, validates inputs, and works with multiple test incidents.
-- [~] Team: The Week 6 journal includes contribution evidence for Brittany, Garrett, and Mike.
+- [x] Team: The app handles errors, validates inputs, and works with multiple test incidents.
+- [x] Team: The Week 6 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 7: Polish, Documentation, and Demo Preparation
 
