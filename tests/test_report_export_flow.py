@@ -34,6 +34,11 @@ def test_generated_report_page_shows_practical_export_options():
     assert 'class="secondary-button new-incident-button" id="new-incident"' in response.text
     assert 'data-incident-date="2026-06-11"' in response.text
     assert 'data-report-audience="technical"' in response.text
+    assert "normalizeReportText" in response.text
+    assert '.replaceAll("â†’", "->")' in response.text
     assert "buildPlainTextFromRenderedReport" in response.text
+    assert "buildMarkdownFromRenderedReport" in response.text
+    assert 'listElement.getAttribute("start")' in response.text
+    assert "Number.parseInt(numbered[1], 10)" in response.text
     assert 'buildReportFilename("md")' in response.text
     assert 'buildReportFilename("html")' in response.text

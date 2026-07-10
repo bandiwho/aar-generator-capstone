@@ -15,11 +15,11 @@ This checklist tracks testing for the Security Incident AAR Generator prototype.
 
 | # | Sample Incident | Audience | Expected Result | Status | Notes |
 |---|---|---|---|---|---|
-| 1 | Phishing Email Led to Microsoft 365 Account Compromise | Technical | Report includes timeline, evidence, 5 Whys, root cause, remediation, lessons learned, and open questions. | Passed but formatting errors | Revised. Will check again tonight |
-| 2 | Ransomware Detected on Shared File Server | Executive | Report explains business impact, response actions, recovery plan, and lessons learned in non-technical language. | Passed | I need to check the tech audience to see differences |
-| 3 | Public Cloud Storage Bucket Exposed Customer Files | Executive | Report explains exposure risk, impact, containment, policy issue, and follow-up questions. | Passed with minor revisions needed | |
-| 4 | Malware Alert on Finance Workstation | Technical | Report includes endpoint evidence, suspicious command activity, containment, root cause, and next steps. | Passed | Will run again to ensure quality of answers |
-| 5 | SQL Injection Attempt Against Customer Portal | Technical | Report includes WAF alerts, affected endpoints, database review, root cause, remediation, and recommendations. | Passed | |
+| 1 | Phishing Email Led to Microsoft 365 Account Compromise | Technical | Report includes timeline, evidence, 5 Whys, root cause, remediation, lessons learned, and open questions. | Passed | Formatting cleanup was reviewed; output was usable after broken-character and export fixes. |
+| 2 | Ransomware Detected on Shared File Server | Executive | Report explains business impact, response actions, recovery plan, and lessons learned in non-technical language. | Passed | Markdown, HTML, and PDF exports were reviewed and considered clean enough for demo and journal evidence. |
+| 3 | Public Cloud Storage Bucket Exposed Customer Files | Executive | Report explains exposure risk, impact, containment, policy issue, and follow-up questions. | Passed with minor formatting note | Content quality was strong and Open Questions evidence was paired correctly. Some generated versions still used `Why 1` labels in the 5 Whys section. |
+| 4 | Malware Alert on Finance Workstation | Technical | Report includes endpoint evidence, suspicious command activity, containment, root cause, and next steps. | Passed with minor formatting note | Content quality was strong and Open Questions evidence was paired correctly. Some generated versions still used `Why 1` labels in the 5 Whys section. |
+| 5 | SQL Injection Attempt Against Customer Portal | Technical | Report includes WAF alerts, affected endpoints, database review, root cause, remediation, and recommendations. | Passed | Report included clean formatting, clear evidence, useful open questions, and practical recommendations. |
 
 ## Pass Criteria
 
