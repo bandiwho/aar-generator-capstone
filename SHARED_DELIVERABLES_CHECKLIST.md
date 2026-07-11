@@ -237,24 +237,24 @@ Expected due date: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [ ] Code and test planned project tasks for Week 6.
-- [ ] Push completed achievements to GitHub.
-- [ ] Update the README to reflect Week 6 progress.
-- [ ] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
-- [ ] Include meeting log information in the Week 6 journal.
-- [ ] Write milestones achieved this week with brief descriptions.
-- [ ] Write subtasks completed this week with brief descriptions.
-- [ ] Provide detailed testing descriptions for completed subtasks.
-- [ ] Add demo screenshots as evidence.
-- [ ] Test Copy Report and Download Report behavior.
-- [ ] Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
-- [ ] Write lessons learned.
-- [ ] Document the contribution of Brittany, Garrett, and Mike.
-- [ ] State whether the team progressed as planned.
-- [ ] If the team did not progress as planned, explain the adjustment.
-- [ ] Confirm no API key is visible in screenshots.
-- [ ] Export the Week 6 journal as a PDF.
-- [ ] Submit the PDF before Friday if possible, or by the Sunday deadline.
+- [x] Code and test planned project tasks for Week 6.
+- [x] Push completed achievements to GitHub.
+- [x] Update the README to reflect Week 6 progress.
+- [x] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
+- [x] Include meeting log information in the Week 6 journal.
+- [x] Write milestones achieved this week with brief descriptions.
+- [x] Write subtasks completed this week with brief descriptions.
+- [x] Provide detailed testing descriptions for completed subtasks.
+- [x] Add demo screenshots as evidence.
+- [x] Test Copy Report and Download Report behavior.
+- [x] Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
+- [x] Write lessons learned.
+- [x] Document the contribution of Brittany, Garrett, and Mike.
+- [x] State whether the team progressed as planned.
+- [x] If the team did not progress as planned, explain the adjustment.
+- [x] Confirm no API key is visible in screenshots.
+- [x] Export the Week 6 journal as a PDF.
+- [x] Submit the Week 6 journal PDF.
 
 ## 15. Week 7 Canvas Assignment: Weekly Journal
 
@@ -262,9 +262,9 @@ Expected due date: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [ ] Code and test planned project tasks for Week 7.
+- [~] Code and test planned project tasks for Week 7.
 - [ ] Push completed achievements to GitHub.
-- [ ] Update the README to reflect Week 7 progress.
+- [x] Update the README to reflect Week 7 progress.
 - [ ] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
 - [ ] Include meeting log information in the Week 7 journal.
 - [ ] Write milestones achieved this week with brief descriptions.
@@ -321,6 +321,10 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Update README, todos, and deliverables for Week 5.
 - [x] Collect screenshot evidence and write Week 5 journal sections.
 - [x] Confirm the signed Week 5 journal was turned in.
+- [x] Confirm the Week 6 journal was turned in.
+- [x] Update README, todos, shared deliverables, and areas of improvement for Week 7.
+- [x] Draft the final demo speech and presentation talking points.
+- [ ] Capture final demo screenshots and organize them for slides/journal evidence.
 
 ### Garrett
 
@@ -331,7 +335,9 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Complete technical/executive report-style backend work.
 - [x] Add 5 Whys and recommendation logic.
 - [x] Confirm tests pass after Week 5 changes.
-- [~] Refine 5 Whys and recommendation quality during Week 6 testing.
+- [x] Refine 5 Whys and recommendation quality during Week 6 testing.
+- [ ] Prepare backend explanation for the Week 7 demo script.
+- [ ] Confirm final demo data works before rehearsal.
 
 ### Mike
 
@@ -339,8 +345,9 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Confirm interface works during demo practice.
 - [x] Document frontend usage.
 - [ ] Prepare frontend explanation for demo.
-- [~] Continue style selection controls and report output formatting.
-- [~] Help capture frontend screenshots for testing evidence.
+- [x] Continue style selection controls and report output formatting.
+- [x] Help capture frontend screenshots for testing evidence.
+- [ ] Polish homepage, report display, copy/export behavior, and frontend walkthrough notes for Week 7.
 
 ## Weekly Review Notes
 
@@ -402,23 +409,29 @@ Use this section during team meetings.
 ### Week 6
 
 - Completed:
+  - Week 6 journal was turned in.
+  - Sample incident testing was completed and documented.
+  - README, milestone todos, shared deliverables, and improvement notes were updated for Week 6.
+  - Error handling, validation, fallback behavior, copy/download behavior, and report layout were reviewed.
+  - Testing evidence was collected without showing the OpenAI API key.
 - Still needed:
-  - Code and test Week 6 validation, error handling, and sample incident tasks.
-  - Push completed achievements to GitHub.
-  - Update README and meeting log with Week 6 progress.
-  - Capture testing screenshots without showing the API key.
-  - Export the Week 6 journal as a PDF.
+  - Carry any remaining polish items into Week 7 demo preparation.
+  - Keep backup screenshots and saved reports organized for the final presentation.
 - Blockers:
-  - To be recorded during the Week 6 team meeting.
+  - No active Week 6 blocker recorded after the journal submission.
 
 ### Week 7
 
 - Completed:
+  - README, milestone todos, shared deliverables, and areas of improvement were moved into Week 7 focus.
+  - Demo speech draft started for final presentation practice.
 - Still needed:
   - Code and test Week 7 polish, documentation, and demo preparation tasks.
   - Push completed achievements to GitHub.
-  - Update README and meeting log with Week 7 progress.
+  - Update meeting log with Week 7 progress.
   - Capture final demo screenshots without showing the API key.
+  - Practice the full demo with speaking roles for Brittany, Garrett, and Mike.
+  - Prepare backup screenshots and a backup generated report.
   - Export the Week 7 journal as a PDF.
 - Blockers:
   - To be recorded during the Week 7 team meeting.
