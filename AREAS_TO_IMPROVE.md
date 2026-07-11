@@ -6,64 +6,65 @@ Team members: Brittany, Garrett, Mike
 
 ## Purpose
 
-This page tracks the main areas that need improvement for Week 6. Week 6 focuses on validation, error handling, fallback behavior, sample incident testing, and making the prototype easier to use before final demo preparation. It shows what needs to be done, why it matters, who owns the work, current status, and what evidence should be collected for the Week 6 weekly journal and final report.
+This page tracks the main areas that need improvement for Week 7. Week 7 focuses on final documentation, demo preparation, presentation notes, screenshot evidence, and reducing final presentation risk. Week 6 testing and journal work are complete, so the team should now use testing evidence to prepare a clear final demo and presentation.
 
-## Week 6 Priority Summary
+## Week 7 Priority Summary
 
-The most important Week 6 work is to prove the prototype is reliable. The team should focus first on items that create evidence for the weekly journal: testing notes, screenshots, backend test results, validation screenshots, and fallback behavior notes.
+The most important Week 7 work is to make the project easy to present. The team should focus first on the items that will appear in the final presentation, Week 7 journal, and final report: screenshots, demo script, role assignments, backup evidence, and clear explanations of the backend, frontend, and documentation work.
 
 | Priority | Focus | Owner | Reason |
 |---|---|---|---|
-| 1 | Sample incident testing and testing notes | Brittany | The Week 6 journal needs real testing evidence, not only task descriptions. |
-| 2 | Frontend validation screenshots | Mike | Validation proves the app guides users when required information is missing. |
-| 3 | Copy/download and report layout evidence | Mike | Export evidence proves the team can save reports, but layout should be clean enough for journal or final report use. |
-| 4 | Backend error handling and fallback behavior | Garrett | Fallback behavior protects the final demo if the LLM or API connection fails. |
-| 5 | Meeting and contribution evidence | Brittany | The instructor needs proof of each member's work and attendance. |
-| 6 | Backup demo evidence | Team | Backup screenshots and saved reports reduce final presentation risk. |
+| 1 | Demo speech and speaking roles | Brittany | The final presentation needs a clear opening, smooth handoffs, and a practiced explanation of the project. |
+| 2 | Final demo screenshots | Brittany and Mike | Screenshots provide backup evidence if the live demo has a problem. |
+| 3 | Backend explanation and fallback plan | Garrett | The team needs to explain how incident data becomes a structured AAR and what happens if the API is unavailable. |
+| 4 | Frontend walkthrough polish | Mike | The live demo should be easy to follow from incident input to generated report output. |
+| 5 | Documentation cleanup | Brittany | README, checklists, and journal notes need to match the current Week 7 status. |
+| 6 | Final rehearsal and backup materials | Team | A full practice run lowers final presentation risk. |
 
 ## Improvement Chart
 
 | Area to Improve | Why It Matters | Owner | Current Status | Next Action | Priority | Evidence Needed |
 |---|---|---|---|---|---|---|
-| Sample incident testing | Week 6 requires proof that the app works with realistic incident scenarios. | Brittany | In progress | Test at least three sample incidents, mark pass/fail status, and write short notes about report quality. | High | Updated `TESTING_CHECKLIST.md` plus screenshots for at least three generated reports. |
-| Testing documentation | The weekly journal needs detailed testing descriptions and evidence. | Brittany | In progress | Record what passed, what needs revision, and whether technical/executive tone matched the selected audience. | High | Testing notes, screenshot list, and confirmation that no API key appears in screenshots. |
-| Meeting and contribution evidence | The instructor grades individual contribution, so each member's work needs to be visible. | Brittany | In progress | Update `MEETING_LOG.md`, `MILESTONE_TODOS.md`, and `SHARED_DELIVERABLES_CHECKLIST.md` after the Week 6 meeting. | High | Week 6 meeting entry, owner assignments, and updated checklist screenshots. |
-| Frontend validation | Users need clear messages when required fields are missing or too short. | Mike | Planned | Improve required-field validation, inline messages, and user-facing guidance before report generation. | High | Screenshot showing validation messages on the form. |
-| Backend error handling | The app should handle API failures or weak input without confusing the user. | Garrett | Planned | Improve backend error handling, keep mock fallback available, and confirm the report service returns a usable response when the LLM is unavailable. | High | Test result or screenshot showing fallback/mock behavior without exposing the API key. |
-| Technical vs executive output review | The advanced component depends on clear audience differences. | Brittany and Garrett | In progress | Compare technical and executive reports for the same or similar incident and note whether the tone is different enough. | High | Side-by-side notes or screenshots of technical and executive outputs. |
-| 5 Whys and recommendations quality | The report should connect root cause and recommendations to the incident details. | Garrett | In progress | Review whether 5 Whys, root cause, and recommendations reference timeline, evidence, impact, and remediation details. | High | Generated report screenshot showing incident-specific 5 Whys and recommendations. |
-| Copy/export behavior | The team needs clean evidence and backup reports for demo and submission. | Mike | In progress | Confirm Copy Report and Download Report work, then review whether the downloaded HTML report layout is clean enough or should be replaced with Print/Save as PDF for polished evidence. | High | Screenshot showing copy/download status, saved HTML report file, and note about whether layout needs cleanup. |
-| Mobile and usability polish | The frontend should remain usable on smaller screens and during live demo practice. | Mike | Planned | Review layout spacing, responsive behavior, form controls, and generated report readability. | Medium | Screenshot of the app on a smaller browser width. |
-| Final demo risk reduction | The team needs backup evidence if the live API or demo environment fails. | Team | Planned | Prepare backup screenshots, a backup generated report, and notes explaining fallback behavior. | Medium | Backup screenshots, saved generated report file, and fallback explanation notes. |
+| Demo speech and presentation flow | The team needs a clear script for explaining the problem, solution, prototype, testing, and lessons learned. | Brittany | In progress | Practice the demo speech draft and adjust timing after a team rehearsal. | High | `DEMO_SPEECH_DRAFT.md`, slide outline notes, and rehearsal notes. |
+| Screenshot organization | Final slides and backup materials need clean visual proof of the working prototype. | Brittany | Planned | Collect screenshots of the homepage, completed form, generated report, technical/executive style, validation, and copy/download behavior. | High | Organized screenshot folder or screenshot list with no API key visible. |
+| Backend explanation | Garrett needs a short, understandable explanation of the schema, prompt workflow, OpenAI connection, mock fallback, and 5 Whys output. | Garrett | Planned | Write or practice a 1-2 minute backend explanation for the presentation. | High | Backend talking points, passing test notes, and fallback evidence. |
+| Frontend demo walkthrough | Mike needs to show the user workflow smoothly during the live demo. | Mike | Planned | Confirm the form, sample incident loading, report style selection, report preview, and copy/download behavior work before rehearsal. | High | Frontend screenshots and demo walkthrough notes. |
+| Final documentation cleanup | The README and supporting checklists should show that Week 6 is complete and Week 7 is active. | Brittany | In progress | Keep README, milestone todos, shared deliverables, meeting log, and Week 7 journal notes aligned. | High | Updated documentation files and Week 7 journal evidence. |
+| Backup generated report | The team needs a backup if the live app, API, or classroom machine has a problem. | Team | Planned | Save one strong generated report and matching screenshots for the final presentation. | High | Saved report file, screenshots, and fallback explanation. |
+| Final report readiness | Week 8 will move fast, so final report sections should be prepared early. | Brittany | Planned | Start organizing milestones, testing evidence, lessons learned, team contributions, and limitations. | Medium | Final report outline and evidence list. |
+| Demo environment check | The final demo machine must be able to run the app. | Team | Planned | Confirm Python environment, dependencies, app URL, and sample data before final practice. | Medium | Demo run notes and successful local app screenshot. |
+| Lessons learned notes | The final report and presentation should show what the team learned from testing, formatting fixes, and export issues. | Brittany | Planned | Keep a short lessons learned list from Week 6 and Week 7 work. | Medium | Journal notes and final report bullet points. |
 
-## Week 6 Focus
+## Week 7 Focus
 
 | Team Member | Focus This Week | Expected Output |
 |---|---|---|
-| Brittany | Test at least three sample incidents, update Week 6 documentation, collect screenshots, track pass/fail notes, and prepare journal evidence. | Week 6 testing notes, updated checklists, meeting log evidence, and screenshots with no API key visible. |
-| Garrett | Improve backend error handling, fallback behavior, report revision support, 5 Whys quality, recommendation quality, and backend testing. | Stronger report-generation logic, fallback evidence, revision notes, and passing backend tests. |
-| Mike | Improve required-field validation, copy/export behavior, downloaded report layout, and frontend screenshot support. | Cleaner form validation, easier report saving, downloaded report layout notes, and frontend evidence screenshots. |
-| Team | Review test results, assign fixes, push completed achievements to GitHub, and confirm evidence is ready before Week 6 journal submission. | Bug list, improvement notes, GitHub updates, and clear owner assignments for remaining work. |
+| Brittany | Update Week 7 documentation, draft the demo speech, prepare presentation notes, organize screenshots, and start Week 7 journal evidence. | Updated README/checklists, demo speech draft, screenshot list, meeting log evidence, and journal notes. |
+| Garrett | Prepare backend explanation, confirm final demo data works, verify fallback behavior, and explain the 5 Whys/report-generation workflow. | Backend talking points, passing test notes, fallback evidence, and final demo data confirmation. |
+| Mike | Polish homepage/report display, confirm frontend demo workflow, verify copy/download behavior, and prepare frontend walkthrough notes. | Frontend screenshots, demo flow notes, and report display/export confirmation. |
+| Team | Practice the full demo, assign speaking roles, prepare backup screenshots, and confirm no API key appears in final materials. | Rehearsal notes, backup generated report, final screenshot set, and clear owner assignments for Week 8. |
 
 ## Screenshot Targets
 
-Use these screenshots for the Week 6 journal and final report evidence:
+Use these screenshots for the Week 7 journal, final slides, final report, and backup demo plan:
 
-- Completed form using a sample incident.
+- Homepage or opening screen of the AAR Generator.
+- Completed form using the selected final demo incident.
+- Audience style selection showing technical and executive options.
 - Generated technical report output.
 - Generated executive report output.
+- 5 Whys root-cause analysis section.
+- Recommendations and lessons learned section.
 - Required-field validation message.
-- Mock fallback or error-handling behavior.
-- Copy, download, print, or saved report behavior.
-- Downloaded HTML report layout, especially whether sections, lists, and 5 Whys are readable enough for final evidence.
-- Smaller-screen layout if mobile usability is improved.
-- Meeting log or checklist update showing Week 6 progress.
+- Copy Report or Download Report behavior.
+- Backup generated report opened outside the app.
+- Meeting log or checklist update showing Week 7 progress.
 
 ## Done Criteria
 
 An improvement can be marked complete when:
 
-- The related code or documentation is updated.
-- The owner has tested or reviewed the change.
-- A screenshot, test result, meeting note, or GitHub commit shows evidence.
-- The task is reflected in the weekly journal or final report if required.
+- The related documentation, code, screenshot, or speech note is updated.
+- The owner has reviewed or tested the item.
+- A screenshot, test result, meeting note, saved report, or GitHub commit shows evidence.
+- The item is reflected in the Week 7 journal, final report, or final presentation if required.

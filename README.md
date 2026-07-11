@@ -52,22 +52,23 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Week 5 README, todos, and shared deliverables checklist updated for the weekly journal requirements.
 - [x] Technical and executive report styles added for different reporting audiences.
 - [x] 5 Whys root-cause analysis and recommendations added to the generated report structure.
-- [~] Week 6 validation, error handling, fallback behavior, and sample incident testing are in progress.
+- [x] Week 6 validation, error handling, fallback behavior, and sample incident testing completed for the weekly journal.
+- [~] Week 7 documentation, screenshots, presentation draft, and demo preparation are in progress.
 
 ## Current Week Focus
 
-Week 6 focus: improve prototype reliability through validation, error handling, fallback behavior, sample incident testing, and stronger screenshot evidence for the weekly journal.
+Week 7 focus: prepare the project for final presentation by polishing documentation, organizing demo screenshots, drafting presentation notes, practicing the live demo, and preparing backup evidence.
 
-The Week 6 journal will summarize validation improvements, backend fallback behavior, sample incident test results, detailed screenshot evidence, lessons learned, each team member's contribution, meeting attendance, progress compared to the project plan, and any needed plan adjustments.
+The Week 6 journal has been turned in. The Week 7 journal should summarize final documentation work, presentation preparation, demo practice, screenshot evidence, lessons learned, each team member's contribution, meeting attendance, progress compared to the project plan, and any needed plan adjustments.
 
-Current Week 6 responsibilities:
+Current Week 7 responsibilities:
 
 | Member | Current Focus | Evidence Needed |
 |---|---|---|
-| Brittany | Test at least three sample incidents, update testing notes, collect screenshots, update meeting evidence, and prepare the Week 6 journal. | Completed testing checklist notes, screenshots, meeting log updates, and journal draft content. |
-| Garrett | Improve backend error handling, fallback behavior, report revision support, and backend test coverage. | Passing backend tests, fallback evidence, and notes showing how errors are handled. |
-| Mike | Improve required-field validation, copy/export behavior, mobile usability, and frontend screenshot support. | Screenshots showing validation messages, report saving behavior, and smaller-screen usability. |
-| Team | Review test results, assign fixes, push completed achievements to GitHub, and confirm no API key appears in screenshots or uploaded files. | GitHub updates, bug notes, screenshots, and Week 6 contribution evidence. |
+| Brittany | Finalize README/checklist updates, draft the demo speech, prepare presentation outline notes, and collect organized screenshot evidence. | Updated documentation, demo speech draft, screenshot list, meeting log updates, and Week 7 journal notes. |
+| Garrett | Prepare a short backend explanation, confirm report generation works with final demo data, and document fallback behavior for the presentation. | Backend explanation notes, test result or screenshot evidence, and backup/fallback talking points. |
+| Mike | Polish the frontend demo flow, confirm report display/export behavior, and prepare frontend walkthrough notes. | Screenshots showing the form, generated report, copy/export behavior, and final demo flow. |
+| Team | Practice the demo from start to finish, assign speaking roles, prepare backup screenshots, and confirm no API key appears in final materials. | Demo rehearsal notes, final screenshot set, backup generated report, and Week 7 contribution evidence. |
 
 ## Team Member Descriptions
 
@@ -84,8 +85,8 @@ Current Week 6 responsibilities:
 | [x] | June 15 - June 21 | Milestone 1 | Repository setup, README, sample incidents, form field review, and demo workflow instructions |
 | [x] | June 22 - June 28 | Milestone 2 | Backend data structure, report-generation workflow, frontend form refinement, and first LLM-generated report draft |
 | [x] | June 29 - July 5 | Milestone 3 | Technical and executive report styles, improved 5 Whys analysis, output formatting, testing screenshots, and meeting log evidence |
-| [~] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, sample incident review, weekly journal, and meeting log evidence |
-| [ ] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, demo script, weekly journal, and meeting log evidence |
+| [x] | July 6 - July 12 | Milestone 4 | Testing, error handling, validation, sample incident review, weekly journal, and meeting log evidence |
+| [~] | July 13 - July 19 | Milestone 5 | Documentation, screenshots, presentation draft, demo script, weekly journal, and meeting log evidence |
 | [ ] | July 20 - July 24 | Milestone 6 | Final report, presentation slides, final presentation preparation, final polish, and submission package |
 | [ ] | July 27 - July 28 | Final Presentation | Final presentation and live demonstration |
 
@@ -143,7 +144,7 @@ Goal: Test the prototype with multiple incidents, improve reliability, and docum
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
 | [x] | Brittany | Test app with sample incidents | Testing notes and screenshots | At least three incident scenarios are tested |
-| [~] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
+| [x] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
 | [x] | Mike | Improve frontend validation | Required-field behavior and user-facing messages | Users understand what information is missing |
 | [x] | Brittany | Prepare Week 6 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 6 journal is ready to export as a PDF |
 | [x] | Team | Review test results | Bug list and improvement notes | Issues are documented and assigned |
@@ -155,11 +156,11 @@ Goal: Prepare the project for final presentation and demonstration while documen
 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
-| [ ] | Brittany | Finalize project documentation | Final README, journal notes, and checklist updates | Documentation is clear and complete |
-| [ ] | Brittany | Prepare presentation outline | Slide outline and speaker notes | Presentation covers problem, solution, prototype, and lessons learned |
+| [~] | Brittany | Finalize project documentation | Final README, journal notes, and checklist updates | Documentation is clear and complete |
+| [~] | Brittany | Prepare presentation outline | Slide outline and speaker notes | Presentation covers problem, solution, prototype, and lessons learned |
 | [ ] | Garrett | Prepare backend explanation | Backend workflow summary | Team can explain how report generation works |
 | [ ] | Mike | Prepare demo flow | Demo script and frontend walkthrough | Demo can be completed smoothly |
-| [ ] | Team | Prepare Week 7 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 7 journal is ready to export as a PDF |
+| [~] | Team | Prepare Week 7 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 7 journal is ready to export as a PDF |
 
 ### Milestone 6: Final Polish and Submission
 
@@ -222,4 +223,5 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 | [`AREAS_TO_IMPROVE.md`](AREAS_TO_IMPROVE.md) | Improvement chart showing needed work, owners, priority, and evidence |
 | [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
 | [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
+| [`DEMO_SPEECH_DRAFT.md`](DEMO_SPEECH_DRAFT.md) | Week 7 draft speaking notes for the final demo and presentation |
 | [`FORM_FIELD_REVIEW.md`](FORM_FIELD_REVIEW.md) | Review of required form fields for the MVP workflow |
