@@ -150,7 +150,21 @@ Planned tasks:
 - Brittanys VS was not keeping up with github due to an inability to get credential tokens. Deletion of some updates occurred but the good thing at one point it said sync 139 things. Brittany closed out and logged out of everything and though some things were lost, 139 things were not altered with no guarantee what. Issue was resolved.
   
 - 07/08
+- Mikes updates on what improvements to buttons.
+- Even thought Brittany's computer was resolved night before some residual issues were going one finally a VS update popped up and fully resolved the issue.
+- Brittany found report formatting issues.
+- 07/09
+- Formatting issues were discussed.
+- Backend and Frontend needed fixes
+- Fontend was trying to bold words and when displayed it showed ** around words that were meant to be bolded
+- Backend had pulled lower cases bullets trying to break up point as bullets and 5 why section was hard to read and pull from clearly.
 
+- 07/09
+- Mike fixed Mobile/Small Screenview
+- Mike provided screenshots for report.
+- Brittany informed team all testing had passed. 
+- Garretts backend was discussed and determined to do minor edits as far as not adding in extra alerts letting user know errors or if in mock mode. It is not in scope and we did not want to break anything as everything is passing. The other issue is it alreading takes 19 seconds loading time and did not want to extend that.
+  
 ### Week 7 Meeting
 
 Date and time: Tuesday, July 14, 2026, 6:30 PM
