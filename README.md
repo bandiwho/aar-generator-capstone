@@ -24,6 +24,7 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Technical and executive reporting styles.
 - [~] Realistic sample incident data for testing.
 - [x] Demo workflow documentation for presentation practice.
+- [x] Final user guide added for stretch-goal documentation.
 - [x] GitHub repository for shared source code and documentation.
 
 ## Current Project Status
@@ -36,6 +37,7 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] Checkboxes added for weekly tasks, MVP requirements, testing, deliverables, and completion criteria.
 - [x] Shared deliverables checklist added.
 - [x] Demo workflow instructions added.
+- [x] User guide added to explain setup, form use, report review, export options, screenshots, and troubleshooting.
 - [x] Form field review completed.
 - [x] Realistic sample incidents added for testing and demo use.
 - [x] Sample incidents page created in Markdown for easier GitHub viewing.
@@ -222,4 +224,5 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 | [`AREAS_TO_IMPROVE.md`](AREAS_TO_IMPROVE.md) | Improvement chart showing needed work, owners, priority, and evidence |
 | [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
 | [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
+| [`USER_GUIDE.md`](USER_GUIDE.md) | Final user guide with setup, usage, review, export, screenshot, and troubleshooting instructions |
 | [`FORM_FIELD_REVIEW.md`](FORM_FIELD_REVIEW.md) | Review of required form fields for the MVP workflow |

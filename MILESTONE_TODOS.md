@@ -229,7 +229,7 @@ Only work on these after the MVP is complete.
 - [ ] Mike: Add a report template selection screen.
 - [ ] Mike: Add a dashboard for previous reports.
 - [ ] Brittany: Add more sample incidents.
-- [ ] Brittany: Add a final user guide.
+- [x] Brittany: Add a final user guide.
 - [ ] Team: Add MITRE ATT&CK or NIST mapping if time allows.
 
 ## Meeting Routine
