@@ -74,6 +74,7 @@ Class: CSC 482 Capstone Project II
 - [x] Prototype has setup instructions.
 - [x] Prototype has run instructions for Windows.
 - [x] Prototype has run instructions for Ubuntu.
+- [x] Prototype has a final user guide.
 
 ## 6. Testing Evidence
 
@@ -96,10 +97,11 @@ Class: CSC 482 Capstone Project II
 - [ ] Technology stack listed.
 - [x] Setup instructions written.
 - [x] Usage instructions written.
-- [ ] Testing summary written.
+- [x] Final user guide written.
+- [x] Testing summary written.
 - [ ] Known limitations written.
-- [ ] Future improvements written.
-- [ ] Team contribution section written.
+- [x] Future improvements written.
+- [x] Team contribution section written.
 - [ ] Final report completed.
 - [ ] Final report exported as a PDF.
 - [x] Weekly meeting log created.
@@ -122,9 +124,9 @@ Class: CSC 482 Capstone Project II
 
 ## 9. Demo Readiness
 
-- [ ] Demo machine has Python installed.
-- [ ] Demo machine has required packages installed.
-- [ ] `updated_prototype` runs successfully.
+- [x] Demo machine has Python installed.
+- [x] Demo machine has required packages installed.
+- [x] `updated_prototype` runs successfully.
 - [ ] Demo URL opens successfully.
 - [ ] Sample incident is ready.
 - [ ] Backup screenshots are ready.
@@ -237,24 +239,24 @@ Expected due date: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [ ] Code and test planned project tasks for Week 6.
-- [ ] Push completed achievements to GitHub.
-- [ ] Update the README to reflect Week 6 progress.
-- [ ] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
-- [ ] Include meeting log information in the Week 6 journal.
-- [ ] Write milestones achieved this week with brief descriptions.
-- [ ] Write subtasks completed this week with brief descriptions.
-- [ ] Provide detailed testing descriptions for completed subtasks.
-- [ ] Add demo screenshots as evidence.
-- [ ] Test Copy Report and Download Report behavior.
-- [ ] Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
-- [ ] Write lessons learned.
-- [ ] Document the contribution of Brittany, Garrett, and Mike.
-- [ ] State whether the team progressed as planned.
-- [ ] If the team did not progress as planned, explain the adjustment.
-- [ ] Confirm no API key is visible in screenshots.
-- [ ] Export the Week 6 journal as a PDF.
-- [ ] Submit the PDF before Friday if possible, or by the Sunday deadline.
+- [x] Code and test planned project tasks for Week 6.
+- [x] Push completed achievements to GitHub.
+- [x] Update the README to reflect Week 6 progress.
+- [x] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
+- [x] Include meeting log information in the Week 6 journal.
+- [x] Write milestones achieved this week with brief descriptions.
+- [x] Write subtasks completed this week with brief descriptions.
+- [x] Provide detailed testing descriptions for completed subtasks.
+- [x] Add demo screenshots as evidence.
+- [x] Test Copy Report and Download Report behavior.
+- [x] Review downloaded HTML report layout and decide whether screenshots or Print/Save as PDF should be used for polished evidence.
+- [x] Write lessons learned.
+- [x] Document the contribution of Brittany, Garrett, and Mike.
+- [x] State whether the team progressed as planned.
+- [x] If the team did not progress as planned, explain the adjustment.
+- [x] Confirm no API key is visible in screenshots.
+- [x] Export the Week 6 journal as a PDF.
+- [x] Submit the Week 6 journal PDF.
 
 ## 15. Week 7 Canvas Assignment: Weekly Journal
 
@@ -321,6 +323,9 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Update README, todos, and deliverables for Week 5.
 - [x] Collect screenshot evidence and write Week 5 journal sections.
 - [x] Confirm the signed Week 5 journal was turned in.
+- [x] Confirm the Week 6 journal was turned in.
+- [x] Add final user guide for stretch-goal documentation.
+- [~] Prepare Week 7 documentation, demo screenshots, presentation outline, and journal evidence.
 
 ### Garrett
 
@@ -331,16 +336,19 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Complete technical/executive report-style backend work.
 - [x] Add 5 Whys and recommendation logic.
 - [x] Confirm tests pass after Week 5 changes.
-- [~] Refine 5 Whys and recommendation quality during Week 6 testing.
+- [x] Refine 5 Whys and recommendation quality during Week 6 testing.
+- [ ] Prepare backend explanation for final demo.
+- [ ] Confirm final demo data works before presentation rehearsal.
 
 ### Mike
 
 - [x] Keep frontend and demo workflow updated.
 - [x] Confirm interface works during demo practice.
 - [x] Document frontend usage.
-- [ ] Prepare frontend explanation for demo.
-- [~] Continue style selection controls and report output formatting.
-- [~] Help capture frontend screenshots for testing evidence.
+- [x] Prepare frontend explanation for demo.
+- [x] Continue style selection controls and report output formatting.
+- [x] Help capture frontend screenshots for testing evidence.
+- [ ] Confirm final demo flow, homepage/report display, and any visual assets for Week 7.
 
 ## Weekly Review Notes
 
@@ -348,45 +356,46 @@ Use this section during team meetings.
 
 ### Week 3
 
-- Completed: Creating and submitting Github URL
+- Completed:
+  - [x] Created and submitted the GitHub URL.
 - Still needed:
-  - Establish basic frontend layout (Mike)
-  - Set up backend environment and report-generation logic (Garrett)
-  - Align frontend input fields with backend "5 Whys" data requirements (Brittany)
+  - [x] Establish basic frontend layout (Mike).
+  - [x] Set up backend environment and report-generation logic (Garrett).
+  - [x] Align frontend input fields with backend "5 Whys" data requirements (Brittany).
 - Blockers:
-  - Awaiting initial frontend/backend setups and finalized data definitions to begin the Week 4 integration phase.
+  - [x] Initial frontend/backend setup and finalized data definitions were needed before Week 4 integration could begin.
 
 ### Week 4
 
 - Completed:
-  - Frontend form connects to backend route.
-  - Backend schema matches frontend form fields.
-  - Sample incident JSON was aligned with the backend schema.
-  - Sample incident Markdown was updated for easier demo copying and screenshot evidence.
-  - Prompt-building workflow was added for structured AAR generation.
-  - OpenAI API mode was configured to use automatic model selection from the class API project.
-  - Real LLM generation was tested with `mock_mode=False`.
-  - Mock fallback behavior was kept for demo reliability.
-  - Backend/report-generation test passed.
-  - Homepage loads successfully.
-  - Report form generates output.
+  - [x] Frontend form connects to backend route.
+  - [x] Backend schema matches frontend form fields.
+  - [x] Sample incident JSON was aligned with the backend schema.
+  - [x] Sample incident Markdown was updated for easier demo copying and screenshot evidence.
+  - [x] Prompt-building workflow was added for structured AAR generation.
+  - [x] OpenAI API mode was configured to use automatic model selection from the class API project.
+  - [x] Real LLM generation was tested with `mock_mode=False`.
+  - [x] Mock fallback behavior was kept for demo reliability.
+  - [x] Backend/report-generation test passed.
+  - [x] Homepage loads successfully.
+  - [x] Report form generates output.
 - Still needed:
-  - Test executive report style.
-  - Save screenshots for midterm report evidence.
-  - Write testing notes and review notes.
-  - Complete and sign the team midterm report.
-  - Push completed achievements to GitHub.
+  - [x] Test executive report style.
+  - [x] Save screenshots for midterm report evidence.
+  - [x] Write testing notes and review notes.
+  - [x] Complete and sign the team midterm report.
+  - [x] Push completed achievements to GitHub.
 - Blockers:
-  - Final screenshot evidence still needs to avoid showing the API key.
+  - [x] Final screenshot evidence needed to avoid showing the API key.
 
 ### Week 5
 
 - Completed:
-  - Meeting log created for weekly attendance, discussion topics, assigned tasks, and completion status.
-  - README updated for the Week 5 assignment.
-  - Milestone todos updated for Week 5 coding, testing, GitHub, journal, and meeting-log tasks.
-  - Shared deliverables checklist updated with Week 5 journal requirements.
-  - Signed Week 5 journal turned in.
+  - [x] Meeting log created for weekly attendance, discussion topics, assigned tasks, and completion status.
+  - [x] README updated for the Week 5 assignment.
+  - [x] Milestone todos updated for Week 5 coding, testing, GitHub, journal, and meeting-log tasks.
+  - [x] Shared deliverables checklist updated with Week 5 journal requirements.
+  - [x] Signed Week 5 journal turned in.
 - Still needed:
   - [x] Push completed achievements to GitHub.
   - [x] Add exact meeting time after the Tuesday meeting. 
@@ -402,36 +411,53 @@ Use this section during team meetings.
 ### Week 6
 
 - Completed:
+  - [x] Week 6 journal was turned in.
+  - [x] Week 6 meeting log was updated with attendance, topics, assigned work, and blocker notes.
+  - [x] Sample incident testing was documented in `TESTING_CHECKLIST.md`.
+  - [x] Technical and executive report output were reviewed for quality and audience differences.
+  - [x] Copy Report and Download Report behavior were reviewed.
+  - [x] Downloaded HTML report preserved the report title, audience, sections, 5 Whys, recommendations, and open questions.
+  - [x] Backend fallback/mock behavior and frontend validation were reviewed for demo reliability.
+  - [x] Screenshot evidence was collected or planned with the reminder that no API key should appear in screenshots.
 - Still needed:
-  - Code and test Week 6 validation, error handling, and sample incident tasks.
-  - Push completed achievements to GitHub.
-  - Update README and meeting log with Week 6 progress.
-  - Capture testing screenshots without showing the API key.
-  - Export the Week 6 journal as a PDF.
+  - [~] Carry remaining polish items into Week 7 demo preparation.
+  - [~] Use screenshots or Print/Save as PDF for polished final evidence if downloaded HTML looks crowded.
+  - [~] Prepare final presentation roles, demo speech, and backup generated report.
 - Blockers:
-  - To be recorded during the Week 6 team meeting.
+  - [x] Brittany had a VS Code/GitHub credential-token issue that interfered with pulling/syncing updates. She logged out and back in, and the issue was treated as resolved.
+  - [x] Some local updates appeared to be lost during the GitHub sync problem, so the team needed to re-check the shared planning files and restore missing checklist updates.
+  - [~] Downloaded HTML reports worked, but formatting/readability still needed review before using them as polished final evidence.
+  - [x] Screenshots had to avoid exposing the OpenAI API key or private configuration.
+  - [~] Some generated reports passed testing but still needed minor wording or formatting review before final demo use.
 
 ### Week 7
 
 - Completed:
+  - [x] Final user guide was added as a stretch-goal documentation item.
 - Still needed:
-  - Code and test Week 7 polish, documentation, and demo preparation tasks.
-  - Push completed achievements to GitHub.
-  - Update README and meeting log with Week 7 progress.
-  - Capture final demo screenshots without showing the API key.
-  - Export the Week 7 journal as a PDF.
+  - [ ] Code and test Week 7 polish, documentation, and demo preparation tasks.
+  - [ ] Push completed achievements to GitHub.
+  - [ ] Update README and meeting log with Week 7 progress.
+  - [ ] Capture final demo screenshots without showing the API key.
+  - [ ] Export the Week 7 journal as a PDF.
 - Blockers:
-  - To be recorded during the Week 7 team meeting.
+  - [ ] Final demo screenshots still need to be captured and organized without showing the OpenAI API key or private configuration.
+  - [ ] Team speaking parts still need to be confirmed so Brittany, Garrett, and Mike each know what to explain during the final presentation.
+  - [ ] The final demo incident needs to be selected and tested one more time before presentation practice.
+  - [ ] Backup materials still need to be prepared, including screenshots and a backup generated report in case the live demo has a problem.
+  - [ ] The topographical homepage image task needs to be confirmed because the current frontend files do not appear to reference that image.
+  - [ ] Week 7 GitHub push/sync still needs to be confirmed after documentation updates are finished.
+  - [ ] Week 7 journal evidence still needs to be collected from the updated checklist, meeting log, screenshots, and demo practice notes.
 
 ### Week 8
 
 - Completed:
 - Still needed:
-  - Complete final report.
-  - Complete presentation slides.
-  - Complete final presentation preparation.
-  - Practice the final demo.
-  - Push final achievements to GitHub.
-  - Confirm no API keys are visible in final materials.
+  - [ ] Complete final report.
+  - [ ] Complete presentation slides.
+  - [ ] Complete final presentation preparation.
+  - [ ] Practice the final demo.
+  - [ ] Push final achievements to GitHub.
+  - [ ] Confirm no API keys are visible in final materials.
 - Blockers:
-  - To be recorded during the Week 8 team meeting.
+  - [ ] To be recorded during the Week 8 team meeting.
