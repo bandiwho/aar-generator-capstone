@@ -20,7 +20,13 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(rgba(238, 242, 245, 0.78), rgba(238, 242, 245, 0.78)),
+    url("/static/hero-banner.jpg");
+  background-attachment: fixed;
+  background-color: var(--bg);
+  background-position: center;
+  background-size: cover;
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
@@ -46,12 +52,13 @@ body {
 .intro p {
   max-width: 760px;
   margin: 0;
-  color: var(--muted);
+  color: var(--steel);
+  font-weight: 600;
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  color: var(--gold);
+  color: var(--steel);
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -86,7 +93,58 @@ body {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 10px 30px rgba(24, 32, 42, 0.07);
+  box-shadow: 0 12px 28px rgba(24, 32, 42, 0.06);
+}
+
+.scroll-panel {
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.panel-sticky-header {
+  position: sticky;
+  top: -20px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+  margin: -4px -4px 12px;
+  border-bottom: 1px solid rgba(217, 222, 229, 0.78);
+  background: #ffffff;
+  padding: 0 0 14px;
+}
+
+.panel-scroll-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.panel-scroll-button {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--steel);
+  font-size: 17px;
+  line-height: 1;
+  padding: 0;
+}
+
+.panel-scroll-button:hover,
+.panel-scroll-button:focus-visible {
+  border-color: var(--accent);
+  background: #eef8f7;
+  color: var(--accent-dark);
 }
 
 .panel-heading {
@@ -308,8 +366,6 @@ button:disabled,
 }
 
 .output {
-  position: sticky;
-  top: 16px;
   min-height: 560px;
 }
 
@@ -569,9 +625,10 @@ button:disabled,
   gap: 10px;
   min-height: 360px;
   align-content: start;
-  border: 1px solid var(--line);
+  border: 1px solid #cfdedc;
+  border-left: 4px solid var(--accent);
   border-radius: 8px;
-  background: #fcfdff;
+  background: rgba(249, 253, 252, 0.92);
   padding: 18px;
 }
 
@@ -664,14 +721,38 @@ pre {
 }
 
 @media (max-width: 860px) {
+  body {
+    background:
+      linear-gradient(rgba(238, 242, 245, 0.84), rgba(238, 242, 245, 0.84)),
+      url("/static/hero-banner.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+  }
+
   .workspace,
   .row,
   .audience-selector {
     grid-template-columns: 1fr;
   }
 
+  .scroll-panel,
   .output {
     position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .panel-scroll-controls {
+    display: none;
+  }
+
+  .panel-sticky-header {
+    position: static;
+    margin: 0;
+    border-bottom: 0;
+    background: transparent;
+    padding: 0;
   }
 
   .layout {
@@ -758,6 +839,13 @@ pre {
 }
 
 @media (max-width: 560px) {
+  body {
+    background:
+      linear-gradient(rgba(238, 242, 245, 0.88), rgba(238, 242, 245, 0.88)),
+      url("/static/hero-banner.jpg");
+    background-position: center top;
+  }
+
   .layout {
     width: min(100% - 16px, 1180px);
     padding: 14px 0 22px;
@@ -881,6 +969,7 @@ pre {
 
   .intro,
   #incident-form,
+  .panel-scroll-controls,
   .new-incident-action,
   .report-toolbar,
   .report-status,
