@@ -109,16 +109,16 @@ Class: CSC 482 Capstone Project II
 
 ## 8. Presentation Deliverables
 
-- [ ] Final presentation outline created.
-- [ ] Slides drafted.
-- [ ] Presentation slides completed.
+- [~] Final presentation outline created.
+- [x] Slides drafted.
+- [~] Presentation slides completed.
 - [ ] Presentation slides exported or saved in final submission format.
 - [ ] Project problem explained.
 - [ ] Project solution explained.
 - [ ] Prototype screenshots included.
-- [ ] Demo flow included.
-- [ ] Team roles included.
-- [ ] Lessons learned included.
+- [x] Demo flow included.
+- [x] Team roles included.
+- [~] Lessons learned included.
 - [ ] Final slides reviewed by Brittany.
 - [ ] Team practiced presentation at least once.
 
@@ -264,19 +264,19 @@ Expected due date: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [ ] Code and test planned project tasks for Week 7.
+- [~] Code and test planned project tasks for Week 7.
 - [ ] Push completed achievements to GitHub.
-- [ ] Update the README to reflect Week 7 progress.
+- [x] Update the README to reflect Week 7 progress.
 - [ ] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
-- [ ] Include meeting log information in the Week 7 journal.
-- [ ] Write milestones achieved this week with brief descriptions.
-- [ ] Write subtasks completed this week with brief descriptions.
-- [ ] Provide detailed testing descriptions for completed subtasks.
+- [~] Include meeting log information in the Week 7 journal.
+- [~] Write milestones achieved this week with brief descriptions.
+- [~] Write subtasks completed this week with brief descriptions.
+- [~] Provide detailed testing descriptions for completed subtasks.
 - [ ] Add demo screenshots as evidence.
-- [ ] Write lessons learned.
-- [ ] Document the contribution of Brittany, Garrett, and Mike.
-- [ ] State whether the team progressed as planned.
-- [ ] If the team did not progress as planned, explain the adjustment.
+- [~] Write lessons learned.
+- [~] Document the contribution of Brittany, Garrett, and Mike.
+- [~] State whether the team progressed as planned.
+- [~] If the team did not progress as planned, explain the adjustment.
 - [ ] Confirm no API key is visible in screenshots.
 - [ ] Export the Week 7 journal as a PDF.
 - [ ] Submit the PDF before Friday if possible, or by the Sunday deadline.
@@ -326,6 +326,9 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Confirm the Week 6 journal was turned in.
 - [x] Add final user guide for stretch-goal documentation.
 - [~] Prepare Week 7 documentation, demo screenshots, presentation outline, and journal evidence.
+- [x] Create Week 7 meeting agenda.
+- [~] Start Week 7 journal draft with signature page.
+- [~] Update presentation deck for Week 7 status and final demo preparation.
 
 ### Garrett
 
@@ -434,10 +437,13 @@ Use this section during team meetings.
 
 - Completed:
   - [x] Final user guide was added as a stretch-goal documentation item.
+  - [x] Week 7 meeting agenda was created.
+  - [x] Week 7 journal draft was started with a signature page.
+  - [x] Week 7 presentation copy was updated for current status, priorities, evidence, and final demo preparation.
 - Still needed:
-  - [ ] Code and test Week 7 polish, documentation, and demo preparation tasks.
+  - [~] Code and test Week 7 polish, documentation, and demo preparation tasks.
   - [ ] Push completed achievements to GitHub.
-  - [ ] Update README and meeting log with Week 7 progress.
+  - [~] Update README and meeting log with Week 7 progress.
   - [ ] Capture final demo screenshots without showing the API key.
   - [ ] Export the Week 7 journal as a PDF.
 - Blockers:
