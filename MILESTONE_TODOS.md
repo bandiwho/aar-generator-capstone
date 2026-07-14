@@ -162,22 +162,22 @@ Deliverable:
 
 Goal: Prepare the project for final presentation.
 
-- [ ] Team: Code and test assigned project tasks as planned for Week 7.
+- [~] Team: Code and test assigned project tasks as planned for Week 7.
 - [ ] Team: Push completed achievements to GitHub.
-- [ ] Team: Update the README to reflect Week 7 progress.
+- [x] Team: Update the README to reflect Week 7 progress.
 - [ ] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
-- [ ] Team: Include meeting log information in the Week 7 journal.
+- [~] Team: Include meeting log information in the Week 7 journal.
 - [ ] Team: Collect demo screenshots without showing the OpenAI API key.
-- [ ] Brittany: Finalize project documentation.
-- [ ] Brittany: Write the final demo script.
-- [ ] Brittany: Prepare presentation slides.
+- [~] Brittany: Finalize project documentation.
+- [~] Brittany: Write the final demo script.
+- [~] Brittany: Prepare presentation slides.
 - [ ] Brittany: Capture screenshots for the presentation.
 - [ ] Garrett: Clean up backend code and comments.
 - [ ] Garrett: Confirm report generation works with final demo data.
 - [ ] Mike: Polish the homepage and report display.
 - [ ] Mike: Confirm the topographical homepage image displays correctly.
 - [ ] Team: Practice the demo from start to finish.
-- [ ] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [~] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
 - [ ] Brittany: Export the Week 7 journal as a PDF for Canvas submission.
 
 Deliverable:
