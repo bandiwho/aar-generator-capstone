@@ -1,0 +1,249 @@
+{"kind":"deck","id":"pr/wdv5ci","name":"Deck"}
+{"kind":"layout","layoutId":"45d0b672-6418-4a65-b7ce-d35ee32581f1","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"dbd01140-0eb5-49cb-9ce4-b7b800aa6a39","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6e1br5","slide":1,"title":"Security Incident Postmortem","textShapes":9}
+{"kind":"textbox","id":"sh/3258vet8","slide":1,"text":"Security Incident Postmortem","textPreview":"Security Incident Postmortem","textChars":28,"textLines":1,"bbox":[64,82,1000,58]}
+{"kind":"textbox","id":"sh/o3e94jat","slide":1,"text":"Automated After-Action Report Generator","textPreview":"Automated After-Action Report Generator","textChars":39,"textLines":1,"bbox":[64,145,1040,145]}
+{"kind":"textbox","id":"sh/p47qxobe","slide":1,"text":"A lightweight web application that turns incident details into structured AAR drafts for technical and executive audiences.","textPreview":"A lightweight web application that turns incident details into structured AAR drafts for technical and executive audiences.","textChars":123,"textLines":1,"bbox":[68,315,940,74]}
+{"kind":"shape","id":"sh/q5gr6tsz","slide":1,"bbox":[64,455,360,104]}
+{"kind":"textbox","id":"sh/bqp8zyt4","slide":1,"text":"Team 1","textPreview":"Team 1","textChars":6,"textLines":1,"bbox":[88,478,250,30]}
+{"kind":"textbox","id":"sh/cry983ap","slide":1,"text":"Brittany, Garrett, Mike","textPreview":"Brittany, Garrett, Mike","textChars":23,"textLines":1,"bbox":[88,515,280,26]}
+{"kind":"shape","id":"sh/ds7q18ra","slide":1,"bbox":[464,455,430,104]}
+{"kind":"textbox","id":"sh/ytgratsv","slide":1,"text":"CSC 482 Capstone Project II","textPreview":"CSC 482 Capstone Project II","textChars":27,"textLines":1,"bbox":[488,478,340,30]}
+{"kind":"textbox","id":"sh/zup83y9g","slide":1,"text":"Final Presentation and Demo","textPreview":"Final Presentation and Demo","textChars":27,"textLines":1,"bbox":[488,515,310,26]}
+{"kind":"shape","id":"sh/n6d076t8","slide":1,"bbox":[1070,0,210,720]}
+{"kind":"textbox","id":"sh/254je1sn","slide":1,"text":"AAR","textPreview":"AAR","textChars":3,"textLines":1,"bbox":[1098,560,130,60]}
+{"kind":"textbox","id":"sh/p8vi9gby","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/6e1br5","slide":1,"text":""}
+{"kind":"slide","id":"sl/6jodhg","slide":2,"title":"TEAM 1 FINAL PRESENTATION","textShapes":16}
+{"kind":"textbox","id":"sh/0vqtovil","slide":2,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/fuhsvqh0","slide":2,"text":"After an incident, teams need a clear report fast","textPreview":"After an incident, teams need a clear report fast","textChars":49,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/et8bml0f","slide":2,"bbox":[64,150,1152,0]}
+{"kind":"textbox","id":"sh/dszatgzu","slide":2,"text":"The challenge","textPreview":"The challenge","textChars":13,"textLines":1,"bbox":[72,190,360,34]}
+{"kind":"textbox","id":"sh/sr6tkbi9","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[74,246,26,26]}
+{"kind":"textbox","id":"sh/r6xsr6h4","slide":2,"text":"Incident details live across timelines, logs, impact notes, and remediation updates.","textPreview":"Incident details live across timelines, logs, impact notes, and remediation updates.","textChars":84,"textLines":1,"bbox":[104,246,490,34]}
+{"kind":"textbox","id":"sh/q5obi10j","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[74,304,26,26]}
+{"kind":"textbox","id":"sh/54fapwzy","slide":2,"text":"Postmortem reports need root cause, lessons learned, and clear follow-up actions.","textPreview":"Postmortem reports need root cause, lessons learned, and clear follow-up actions.","textChars":81,"textLines":1,"bbox":[104,304,490,34]}
+{"kind":"textbox","id":"sh/436tgbid","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[74,362,26,26]}
+{"kind":"textbox","id":"sh/e5k3itk7","slide":2,"text":"The report must work for both technical reviewers and leadership.","textPreview":"The report must work for both technical reviewers and leadership.","textChars":65,"textLines":1,"bbox":[104,362,490,34]}
+{"kind":"shape","id":"sh/f6t4ryls","slide":2,"bbox":[670,190,470,120]}
+{"kind":"shape","id":"sh/07mlk32d","slide":2,"bbox":[670,190,7,120]}
+{"kind":"textbox","id":"sh/1svmt83y","slide":2,"text":"What gets lost","textPreview":"What gets lost","textChars":14,"textLines":1,"bbox":[694,212,422,30]}
+{"kind":"textbox","id":"sh/q1k3etkb","slide":2,"text":"Important evidence can be hard to organize when the team is moving quickly after containment.","textPreview":"Important evidence can be hard to organize when the team is moving quickly after containment.","textChars":93,"textLines":1,"bbox":[694,252,422,40]}
+{"kind":"shape","id":"sh/r2t4nylw","slide":2,"bbox":[670,340,470,120]}
+{"kind":"shape","id":"sh/s32lg321","slide":2,"bbox":[670,340,7,120]}
+{"kind":"textbox","id":"sh/d4bmpo3m","slide":2,"text":"What takes time","textPreview":"What takes time","textChars":15,"textLines":1,"bbox":[694,362,422,30]}
+{"kind":"textbox","id":"sh/ix03a9kz","slide":2,"text":"Writing the first draft, formatting sections, and translating technical details into executive language.","textPreview":"Writing the first draft, formatting sections, and translating technical details into executive language.","textChars":104,"textLines":1,"bbox":[694,402,422,40]}
+{"kind":"shape","id":"sh/3y9kjelk","slide":2,"bbox":[670,490,470,120]}
+{"kind":"shape","id":"sh/765svqx0","slide":2,"bbox":[670,490,7,120]}
+{"kind":"textbox","id":"sh/m5wr2lwf","slide":2,"text":"What the project fixes","textPreview":"What the project fixes","textChars":22,"textLines":1,"bbox":[694,512,422,30]}
+{"kind":"textbox","id":"sh/9snaxgf6","slide":2,"text":"The prototype turns structured incident input into a professional draft that a human reviewer can refine.","textPreview":"The prototype turns structured incident input into a professional draft that a human reviewer can refine.","textChars":105,"textLines":1,"bbox":[694,552,422,40]}
+{"kind":"textbox","id":"sh/8re94vel","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/6jodhg","slide":2,"text":""}
+{"kind":"slide","id":"sl/fp2lke","slide":3,"title":"TEAM 1 FINAL PRESENTATION","textShapes":10}
+{"kind":"textbox","id":"sh/6xcbqt0z","slide":3,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/t03ul8za","slide":3,"text":"The tool creates a stronger starting point for AAR writing","textPreview":"The tool creates a stronger starting point for AAR writing","textChars":58,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/8zuds3ip","slide":3,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/ja1cfe18","slide":3,"bbox":[72,210,330,210]}
+{"kind":"shape","id":"sh/y9sbm90n","slide":3,"bbox":[72,210,7,210]}
+{"kind":"textbox","id":"sh/lw3uhoje","slide":3,"text":"1. Enter incident details","textPreview":"1. Enter incident details","textChars":25,"textLines":1,"bbox":[96,232,282,30]}
+{"kind":"textbox","id":"sh/kvatojit","slide":3,"text":"The form captures title, date, summary, timeline, logs, impact, remediation, and open questions.","textPreview":"The form captures title, date, summary, timeline, logs, impact, remediation, and open questions.","textChars":96,"textLines":1,"bbox":[96,272,282,130]}
+{"kind":"shape","id":"sh/365crihc","slide":3,"bbox":[474,210,330,210]}
+{"kind":"shape","id":"sh/25wvyd0r","slide":3,"bbox":[474,210,7,210]}
+{"kind":"textbox","id":"sh/8be5g3md","slide":3,"text":"2. Choose the audience","textPreview":"2. Choose the audience","textChars":22,"textLines":1,"bbox":[498,232,282,30]}
+{"kind":"textbox","id":"sh/tcnmp8ny","slide":3,"text":"Technical output keeps evidence and root-cause detail visible. Executive output focuses on impact and action.","textPreview":"Technical output keeps evidence and root-cause detail visible. Executive output focuses on impact and action.","textChars":109,"textLines":1,"bbox":[498,272,282,130]}
+{"kind":"shape","id":"sh/69cned47","slide":3,"bbox":[876,210,330,210]}
+{"kind":"shape","id":"sh/7a54ny5s","slide":3,"bbox":[876,210,7,210]}
+{"kind":"textbox","id":"sh/knulc3mh","slide":3,"text":"3. Generate a draft","textPreview":"3. Generate a draft","textChars":19,"textLines":1,"bbox":[900,232,282,30]}
+{"kind":"textbox","id":"sh/lo3ml8nm","slide":3,"text":"The backend organizes the information into report sections, 5 Whys, recommendations, and lessons learned.","textPreview":"The backend organizes the information into report sections, 5 Whys, recommendations, and lessons learned.","textChars":105,"textLines":1,"bbox":[900,272,282,130]}
+{"kind":"textbox","id":"sh/ylc3at4b","slide":3,"text":"Important boundary: the output is a draft. A human reviewer still confirms facts and approves the final report.","textPreview":"Important boundary: the output is a draft. A human reviewer still confirms facts and approves the final report.","textChars":111,"textLines":1,"bbox":[120,505,1040,62]}
+{"kind":"textbox","id":"sh/jml4jy5w","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/fp2lke","slide":3,"text":""}
+{"kind":"slide","id":"sl/zd582s","slide":4,"title":"TEAM 1 FINAL PRESENTATION","textShapes":14}
+{"kind":"textbox","id":"sh/epkre5cb","slide":4,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/1sba90bm","slide":4,"text":"The completed prototype follows a simple report-generation workflow","textPreview":"The completed prototype follows a simple report-generation workflow","textChars":67,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/gr29gvuh","slide":4,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/3utsbats","slide":4,"bbox":[84,270,145,92]}
+{"kind":"textbox","id":"sh/2tkri5c7","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[98,286,32,28]}
+{"kind":"textbox","id":"sh/pwvadkby","slide":4,"text":"Incident input","textPreview":"Incident input","textChars":14,"textLines":1,"bbox":[129,290,86,48]}
+{"kind":"shape","id":"sh/ov29kfad","slide":4,"bbox":[234,316,90,0]}
+{"kind":"shape","id":"sh/bydsfut4","slide":4,"bbox":[326,270,145,92]}
+{"kind":"textbox","id":"sh/qx4rmpsj","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[340,286,32,28]}
+{"kind":"textbox","id":"sh/c7yxcnah","slide":4,"text":"Audience style","textPreview":"Audience style","textChars":14,"textLines":1,"bbox":[371,290,86,48]}
+{"kind":"shape","id":"sh/d87yl8b2","slide":4,"bbox":[476,316,90,0]}
+{"kind":"shape","id":"sh/q5gfadsb","slide":4,"bbox":[568,270,145,92]}
+{"kind":"textbox","id":"sh/r6pwjitw","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[582,286,32,28]}
+{"kind":"textbox","id":"sh/0bixgnat","slide":4,"text":"Backend prompt","textPreview":"Backend prompt","textChars":14,"textLines":1,"bbox":[613,290,86,48]}
+{"kind":"shape","id":"sh/1crypsby","slide":4,"bbox":[718,316,90,0]}
+{"kind":"shape","id":"sh/e90fedsn","slide":4,"bbox":[810,270,145,92]}
+{"kind":"textbox","id":"sh/za9gnit8","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[824,286,32,28]}
+{"kind":"textbox","id":"sh/ofixk7ap","slide":4,"text":"AAR draft","textPreview":"AAR draft","textChars":9,"textLines":1,"bbox":[855,290,86,48]}
+{"kind":"shape","id":"sh/9grytsba","slide":4,"bbox":[960,316,90,0]}
+{"kind":"shape","id":"sh/xkn6h8z2","slide":4,"bbox":[1052,270,145,92]}
+{"kind":"textbox","id":"sh/wje5o3yh","slide":4,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1066,286,32,28]}
+{"kind":"textbox","id":"sh/bi5ofyhc","slide":4,"text":"Review/export","textPreview":"Review/export","textChars":13,"textLines":1,"bbox":[1097,290,86,48]}
+{"kind":"textbox","id":"sh/ahcnmtgr","slide":4,"text":"The workflow stays narrow on purpose: capture the incident, organize it, generate a draft, then let the team review and save evidence.","textPreview":"The workflow stays narrow on purpose: capture the incident, organize it, generate a draft, then let the team review and save evidence.","textChars":134,"textLines":1,"bbox":[148,430,980,62]}
+{"kind":"textbox","id":"sh/lon6l8fe","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/zd582s","slide":4,"text":""}
+{"kind":"slide","id":"sl/76ja9b","slide":5,"title":"TEAM 1 FINAL PRESENTATION","textShapes":15}
+{"kind":"textbox","id":"sh/jap0ba50","slide":5,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/kby1kfml","slide":5,"text":"The MVP requirements are covered by working features","textPreview":"The MVP requirements are covered by working features","textChars":52,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/lcridkn6","slide":5,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/algze54j","slide":5,"bbox":[78,198,1100,372]}
+{"kind":"shape","id":"sh/b6p07q54","slide":5,"bbox":[78,198,260,62]}
+{"kind":"textbox","id":"sh/w7yhgvmp","slide":5,"text":"Requirement","textPreview":"Requirement","textChars":11,"textLines":1,"bbox":[90,211,236,26]}
+{"kind":"shape","id":"sh/x87i90na","slide":5,"bbox":[338,198,840,62]}
+{"kind":"textbox","id":"sh/mhwzal4n","slide":5,"text":"Completed capability","textPreview":"Completed capability","textChars":20,"textLines":1,"bbox":[350,211,816,26]}
+{"kind":"shape","id":"sh/ni503q5s","slide":5,"bbox":[78,260,260,62]}
+{"kind":"textbox","id":"sh/jml87y9c","slide":5,"text":"Incident input","textPreview":"Incident input","textChars":14,"textLines":1,"bbox":[90,270,236,46]}
+{"kind":"shape","id":"sh/ilc7etsr","slide":5,"bbox":[338,260,840,62]}
+{"kind":"textbox","id":"sh/5o3q98ri","slide":5,"text":"Browser form captures summary, timeline, logs, impact, remediation, and open questions.","textPreview":"Browser form captures summary, timeline, logs, impact, remediation, and open questions.","textChars":87,"textLines":1,"bbox":[350,270,816,46]}
+{"kind":"shape","id":"sh/knupg3ax","slide":5,"bbox":[78,322,260,62]}
+{"kind":"textbox","id":"sh/7ql8bi98","slide":5,"text":"Report generation","textPreview":"Report generation","textChars":17,"textLines":1,"bbox":[90,332,236,46]}
+{"kind":"shape","id":"sh/6pc7ids3","slide":5,"bbox":[338,322,840,62]}
+{"kind":"textbox","id":"sh/tc3qd8re","slide":5,"text":"FastAPI backend returns a structured AAR draft from user-provided incident details.","textPreview":"FastAPI backend returns a structured AAR draft from user-provided incident details.","textChars":83,"textLines":1,"bbox":[350,332,816,46]}
+{"kind":"shape","id":"sh/sbupknat","slide":5,"bbox":[78,384,260,62]}
+{"kind":"textbox","id":"sh/nu1oze94","slide":5,"text":"Root-cause analysis","textPreview":"Root-cause analysis","textChars":19,"textLines":1,"bbox":[90,394,236,46]}
+{"kind":"shape","id":"sh/mt8769sj","slide":5,"bbox":[338,384,840,62]}
+{"kind":"textbox","id":"sh/ql0julgj","slide":5,"text":"Generated reports include 5 Whys, root cause, recommendations, and lessons learned.","textPreview":"Generated reports include 5 Whys, root cause, recommendations, and lessons learned.","textChars":83,"textLines":1,"bbox":[350,394,816,46]}
+{"kind":"shape","id":"sh/bm9k3qx4","slide":5,"bbox":[78,446,260,62]}
+{"kind":"textbox","id":"sh/cni1wby9","slide":5,"text":"Audience styles","textPreview":"Audience styles","textChars":15,"textLines":1,"bbox":[90,456,236,46]}
+{"kind":"shape","id":"sh/dor25gfu","slide":5,"bbox":[338,446,840,62]}
+{"kind":"textbox","id":"sh/2hgjq1g7","slide":5,"text":"Technical and executive report styles are available for different reviewers.","textPreview":"Technical and executive report styles are available for different reviewers.","textChars":76,"textLines":1,"bbox":[350,456,816,46]}
+{"kind":"shape","id":"sh/3i90z6xs","slide":5,"bbox":[78,508,260,62]}
+{"kind":"textbox","id":"sh/oji1sbyd","slide":5,"text":"Demo reliability","textPreview":"Demo reliability","textChars":16,"textLines":1,"bbox":[90,518,236,46]}
+{"kind":"shape","id":"sh/pkr21gfy","slide":5,"bbox":[338,508,840,62]}
+{"kind":"textbox","id":"sh/etgjm1gb","slide":5,"text":"Mock fallback remains available when API mode is unavailable.","textPreview":"Mock fallback remains available when API mode is unavailable.","textChars":61,"textLines":1,"bbox":[350,518,816,46]}
+{"kind":"textbox","id":"sh/fup0v6xw","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/76ja9b","slide":5,"text":""}
+{"kind":"slide","id":"sl/nd0m8e","slide":6,"title":"TEAM 1 FINAL PRESENTATION","textShapes":8}
+{"kind":"textbox","id":"sh/wvmdw7e5","slide":6,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/budc32dk","slide":6,"text":"Audience-specific reports make the draft useful to more reviewers","textPreview":"Audience-specific reports make the draft useful to more reviewers","textChars":65,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/at4vuxwz","slide":6,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/98vu1sve","slide":6,"bbox":[86,218,500,225]}
+{"kind":"shape","id":"sh/o7mtsnet","slide":6,"bbox":[86,218,7,225]}
+{"kind":"textbox","id":"sh/n6dczido","slide":6,"text":"Technical report","textPreview":"Technical report","textChars":16,"textLines":1,"bbox":[110,240,452,30]}
+{"kind":"textbox","id":"sh/m5kbqxw3","slide":6,"text":"Keeps timeline, evidence, logs, root cause, remediation, and 5 Whys visible for security and IT reviewers.","textPreview":"Keeps timeline, evidence, logs, root cause, remediation, and 5 Whys visible for security and IT reviewers.","textChars":106,"textLines":1,"bbox":[110,280,452,145]}
+{"kind":"shape","id":"sh/14buxsvi","slide":6,"bbox":[694,218,500,225]}
+{"kind":"shape","id":"sh/032tonex","slide":6,"bbox":[694,218,7,225]}
+{"kind":"textbox","id":"sh/2p0r2hcr","slide":6,"text":"Executive report","textPreview":"Executive report","textChars":16,"textLines":1,"bbox":[718,240,452,30]}
+{"kind":"textbox","id":"sh/3qtsvmtc","slide":6,"text":"Summarizes impact, risk, response actions, accountability, and recommendations for leadership review.","textPreview":"Summarizes impact, risk, response actions, accountability, and recommendations for leadership review.","textChars":101,"textLines":1,"bbox":[718,280,452,145]}
+{"kind":"textbox","id":"sh/or294rux","slide":6,"text":"This is the advanced component: the same incident can be translated into different report styles without changing the core workflow.","textPreview":"This is the advanced component: the same incident can be translated into different report styles without changing the core workflow.","textChars":132,"textLines":1,"bbox":[130,520,1020,54]}
+{"kind":"textbox","id":"sh/psbaxcbi","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/nd0m8e","slide":6,"text":""}
+{"kind":"slide","id":"sl/hd5r9r","slide":7,"title":"TEAM 1 FINAL PRESENTATION","textShapes":22}
+{"kind":"textbox","id":"sh/2pgne50r","slide":7,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/psr6p0z2","slide":7,"text":"Testing used five realistic incident scenarios","textPreview":"Testing used five realistic incident scenarios","textChars":46,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/ori5gvih","slide":7,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/fmp4jqh0","slide":7,"bbox":[72,190,940,348]}
+{"kind":"shape","id":"sh/elgnal0f","slide":7,"bbox":[72,190,470,58]}
+{"kind":"textbox","id":"sh/1o7ml0z6","slide":7,"text":"Scenario","textPreview":"Scenario","textChars":8,"textLines":1,"bbox":[84,203,446,26]}
+{"kind":"shape","id":"sh/gny5cvil","slide":7,"bbox":[542,190,220,58]}
+{"kind":"textbox","id":"sh/zitovuh4","slide":7,"text":"Audience","textPreview":"Audience","textChars":8,"textLines":1,"bbox":[554,203,196,26]}
+{"kind":"shape","id":"sh/yhknmp0z","slide":7,"bbox":[762,190,250,58]}
+{"kind":"textbox","id":"sh/cbu54jqt","slide":7,"text":"Result","textPreview":"Result","textChars":6,"textLines":1,"bbox":[774,203,226,26]}
+{"kind":"shape","id":"sh/dcn6xo7e","slide":7,"bbox":[72,248,470,58]}
+{"kind":"textbox","id":"sh/q9cn298n","slide":7,"text":"Microsoft 365 phishing compromise","textPreview":"Microsoft 365 phishing compromise","textChars":33,"textLines":1,"bbox":[84,258,446,42]}
+{"kind":"shape","id":"sh/ralovep8","slide":7,"bbox":[542,248,220,58]}
+{"kind":"textbox","id":"sh/47u50zqh","slide":7,"text":"Technical","textPreview":"Technical","textChars":9,"textLines":1,"bbox":[554,258,196,42]}
+{"kind":"shape","id":"sh/p836t472","slide":7,"bbox":[762,248,250,58]}
+{"kind":"textbox","id":"sh/25cnyp8r","slide":7,"text":"Passed","textPreview":"Passed","textChars":6,"textLines":1,"bbox":[774,258,226,42]}
+{"kind":"shape","id":"sh/36l4rupc","slide":7,"bbox":[72,306,470,58]}
+{"kind":"textbox","id":"sh/g3a5wzql","slide":7,"text":"Ransomware on shared file server","textPreview":"Ransomware on shared file server","textChars":32,"textLines":1,"bbox":[84,316,446,42]}
+{"kind":"shape","id":"sh/h43mp476","slide":7,"bbox":[542,306,220,58]}
+{"kind":"textbox","id":"sh/h0vmtgju","slide":7,"text":"Executive","textPreview":"Executive","textChars":9,"textLines":1,"bbox":[554,316,196,42]}
+{"kind":"shape","id":"sh/wz2lkbi9","slide":7,"bbox":[762,306,250,58]}
+{"kind":"textbox","id":"sh/vytkr61o","slide":7,"text":"Passed","textPreview":"Passed","textChars":6,"textLines":1,"bbox":[774,316,226,42]}
+{"kind":"shape","id":"sh/uxk3il0j","slide":7,"bbox":[72,364,470,58]}
+{"kind":"textbox","id":"sh/9wb2pgjy","slide":7,"text":"Cloud storage bucket exposure","textPreview":"Cloud storage bucket exposure","textChars":29,"textLines":1,"bbox":[84,374,446,42]}
+{"kind":"shape","id":"sh/8b2lgbid","slide":7,"bbox":[542,364,220,58]}
+{"kind":"textbox","id":"sh/7atkn61s","slide":7,"text":"Executive","textPreview":"Executive","textChars":9,"textLines":1,"bbox":[554,374,196,42]}
+{"kind":"shape","id":"sh/m9k3e107","slide":7,"bbox":[762,364,250,58]}
+{"kind":"textbox","id":"sh/tsfm10j2","slide":7,"text":"Passed with note","textPreview":"Passed with note","textChars":16,"textLines":1,"bbox":[774,374,226,42]}
+{"kind":"shape","id":"sh/s7mlsvih","slide":7,"bbox":[72,422,470,58]}
+{"kind":"textbox","id":"sh/q1wr6dcn","slide":7,"text":"Malware alert on finance workstation","textPreview":"Malware alert on finance workstation","textChars":36,"textLines":1,"bbox":[84,432,446,42]}
+{"kind":"shape","id":"sh/r25szid8","slide":7,"bbox":[542,422,220,58]}
+{"kind":"textbox","id":"sh/c3e983ut","slide":7,"text":"Technical","textPreview":"Technical","textChars":9,"textLines":1,"bbox":[554,432,196,42]}
+{"kind":"shape","id":"sh/d47a18ve","slide":7,"bbox":[762,422,250,58]}
+{"kind":"textbox","id":"sh/2xwr2tcr","slide":7,"text":"Passed with note","textPreview":"Passed with note","textChars":16,"textLines":1,"bbox":[774,432,226,42]}
+{"kind":"shape","id":"sh/3y58vydc","slide":7,"bbox":[72,480,470,58]}
+{"kind":"textbox","id":"sh/4ze943ux","slide":7,"text":"SQL injection attempt","textPreview":"SQL injection attempt","textChars":21,"textLines":1,"bbox":[84,490,446,42]}
+{"kind":"shape","id":"sh/p0nqx8v2","slide":7,"bbox":[542,480,220,58]}
+{"kind":"textbox","id":"sh/mtgrexcv","slide":7,"text":"Technical","textPreview":"Technical","textChars":9,"textLines":1,"bbox":[554,490,196,42]}
+{"kind":"shape","id":"sh/nups72dg","slide":7,"bbox":[762,480,250,58]}
+{"kind":"textbox","id":"sh/7m5o3uxw","slide":7,"text":"Passed","textPreview":"Passed","textChars":6,"textLines":1,"bbox":[774,490,226,42]}
+{"kind":"textbox","id":"sh/6lwnapgb","slide":7,"text":"Pass criteria checked accurate incident use, required sections, audience tone, specific recommendations, and professional readability.","textPreview":"Pass criteria checked accurate incident use, required sections, audience tone, specific recommendations, and professional readability.","textChars":134,"textLines":1,"bbox":[72,565,1010,50]}
+{"kind":"textbox","id":"sh/ton654f2","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/hd5r9r","slide":7,"text":""}
+{"kind":"slide","id":"sl/2di7ml","slide":8,"title":"TEAM 1 FINAL PRESENTATION","textShapes":13}
+{"kind":"textbox","id":"sh/7udcfq90","slide":8,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/8vmtovq5","slide":8,"text":"Use the phishing scenario for the final demo","textPreview":"Use the phishing scenario for the final demo","textChars":44,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/9wvuh0rq","slide":8,"bbox":[64,150,1152,0]}
+{"kind":"textbox","id":"sh/ux4bq58b","slide":8,"text":"Recommended scenario","textPreview":"Recommended scenario","textChars":20,"textLines":1,"bbox":[80,200,400,30]}
+{"kind":"textbox","id":"sh/vyxcja9w","slide":8,"text":"Phishing Email Led to Microsoft 365\nAccount Compromise","textPreview":"Phishing Email Led to Microsoft 365 | Account Compromise","textChars":54,"textLines":2,"bbox":[80,245,630,92]}
+{"kind":"textbox","id":"sh/wz6tsfqh","slide":8,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[86,390,26,26]}
+{"kind":"textbox","id":"sh/h0fulkr2","slide":8,"text":"Easy to explain to a mixed audience.","textPreview":"Easy to explain to a mixed audience.","textChars":36,"textLines":1,"bbox":[116,390,590,34]}
+{"kind":"textbox","id":"sh/i1obe58n","slide":8,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[86,446,26,26]}
+{"kind":"textbox","id":"sh/j2xcna9s","slide":8,"text":"Includes timeline, log evidence, impact, remediation, and open questions.","textPreview":"Includes timeline, log evidence, impact, remediation, and open questions.","textChars":73,"textLines":1,"bbox":[116,446,590,34]}
+{"kind":"textbox","id":"sh/j2x43i5w","slide":8,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[86,502,26,26]}
+{"kind":"textbox","id":"sh/i1onadob","slide":8,"text":"Produces useful 5 Whys and recommendation sections.","textPreview":"Produces useful 5 Whys and recommendation sections.","textChars":51,"textLines":1,"bbox":[116,502,590,34]}
+{"kind":"shape","id":"sh/5ofm5sn2","slide":8,"bbox":[790,205,360,300]}
+{"kind":"textbox","id":"sh/4n65cn6h","slide":8,"text":"Screenshot placeholder","textPreview":"Screenshot placeholder","textChars":22,"textLines":1,"bbox":[814,321,312,26]}
+{"kind":"textbox","id":"sh/vyx4zyp0","slide":8,"text":"Drop completed form or generated report screenshot here","textPreview":"Drop completed form or generated report screenshot here","textChars":55,"textLines":1,"bbox":[814,355,312,54]}
+{"kind":"textbox","id":"sh/uxo36dof","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/2di7ml","slide":8,"text":""}
+{"kind":"slide","id":"sl/b52bl7","slide":9,"title":"TEAM 1 FINAL PRESENTATION","textShapes":10}
+{"kind":"textbox","id":"sh/m5w72tkz","slide":9,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/9876d8jq","slide":9,"text":"Final screenshots should prove the workflow end to end","textPreview":"Final screenshots should prove the workflow end to end","textChars":54,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/87yp4325","slide":9,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/vapofi1g","slide":9,"bbox":[70,198,345,230]}
+{"kind":"textbox","id":"sh/u9g76dkv","slide":9,"text":"Screenshot placeholder","textPreview":"Screenshot placeholder","textChars":22,"textLines":1,"bbox":[94,279,297,26]}
+{"kind":"textbox","id":"sh/hc76h8jm","slide":9,"text":"Homepage / incident form","textPreview":"Homepage / incident form","textChars":24,"textLines":1,"bbox":[94,313,297,54]}
+{"kind":"shape","id":"sh/wbyp8n21","slide":9,"bbox":[468,198,345,230]}
+{"kind":"textbox","id":"sh/belo3elc","slide":9,"text":"Screenshot placeholder","textPreview":"Screenshot placeholder","textChars":22,"textLines":1,"bbox":[492,279,297,26]}
+{"kind":"textbox","id":"sh/qdcnu9kr","slide":9,"text":"Generated report preview","textPreview":"Generated report preview","textChars":24,"textLines":1,"bbox":[492,313,297,54]}
+{"kind":"shape","id":"sh/obi9ora5","slide":9,"bbox":[866,198,345,230]}
+{"kind":"textbox","id":"sh/pwraxwbq","slide":9,"text":"Screenshot placeholder","textPreview":"Screenshot placeholder","textChars":22,"textLines":1,"bbox":[890,279,297,26]}
+{"kind":"textbox","id":"sh/290rmhsz","slide":9,"text":"5 Whys and recommendations","textPreview":"5 Whys and recommendations","textChars":26,"textLines":1,"bbox":[890,313,297,54]}
+{"kind":"textbox","id":"sh/3a9svmtk","slide":9,"text":"Before using screenshots, confirm they do not show API keys, .env files, terminal secrets, or private configuration.","textPreview":"Before using screenshots, confirm they do not show API keys, .env files, terminal secrets, or private configuration.","textChars":116,"textLines":1,"bbox":[116,524,1040,52]}
+{"kind":"textbox","id":"sh/cz29sra1","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/b52bl7","slide":9,"text":""}
+{"kind":"slide","id":"sl/509bwt","slide":10,"title":"TEAM 1 FINAL PRESENTATION","textShapes":9}
+{"kind":"textbox","id":"sh/ton2hsva","slide":10,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/6lwjmdcz","slide":10,"text":"Each team member owned a clear part of the final project","textPreview":"Each team member owned a clear part of the final project","textChars":56,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/7m5kfidk","slide":10,"bbox":[64,150,1152,0]}
+{"kind":"shape","id":"sh/kzu1k3ut","slide":10,"bbox":[76,205,340,300]}
+{"kind":"shape","id":"sh/5k32d8ve","slide":10,"bbox":[76,205,7,300]}
+{"kind":"textbox","id":"sh/ixcjidcn","slide":10,"text":"Brittany","textPreview":"Brittany","textChars":8,"textLines":1,"bbox":[100,227,292,30]}
+{"kind":"textbox","id":"sh/jylkbid8","slide":10,"text":"Project leadership, documentation, checklists, meeting evidence, grammar review, journal preparation, quality review, and final submission organization.","textPreview":"Project leadership, documentation, checklists, meeting evidence, grammar review, journal preparation, quality review, and final submissio...","textChars":152,"textLines":1,"bbox":[100,267,292,220]}
+{"kind":"shape","id":"sh/4vylw7ux","slide":10,"bbox":[470,205,340,300]}
+{"kind":"shape","id":"sh/pg72pcvi","slide":10,"bbox":[470,205,7,300]}
+{"kind":"textbox","id":"sh/9cfalonu","slide":10,"text":"Garrett","textPreview":"Garrett","textChars":7,"textLines":1,"bbox":[494,227,292,30]}
+{"kind":"textbox","id":"sh/8b69sj69","slide":10,"text":"Backend architecture, request/response structure, report-generation workflow, LLM/API option, mock fallback, 5 Whys, and recommendations.","textPreview":"Backend architecture, request/response structure, report-generation workflow, LLM/API option, mock fallback, 5 Whys, and recommendations.","textChars":137,"textLines":1,"bbox":[494,267,292,220]}
+{"kind":"shape","id":"sh/naxsje5o","slide":10,"bbox":[864,205,340,300]}
+{"kind":"shape","id":"sh/m9orq9o3","slide":10,"bbox":[864,205,7,300]}
+{"kind":"textbox","id":"sh/lofah4ni","slide":10,"text":"Mike","textPreview":"Mike","textChars":4,"textLines":1,"bbox":[888,227,292,30]}
+{"kind":"textbox","id":"sh/0n69oz6x","slide":10,"text":"Frontend form, audience controls, sample incident workflow, report display, validation, copy/download/export behavior, and demo walkthrough.","textPreview":"Frontend form, audience controls, sample incident workflow, report display, validation, copy/download/export behavior, and demo walkthrough.","textChars":140,"textLines":1,"bbox":[888,267,292,220]}
+{"kind":"textbox","id":"sh/zmxsfu5s","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/509bwt","slide":10,"text":""}
+{"kind":"slide","id":"sl/z1u4fm","slide":11,"title":"TEAM 1 FINAL PRESENTATION","textShapes":11}
+{"kind":"textbox","id":"sh/hkna1s7y","slide":11,"text":"TEAM 1 FINAL PRESENTATION","textPreview":"TEAM 1 FINAL PRESENTATION","textChars":25,"textLines":1,"bbox":[64,38,500,26]}
+{"kind":"textbox","id":"sh/uhwbqd87","slide":11,"text":"The biggest lessons came from making output usable, not just functional","textPreview":"The biggest lessons came from making output usable, not just functional","textChars":71,"textLines":1,"bbox":[64,76,1100,62]}
+{"kind":"shape","id":"sh/fi5szips","slide":11,"bbox":[64,150,1152,0]}
+{"kind":"textbox","id":"sh/sfetonqh","slide":11,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[118,210,26,26]}
+{"kind":"textbox","id":"sh/tgnax872","slide":11,"text":"Good report quality depends on clear incident details from the user.","textPreview":"Good report quality depends on clear incident details from the user.","textChars":68,"textLines":1,"bbox":[148,210,970,34]}
+{"kind":"textbox","id":"sh/6dcbmd8b","slide":11,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[118,280,26,26]}
+{"kind":"textbox","id":"sh/7elsvipw","slide":11,"text":"Export features still need readability review before they become final evidence.","textPreview":"Export features still need readability review before they become final evidence.","textChars":80,"textLines":1,"bbox":[148,280,970,34]}
+{"kind":"textbox","id":"sh/cbyt07ql","slide":11,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[118,350,26,26]}
+{"kind":"textbox","id":"sh/dc7u9c76","slide":11,"text":"A live demo needs backup screenshots and a saved generated report.","textPreview":"A live demo needs backup screenshots and a saved generated report.","textChars":66,"textLines":1,"bbox":[148,350,970,34]}
+{"kind":"textbox","id":"sh/9sjmxo3y","slide":11,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[118,420,26,26]}
+{"kind":"textbox","id":"sh/oralojmd","slide":11,"text":"Documentation, testing notes, meeting logs, and checklists must stay synchronized.","textPreview":"Documentation, testing notes, meeting logs, and checklists must stay synchronized.","textChars":82,"textLines":1,"bbox":[148,420,970,34]}
+{"kind":"textbox","id":"sh/nq1kvels","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/z1u4fm","slide":11,"text":""}
+{"kind":"slide","id":"sl/uotn4a","slide":12,"title":"Final takeaway","textShapes":5}
+{"kind":"textbox","id":"sh/9svuhsj2","slide":12,"text":"Final takeaway","textPreview":"Final takeaway","textChars":14,"textLines":1,"bbox":[72,72,360,32]}
+{"kind":"textbox","id":"sh/mpkbmd0b","slide":12,"text":"The AAR Generator turns incident notes into a structured draft the team can review, improve, and share.","textPreview":"The AAR Generator turns incident notes into a structured draft the team can review, improve, and share.","textChars":103,"textLines":1,"bbox":[72,150,1050,145]}
+{"kind":"textbox","id":"sh/nqtcfi1w","slide":12,"text":"Completed capabilities include incident input, technical and executive styles, 5 Whys analysis, recommendations, sample incidents, user guide documentation, testing evidence, and demo-ready backup planning.","textPreview":"Completed capabilities include incident input, technical and executive styles, 5 Whys analysis, recommendations, sample incidents, user g...","textChars":206,"textLines":1,"bbox":[76,365,980,90]}
+{"kind":"textbox","id":"sh/wvmdsnid","slide":12,"text":"Ready for final demonstration and questions.","textPreview":"Ready for final demonstration and questions.","textChars":44,"textLines":1,"bbox":[76,548,700,44]}
+{"kind":"textbox","id":"sh/xwvulsjy","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1190,662,40,24]}
+{"kind":"notes","id":"nt/uotn4a","slide":12,"text":""}
