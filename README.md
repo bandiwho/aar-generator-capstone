@@ -69,7 +69,7 @@ Current Week 7 responsibilities:
 |---|---|---|
 | Brittany | Finalize documentation, prepare Week 7 journal evidence, update presentation materials, organize screenshots, and track meeting discussion points. | Week 7 journal draft, meeting agenda, updated deck, checklist updates, screenshot list, and meeting log updates. |
 | Garrett | Confirm backend explanation, final demo data behavior, fallback behavior, and 5 Whys/report-generation explanation. | Backend talking points, test confirmation, fallback explanation, and final demo data confirmation. |
-| Mike | Confirm frontend demo flow, report display, copy/download behavior, and visual polish items. | Frontend walkthrough notes, screenshots, final demo flow confirmation, and decision about the topographical homepage image task. |
+| Mike | Confirm frontend demo flow, report display, copy/download behavior, and visual polish items. | Frontend walkthrough notes, screenshots, final demo flow confirmation, and confirmation that the homepage background image renders correctly. |
 | Team | Confirm final demo incident, assign speaking roles, prepare backup materials, push updates to GitHub, and practice the demo. | Demo rehearsal notes, backup screenshots, backup generated report, GitHub sync confirmation, and Week 7 contribution evidence. |
 
 ## Team Member Descriptions

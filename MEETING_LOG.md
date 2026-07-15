@@ -183,7 +183,7 @@ Planned topics:
 - Assign final polish tasks before final review.
 - Select the final demo incident and confirm whether the phishing/Microsoft 365 sample should be used.
 - Assign final screenshot and backup generated report responsibilities.
-- Confirm whether the topographical homepage image task is still needed.
+- Confirm the homepage background image renders correctly.
 - Confirm the Week 7 journal should stay as a local-only DOCX/PDF submission file instead of a GitHub Markdown file.
 - Confirm the Week 7 meeting agenda should stay as a local-only DOCX file.
 - Review the updated Areas To Improve page and use it as the Week 7 task checklist.
@@ -271,7 +271,7 @@ Detailed owner checklist:
 | Garrett | Confirm final demo incident generates a complete report through the backend. | Generated report output and backend test confirmation. |
 | Garrett | Prepare backend talking points for the final presentation. | Short explanation of report-generation route, LLM/API mode, mock fallback, 5 Whys, and recommendations. |
 | Mike | Confirm homepage, form, audience controls, generated report view, and export controls are ready for screenshots. | Frontend screenshots and demo walkthrough notes. |
-| Mike | Confirm whether the topographical homepage image task is still needed. | Decision note recorded in meeting log and checklist. |
+| Mike | Confirm the homepage background image renders correctly. | Decision note recorded in meeting log and checklist. |
 | Team | Practice the demo and prepare backup materials. | Demo practice notes, backup screenshots, backup generated report, and final speaking order. |
 
 Pre-meeting notes:
@@ -291,7 +291,7 @@ Current Week 7 blockers to discuss:
 | Speaking roles are not fully confirmed. | Presentation may feel unorganized if each member does not know their part. | Confirm Brittany, Garrett, and Mike's presentation sections. |
 | Final demo incident needs final confirmation. | Demo practice cannot be fully locked in without one selected scenario. | Confirm phishing/Microsoft 365 sample or choose another sample. |
 | Backup generated report is not prepared yet. | Team needs a fallback if live generation has a problem. | Assign backup report owner and storage location. |
-| Topographical homepage image task may be outdated. | Team may waste time on a visual item that no longer matters. | Mike confirms whether it is still needed. |
+| Topographical homepage image wording is outdated. | Team may reference the wrong visual task during final prep. | Mike confirms the current homepage uses a full-page background image. |
 | Week 7 GitHub push/sync still needs confirmation. | Team needs to know which files are ready for GitHub and which stay local. | Decide what to push and verify no local-only drafts are included. |
 | Week 7 journal evidence is incomplete. | Journal cannot be finalized until screenshots and meeting details are added. | Confirm evidence list and timeline for PDF export. |
 
@@ -304,7 +304,7 @@ Decisions to record after meeting:
 - Brittany speaking section:
 - Garrett speaking section:
 - Mike speaking section:
-- Topographical homepage image decision:
+- Homepage background image decision: The frontend now uses a full-page hero background image.
 - GitHub files to push:
 - Local-only files to keep out of GitHub:
 - Demo practice date/time:

@@ -451,7 +451,7 @@ Use this section during team meetings.
   - [ ] Team speaking parts still need to be confirmed so Brittany, Garrett, and Mike each know what to explain during the final presentation.
   - [ ] The final demo incident needs to be selected and tested one more time before presentation practice.
   - [ ] Backup materials still need to be prepared, including screenshots and a backup generated report in case the live demo has a problem.
-  - [ ] The topographical homepage image task needs to be confirmed because the current frontend files do not appear to reference that image.
+  - [x] The homepage background image task was updated because the current frontend now uses a full-page homepage background image.
   - [ ] Week 7 GitHub push/sync still needs to be confirmed after documentation updates are finished.
   - [ ] Week 7 journal evidence still needs to be collected from the updated checklist, meeting log, screenshots, and demo practice notes.
 

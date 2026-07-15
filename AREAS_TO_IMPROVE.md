@@ -256,7 +256,7 @@ Why this needs improvement: Meeting notes prove attendance, planning, assigned w
 - [ ] Record screenshot owner.
 - [ ] Record backup report owner.
 - [ ] Record speaking roles.
-- [ ] Record whether topographical homepage image is still needed.
+- [x] Record that the homepage now uses a full-page background image.
 - [ ] Record GitHub push/sync plan.
 - [ ] Record any final blockers.
 - [ ] Add Microsoft Teams chat notes if useful.
@@ -338,13 +338,13 @@ Why this needs improvement: The frontend is the part the audience will see most 
 - [ ] Confirm smaller-screen layout is usable.
 - [ ] Confirm no visible text overlaps.
 - [ ] Confirm buttons and labels fit their containers.
-- [ ] Confirm the topographical homepage image task is still needed or should be removed from final priorities.
+- [x] Confirm the homepage background image task is complete.
 
 ### Evidence Needed
 
 - Frontend screenshots.
 - Demo flow notes.
-- Decision about topographical homepage image.
+- Decision about homepage background image.
 
 ## 9. GitHub And File Organization
 
@@ -461,7 +461,7 @@ Why this needs improvement: Week 7 should prepare the team for Week 8 final repo
 | Speaking roles are not fully confirmed. | Team | The final presentation may feel unorganized. | Confirm Brittany, Garrett, and Mike's speaking sections during the Week 7 meeting. |
 | Final demo incident still needs final confirmation. | Team | Demo practice cannot be fully locked in. | Choose the phishing/Microsoft 365 sample or another final scenario. |
 | Backup generated report is not prepared yet. | Garrett and Brittany | The team has no fallback if live generation fails. | Generate and save one strong report before practice. |
-| Topographical homepage image task may be outdated. | Mike | The team may waste time on a visual task that is no longer needed. | Confirm whether the current frontend still needs that image. |
+| Homepage background image task updated. | Mike | The previous wording no longer matched the current frontend design. | Confirm the full-page homepage background image renders correctly for demo screenshots. |
 | Week 7 GitHub push/sync needs confirmation. | Team | Documentation changes may not be visible to teammates or instructor. | Check Git status, choose files to push, and confirm local-only DOCX drafts stay off GitHub. |
 | Week 7 journal evidence is incomplete. | Brittany | Journal cannot be finalized yet. | Add screenshots, meeting summary, blockers, and contribution notes. |
 
@@ -485,7 +485,7 @@ Use this section during the Week 7 meeting.
 - [ ] Did we assign screenshot responsibilities?
 - [ ] Did we assign backup report responsibility?
 - [ ] Did we confirm speaking roles?
-- [ ] Did we decide whether the topographical homepage image is still needed?
+- [x] Did we confirm the homepage background image is ready?
 - [ ] Did we confirm what files should go to GitHub?
 - [ ] Did we confirm what files should stay local-only?
 - [ ] Did we confirm the Week 7 journal evidence list?

@@ -174,8 +174,8 @@ Goal: Prepare the project for final presentation.
 - [ ] Brittany: Capture screenshots for the presentation.
 - [ ] Garrett: Clean up backend code and comments.
 - [ ] Garrett: Confirm report generation works with final demo data.
-- [ ] Mike: Polish the homepage and report display.
-- [ ] Mike: Confirm the topographical homepage image displays correctly.
+- [x] Mike: Polish the homepage and report display.
+- [x] Mike: Confirm the homepage background image displays correctly.
 - [ ] Team: Practice the demo from start to finish.
 - [~] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
 - [ ] Brittany: Export the Week 7 journal as a PDF for Canvas submission.
