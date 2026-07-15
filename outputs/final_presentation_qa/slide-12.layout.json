@@ -1,0 +1,390 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/uotn4a",
+    "id": "uotn4a",
+    "slide": 12,
+    "layoutId": "dbd01140-0eb5-49cb-9ce4-b7b800aa6a39",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "45d0b672-6418-4a65-b7ce-d35ee32581f1",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "dbd01140-0eb5-49cb-9ce4-b7b800aa6a39",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "45d0b672-6418-4a65-b7ce-d35ee32581f1",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "45d0b672-6418-4a65-b7ce-d35ee32581f1",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9svuhsj2",
+      "id": "1",
+      "bbox": [
+        72,
+        72,
+        360,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Final takeaway",
+      "textPreview": "Final takeaway",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#2563EB",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Final takeaway"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Final takeaway",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#2563EB",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Final takeaway",
+              "fontSize": 24,
+              "color": "#2563EB",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mpkbmd0b",
+      "id": "2",
+      "bbox": [
+        72,
+        150,
+        1050,
+        145
+      ],
+      "geometry": "rect",
+      "text": "The AAR Generator turns incident notes into a structured draft the team can review, improve, and share.",
+      "textPreview": "The AAR Generator turns incident notes into a structured draft the team can review, improve, and share.",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "color": "#0B1220",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The AAR Generator turns incident notes into a"
+          },
+          {
+            "index": 2,
+            "text": "structured draft the team can review, improve, and"
+          },
+          {
+            "index": 3,
+            "text": "share."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The AAR Generator turns incident notes into a structured draft the team can review, improve, and share.",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "color": "#0B1220",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The AAR Generator turns incident notes into a structured draft the team can review, improve, and share.",
+              "fontSize": 48,
+              "color": "#0B1220",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqtcfi1w",
+      "id": "3",
+      "bbox": [
+        76,
+        365,
+        980,
+        90
+      ],
+      "geometry": "rect",
+      "text": "Completed capabilities include incident input, technical and executive styles, 5 Whys analysis, recommendations, sample incidents, user guide documentation, testing evidence, and demo-ready backup planning.",
+      "textPreview": "Completed capabilities include incident input, technical and executive styles, 5 Whys analysis, recommendations, sample incidents, user g...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#475569",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Completed capabilities include incident input, technical and executive styles, 5 Whys analysis,"
+          },
+          {
+            "index": 2,
+            "text": "recommendations, sample incidents, user guide documentation, testing evidence, and"
+          },
+          {
+            "index": 3,
+            "text": "demo-ready backup planning."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Completed capabilities include incident input, technical and executive styles, 5 Whys analysis, recommendations, sample incidents, user guide documentation, testing evidence, and demo-ready backup planning.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#475569",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Completed capabilities include incident input, technical and executive styles, 5 Whys analysis, recommendations, sample incidents, user guide documentation, testing evidence, and demo-ready backup planning.",
+              "fontSize": 24,
+              "color": "#475569",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvmdsnid",
+      "id": "4",
+      "bbox": [
+        76,
+        548,
+        700,
+        44
+      ],
+      "geometry": "rect",
+      "text": "Ready for final demonstration and questions.",
+      "textPreview": "Ready for final demonstration and questions.",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "+mn-lt",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Ready for final demonstration and questions."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Ready for final demonstration and questions.",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "color": "#0F766E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Ready for final demonstration and questions.",
+              "fontSize": 30,
+              "color": "#0F766E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xwvulsjy",
+      "id": "5",
+      "bbox": [
+        1190,
+        662,
+        40,
+        24
+      ],
+      "geometry": "rect",
+      "text": "12",
+      "textPreview": "12",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#94A3B8",
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#94A3B8",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12",
+              "fontSize": 14,
+              "color": "#94A3B8",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}
