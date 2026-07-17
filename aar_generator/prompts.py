@@ -11,9 +11,8 @@ questions. Use the 5 Whys method for root cause analysis.
 
 def build_report_prompt(data: IncidentInput) -> str:
     """Build the prompt for the AAR draft."""
-    # TODO: Week 3 - Add few-shot examples for ransomware, phishing, and cloud misconfiguration incidents.
-    # TODO: Week 4 - Request strict JSON first, then render Markdown from validated sections.
-    # TODO: Week 5 - Include prior reviewer feedback when the revision workflow is implemented.
+    # Future enhancement: add few-shot examples and structured JSON rendering.
+    # Future enhancement: include prior reviewer feedback if revision workflow is added.
     audience_guidance = {
         "technical": (
             "Write for a technical security and IT audience. Include concrete "
@@ -22,7 +21,8 @@ def build_report_prompt(data: IncidentInput) -> str:
         ),
         "executive": (
             "Write for executives. Focus on business impact, risk, decisions, "
-            "accountability, and high-level corrective actions. Avoid excessive jargon."
+            "accountability, and high-level corrective actions. Avoid excessive jargon. "
+            "Summarize technical evidence in plain language instead of emphasizing raw log syntax."
         ),
     }[data.audience.value]
 
@@ -95,10 +95,12 @@ Rules:
 - Let the section heading provide the category, then write clean bullet text underneath it.
 - Do not split one recommendation sentence into several lowercase bullet fragments.
 - If a recommendation has subconditions, keep them in the same bullet sentence or use capitalized sub-bullets.
+- In Recommendations and Owners, put the owner at the end of the same recommendation bullet using "**Owner:** Team or role".
 - End the report with the Open Questions section content only.
 - Do not add chat-style closing offers such as "If you share additional details, I can revise this draft."
 - In Open Questions, write the unresolved question first, followed by one short evidence note if needed.
 - Do not repeat lead-in labels such as "Open item:" or "Assumption:" in the Open Questions section.
 - Use "Evidence:" instead of "Evidence note:" when adding support under an open question.
+- Do not add new Open Questions unless they are directly supported by the incident details.
 """.strip()
 

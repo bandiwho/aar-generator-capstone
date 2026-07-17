@@ -75,7 +75,7 @@ Planned tasks:
 - Update dropdown audience to clickable audience button for readability.
 - Change Executive Summary to matched the correct audience.
 - Layout of submit = Generate button- We decided placement is fine.
-- Discussed Addition on Areas of Improvement page = Help show which Improvements were more importand and where Brittany should take screenshots to provide evidence of improvements.
+- Discussed adding an Areas of Improvement page to show which improvements were most important and where Brittany should take screenshots to provide evidence of improvements.
 - There was suggestion of keeping a database of logged past incident reports. It is beyond scope. We will focus on requirement output and if we have extra time we may implement.                   - Helper text to indicate to user who report is written for.
 - Section of output shows buttons. Depending on time they may be labels or buttons that show summary. 
 - Make Sample incidents follow design of layout and more descriDiptive.
@@ -115,7 +115,7 @@ Date and time: Tuesday, July 7, 2026, 6:30 PM
 Location: Team meeting and Microsoft Teams follow-up chat
 Planned attendees: Brittany, Garrett, Mike
 Absences: No absences
-Meeting lasted 6:28 - 7:02 (34 Minutes) Meeting went well no huge blockers. Brittany did have an issue with vs code not getting a creditial token from github to do pulls. 
+Meeting lasted 6:28 - 7:02 (34 minutes). The meeting went well with no major blockers. Brittany had an issue with VS Code not getting a credential token from GitHub to pull updates.
 
 Planned topics:
 
@@ -134,7 +134,7 @@ Planned tasks:
 | Garrett | Improve backend error handling, fallback behavior, revision support, and test coverage. | Planned |
 | Mike | Improve required-field validation, copy/export behavior, downloaded report layout, and frontend screenshot support. | Planned |
 
-- This week is focusing on testing. Everything seems to be working. Just need to review to ensure quality. Mobile is a option. It is not a needed requirement. Other core focus is on wrapup. We need to decide who is going to talk about what and prepare for speeches. I would like to get most of slides established on what we are going to talk about I know we do not have the assignment yet but we can prepare. I will also like to start with the final report. That maybe a weekend thing because as this is not a crucial week we need to figure out where we are going to end our project.
+- This week is focused on testing. Everything seems to be working, but the team still needs to review the project for quality. Mobile support is optional, not a required feature. The other core focus is wrap-up. The team needs to decide who will speak about each section and prepare presentation notes. Brittany would like most of the slides established early so the team knows what to discuss. Brittany would also like to start the final report soon so the team can clearly define where the project will end.
 - Export review note: The Download Report feature successfully saves the generated report as an HTML file, but the layout should be reviewed before using it as a polished final report. Screenshots or Print/Save as PDF may be better for final evidence if the downloaded HTML formatting looks crowded or shows raw Markdown formatting.
   
 ## Chat Topics
@@ -147,7 +147,7 @@ Planned tasks:
 - Focal point is polish ready and next week really a last minute change week allowing us to focus on final report and demo
 - May send message to teacher about early release of final report and slide so that we correctly create them.
 - Mike is looking into mobile view stretch goal.
-- Brittanys VS was not keeping up with github due to an inability to get credential tokens. Deletion of some updates occurred but the good thing at one point it said sync 139 things. Brittany closed out and logged out of everything and though some things were lost, 139 things were not altered with no guarantee what. Issue was resolved.
+- Brittany's VS Code was not keeping up with GitHub because it could not get credential tokens. Some updates appeared to be lost during troubleshooting, but the issue was resolved after Brittany closed out, logged out, and signed back in.
   
 - 07/08
 - Mikes updates on what improvements to buttons.

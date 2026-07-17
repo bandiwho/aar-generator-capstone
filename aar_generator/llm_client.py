@@ -32,7 +32,6 @@ class LlmClient:
         return response.output_text
 
     def _mock_report(self) -> str:
-        # TODO: Week 7 - Replace this with multiple realistic demo incident fixtures.
         return """
 ## Report Summary
 
@@ -41,12 +40,12 @@ This is a mock after-action report generated without calling the OpenAI API. It 
 ## Incident Overview
 
 - Incident data was accepted through the prototype form or API.
-- The final version will generate this section from pasted timelines, logs, impact notes, and remediation steps.
+- The report draft should be reviewed against the submitted timeline, logs, impact notes, and remediation steps.
 
 ## Timeline of Events
 
-- TODO: Week 2 - Confirm the timeline input format the team wants to support.
-- TODO: Week 4 - Normalize semi-structured timeline entries into consistent report bullets.
+- Review the submitted incident timeline and confirm that each event has a clear time, action, and outcome.
+- Normalize semi-structured timeline entries into readable report bullets before final submission.
 
 ## Impact Assessment
 
@@ -59,23 +58,24 @@ This is a mock after-action report generated without calling the OpenAI API. It 
 
 ## 5 Whys Root Cause Analysis
 
-1. Why did the incident occur? TODO: Derive from evidence.
-2. Why was the issue not prevented? TODO: Identify control gaps.
-3. Why was detection delayed? TODO: Compare timeline and monitoring.
-4. Why was response limited? TODO: Review process and ownership.
-5. Why can this happen again? TODO: List systemic gaps.
+1. Why did the incident occur? Review the available evidence and identify the most likely initiating event.
+2. Why was the issue not prevented? Identify control gaps that allowed the incident to progress.
+3. Why was detection delayed? Compare the timeline against monitoring, alerting, and reporting evidence.
+4. Why was response limited? Review process ownership, escalation steps, and available response evidence.
+5. Why can this happen again? List systemic gaps that should become tracked recommendations.
 
 ## Technical Root Cause
 
-TODO: Week 3 - Improve prompt logic for technical root cause extraction.
+The technical root cause should be stated only when supported by evidence from logs, timeline details, and response notes.
 
 ## Process and Communication Gaps
 
-TODO: Week 5 - Add reviewer feedback and revision support.
+- Confirm whether roles, escalation paths, and documentation steps were clear during the response.
+- Add reviewer feedback before treating this report as final evidence.
 
 ## Remediation Completed
 
-TODO: Week 6 - Add export-ready formatting for final report delivery.
+Remediation actions should be listed clearly, grouped by containment, recovery, validation, and follow-up where possible.
 
 ## Recommendations and Owners
 

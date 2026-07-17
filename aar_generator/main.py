@@ -1,7 +1,7 @@
 import json
 import logging
 from fastapi import FastAPI, Form, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
@@ -33,6 +33,11 @@ def health() -> dict[str, str | bool]:
         "mock_mode": settings.mock_llm or not settings.openai_api_key,
         "model": settings.openai_model,
     }
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon() -> FileResponse:
+    return FileResponse(BASE_DIR / "static" / "favicon.svg", media_type="image/svg+xml")
 
 
 @app.get("/", response_class=HTMLResponse)
