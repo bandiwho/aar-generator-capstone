@@ -21,53 +21,53 @@ Status key:
 
 | Priority | Focus | Owner | Current Status | Why It Matters |
 |---|---|---|---|---|
-| 1 | Final demo screenshots | Brittany and Mike | Not started | Screenshots are needed for the Week 7 journal, final report, and presentation backup. |
-| 2 | Speaking roles and demo script | Team | In progress | Each team member needs to know exactly what to explain during the final presentation. |
-| 3 | Backup generated report | Garrett and Brittany | Not started | The team needs a saved report in case the live demo has a problem. |
-| 4 | Frontend visual polish | Mike | Planned | The homepage, form, report display, and export controls need to look clean during screenshots and demo. |
-| 5 | Backend explanation and final demo data | Garrett | Planned | Garrett needs clear talking points and confirmation that the selected demo incident works. |
-| 6 | Week 7 journal evidence | Brittany | In progress | The journal needs milestones, testing evidence, blockers, lessons learned, and contributions. |
-| 7 | GitHub readiness | Team | Not started | Final source files should be organized, with no API keys, secrets, or local-only drafts uploaded. |
+| 1 | Final demo screenshots | Brittany and Mike | Complete | Screenshots are available for the Week 7 journal, final report, and presentation backup. |
+| 2 | Speaking roles and demo script | Team | In progress | Each team member still needs to practice exactly what to explain during the final presentation. |
+| 3 | Backup generated report | Garrett and Brittany | Complete | A saved report is available in case the live demo has a problem. |
+| 4 | Frontend visual polish | Mike | Complete | The homepage, form, report display, navigation buttons, and export controls were polished for screenshots and demo use. |
+| 5 | Backend explanation and final demo data | Garrett | Complete | The selected demo incident works, and backend talking points are ready for presentation practice. |
+| 6 | Week 7 journal evidence | Brittany | Complete | The journal includes milestones, testing evidence, lessons learned, contributions, and signatures. |
+| 7 | GitHub readiness | Team | In progress | Final source files should still be pushed after documentation updates are finished and reviewed. |
 
 ## 1. Final Demo Screenshots
 
 Owner: Brittany and Mike  
 Priority: High  
-Current status: Not started
+Current status: Complete
 
-Why this needs improvement: The Week 7 journal, final report, and presentation all need clear visual evidence. The team should not wait until the final presentation week to collect screenshots.
+Why this needed improvement: The Week 7 journal, final report, and presentation all needed clear visual evidence. The team collected screenshots during Week 7 so final presentation week can focus on practice and submission readiness.
 
 ### Small Tasks
 
-- [ ] Decide which browser window size will be used for final screenshots.
-- [ ] Open the prototype homepage and confirm the page loads cleanly.
-- [ ] Capture a homepage screenshot.
-- [ ] Open the report form page.
-- [ ] Load or enter the final demo incident.
-- [ ] Capture a completed form screenshot.
-- [ ] Select the technical audience option.
-- [ ] Generate a technical report.
-- [ ] Capture the technical report title and summary section.
-- [ ] Capture the technical report 5 Whys section.
-- [ ] Capture the technical report recommendations section.
-- [ ] Select the executive audience option.
-- [ ] Generate an executive report.
-- [ ] Capture the executive report title and summary section.
-- [ ] Capture the audience selection controls.
-- [ ] Capture the Copy Report control.
-- [ ] Capture the Editable Text download control.
-- [ ] Capture the HTML download control.
-- [ ] Capture the Save as PDF control.
+- [x] Decide which browser window size will be used for final screenshots.
+- [x] Open the prototype homepage and confirm the page loads cleanly.
+- [x] Capture a homepage screenshot.
+- [x] Open the report form page.
+- [x] Load or enter the final demo incident.
+- [x] Capture a completed form screenshot.
+- [x] Select the technical audience option.
+- [x] Generate a technical report.
+- [x] Capture the technical report title and summary section.
+- [x] Capture the technical report 5 Whys section.
+- [x] Capture the technical report recommendations section.
+- [x] Select the executive audience option.
+- [x] Generate an executive report.
+- [x] Capture the executive report title and summary section.
+- [x] Capture the audience selection controls.
+- [x] Capture the Copy Report control.
+- [x] Capture the Editable Text download control.
+- [x] Capture the HTML download control.
+- [x] Capture the Save as PDF control.
 - [ ] Capture one screenshot showing required-field validation.
 - [ ] Capture one screenshot showing the smaller-screen/mobile-friendly layout if it looks clean.
-- [ ] Review every screenshot for exposed API keys.
-- [ ] Review every screenshot for exposed `.env` content.
-- [ ] Review every screenshot for terminal secrets or private configuration.
-- [ ] Rename screenshots with clear names.
-- [ ] Save screenshots in a final evidence folder.
-- [ ] Choose which screenshots belong in the Week 7 journal.
-- [ ] Choose which screenshots belong in the final presentation.
-- [ ] Choose which screenshots belong in the final report.
+- [x] Review every screenshot for exposed API keys.
+- [x] Review every screenshot for exposed `.env` content.
+- [x] Review every screenshot for terminal secrets or private configuration.
+- [x] Rename screenshots with clear names.
+- [x] Save screenshots in a final evidence folder.
+- [x] Choose which screenshots belong in the Week 7 journal.
+- [~] Choose which screenshots belong in the final presentation.
+- [x] Choose which screenshots belong in the final report.
 
 ### Evidence Needed
 
@@ -84,32 +84,32 @@ Why this needs improvement: The Week 7 journal, final report, and presentation a
 
 Owner: Team  
 Priority: High  
-Current status: Not started
+Current status: Complete
 
-Why this needs improvement: The team needs one final demo incident that is reliable, realistic, and easy to explain. The phishing/Microsoft 365 account compromise sample is currently the likely demo scenario, but it should be confirmed.
+Why this needed improvement: The team needed one final demo incident that is reliable, realistic, and easy to explain. The phishing/Microsoft 365 account compromise sample was selected and tested for final demo use.
 
 ### Small Tasks
 
-- [ ] Review the available sample incidents.
-- [ ] Confirm whether the phishing/Microsoft 365 account compromise sample will be the main demo.
-- [ ] Make sure the selected incident has a clear title.
-- [ ] Make sure the selected incident has a realistic date.
-- [ ] Make sure the selected incident has a clear incident summary.
-- [ ] Make sure the selected incident has a useful timeline.
-- [ ] Make sure the selected incident has enough log snippets or evidence notes.
-- [ ] Make sure the selected incident has clear impact details.
-- [ ] Make sure the selected incident has remediation steps.
-- [ ] Make sure the selected incident has open questions if evidence is incomplete.
-- [ ] Generate a report from the selected incident.
-- [ ] Confirm the generated report includes a summary.
-- [ ] Confirm the generated report includes a timeline.
-- [ ] Confirm the generated report includes evidence observations.
-- [ ] Confirm the generated report includes 5 Whys.
-- [ ] Confirm the generated report includes root cause.
-- [ ] Confirm the generated report includes recommendations.
-- [ ] Confirm the generated report includes lessons learned or follow-up actions.
-- [ ] Save the final demo incident text for quick copying if autofill does not work.
-- [ ] Add a short note explaining why this incident is a good demo choice.
+- [x] Review the available sample incidents.
+- [x] Confirm whether the phishing/Microsoft 365 account compromise sample will be the main demo.
+- [x] Make sure the selected incident has a clear title.
+- [x] Make sure the selected incident has a realistic date.
+- [x] Make sure the selected incident has a clear incident summary.
+- [x] Make sure the selected incident has a useful timeline.
+- [x] Make sure the selected incident has enough log snippets or evidence notes.
+- [x] Make sure the selected incident has clear impact details.
+- [x] Make sure the selected incident has remediation steps.
+- [x] Make sure the selected incident has open questions if evidence is incomplete.
+- [x] Generate a report from the selected incident.
+- [x] Confirm the generated report includes a summary.
+- [x] Confirm the generated report includes a timeline.
+- [x] Confirm the generated report includes evidence observations.
+- [x] Confirm the generated report includes 5 Whys.
+- [x] Confirm the generated report includes root cause.
+- [x] Confirm the generated report includes recommendations.
+- [x] Confirm the generated report includes lessons learned or follow-up actions.
+- [x] Save the final demo incident text for quick copying if autofill does not work.
+- [x] Add a short note explaining why this incident is a good demo choice.
 
 ### Evidence Needed
 
@@ -121,28 +121,28 @@ Why this needs improvement: The team needs one final demo incident that is relia
 
 Owner: Garrett and Brittany  
 Priority: High  
-Current status: Not started
+Current status: Complete
 
-Why this needs improvement: A live demo can fail because of API delays, internet problems, local server issues, or timing. The team needs a backup report that can be shown if the live demo does not work.
+Why this needed improvement: A live demo can fail because of API delays, internet problems, local server issues, or timing. The team prepared a backup report that can be shown if the live demo does not work.
 
 ### Small Tasks
 
-- [ ] Generate one strong report using the final demo incident.
-- [ ] Confirm the report uses the correct audience style.
-- [ ] Confirm the report title is clean.
-- [ ] Confirm the report summary is easy to explain.
-- [ ] Confirm the timeline is readable.
-- [ ] Confirm the 5 Whys section is readable.
-- [ ] Confirm the recommendations are specific to the incident.
-- [ ] Confirm the report does not include placeholder text.
-- [ ] Confirm the report does not include raw Markdown symbols that look unprofessional.
-- [ ] Confirm the report does not include labels that were previously removed, such as `Gap:`, `Task:`, `Open item:`, or `Evidence note:`.
-- [ ] Save the report as a backup file.
-- [ ] Save a screenshot of the backup report.
-- [ ] Save a screenshot of the 5 Whys section.
-- [ ] Save a screenshot of the recommendations section.
-- [ ] Decide whether the backup should be shown as a screenshot, browser view, HTML file, or PDF.
-- [ ] Add the backup report location to the meeting notes.
+- [x] Generate one strong report using the final demo incident.
+- [x] Confirm the report uses the correct audience style.
+- [x] Confirm the report title is clean.
+- [x] Confirm the report summary is easy to explain.
+- [x] Confirm the timeline is readable.
+- [x] Confirm the 5 Whys section is readable.
+- [x] Confirm the recommendations are specific to the incident.
+- [x] Confirm the report does not include placeholder text.
+- [x] Confirm the report does not include raw Markdown symbols that look unprofessional.
+- [x] Confirm the report does not include labels that were previously removed, such as `Gap:`, `Task:`, `Open item:`, or `Evidence note:`.
+- [x] Save the report as a backup file.
+- [x] Save a screenshot of the backup report.
+- [x] Save a screenshot of the 5 Whys section.
+- [x] Save a screenshot of the recommendations section.
+- [x] Decide whether the backup should be shown as a screenshot, browser view, HTML file, or PDF.
+- [~] Add the backup report location to the meeting notes.
 
 ### Evidence Needed
 
@@ -196,34 +196,34 @@ Why this needs improvement: The slides need to clearly show the project problem,
 
 Owner: Brittany  
 Priority: High  
-Current status: In progress
+Current status: Complete
 
-Why this needs improvement: The Week 7 journal needs clear evidence of progress, testing, blockers, lessons learned, contribution, and meeting attendance. The journal should be a Word/PDF file for submission, not a GitHub Markdown draft.
+Why this needed improvement: The Week 7 journal needed clear evidence of progress, testing, blockers, lessons learned, contribution, and meeting attendance. The journal was prepared as a Word document for submission use, not as a GitHub Markdown draft.
 
 ### Small Tasks
 
 - [x] Start the Week 7 journal draft.
 - [x] Add a signature page.
 - [x] Keep the Week 7 journal as a local-only DOCX draft.
-- [ ] Confirm the Week 7 journal does not need to be uploaded to GitHub.
-- [ ] Add milestones achieved this week.
-- [ ] Add brief descriptions for each milestone.
-- [ ] Add subtasks completed by Brittany.
-- [ ] Add subtasks completed by Garrett.
-- [ ] Add subtasks completed by Mike.
-- [ ] Add detailed testing descriptions.
-- [ ] Add final screenshot evidence.
-- [ ] Add lessons learned.
-- [ ] Add team contribution section.
-- [ ] Add progress compared to plan.
-- [ ] Add plan adjustments if needed.
-- [ ] Add Week 7 blockers.
-- [ ] Add meeting attendance and meeting discussion summary.
-- [ ] Confirm the signature page has Brittany, Garrett, and Mike.
-- [ ] Confirm each signature line keeps `Date:` on the same line as `Signature:`.
-- [ ] Review grammar and sentence clarity.
-- [ ] Export the journal as a PDF.
-- [ ] Confirm the PDF opens correctly.
+- [x] Confirm the Week 7 journal does not need to be uploaded to GitHub.
+- [x] Add milestones achieved this week.
+- [x] Add brief descriptions for each milestone.
+- [x] Add subtasks completed by Brittany.
+- [x] Add subtasks completed by Garrett.
+- [x] Add subtasks completed by Mike.
+- [x] Add detailed testing descriptions.
+- [x] Add final screenshot evidence.
+- [x] Add lessons learned.
+- [x] Add team contribution section.
+- [x] Add progress compared to plan.
+- [x] Add plan adjustments if needed.
+- [x] Add Week 7 blockers.
+- [x] Add meeting attendance and meeting discussion summary.
+- [x] Confirm the signature page has Brittany, Garrett, and Mike.
+- [x] Confirm each signature line keeps `Date:` on the same line as `Signature:`.
+- [x] Review grammar and sentence clarity.
+- [~] Export the journal as a PDF.
+- [~] Confirm the PDF opens correctly.
 - [ ] Submit the PDF before Friday if possible.
 - [ ] If Friday is not possible, submit by the Sunday deadline.
 
@@ -239,28 +239,28 @@ Why this needs improvement: The Week 7 journal needs clear evidence of progress,
 
 Owner: Brittany  
 Priority: High  
-Current status: In progress
+Current status: Complete
 
-Why this needs improvement: Meeting notes prove attendance, planning, assigned work, and blockers. The Week 7 entry still needs final details after the meeting.
+Why this needed improvement: Meeting notes prove attendance, planning, assigned work, and blockers. Week 7 meeting and chat details were summarized for the journal and final evidence.
 
 ### Small Tasks
 
 - [x] Add Week 7 meeting entry.
 - [x] Add planned Week 7 meeting topics.
 - [x] Add planned Week 7 owner assignments.
-- [ ] Record exact Week 7 attendance.
-- [ ] Record if anyone was absent.
-- [ ] Record the meeting start time.
-- [ ] Record the meeting end time.
-- [ ] Record final demo incident decision.
-- [ ] Record screenshot owner.
-- [ ] Record backup report owner.
-- [ ] Record speaking roles.
+- [x] Record exact Week 7 attendance.
+- [x] Record if anyone was absent.
+- [x] Record the meeting start time.
+- [~] Record the meeting end time.
+- [x] Record final demo incident decision.
+- [x] Record screenshot owner.
+- [x] Record backup report owner.
+- [~] Record speaking roles.
 - [x] Record that the homepage now uses a full-page background image.
 - [ ] Record GitHub push/sync plan.
-- [ ] Record any final blockers.
-- [ ] Add Microsoft Teams chat notes if useful.
-- [ ] Make sure Week 7 meeting notes are summarized in the journal.
+- [x] Record any final blockers.
+- [x] Add Microsoft Teams chat notes if useful.
+- [x] Make sure Week 7 meeting notes are summarized in the journal.
 
 ### Evidence Needed
 
@@ -273,28 +273,28 @@ Why this needs improvement: Meeting notes prove attendance, planning, assigned w
 
 Owner: Garrett  
 Priority: Medium  
-Current status: Planned
+Current status: Complete
 
 Why this needs improvement: The backend is working, but Garrett still needs a clean explanation for the final demo. The team should avoid risky backend changes unless they are needed for demo reliability.
 
 ### Small Tasks
 
-- [ ] Confirm the backend starts successfully.
-- [ ] Confirm the report-generation route works.
-- [ ] Confirm the final demo incident works through the backend.
-- [ ] Confirm fallback/mock behavior still works.
-- [ ] Confirm no API key is printed in screenshots or documentation.
-- [ ] Confirm backend tests pass before final demo practice.
-- [ ] Review backend comments for anything confusing or outdated.
-- [ ] Remove or update comments that no longer match the code.
-- [ ] Confirm 5 Whys output is incident-specific.
-- [ ] Confirm recommendations are incident-specific.
-- [ ] Confirm technical audience output has technical detail.
-- [ ] Confirm executive audience output is easier for leadership to read.
-- [ ] Prepare a short backend explanation for Garrett.
-- [ ] Prepare one sentence explaining mock fallback.
-- [ ] Prepare one sentence explaining OpenAI/API mode.
-- [ ] Prepare one sentence explaining why 5 Whys helps the report.
+- [x] Confirm the backend starts successfully.
+- [x] Confirm the report-generation route works.
+- [x] Confirm the final demo incident works through the backend.
+- [x] Confirm fallback/mock behavior still works.
+- [x] Confirm no API key is printed in screenshots or documentation.
+- [x] Confirm backend tests pass before final demo practice.
+- [x] Review backend comments for anything confusing or outdated.
+- [x] Remove or update comments that no longer match the code.
+- [x] Confirm 5 Whys output is incident-specific.
+- [x] Confirm recommendations are incident-specific.
+- [x] Confirm technical audience output has technical detail.
+- [x] Confirm executive audience output is easier for leadership to read.
+- [x] Prepare a short backend explanation for Garrett.
+- [x] Prepare one sentence explaining mock fallback.
+- [x] Prepare one sentence explaining OpenAI/API mode.
+- [x] Prepare one sentence explaining why 5 Whys helps the report.
 
 ### Evidence Needed
 
@@ -306,38 +306,38 @@ Why this needs improvement: The backend is working, but Garrett still needs a cl
 
 Owner: Mike  
 Priority: Medium  
-Current status: Planned
+Current status: Complete
 
 Why this needs improvement: The frontend is the part the audience will see most during the demo. It needs to look clean, guide the user, and make report output easy to read.
 
 ### Small Tasks
 
-- [ ] Confirm the homepage loads.
-- [ ] Confirm the report form loads.
-- [ ] Confirm sample incident autofill works if available.
-- [ ] Confirm the user can enter incident title.
-- [ ] Confirm the user can enter incident date.
-- [ ] Confirm the user can enter incident summary.
-- [ ] Confirm the user can enter timeline details.
-- [ ] Confirm the user can enter log snippets.
-- [ ] Confirm the user can enter impact details.
-- [ ] Confirm the user can enter remediation steps.
-- [ ] Confirm the user can enter open questions.
-- [ ] Confirm required-field validation appears when needed.
-- [ ] Confirm validation messages are easy to understand.
-- [ ] Confirm loading state appears while a report is being generated.
-- [ ] Confirm technical audience button or control works.
-- [ ] Confirm executive audience button or control works.
-- [ ] Confirm generated report is readable.
-- [ ] Confirm 5 Whys section is readable.
-- [ ] Confirm recommendations section is readable.
-- [ ] Confirm Copy Report works.
-- [ ] Confirm Editable Text download works.
-- [ ] Confirm HTML download works.
-- [ ] Confirm Save as PDF option is available.
-- [ ] Confirm smaller-screen layout is usable.
-- [ ] Confirm no visible text overlaps.
-- [ ] Confirm buttons and labels fit their containers.
+- [x] Confirm the homepage loads.
+- [x] Confirm the report form loads.
+- [x] Confirm sample incident autofill works if available.
+- [x] Confirm the user can enter incident title.
+- [x] Confirm the user can enter incident date.
+- [x] Confirm the user can enter incident summary.
+- [x] Confirm the user can enter timeline details.
+- [x] Confirm the user can enter log snippets.
+- [x] Confirm the user can enter impact details.
+- [x] Confirm the user can enter remediation steps.
+- [x] Confirm the user can enter open questions.
+- [x] Confirm required-field validation appears when needed.
+- [x] Confirm validation messages are easy to understand.
+- [x] Confirm loading state appears while a report is being generated.
+- [x] Confirm technical audience button or control works.
+- [x] Confirm executive audience button or control works.
+- [x] Confirm generated report is readable.
+- [x] Confirm 5 Whys section is readable.
+- [x] Confirm recommendations section is readable.
+- [x] Confirm Copy Report works.
+- [x] Confirm Editable Text download works.
+- [x] Confirm HTML download works.
+- [x] Confirm Save as PDF option is available.
+- [x] Confirm smaller-screen layout is usable.
+- [x] Confirm no visible text overlaps.
+- [x] Confirm buttons and labels fit their containers.
 - [x] Confirm the homepage background image task is complete.
 
 ### Evidence Needed
@@ -424,28 +424,28 @@ Why this needs improvement: The team needs to practice the demo before the final
 
 Owner: Brittany  
 Priority: Medium  
-Current status: Planned
+Current status: Complete
 
-Why this needs improvement: Week 7 should prepare the team for Week 8 final report work. Waiting until Week 8 to organize evidence will make the final report harder.
+Why this needed improvement: Week 7 prepared the team for Week 8 final report work by organizing project wording, testing evidence, contribution notes, meeting evidence, and screenshots before final submission week.
 
 ### Small Tasks
 
-- [ ] Create a list of final report sections.
-- [ ] Collect project description wording.
-- [ ] Collect problem statement wording.
-- [ ] Collect solution summary wording.
-- [ ] Collect technology stack details.
-- [ ] Collect setup and usage evidence.
-- [ ] Collect testing summary notes.
-- [ ] Collect screenshot evidence.
-- [ ] Collect known limitations.
-- [ ] Collect future improvements.
-- [ ] Collect Brittany's contribution notes.
-- [ ] Collect Garrett's contribution notes.
-- [ ] Collect Mike's contribution notes.
-- [ ] Collect meeting log evidence.
-- [ ] Collect GitHub evidence.
-- [ ] Identify missing final report content before Week 8 starts.
+- [x] Create a list of final report sections.
+- [x] Collect project description wording.
+- [x] Collect problem statement wording.
+- [x] Collect solution summary wording.
+- [x] Collect technology stack details.
+- [x] Collect setup and usage evidence.
+- [x] Collect testing summary notes.
+- [x] Collect screenshot evidence.
+- [x] Collect known limitations.
+- [x] Collect future improvements.
+- [x] Collect Brittany's contribution notes.
+- [x] Collect Garrett's contribution notes.
+- [x] Collect Mike's contribution notes.
+- [x] Collect meeting log evidence.
+- [~] Collect GitHub evidence.
+- [x] Identify missing final report content before Week 8 starts.
 
 ### Evidence Needed
 
@@ -457,13 +457,9 @@ Why this needs improvement: Week 7 should prepare the team for Week 8 final repo
 
 | Blocker | Owner | Impact | Small Next Step |
 |---|---|---|---|
-| Final screenshots are not organized yet. | Brittany and Mike | Week 7 journal and presentation evidence are incomplete. | Capture homepage, form, generated report, 5 Whys, recommendations, and export-control screenshots. |
-| Speaking roles are not fully confirmed. | Team | The final presentation may feel unorganized. | Confirm Brittany, Garrett, and Mike's speaking sections during the Week 7 meeting. |
-| Final demo incident still needs final confirmation. | Team | Demo practice cannot be fully locked in. | Choose the phishing/Microsoft 365 sample or another final scenario. |
-| Backup generated report is not prepared yet. | Garrett and Brittany | The team has no fallback if live generation fails. | Generate and save one strong report before practice. |
-| Homepage background image task updated. | Mike | The previous wording no longer matched the current frontend design. | Confirm the full-page homepage background image renders correctly for demo screenshots. |
-| Week 7 GitHub push/sync needs confirmation. | Team | Documentation changes may not be visible to teammates or instructor. | Check Git status, choose files to push, and confirm local-only DOCX drafts stay off GitHub. |
-| Week 7 journal evidence is incomplete. | Brittany | Journal cannot be finalized yet. | Add screenshots, meeting summary, blockers, and contribution notes. |
+| GitHub push/sync needs confirmation. | Team | Documentation and code updates may not be visible to teammates or instructor yet. | Check Git status, choose files to push, and confirm local-only DOCX drafts stay off GitHub. |
+| Presentation practice still needs to happen. | Team | The final presentation may feel unorganized without a full run-through. | Confirm Brittany, Garrett, and Mike's speaking sections and practice the demo from start to finish. |
+| Final presentation slides are still being reviewed. | Brittany and team | The deck may change after instructor feedback. | Finish slide edits, add final screenshots, and review grammar before final submission. |
 
 ## 13. Done Criteria
 
@@ -481,13 +477,13 @@ An improvement can be marked complete when:
 
 Use this section during the Week 7 meeting.
 
-- [ ] Did we select the final demo incident?
-- [ ] Did we assign screenshot responsibilities?
-- [ ] Did we assign backup report responsibility?
-- [ ] Did we confirm speaking roles?
+- [x] Did we select the final demo incident?
+- [x] Did we assign screenshot responsibilities?
+- [x] Did we assign backup report responsibility?
+- [~] Did we confirm speaking roles?
 - [x] Did we confirm the homepage background image is ready?
-- [ ] Did we confirm what files should go to GitHub?
-- [ ] Did we confirm what files should stay local-only?
-- [ ] Did we confirm the Week 7 journal evidence list?
-- [ ] Did we choose a demo practice time?
-- [ ] Did we identify anything that must wait until Week 8?
+- [~] Did we confirm what files should go to GitHub?
+- [x] Did we confirm what files should stay local-only?
+- [x] Did we confirm the Week 7 journal evidence list?
+- [~] Did we choose a demo practice time?
+- [x] Did we identify anything that must wait until Week 8?

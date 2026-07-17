@@ -38,6 +38,7 @@ def test_generated_report_page_shows_practical_export_options():
     assert '.replaceAll("â†’", "->")' in response.text
     assert "buildPlainTextFromRenderedReport" in response.text
     assert "buildMarkdownFromRenderedReport" in response.text
+    assert '.replace(/^\\d+\\.\\s*/, "")' in response.text
     assert 'listElement.getAttribute("start")' in response.text
     assert "Number.parseInt(numbered[1], 10)" in response.text
     assert 'buildReportFilename("md")' in response.text
