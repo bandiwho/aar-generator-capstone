@@ -22,7 +22,7 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] LLM-supported report generation workflow.
 - [x] 5 Whys root-cause analysis.
 - [x] Technical and executive reporting styles.
-- [~] Realistic sample incident data for testing.
+- [x] Realistic sample incident data for testing.
 - [x] Demo workflow documentation for presentation practice.
 - [x] Final user guide added for stretch-goal documentation.
 - [x] GitHub repository for shared source code and documentation.
@@ -146,7 +146,7 @@ Goal: Test the prototype with multiple incidents, improve reliability, and docum
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
 | [x] | Brittany | Test app with sample incidents | Testing notes and screenshots | At least three incident scenarios are tested |
-| [~] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
+| [x] | Garrett | Improve backend error handling | Backend fallback and error handling logic | App handles incomplete or weak input without crashing |
 | [x] | Mike | Improve frontend validation | Required-field behavior and user-facing messages | Users understand what information is missing |
 | [x] | Brittany | Prepare Week 6 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 6 journal is ready to export as a PDF |
 | [x] | Team | Review test results | Bug list and improvement notes | Issues are documented and assigned |
@@ -160,8 +160,8 @@ Goal: Prepare the project for final presentation and demonstration while documen
 |---|---|---|---|---|
 | [~] | Brittany | Finalize project documentation | Final README, journal notes, and checklist updates | Documentation is clear and complete |
 | [~] | Brittany | Prepare presentation outline | Slide outline and speaker notes | Presentation covers problem, solution, prototype, and lessons learned |
-| [ ] | Garrett | Prepare backend explanation | Backend workflow summary | Team can explain how report generation works |
-| [ ] | Mike | Prepare demo flow | Demo script and frontend walkthrough | Demo can be completed smoothly |
+| [~] | Garrett | Prepare backend explanation | Backend workflow summary | Team can explain how report generation works |
+| [~] | Mike | Prepare demo flow | Demo script and frontend walkthrough | Demo can be completed smoothly |
 | [~] | Team | Prepare Week 7 journal evidence | Meeting log, screenshots, testing notes, and contribution summary | Week 7 journal is ready to export as a PDF |
 
 ### Milestone 6: Final Polish and Submission
@@ -226,6 +226,4 @@ Sample scenario: "Generate an after-action report for a phishing email that led 
 | [`SAMPLE_INCIDENTS.md`](SAMPLE_INCIDENTS.md) | Readable sample incident scenarios for GitHub review and screenshots |
 | [`DEMO_WORKFLOW_INSTRUCTIONS.md`](DEMO_WORKFLOW_INSTRUCTIONS.md) | Step-by-step instructions for demonstrating the prototype |
 | [`USER_GUIDE.md`](USER_GUIDE.md) | Final user guide with setup, usage, review, export, screenshot, and troubleshooting instructions |
-| [`WEEK7_MEETING_AGENDA.md`](WEEK7_MEETING_AGENDA.md) | Week 7 meeting agenda with current status, discussion topics, blockers, and owner assignments |
-| [`WEEK7_WEEKLY_JOURNAL_DRAFT.md`](WEEK7_WEEKLY_JOURNAL_DRAFT.md) | Week 7 journal draft with progress notes, blockers, contributions, and signature page |
 | [`FORM_FIELD_REVIEW.md`](FORM_FIELD_REVIEW.md) | Review of required form fields for the MVP workflow |

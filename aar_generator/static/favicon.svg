@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0f4f4a"/>
+  <path d="M32 8 52 16v14c0 12-8 22-20 26C20 52 12 42 12 30V16l20-8Z" fill="#f8fafc"/>
+  <path d="M32 14 46 20v10c0 8-5 15-14 19-9-4-14-11-14-19V20l14-6Z" fill="#0f766e"/>
+  <text x="32" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">AAR</text>
+</svg>

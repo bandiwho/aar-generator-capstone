@@ -12,8 +12,8 @@ class ReportService:
         self.llm_client = LlmClient(settings)
 
     def generate_report(self, incident: IncidentInput) -> ReportResponse:
-        # TODO: Week 4 - Validate generated report sections before returning to the UI.
-        # TODO: Week 6 - Add export adapters for Markdown, DOCX, and PDF.
+        # Future enhancement: validate generated report sections before returning to the UI.
+        # Future enhancement: add direct DOCX/PDF export adapters if the scope expands.
         prompt = build_report_prompt(incident)
         used_mock = self.settings.mock_llm or not self.settings.openai_api_key
         model_used = self.settings.openai_model
@@ -138,8 +138,10 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _clean_report_markdown(report_markdown: str) -> str:
         report_markdown = ReportService._normalize_report_text(report_markdown)
+        report_markdown = ReportService._normalize_five_whys_heading_answers(report_markdown)
         report_markdown = ReportService._interleave_five_whys_answers(report_markdown)
         report_markdown = ReportService._pair_open_questions_with_evidence(report_markdown)
+        report_markdown = ReportService._attach_recommendation_owners(report_markdown)
         report_markdown = ReportService._indent_nested_bullet_groups(report_markdown)
 
         label_pattern = re.compile(
@@ -198,6 +200,9 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
         }
         for original, replacement in replacements.items():
             report_text = report_text.replace(original, replacement)
+        report_text = report_text.replace("britanny.employee", "brittany.employee")
+        report_text = report_text.replace("WebAuthicator", "WebAuthn authenticator")
+        report_text = report_text.replace("collateral platforms", "collaboration platforms")
         return report_text
 
     @staticmethod
@@ -210,7 +215,10 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
         def rewrite_section(match: re.Match) -> str:
             heading = match.group(1)
             lines = [line.strip() for line in match.group(2).splitlines() if line.strip()]
-            question_pattern = re.compile(r"^(?:[-*]\s+)?(?:Why\s+)?(\d+)(?:\.|:)\s+(Why\b.+\?)$", re.IGNORECASE)
+            question_pattern = re.compile(
+                r"^(?:[-*]\s+)?(?:Why\s+)?(\d+)(?:\.|:)\s+(?:\*\*)?(.+\?)(?:\*\*)?$",
+                re.IGNORECASE,
+            )
             questions = []
 
             for line in lines:
@@ -218,6 +226,20 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
                 if not question:
                     break
                 questions.append(question.group(2))
+
+            alternating = []
+            index = 0
+            while index < len(lines):
+                question = question_pattern.match(lines[index])
+                if not question or index + 1 >= len(lines):
+                    break
+                if question_pattern.match(lines[index + 1]):
+                    break
+                alternating.append(f"{int(question.group(1))}. {question.group(2)} {lines[index + 1]}")
+                index += 2
+
+            if len(alternating) >= 2 and index == len(lines):
+                return f"{heading}{chr(10).join(alternating).rstrip()}\n"
 
             if len(questions) < 2 or len(lines) <= len(questions):
                 return match.group(0)
@@ -232,6 +254,45 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
 
             if len(answers) > len(questions):
                 rewritten.extend(answers[len(questions):])
+
+            return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
+
+        return section_pattern.sub(rewrite_section, report_markdown)
+
+    @staticmethod
+    def _normalize_five_whys_heading_answers(report_markdown: str) -> str:
+        section_pattern = re.compile(
+            r"(##\s+5 Whys Root Cause Analysis\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            re.IGNORECASE,
+        )
+        why_heading_pattern = re.compile(r"^#{3,4}\s+Why\s+(\d+):\s+(.+\?)$", re.IGNORECASE)
+        bullet_pattern = re.compile(r"^[-*]\s+(.+)$")
+
+        def rewrite_section(match: re.Match) -> str:
+            heading = match.group(1)
+            lines = [line.strip() for line in match.group(2).splitlines() if line.strip()]
+            rewritten = []
+            index = 0
+
+            while index < len(lines):
+                why_heading = why_heading_pattern.match(lines[index])
+                if not why_heading:
+                    return match.group(0)
+
+                answer = ""
+                if index + 1 < len(lines):
+                    bullet = bullet_pattern.match(lines[index + 1])
+                    answer = bullet.group(1).strip() if bullet else lines[index + 1].strip()
+                    index += 2
+                else:
+                    index += 1
+
+                question_number = int(why_heading.group(1))
+                question = why_heading.group(2).strip()
+                rewritten.append(f"{question_number}. {question} {answer}".rstrip())
+
+            if len(rewritten) < 2:
+                return match.group(0)
 
             return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
 
@@ -282,6 +343,31 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
             evidence_pattern = re.compile(r"^(?:[-*]\s+)?Evidence:\s+(.+)$", re.IGNORECASE)
             questions = []
 
+            def pair_alternating_lines() -> str:
+                rewritten = []
+                index = 0
+                paired_count = 0
+
+                while index < len(lines):
+                    question = question_pattern.match(lines[index])
+                    if not question:
+                        return match.group(0)
+
+                    rewritten.append(f"- {question.group(1)}")
+                    index += 1
+
+                    if index < len(lines):
+                        evidence = evidence_pattern.match(lines[index])
+                        if evidence:
+                            rewritten.append(f"  Evidence: {evidence.group(1)}")
+                            paired_count += 1
+                            index += 1
+
+                if paired_count < 1:
+                    return match.group(0)
+
+                return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
+
             for line in lines:
                 question = question_pattern.match(line)
                 if not question:
@@ -289,18 +375,18 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
                 questions.append(question.group(1))
 
             if len(questions) < 2 or len(lines) <= len(questions):
-                return match.group(0)
+                return pair_alternating_lines()
 
             evidence_lines = lines[len(questions):]
             evidence = []
             for line in evidence_lines:
                 evidence_match = evidence_pattern.match(line)
                 if not evidence_match:
-                    return match.group(0)
+                    return pair_alternating_lines()
                 evidence.append(evidence_match.group(1))
 
             if len(evidence) < len(questions):
-                return match.group(0)
+                return pair_alternating_lines()
 
             rewritten = []
             for question, evidence_text in zip(questions, evidence):
@@ -311,6 +397,59 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
                 for extra_evidence in evidence[len(questions):]:
                     rewritten.append(f"  Evidence: {extra_evidence}")
 
+            return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
+
+        return section_pattern.sub(rewrite_section, report_markdown)
+
+    @staticmethod
+    def _attach_recommendation_owners(report_markdown: str) -> str:
+        section_pattern = re.compile(
+            r"(##\s+Recommendations and Owners\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            re.IGNORECASE,
+        )
+        owner_pattern = re.compile(r"^(?:[-*]\s+)?(?:\*\*)?Owner:(?:\*\*)?\s+(.+)$", re.IGNORECASE)
+
+        def rewrite_section(match: re.Match) -> str:
+            heading = match.group(1)
+            lines = match.group(2).splitlines()
+            rewritten = []
+            pending_bullets = []
+            pending_owners = []
+
+            def flush_group() -> None:
+                if not pending_bullets:
+                    return
+
+                for index, bullet_line in enumerate(pending_bullets):
+                    owner = pending_owners[index] if index < len(pending_owners) else ""
+                    if owner:
+                        rewritten.append(f"{bullet_line.rstrip()} **Owner:** {owner}")
+                    else:
+                        rewritten.append(bullet_line)
+
+                pending_bullets.clear()
+                pending_owners.clear()
+
+            for line in lines:
+                stripped = line.strip()
+                owner = owner_pattern.match(stripped)
+                bullet = re.match(r"^[-*]\s+.+", stripped)
+
+                if owner:
+                    pending_owners.append(owner.group(1).strip())
+                    continue
+
+                if bullet:
+                    pending_bullets.append(line)
+                    continue
+
+                if not stripped and pending_bullets:
+                    continue
+
+                flush_group()
+                rewritten.append(line)
+
+            flush_group()
             return f"{heading}{chr(10).join(rewritten).rstrip()}\n"
 
         return section_pattern.sub(rewrite_section, report_markdown)

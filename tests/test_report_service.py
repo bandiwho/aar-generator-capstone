@@ -273,6 +273,125 @@ Because endpoint controls did not stop execution before file encryption attempts
     assert "Why 2:" not in result.report_markdown
 
 
+def test_report_service_pairs_recommendations_with_owners(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_separated_recommendation_owners(prompt):
+        return """
+## Recommendations and Owners
+
+### Identity & Authentication
+
+- Enforce phishing-resistant authentication for all users.
+- Require step-up MFA for sign-ins from unfamiliar IPs.
+
+**Owner:** Identity Security / IAM Team
+**Owner:** IAM + Cloud Security Engineering
+
+### Email & Mailbox Security Controls
+
+- Implement automated detection for high-risk mailbox rule changes.
+
+Owner: Exchange/M365 Security Operations
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_separated_recommendation_owners)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Enforce phishing-resistant authentication for all users. **Owner:** Identity Security / IAM Team" in result.report_markdown
+    assert "- Require step-up MFA for sign-ins from unfamiliar IPs. **Owner:** IAM + Cloud Security Engineering" in result.report_markdown
+    assert "- Implement automated detection for high-risk mailbox rule changes. **Owner:** Exchange/M365 Security Operations" in result.report_markdown
+    assert "\n**Owner:**" not in result.report_markdown
+    assert "\nOwner:" not in result.report_markdown
+
+
+def test_report_service_rewrites_five_whys_heading_answers(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_heading_answers(prompt):
+        return """
+## 5 Whys Root Cause Analysis
+
+### Why 1: Why did the Microsoft 365 account get compromised?
+- Because the employee entered credentials into a fake Microsoft 365 login page.
+### Why 2: Why were the credentials usable by the attacker?
+- Because the sign-in process did not stop the attacker.
+### Why 3: Why was the sign-in not blocked?
+- Because MFA behavior is not confirmed.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_heading_answers)
+
+    result = service.generate_report(build_incident())
+
+    assert "1. Why did the Microsoft 365 account get compromised? Because the employee entered credentials" in result.report_markdown
+    assert "2. Why were the credentials usable by the attacker? Because the sign-in process" in result.report_markdown
+    assert "### Why 1:" not in result.report_markdown
+
+
+def test_report_service_rewrites_numbered_bold_five_whys_answers(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_numbered_bold_questions(prompt):
+        return """
+## 5 Whys Root Cause Analysis
+
+1. **Why was the account compromised?**
+Because the employee entered credentials into a fake Microsoft 365 login page.
+2. **Why did the attacker gain usable access?**
+Because the sign-in resulted in a successful session.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_numbered_bold_questions)
+
+    result = service.generate_report(build_incident())
+
+    assert "1. Why was the account compromised? Because the employee entered credentials" in result.report_markdown
+    assert "2. Why did the attacker gain usable access? Because the sign-in resulted" in result.report_markdown
+    assert "**Why was the account compromised?**\nBecause" not in result.report_markdown
+
+
+def test_report_service_normalizes_sample_account_typo(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_account_typo(prompt):
+        return "The Microsoft 365 account for britanny.employee was compromised."
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_account_typo)
+
+    result = service.generate_report(build_incident())
+
+    assert "brittany.employee" in result.report_markdown
+    assert "britanny.employee" not in result.report_markdown
+
+
+def test_report_service_pairs_alternating_open_question_evidence(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_alternating_open_question_evidence(prompt):
+        return """
+## Open Questions
+
+- Was MFA challenged, bypassed, or not enabled during the suspicious login?
+Evidence: MFA registration was reviewed after compromise, but the exact sign-in outcome is missing.
+- Did the attacker access or download SharePoint files?
+Evidence: SharePoint audit review is pending.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_alternating_open_question_evidence)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Was MFA challenged, bypassed, or not enabled during the suspicious login?\n  Evidence: MFA registration was reviewed" in result.report_markdown
+    assert "- Did the attacker access or download SharePoint files?\n  Evidence: SharePoint audit review is pending." in result.report_markdown
+
+
 def test_report_service_pairs_open_question_evidence_with_each_question(monkeypatch):
     settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
     service = ReportService(settings)
