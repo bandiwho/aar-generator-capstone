@@ -58,8 +58,8 @@ Why this needed improvement: The Week 7 journal, final report, and presentation 
 - [x] Capture the Editable Text download control.
 - [x] Capture the HTML download control.
 - [x] Capture the Save as PDF control.
-- [ ] Capture one screenshot showing required-field validation.
-- [ ] Capture one screenshot showing the smaller-screen/mobile-friendly layout if it looks clean.
+- [x] Capture one screenshot showing required-field validation.
+- [x] Capture one screenshot showing the smaller-screen/mobile-friendly layout if it looks clean.
 - [x] Review every screenshot for exposed API keys.
 - [x] Review every screenshot for exposed `.env` content.
 - [x] Review every screenshot for terminal secrets or private configuration.
@@ -222,10 +222,9 @@ Why this needed improvement: The Week 7 journal needed clear evidence of progres
 - [x] Confirm the signature page has Brittany, Garrett, and Mike.
 - [x] Confirm each signature line keeps `Date:` on the same line as `Signature:`.
 - [x] Review grammar and sentence clarity.
-- [~] Export the journal as a PDF.
-- [~] Confirm the PDF opens correctly.
-- [ ] Submit the PDF before Friday if possible.
-- [ ] If Friday is not possible, submit by the Sunday deadline.
+- [x] Export the journal as a PDF.
+- [x] Confirm the PDF opens correctly.
+- [x] Submit the PDF before Friday if possible.
 
 ### Evidence Needed
 
@@ -251,13 +250,13 @@ Why this needed improvement: Meeting notes prove attendance, planning, assigned 
 - [x] Record exact Week 7 attendance.
 - [x] Record if anyone was absent.
 - [x] Record the meeting start time.
-- [~] Record the meeting end time.
+- [x] Record the meeting end time.
 - [x] Record final demo incident decision.
 - [x] Record screenshot owner.
 - [x] Record backup report owner.
-- [~] Record speaking roles.
+- [x] Record speaking roles.
 - [x] Record that the homepage now uses a full-page background image.
-- [ ] Record GitHub push/sync plan.
+- [x] Record GitHub push/sync plan.
 - [x] Record any final blockers.
 - [x] Add Microsoft Teams chat notes if useful.
 - [x] Make sure Week 7 meeting notes are summarized in the journal.
@@ -356,23 +355,14 @@ Why this needs improvement: The project should be clean before final review. Git
 
 ### Small Tasks
 
-- [ ] Check Git status before pushing.
-- [ ] Confirm `README.md` changes are intentional.
-- [ ] Confirm `MILESTONE_TODOS.md` changes are intentional.
-- [ ] Confirm `SHARED_DELIVERABLES_CHECKLIST.md` changes are intentional.
-- [ ] Confirm `MEETING_LOG.md` changes are intentional.
-- [ ] Confirm `AREAS_TO_IMPROVE.md` changes are intentional.
-- [ ] Confirm `USER_GUIDE.md` should be added to GitHub.
-- [ ] Confirm the PowerPoint deck should be added to GitHub or kept local.
-- [ ] Confirm Week 7 DOCX journal draft stays local-only.
-- [ ] Confirm Week 7 DOCX meeting agenda stays local-only.
-- [ ] Confirm no Week 7 Markdown journal draft is in the GitHub project.
-- [ ] Confirm no Week 7 Markdown agenda draft is in the GitHub project.
-- [ ] Confirm no API keys are in tracked files.
-- [ ] Confirm no `.env` file is tracked.
-- [ ] Confirm no test cache or temporary render folder is tracked.
-- [ ] Push only the files the team wants on GitHub.
-- [ ] Re-check GitHub after push to make sure the files appear correctly.
+- [x] Check Git status before pushing.
+- [x] Confirm `README.md` changes are intentional.
+- [x] Confirm `MILESTONE_TODOS.md` changes are intentional.
+- [x] Confirm `SHARED_DELIVERABLES_CHECKLIST.md` changes are intentional.
+- [x] Confirm `MEETING_LOG.md` changes are intentional.
+- [x] Confirm `AREAS_TO_IMPROVE.md` changes are intentional.
+- [x] Confirm `USER_GUIDE.md` should be added to GitHub.
+- [x] Confirm the PowerPoint deck should be added to GitHub or kept local.
 
 ### Evidence Needed
 
@@ -390,20 +380,20 @@ Why this needs improvement: The team needs to practice the demo before the final
 
 ### Small Tasks
 
-- [ ] Decide the speaking order.
-- [ ] Decide who starts the live demo.
-- [ ] Decide who explains the form fields.
-- [ ] Decide who explains the backend.
-- [ ] Decide who explains the generated report.
-- [ ] Decide who explains 5 Whys.
-- [ ] Decide who explains technical vs executive output.
-- [ ] Decide who explains export options.
-- [ ] Decide who explains testing evidence.
-- [ ] Decide who explains lessons learned.
-- [ ] Practice opening the app.
-- [ ] Practice loading or entering the final demo incident.
-- [ ] Practice generating the report.
-- [ ] Practice switching between technical and executive audience if needed.
+- [x] Decide the speaking order.
+- [x] Decide who starts the live demo.
+- [x] Decide who explains the form fields.
+- [x] Decide who explains the backend.
+- [x] Decide who explains the generated report.
+- [x] Decide who explains 5 Whys.
+- [~] Decide who explains technical vs executive output.
+- [~] Decide who explains export options.
+- [x] Decide who explains testing evidence.
+- [x] Decide who explains lessons learned.
+- [x] Practice opening the app.
+- [x] Practice loading or entering the final demo incident.
+- [x] Practice generating the report.
+- [~] Practice switching between technical and executive audience if needed.
 - [ ] Practice showing the 5 Whys section.
 - [ ] Practice showing recommendations.
 - [ ] Practice using backup screenshots.
@@ -444,7 +434,7 @@ Why this needed improvement: Week 7 prepared the team for Week 8 final report wo
 - [x] Collect Garrett's contribution notes.
 - [x] Collect Mike's contribution notes.
 - [x] Collect meeting log evidence.
-- [~] Collect GitHub evidence.
+- [x] Collect GitHub evidence.
 - [x] Identify missing final report content before Week 8 starts.
 
 ### Evidence Needed
@@ -482,8 +472,7 @@ Use this section during the Week 7 meeting.
 - [x] Did we assign backup report responsibility?
 - [~] Did we confirm speaking roles?
 - [x] Did we confirm the homepage background image is ready?
-- [~] Did we confirm what files should go to GitHub?
 - [x] Did we confirm what files should stay local-only?
 - [x] Did we confirm the Week 7 journal evidence list?
 - [~] Did we choose a demo practice time?
-- [x] Did we identify anything that must wait until Week 8?
+- [~] Did we identify anything that must wait until Week 8?

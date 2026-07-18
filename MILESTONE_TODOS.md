@@ -163,7 +163,7 @@ Deliverable:
 Goal: Prepare the project for final presentation.
 
 - [x] Team: Code and test assigned project tasks as planned for Week 7.
-- [ ] Team: Push completed achievements to GitHub.
+- [x] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect Week 7 progress.
 - [x] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
 - [x] Team: Include meeting log information in the Week 7 journal.
@@ -176,7 +176,7 @@ Goal: Prepare the project for final presentation.
 - [x] Garrett: Confirm report generation works with final demo data.
 - [x] Mike: Polish the homepage and report display.
 - [x] Mike: Confirm the homepage background image displays correctly.
-- [ ] Team: Practice the demo from start to finish.
+- [~] Team: Practice the demo from start to finish.
 - [x] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
 - [~] Brittany: Export the Week 7 journal as a PDF for Canvas submission.
 

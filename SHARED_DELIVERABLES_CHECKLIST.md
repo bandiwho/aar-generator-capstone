@@ -133,7 +133,7 @@ Class: CSC 482 Capstone Project II
 - [x] Backup generated report is ready.
 - [x] Garrett can explain backend workflow.
 - [~] Mike can explain frontend workflow.
-- [x] Brittany can explain project purpose, documentation, and final quality review.
+- [~] Brittany can explain project purpose, documentation, and final quality review.
 
 ## 10. Final Submission
 
@@ -265,7 +265,7 @@ Submission type: PDF file upload
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
 - [x] Code and test planned project tasks for Week 7.
-- [ ] Push completed achievements to GitHub.
+- [x] Push completed achievements to GitHub.
 - [x] Update the README to reflect Week 7 progress.
 - [x] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
 - [x] Include meeting log information in the Week 7 journal.
@@ -278,8 +278,7 @@ Instructor focus: individual contribution, GitHub achievements, testing evidence
 - [x] State whether the team progressed as planned.
 - [x] If the team did not progress as planned, explain the adjustment.
 - [x] Confirm no API key is visible in screenshots.
-- [~] Export the Week 7 journal as a PDF.
-- [ ] Submit the PDF before Friday if possible, or by the Sunday deadline.
+- [x] Export the Week 7 journal as a PDF.
 
 ## 16. Week 8 Canvas Assignments: Final Report, Slides, and Presentation Preparation
 
@@ -335,13 +334,13 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Keep backend and report-generation work updated.
 - [x] Confirm tests pass.
 - [x] Document backend setup and technical behavior.
-- [ ] Prepare backend explanation for demo.
+- [~] Prepare backend explanation for demo.
 - [x] Complete technical/executive report-style backend work.
 - [x] Add 5 Whys and recommendation logic.
 - [x] Confirm tests pass after Week 5 changes.
 - [x] Refine 5 Whys and recommendation quality during Week 6 testing.
-- [ ] Prepare backend explanation for final demo.
-- [ ] Confirm final demo data works before presentation rehearsal.
+- [x] Prepare backend explanation for final demo.
+- [x] Confirm final demo data works before presentation rehearsal.
 
 ### Mike
 
@@ -351,7 +350,7 @@ Purpose: Present the completed AAR Generator and demonstrate the working prototy
 - [x] Prepare frontend explanation for demo.
 - [x] Continue style selection controls and report output formatting.
 - [x] Help capture frontend screenshots for testing evidence.
-- [ ] Confirm final demo flow, homepage/report display, and any visual assets for Week 7.
+- [x] Confirm final demo flow, homepage/report display, and any visual assets for Week 7.
 
 ## Weekly Review Notes
 
@@ -423,15 +422,15 @@ Use this section during team meetings.
   - [x] Backend fallback/mock behavior and frontend validation were reviewed for demo reliability.
   - [x] Screenshot evidence was collected or planned with the reminder that no API key should appear in screenshots.
 - Still needed:
-  - [~] Carry remaining polish items into Week 7 demo preparation.
-  - [~] Use screenshots or Print/Save as PDF for polished final evidence if downloaded HTML looks crowded.
-  - [~] Prepare final presentation roles, demo speech, and backup generated report.
+  - [x] Carry remaining polish items into Week 7 demo preparation.
+  - [x] Use screenshots or Print/Save as PDF for polished final evidence if downloaded HTML looks crowded.
+  - [x] Prepare final presentation roles, demo speech, and backup generated report.
 - Blockers:
   - [x] Brittany had a VS Code/GitHub credential-token issue that interfered with pulling/syncing updates. She logged out and back in, and the issue was treated as resolved.
   - [x] Some local updates appeared to be lost during the GitHub sync problem, so the team needed to re-check the shared planning files and restore missing checklist updates.
-  - [~] Downloaded HTML reports worked, but formatting/readability still needed review before using them as polished final evidence.
+  - [x] Downloaded HTML reports worked, but formatting/readability still needed review before using them as polished final evidence.
   - [x] Screenshots had to avoid exposing the OpenAI API key or private configuration.
-  - [~] Some generated reports passed testing but still needed minor wording or formatting review before final demo use.
+  - [x] Some generated reports passed testing but still needed minor wording or formatting review before final demo use.
 
 ### Week 7
 
@@ -442,17 +441,17 @@ Use this section during team meetings.
   - [x] Week 7 presentation copy was updated for current status, priorities, evidence, and final demo preparation.
 - Still needed:
   - [x] Code and test Week 7 polish, documentation, and demo preparation tasks.
-  - [ ] Push completed achievements to GitHub.
+  - [x] Push completed achievements to GitHub.
   - [x] Update README and meeting log with Week 7 progress.
   - [x] Capture final demo screenshots without showing the API key.
-  - [~] Export the Week 7 journal as a PDF.
+  - [x] Export the Week 7 journal as a PDF.
 - Blockers:
   - [x] Final demo screenshots were captured and organized without showing the OpenAI API key or private configuration.
-  - [ ] Team speaking parts still need to be confirmed so Brittany, Garrett, and Mike each know what to explain during the final presentation.
+  - [x] Team speaking parts still need to be confirmed so Brittany, Garrett, and Mike each know what to explain during the final presentation.
   - [x] The final demo incident was selected and tested before presentation practice.
   - [x] Backup materials were prepared, including screenshots and a backup generated report in case the live demo has a problem.
   - [x] The homepage background image task was updated because the current frontend now uses a full-page homepage background image.
-  - [ ] Week 7 GitHub push/sync still needs to be confirmed after documentation updates are finished.
+  - [x] Week 7 GitHub push/sync still needs to be confirmed after documentation updates are finished.
   - [x] Week 7 journal evidence was collected from the updated checklist, meeting log, screenshots, and demo practice notes.
 
 ### Week 8
