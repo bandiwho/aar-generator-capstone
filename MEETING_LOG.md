@@ -262,23 +262,23 @@ Decisions to record after meeting:
 
 **Chat Timeline Summary: July 14 - July 17**
 
-- July 14
+ July 14
 
 - The team focused on Week 7 submission preparation and final demo evidence. Brittany asked Mike to complete the frontend portion of the presentation so those points could also be used in the final paper. Brittany reviewed the generated report outputs and did not find major content errors. The team planned to finish updates by Friday or Saturday so final screenshots could be added to the final paper.
 
 - Brittany shared both technical and executive generated report outputs for team review. A few formatting issues reappeared, including the PDF export moving close to the page edge and repeated “likely owner” wording. Brittany noted that these looked like simple fixes and planned to review them before copying final files.
 
-- uly 15
+ July 15
 
 - The formatting issues were reviewed and linked to the Python update. Brittany confirmed that the issues were fixed. The team continued reviewing the technical audience output and prepared the Week 7 journal for completion.
 
-- July 16
+ July 16
 
 - The team reviewed final demo workflow and frontend demo documentation through a pull request. Mike’s update added final presentation demo workflow notes, frontend walkthrough guidance, backup plan information, and speaking notes. Brittany clarified that the main focus was the frontend demo explanation and recommended using the same incident for both technical and executive views so the audience could clearly compare the difference between report styles.
 
 - The team also discussed presentation timing. 
 
-- July 17
+ July 17
 
 - The presentation file was unlocked. The team continued preparing for Week 8 work, including final slides, backend explanation, frontend explanation, demo practice, and final presentation readiness.
 
