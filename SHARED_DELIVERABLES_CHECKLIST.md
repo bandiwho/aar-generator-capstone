@@ -90,22 +90,22 @@ Class: CSC 482 Capstone Project II
 
 ## 7. Documentation Deliverables
 
-- [ ] Final project description written.
+- [x] Final project description written.
 - [x] Problem statement written.
 - [x] Solution summary written.
-- [ ] Tool features listed.
-- [ ] Technology stack listed.
+- [x] Tool features listed.
+- [x] Technology stack listed.
 - [x] Setup instructions written.
 - [x] Usage instructions written.
 - [x] Final user guide written.
 - [x] Testing summary written.
-- [ ] Known limitations written.
+- [x] Known limitations written.
 - [x] Future improvements written.
 - [x] Team contribution section written.
-- [ ] Final report completed.
+- [x] Final report completed.
 - [ ] Final report exported as a PDF.
 - [x] Weekly meeting log created.
-- [~] Weekly meeting log included or summarized in the weekly journal, midterm report, and final report.
+- [x] Weekly meeting log included or summarized in the weekly journal, midterm report, and final report.
 
 ## 8. Presentation Deliverables
 
@@ -113,13 +113,13 @@ Class: CSC 482 Capstone Project II
 - [x] Slides drafted.
 - [~] Presentation slides completed.
 - [ ] Presentation slides exported or saved in final submission format.
-- [ ] Project problem explained.
-- [ ] Project solution explained.
-- [ ] Prototype screenshots included.
+- [x] Project problem explained.
+- [x] Project solution explained.
+- [x] Prototype screenshots included.
 - [x] Demo flow included.
 - [x] Team roles included.
 - [~] Lessons learned included.
-- [ ] Final slides reviewed by Brittany.
+- [~] Final slides reviewed by Brittany.
 - [ ] Team practiced presentation at least once.
 
 ## 9. Demo Readiness
@@ -127,26 +127,26 @@ Class: CSC 482 Capstone Project II
 - [x] Demo machine has Python installed.
 - [x] Demo machine has required packages installed.
 - [x] `updated_prototype` runs successfully.
-- [ ] Demo URL opens successfully.
-- [ ] Sample incident is ready.
-- [ ] Backup screenshots are ready.
-- [ ] Backup generated report is ready.
-- [ ] Garrett can explain backend workflow.
-- [ ] Mike can explain frontend workflow.
-- [ ] Brittany can explain project purpose, documentation, and final quality review.
+- [x] Demo URL opens successfully.
+- [x] Sample incident is ready.
+- [x] Backup screenshots are ready.
+- [x] Backup generated report is ready.
+- [x] Garrett can explain backend workflow.
+- [~] Mike can explain frontend workflow.
+- [x] Brittany can explain project purpose, documentation, and final quality review.
 
 ## 10. Final Submission
 
-- [ ] Final prototype files ready.
-- [ ] Final README ready.
-- [ ] Final planning documents ready.
-- [ ] Final screenshots ready.
-- [ ] Final presentation ready.
-- [ ] Final report ready.
-- [ ] Presentation slides ready.
-- [ ] Final presentation preparation completed.
+- [~] Final prototype files ready.
+- [x] Final README ready.
+- [x] Final planning documents ready.
+- [x] Final screenshots ready.
+- [~] Final presentation ready.
+- [x] Final report ready.
+- [~] Presentation slides ready.
+- [~] Final presentation preparation completed.
 - [ ] GitHub repository is clean and organized.
-- [ ] No API keys or secrets are uploaded.
+- [~] No API keys or secrets are uploaded.
 - [ ] Draft files are separated from final files.
 - [ ] Brittany completes final submission check.
 
@@ -264,21 +264,21 @@ Expected due date: Sunday by 11:59 PM
 Submission type: PDF file upload  
 Instructor focus: individual contribution, GitHub achievements, testing evidence, and meeting attendance.
 
-- [~] Code and test planned project tasks for Week 7.
+- [x] Code and test planned project tasks for Week 7.
 - [ ] Push completed achievements to GitHub.
 - [x] Update the README to reflect Week 7 progress.
-- [ ] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
-- [~] Include meeting log information in the Week 7 journal.
-- [~] Write milestones achieved this week with brief descriptions.
-- [~] Write subtasks completed this week with brief descriptions.
-- [~] Provide detailed testing descriptions for completed subtasks.
-- [ ] Add demo screenshots as evidence.
-- [~] Write lessons learned.
-- [~] Document the contribution of Brittany, Garrett, and Mike.
-- [~] State whether the team progressed as planned.
-- [~] If the team did not progress as planned, explain the adjustment.
-- [ ] Confirm no API key is visible in screenshots.
-- [ ] Export the Week 7 journal as a PDF.
+- [x] Update the meeting log with date/time, attendance, topics, assigned tasks, and completion status.
+- [x] Include meeting log information in the Week 7 journal.
+- [x] Write milestones achieved this week with brief descriptions.
+- [x] Write subtasks completed this week with brief descriptions.
+- [x] Provide detailed testing descriptions for completed subtasks.
+- [x] Add demo screenshots as evidence.
+- [x] Write lessons learned.
+- [x] Document the contribution of Brittany, Garrett, and Mike.
+- [x] State whether the team progressed as planned.
+- [x] If the team did not progress as planned, explain the adjustment.
+- [x] Confirm no API key is visible in screenshots.
+- [~] Export the Week 7 journal as a PDF.
 - [ ] Submit the PDF before Friday if possible, or by the Sunday deadline.
 
 ## 16. Week 8 Canvas Assignments: Final Report, Slides, and Presentation Preparation
@@ -287,8 +287,8 @@ Week: July 20 - July 24
 Expected due date for final report and slides: July 26  
 Instructor focus: completed final report, completed presentation slides, and preparation for the final presentation.
 
-- [ ] Complete the final report.
-- [ ] Confirm the final report includes milestones achieved, completed subtasks, testing evidence, lessons learned, team member contributions, and meeting log evidence.
+- [x] Complete the final report.
+- [x] Confirm the final report includes milestones achieved, completed subtasks, testing evidence, lessons learned, team member contributions, and meeting log evidence.
 - [ ] Export the final report as a PDF.
 - [ ] Complete the presentation slides.
 - [ ] Confirm the slides include project problem, solution, prototype workflow, screenshots, testing summary, lessons learned, and team roles.
@@ -296,8 +296,8 @@ Instructor focus: completed final report, completed presentation slides, and pre
 - [ ] Complete final presentation preparation.
 - [ ] Assign speaking roles for Brittany, Garrett, and Mike.
 - [ ] Practice the full demo from start to finish.
-- [ ] Prepare backup screenshots and a backup generated report.
-- [ ] Confirm no API key is visible in screenshots, report files, slides, or demo materials.
+- [x] Prepare backup screenshots and a backup generated report.
+- [~] Confirm no API key is visible in screenshots, report files, slides, or demo materials.
 - [ ] Push final achievements to GitHub.
 
 ## 17. Final Presentation: July 27 - July 28
@@ -441,26 +441,26 @@ Use this section during team meetings.
   - [x] Week 7 journal draft was started with a signature page.
   - [x] Week 7 presentation copy was updated for current status, priorities, evidence, and final demo preparation.
 - Still needed:
-  - [~] Code and test Week 7 polish, documentation, and demo preparation tasks.
+  - [x] Code and test Week 7 polish, documentation, and demo preparation tasks.
   - [ ] Push completed achievements to GitHub.
-  - [~] Update README and meeting log with Week 7 progress.
-  - [ ] Capture final demo screenshots without showing the API key.
-  - [ ] Export the Week 7 journal as a PDF.
+  - [x] Update README and meeting log with Week 7 progress.
+  - [x] Capture final demo screenshots without showing the API key.
+  - [~] Export the Week 7 journal as a PDF.
 - Blockers:
-  - [ ] Final demo screenshots still need to be captured and organized without showing the OpenAI API key or private configuration.
+  - [x] Final demo screenshots were captured and organized without showing the OpenAI API key or private configuration.
   - [ ] Team speaking parts still need to be confirmed so Brittany, Garrett, and Mike each know what to explain during the final presentation.
-  - [ ] The final demo incident needs to be selected and tested one more time before presentation practice.
-  - [ ] Backup materials still need to be prepared, including screenshots and a backup generated report in case the live demo has a problem.
+  - [x] The final demo incident was selected and tested before presentation practice.
+  - [x] Backup materials were prepared, including screenshots and a backup generated report in case the live demo has a problem.
   - [x] The homepage background image task was updated because the current frontend now uses a full-page homepage background image.
   - [ ] Week 7 GitHub push/sync still needs to be confirmed after documentation updates are finished.
-  - [ ] Week 7 journal evidence still needs to be collected from the updated checklist, meeting log, screenshots, and demo practice notes.
+  - [x] Week 7 journal evidence was collected from the updated checklist, meeting log, screenshots, and demo practice notes.
 
 ### Week 8
 
 - Completed:
 - Still needed:
-  - [ ] Complete final report.
-  - [ ] Complete presentation slides.
+  - [x] Complete final report.
+  - [~] Complete presentation slides.
   - [ ] Complete final presentation preparation.
   - [ ] Practice the final demo.
   - [ ] Push final achievements to GitHub.

@@ -162,46 +162,46 @@ Deliverable:
 
 Goal: Prepare the project for final presentation.
 
-- [~] Team: Code and test assigned project tasks as planned for Week 7.
+- [x] Team: Code and test assigned project tasks as planned for Week 7.
 - [ ] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect Week 7 progress.
-- [ ] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
-- [~] Team: Include meeting log information in the Week 7 journal.
-- [ ] Team: Collect demo screenshots without showing the OpenAI API key.
-- [~] Brittany: Finalize project documentation.
-- [~] Brittany: Write the final demo script.
+- [x] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
+- [x] Team: Include meeting log information in the Week 7 journal.
+- [x] Team: Collect demo screenshots without showing the OpenAI API key.
+- [x] Brittany: Finalize project documentation.
+- [x] Brittany: Write the final demo script.
 - [~] Brittany: Prepare presentation slides.
-- [ ] Brittany: Capture screenshots for the presentation.
-- [ ] Garrett: Clean up backend code and comments.
-- [ ] Garrett: Confirm report generation works with final demo data.
+- [x] Brittany: Capture screenshots for the presentation.
+- [x] Garrett: Clean up backend code and comments.
+- [x] Garrett: Confirm report generation works with final demo data.
 - [x] Mike: Polish the homepage and report display.
 - [x] Mike: Confirm the homepage background image displays correctly.
 - [ ] Team: Practice the demo from start to finish.
-- [~] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
-- [ ] Brittany: Export the Week 7 journal as a PDF for Canvas submission.
+- [x] Brittany: Write the Week 7 journal sections for milestones, subtasks, testing evidence, lessons learned, contributions, and progress compared to plan.
+- [~] Brittany: Export the Week 7 journal as a PDF for Canvas submission.
 
 Deliverable:
 
-- [ ] Team: The app, documentation, slides, and demo script are ready for final review.
-- [ ] Team: The Week 7 journal includes contribution evidence for Brittany, Garrett, and Mike.
+- [x] Team: The app, documentation, slides, and demo script are ready for final review.
+- [x] Team: The Week 7 journal includes contribution evidence for Brittany, Garrett, and Mike.
 
 ## Week 8: Final Testing and Submission
 
 Goal: Finish the final report, presentation slides, final presentation preparation, final testing, and submission package.
 
-- [ ] Brittany: Run the final quality review.
-- [ ] Brittany: Confirm grammar, formatting, and documentation quality.
-- [ ] Brittany: Confirm the team can explain each project section.
-- [ ] Brittany: Finalize the final report.
-- [ ] Brittany: Confirm the final report includes milestones, testing evidence, lessons learned, team contributions, and meeting log evidence.
-- [ ] Brittany: Finalize the presentation slides.
-- [ ] Brittany: Confirm the slides include project problem, solution, prototype workflow, screenshots, testing, lessons learned, and team roles.
-- [ ] Garrett: Confirm backend and LLM generation are working.
-- [ ] Garrett: Prepare a backup plan if the LLM service fails during the demo.
-- [ ] Garrett: Prepare the backend and LLM explanation for the final presentation.
-- [ ] Mike: Confirm the frontend works on the presentation machine.
-- [ ] Mike: Confirm the final demo flow is smooth.
-- [ ] Mike: Prepare the frontend and demo workflow explanation for the final presentation.
+- [~] Brittany: Run the final quality review.
+- [~] Brittany: Confirm grammar, formatting, and documentation quality.
+- [~] Brittany: Confirm the team can explain each project section.
+- [x] Brittany: Finalize the final report.
+- [x] Brittany: Confirm the final report includes milestones, testing evidence, lessons learned, team contributions, and meeting log evidence.
+- [~] Brittany: Finalize the presentation slides.
+- [~] Brittany: Confirm the slides include project problem, solution, prototype workflow, screenshots, testing, lessons learned, and team roles.
+- [x] Garrett: Confirm backend and LLM generation are working.
+- [x] Garrett: Prepare a backup plan if the LLM service fails during the demo.
+- [x] Garrett: Prepare the backend and LLM explanation for the final presentation.
+- [~] Mike: Confirm the frontend works on the presentation machine.
+- [~] Mike: Confirm the final demo flow is smooth.
+- [~] Mike: Prepare the frontend and demo workflow explanation for the final presentation.
 - [ ] Team: Complete final presentation practice.
 - [ ] Team: Prepare final presentation roles for July 27-28.
 - [ ] Team: Submit final files.
