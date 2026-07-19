@@ -591,17 +591,15 @@ button:disabled,
 }
 
 .attention-heading {
-  border-top: 1px solid #e6c981;
-  padding-top: 14px;
-  color: #725012;
+  color: var(--steel);
 }
 
 .attention-heading + ul,
 .attention-heading + ol,
 .attention-heading + p {
-  border-left: 3px solid #e6c981;
-  background: #fffaf0;
-  padding: 10px 12px;
+  border-left: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .back-to-top {
@@ -948,6 +946,10 @@ pre {
 }
 
 @media print {
+  @page {
+    margin: 0.65in;
+  }
+
   :root {
     --bg: #ffffff;
     --panel: #ffffff;
@@ -964,6 +966,7 @@ pre {
 
   .layout {
     width: 100%;
+    max-width: none;
     padding: 0;
   }
 
@@ -983,13 +986,16 @@ pre {
 
   .workspace {
     display: block;
+    width: 100%;
   }
 
   .panel,
   .output {
     border: 0;
     box-shadow: none;
-    padding: 0;
+    box-sizing: border-box;
+    padding: 0.35in;
+    width: 100%;
   }
 
   .output {
@@ -1028,6 +1034,7 @@ pre {
   .rendered-report {
     display: block;
     padding: 0;
+    max-width: none;
   }
 
   .rendered-report h3,

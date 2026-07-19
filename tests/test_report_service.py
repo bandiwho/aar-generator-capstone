@@ -307,6 +307,33 @@ Owner: Exchange/M365 Security Operations
     assert "\nOwner:" not in result.report_markdown
 
 
+def test_report_service_repairs_broken_inline_owner_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_broken_inline_owner_labels(prompt):
+        return """
+## Recommendations and Owners
+
+- Enforce phishing-resistant authentication for all users. Owner:** Identity & Access Management Team
+- Complete SharePoint access auditing. **Owner: Microsoft 365 Governance Team
+
+## 5 Whys Root Cause Analysis
+
+5. Why were detection and prevention controls not triggered earlier enough to stop mailbox actions? Because mailbox rule monitoring needs improvement.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_broken_inline_owner_labels)
+
+    result = service.generate_report(build_incident())
+
+    assert " Owner:**" not in result.report_markdown
+    assert "**Owner: Microsoft" not in result.report_markdown
+    assert "- Enforce phishing-resistant authentication for all users. **Owner:** Identity & Access Management Team" in result.report_markdown
+    assert "- Complete SharePoint access auditing. **Owner:** Microsoft 365 Governance Team" in result.report_markdown
+    assert "Why did detection and prevention controls not trigger early enough to stop mailbox actions?" in result.report_markdown
+
+
 def test_report_service_rewrites_five_whys_heading_answers(monkeypatch):
     settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
     service = ReportService(settings)

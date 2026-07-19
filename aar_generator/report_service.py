@@ -138,6 +138,7 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _clean_report_markdown(report_markdown: str) -> str:
         report_markdown = ReportService._normalize_report_text(report_markdown)
+        report_markdown = ReportService._normalize_markdown_labels(report_markdown)
         report_markdown = ReportService._normalize_five_whys_heading_answers(report_markdown)
         report_markdown = ReportService._interleave_five_whys_answers(report_markdown)
         report_markdown = ReportService._pair_open_questions_with_evidence(report_markdown)
@@ -204,6 +205,38 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
         report_text = report_text.replace("WebAuthicator", "WebAuthn authenticator")
         report_text = report_text.replace("collateral platforms", "collaboration platforms")
         return report_text
+
+    @staticmethod
+    def _normalize_markdown_labels(report_markdown: str) -> str:
+        report_markdown = re.sub(
+            r"(?<!\*)\bOwner:\s*\*\*\s*",
+            "**Owner:** ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"\*\*\s*Owner:\s*(?!\*\*)",
+            "**Owner:** ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"(?<!\*)\bEvidence:\s*\*\*\s*",
+            "**Evidence:** ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"\*\*\s*Evidence:\s*(?!\*\*)",
+            "**Evidence:** ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = report_markdown.replace(
+            "Why were detection and prevention controls not triggered earlier enough to stop mailbox actions?",
+            "Why did detection and prevention controls not trigger early enough to stop mailbox actions?",
+        )
+        return report_markdown
 
     @staticmethod
     def _interleave_five_whys_answers(report_markdown: str) -> str:
