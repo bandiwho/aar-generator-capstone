@@ -42,7 +42,9 @@ The app can run in mock mode without an API key. If the OpenAI API is configured
 
 ## Start The App On Windows
 
-Open the `updated_prototype` folder in VS Code. In the VS Code terminal, run:
+Easiest option: double-click `Start_Demo.cmd` in the `updated_prototype` folder. It opens the server in a PowerShell window and then opens the app in the browser.
+
+Manual option: open the `updated_prototype` folder in VS Code. In the VS Code terminal, run:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
