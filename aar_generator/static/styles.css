@@ -590,6 +590,11 @@ button:disabled,
   margin-top: 5px;
 }
 
+.rendered-report .open-question-evidence {
+  margin: 4px 0 0;
+  color: var(--text);
+}
+
 .attention-heading {
   color: var(--steel);
 }

@@ -56,20 +56,22 @@ Build a lightweight web-based tool that helps users create professional after-ac
 - [x] 5 Whys root-cause analysis and recommendations added to the generated report structure.
 - [x] Week 6 validation, error handling, fallback behavior, sample incident testing, and journal submission are complete.
 - [x] Week 7 documentation, demo screenshots, presentation update, meeting evidence, journal evidence, and report polish are complete.
-- [~] Week 8 final report, presentation slides, demo practice, final submission organization, and GitHub push confirmation are in progress.
+- [~] Week 8 final presentation polish, demo practice, final submission organization, and GitHub push confirmation are in progress.
+- [x] Final report content has been completed for final review and submission preparation.
+- [x] Latest automated verification confirms the project test suite passes with 19 tests and 2 non-failing warnings.
 
 ## Current Week Focus
 
 Week 7 completion status: the team moved from feature-building into final-readiness work. Documentation, testing evidence, screenshot planning, report formatting polish, Week 7 journal evidence, and backup demo planning were completed or prepared for final submission use.
 
-Current Week 8 focus: finish the final report package, finalize presentation slides after instructor feedback, practice the demo, confirm speaking roles, push final source/documentation updates to GitHub, and prepare backup screenshots or generated reports in case the live demo has an issue.
+Current Week 8 focus: finalize the presentation slides, practice the live demo, confirm speaking roles, push final source/documentation updates to GitHub, and keep backup screenshots or generated reports ready in case the live demo has an issue.
 
 Current final-readiness responsibilities:
 
 | Member | Current Focus | Evidence Needed |
 |---|---|---|
-| Brittany | Final quality review, final report organization, presentation updates, screenshot evidence, journal evidence, and submission readiness. | Final report, Week 7 journal, screenshot evidence, updated checklist files, presentation notes, and submission review notes. |
-| Garrett | Backend explanation, LLM/report-generation workflow, fallback behavior, and final demo data confirmation. | Backend talking points, test confirmation, fallback explanation, and final demo report confirmation. |
+| Brittany | Final quality review, final presentation polish, final report organization, screenshot evidence, and submission readiness. | Final report, screenshot evidence, updated checklist files, presentation notes, and submission review notes. |
+| Garrett | Backend explanation, LLM/report-generation workflow, fallback behavior, owner-label formatting, and final demo data confirmation. | Backend talking points, passing tests, fallback explanation, final demo report confirmation, and report-formatting fixes. |
 | Mike | Frontend demo flow, report display, copy/download/export behavior, and visual polish confirmation. | Frontend walkthrough notes, screenshots, demo flow confirmation, and homepage/report display confirmation. |
 | Team | Final demo incident, speaking roles, backup materials, GitHub sync, and presentation practice. | Demo rehearsal notes, backup screenshots, backup generated report, GitHub sync confirmation, and final contribution evidence. |
 
@@ -173,9 +175,9 @@ Goal: Finish the prototype, final report, presentation slides, screenshots, and 
 | Done | Member | Task | Outputs Produced | Measurement |
 |---|---|---|---|---|
 | [~] | Brittany | Run final quality review | Final grammar, formatting, and requirement check | Submission materials are clean and organized |
-| [~] | Brittany | Finalize final report | Final report PDF and supporting evidence | Report includes project summary, milestones, testing, lessons learned, and team contributions |
+| [x] | Brittany | Finalize final report | Final report PDF and supporting evidence | Report includes project summary, milestones, testing, lessons learned, and team contributions |
 | [~] | Brittany | Finalize presentation slides | Completed presentation deck | Slides cover problem, solution, demo workflow, testing, lessons learned, and contributions |
-| [~] | Garrett | Confirm backend/report generation | Final backend test notes | Report generation works with final demo data |
+| [x] | Garrett | Confirm backend/report generation | Final backend test notes | Report generation works with final demo data |
 | [~] | Mike | Confirm frontend/demo workflow | Final interface check and demo screenshots | Prototype is ready for presentation |
 | [ ] | Team | Complete final presentation preparation | Full demo rehearsal, speaker roles, and backup plan | Team can present within the assigned time on July 27-28 |
 

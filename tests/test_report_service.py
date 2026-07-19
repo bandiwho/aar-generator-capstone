@@ -334,6 +334,53 @@ def test_report_service_repairs_broken_inline_owner_labels(monkeypatch):
     assert "Why did detection and prevention controls not trigger early enough to stop mailbox actions?" in result.report_markdown
 
 
+def test_report_service_cleans_numbered_heading_recommendation_owner_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_numbered_heading_and_trailing_owner_markers(prompt):
+        return """
+## 11. Recommendations and Owners
+
+- Enforce phishing-resistant authentication, **Owner:** Identity Security Engineering Team**.
+- Add mailbox rule monitoring, **Owner:** Microsoft 365 Security Operations Team**.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_numbered_heading_and_trailing_owner_markers)
+
+    result = service.generate_report(build_incident())
+
+    assert "**Owner:** Identity Security Engineering Team." in result.report_markdown
+    assert "**Owner:** Microsoft 365 Security Operations Team." in result.report_markdown
+    assert "Team**" not in result.report_markdown
+
+
+def test_report_service_cleans_broken_evidence_dash_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_broken_evidence_dash_labels(prompt):
+        return """
+## Impact Assessment
+
+**Confirmed impacts based on available Evidence: - The **brittany.employee mailbox** was accessed via an **unfamiliar sign-in**.
+
+## Evidence and Log Observations
+
+- **Azure AD Sign-in Evidence: - A successful Office365 sign-in occurred for **brittany.employee** from an **unfamiliar IP address**.
+- **Defender alert Evidence: - A **high-severity alert** indicated that the user clicked a phishing URL.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_broken_evidence_dash_labels)
+
+    result = service.generate_report(build_incident())
+
+    assert "**Confirmed impacts based on available Evidence:** The **brittany.employee mailbox**" in result.report_markdown
+    assert "- **Azure AD Sign-in Evidence:** A successful Office365 sign-in occurred for **brittany.employee**" in result.report_markdown
+    assert "- **Defender alert Evidence:** A **high-severity alert** indicated" in result.report_markdown
+    assert "Evidence: -" not in result.report_markdown
+
+
 def test_report_service_rewrites_five_whys_heading_answers(monkeypatch):
     settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
     service = ReportService(settings)
@@ -382,6 +429,29 @@ Because the sign-in resulted in a successful session.
     assert "**Why was the account compromised?**\nBecause" not in result.report_markdown
 
 
+def test_report_service_interleaves_numbered_heading_five_whys_answers(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_numbered_heading_five_whys(prompt):
+        return """
+## 7. 5 Whys Root Cause Analysis
+
+1. **Why was the account compromised?**
+2. **Why could the attacker authenticate after credential submission?**
+Because credentials were entered into a fake Microsoft 365 login page.
+Because the attacker was able to establish a successful session.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_numbered_heading_five_whys)
+
+    result = service.generate_report(build_incident())
+
+    assert "1. Why was the account compromised? Because credentials were entered" in result.report_markdown
+    assert "2. Why could the attacker authenticate after credential submission? Because the attacker was able" in result.report_markdown
+    assert "**Why was the account compromised?**" not in result.report_markdown
+
+
 def test_report_service_normalizes_sample_account_typo(monkeypatch):
     settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
     service = ReportService(settings)
@@ -419,6 +489,72 @@ Evidence: SharePoint audit review is pending.
     assert "- Did the attacker access or download SharePoint files?\n  Evidence: SharePoint audit review is pending." in result.report_markdown
 
 
+def test_report_service_splits_inline_open_question_evidence_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_inline_open_question_evidence(prompt):
+        return """
+## Open Questions
+
+- Was MFA challenged, bypassed, or not enabled during the suspicious login?Evidence:** Provided logs show success but not MFA outcome.
+- Did the attacker access or download SharePoint files?**Evidence:** SharePoint review is pending.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_inline_open_question_evidence)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Was MFA challenged, bypassed, or not enabled during the suspicious login?\n  Evidence: Provided logs show success" in result.report_markdown
+    assert "- Did the attacker access or download SharePoint files?\n  Evidence: SharePoint review is pending." in result.report_markdown
+    assert "?Evidence" not in result.report_markdown
+    assert "Evidence:**" not in result.report_markdown
+
+
+def test_report_service_splits_bold_open_question_evidence_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_bold_inline_open_question_evidence(prompt):
+        return """
+## Open Questions
+
+- **Was MFA challenged, bypassed, or not enabled during the suspicious login?Evidence: The report states MFA registration was reviewed, but it does not state whether MFA succeeded at the **8:26 AM** sign-in.
+- **Did the attacker access or download SharePoint files during the compromise window?Evidence: SharePoint audit review is explicitly marked as **pending** for file access after the login time.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_bold_inline_open_question_evidence)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Was MFA challenged, bypassed, or not enabled during the suspicious login?\n  Evidence: The report states MFA registration was reviewed" in result.report_markdown
+    assert "- Did the attacker access or download SharePoint files during the compromise window?\n  Evidence: SharePoint audit review is explicitly marked as **pending**" in result.report_markdown
+    assert "?Evidence" not in result.report_markdown
+    assert "login?Evidence" not in result.report_markdown
+
+
+def test_report_service_cleans_unclosed_bold_open_question_evidence_labels(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_unclosed_bold_open_question_evidence(prompt):
+        return """
+## 13. Open Questions
+
+- **Was MFA challenged, bypassed, or not enabled during the suspicious login?Evidence: The incident notes password reset and MFA registration review, but does not state the MFA outcome.
+- **Did the attacker access or download SharePoint files after the suspicious login time?Evidence: SharePoint audit review is explicitly pending.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_unclosed_bold_open_question_evidence)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Was MFA challenged, bypassed, or not enabled during the suspicious login?\n  Evidence: The incident notes password reset" in result.report_markdown
+    assert "- Did the attacker access or download SharePoint files after the suspicious login time?\n  Evidence: SharePoint audit review is explicitly pending." in result.report_markdown
+    assert "- **Was MFA" not in result.report_markdown
+    assert "?Evidence" not in result.report_markdown
+
+
 def test_report_service_pairs_open_question_evidence_with_each_question(monkeypatch):
     settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
     service = ReportService(settings)
@@ -445,3 +581,25 @@ Evidence: No outbound transfer logs are included in the provided snippets.
     assert "â€œ" not in result.report_markdown
     assert "â€™" not in result.report_markdown
     assert "â†’" not in result.report_markdown
+
+
+def test_report_service_pairs_numbered_heading_open_question_evidence(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_numbered_heading_open_questions(prompt):
+        return """
+## 13. Open Questions
+
+- Was MFA challenged, bypassed, or not enabled during the suspicious login?
+- Did the attacker access or download SharePoint files?
+Evidence: MFA registration was reviewed, but the outcome is missing.
+Evidence: SharePoint audit review is pending.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_numbered_heading_open_questions)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Was MFA challenged, bypassed, or not enabled during the suspicious login?\n  Evidence: MFA registration was reviewed" in result.report_markdown
+    assert "- Did the attacker access or download SharePoint files?\n  Evidence: SharePoint audit review is pending." in result.report_markdown
