@@ -163,7 +163,7 @@ Deliverable:
 Goal: Prepare the project for final presentation.
 
 - [x] Team: Code and test assigned project tasks as planned for Week 7.
-- [ ] Team: Push completed achievements to GitHub.
+- [~] Team: Push completed achievements to GitHub.
 - [x] Team: Update the README to reflect Week 7 progress.
 - [x] Team: Update the meeting log with attendance, topics, assigned tasks, and completion status.
 - [x] Team: Include meeting log information in the Week 7 journal.
@@ -194,8 +194,10 @@ Goal: Finish the final report, presentation slides, final presentation preparati
 - [~] Brittany: Confirm the team can explain each project section.
 - [x] Brittany: Finalize the final report.
 - [x] Brittany: Confirm the final report includes milestones, testing evidence, lessons learned, team contributions, and meeting log evidence.
-- [~] Brittany: Finalize the presentation slides.
-- [~] Brittany: Confirm the slides include project problem, solution, prototype workflow, screenshots, testing, lessons learned, and team roles.
+- [x] Brittany: Confirm the final paper draft is written and signed.
+- [~] Brittany: Finalize the presentation slides; only a few slides remain.
+- [x] Brittany: Confirm the slides include project problem, solution, prototype workflow, screenshots, testing, lessons learned, and team roles.
+- [x] Brittany: Confirm automated testing evidence shows 27 passed tests and 2 non-failing warnings.
 - [x] Garrett: Confirm backend and LLM generation are working.
 - [x] Garrett: Prepare a backup plan if the LLM service fails during the demo.
 - [x] Garrett: Prepare the backend and LLM explanation for the final presentation.
@@ -208,7 +210,7 @@ Goal: Finish the final report, presentation slides, final presentation preparati
 
 Deliverable:
 
-- [ ] Team: Final application, report, slides, and demo are complete.
+- [~] Team: Final application, signed report draft, mostly completed slides, and demo materials are complete; remaining work is final slide polish, demo practice, GitHub push confirmation, and final submission.
 
 ## Final Presentation: July 27 - July 28
 
@@ -241,4 +243,21 @@ Use this routine during each team meeting:
 3. Add blockers beside any delayed task.
 4. Assign a clear owner to every new task.
 5. End the meeting with each person naming their next task.
+
+## Current Week 8 Review Notes
+
+- Completed:
+  - [x] Final paper draft was written and signed.
+  - [x] Final report includes milestones, subtasks, testing evidence, lessons learned, team contributions, progress compared to plan, and signatures.
+  - [x] Automated test evidence was captured with 27 passed tests and 2 non-failing warnings.
+  - [x] Presentation deck is mostly complete and only missing a few slides/final review items.
+- Still needed:
+  - [~] Complete the last remaining presentation slides.
+  - [ ] Complete final presentation preparation.
+  - [ ] Practice the final demo.
+  - [ ] Push final achievements to GitHub.
+  - [ ] Confirm no API keys are visible in final materials.
+- Blockers:
+  - [~] Presentation is not fully finished yet because a few slides still need final content and review.
+  - [~] GitHub push/sync still needs final confirmation before submission.
 

@@ -555,6 +555,28 @@ def test_report_service_cleans_unclosed_bold_open_question_evidence_labels(monke
     assert "?Evidence" not in result.report_markdown
 
 
+def test_report_service_removes_dangling_bold_markers_from_open_question_evidence(monkeypatch):
+    settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
+    service = ReportService(settings)
+
+    def generate_with_dangling_open_question_evidence_bold(prompt):
+        return """
+## 13. Open Questions
+
+- Did any other users enter credentials into the phishing page?Evidence: Message trace shows the phishing email was delivered to 14 recipients**, but no evidence is provided confirming whether any of them submitted credentials.
+- How long was the forwarding rule active before removal?Evidence: Exchange audit shows rule creation at 8:31 AM, and rule removal is noted at 10:15 AM**, but exact timestamps for the removal event are not included.
+""".strip()
+
+    monkeypatch.setattr(service.llm_client, "generate", generate_with_dangling_open_question_evidence_bold)
+
+    result = service.generate_report(build_incident())
+
+    assert "- Did any other users enter credentials into the phishing page?\n  Evidence: Message trace shows the phishing email was delivered to 14 recipients, but no evidence" in result.report_markdown
+    assert "- How long was the forwarding rule active before removal?\n  Evidence: Exchange audit shows rule creation at 8:31 AM, and rule removal is noted at 10:15 AM, but exact timestamps" in result.report_markdown
+    assert "recipients**" not in result.report_markdown
+    assert "10:15 AM**" not in result.report_markdown
+
+
 def test_report_service_pairs_open_question_evidence_with_each_question(monkeypatch):
     settings = Settings(mock_llm=False, openai_api_key="test-key", openai_model="test-model")
     service = ReportService(settings)

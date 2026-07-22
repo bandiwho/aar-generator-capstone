@@ -79,6 +79,7 @@ Class: CSC 482 Capstone Project II
 ## 6. Testing Evidence
 
 - [x] Backend/report-generation test passes.
+- [x] Automated test suite screenshot captured with 27 passed tests and 2 non-failing warnings.
 - [x] Homepage loads successfully.
 - [x] Report form generates output.
 - [x] Technical report style tested.
@@ -86,7 +87,7 @@ Class: CSC 482 Capstone Project II
 - [x] Sample incident tested.
 - [x] Error handling tested with API/model fallback behavior.
 - [x] Screenshots saved for final documentation.
-- [~] Test notes saved for final submission.
+- [x] Test notes saved for final submission.
 
 ## 7. Documentation Deliverables
 
@@ -103,22 +104,23 @@ Class: CSC 482 Capstone Project II
 - [x] Future improvements written.
 - [x] Team contribution section written.
 - [x] Final report completed.
+- [x] Final report draft written and signed.
 - [ ] Final report exported as a PDF.
 - [x] Weekly meeting log created.
 - [x] Weekly meeting log included or summarized in the weekly journal, midterm report, and final report.
 
 ## 8. Presentation Deliverables
 
-- [~] Final presentation outline created.
+- [x] Final presentation outline created.
 - [x] Slides drafted.
-- [~] Presentation slides completed.
+- [~] Presentation slides completed; only a few slides remain.
 - [ ] Presentation slides exported or saved in final submission format.
 - [x] Project problem explained.
 - [x] Project solution explained.
 - [x] Prototype screenshots included.
 - [x] Demo flow included.
 - [x] Team roles included.
-- [~] Lessons learned included.
+- [x] Lessons learned included.
 - [~] Final slides reviewed by Brittany.
 - [ ] Team practiced presentation at least once.
 
@@ -137,14 +139,14 @@ Class: CSC 482 Capstone Project II
 
 ## 10. Final Submission
 
-- [~] Final prototype files ready.
+- [x] Final prototype files ready.
 - [x] Final README ready.
 - [x] Final planning documents ready.
 - [x] Final screenshots ready.
-- [~] Final presentation ready.
+- [~] Final presentation ready; only a few slides remain.
 - [x] Final report ready.
-- [~] Presentation slides ready.
-- [~] Final presentation preparation completed.
+- [~] Presentation slides ready; final slide polish remains.
+- [~] Final presentation preparation completed; full practice still needed.
 - [ ] GitHub repository is clean and organized.
 - [~] No API keys or secrets are uploaded.
 - [ ] Draft files are separated from final files.
@@ -289,12 +291,13 @@ Instructor focus: completed final report, completed presentation slides, and pre
 
 - [x] Complete the final report.
 - [x] Confirm the final report includes milestones achieved, completed subtasks, testing evidence, lessons learned, team member contributions, and meeting log evidence.
+- [x] Confirm the final report draft is signed by Brittany, Garrett, and Mike.
 - [ ] Export the final report as a PDF.
-- [ ] Complete the presentation slides.
-- [ ] Confirm the slides include project problem, solution, prototype workflow, screenshots, testing summary, lessons learned, and team roles.
+- [~] Complete the presentation slides; only a few slides remain.
+- [x] Confirm the slides include project problem, solution, prototype workflow, screenshots, testing summary, lessons learned, and team roles.
 - [ ] Save the slides in the required final format.
 - [ ] Complete final presentation preparation.
-- [ ] Assign speaking roles for Brittany, Garrett, and Mike.
+- [~] Assign speaking roles for Brittany, Garrett, and Mike.
 - [ ] Practice the full demo from start to finish.
 - [x] Prepare backup screenshots and a backup generated report.
 - [~] Confirm no API key is visible in screenshots, report files, slides, or demo materials.
