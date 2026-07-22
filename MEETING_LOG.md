@@ -285,7 +285,10 @@ Decisions to record after meeting:
 ### Week 8 Meeting
 
 Date and time: Tuesday, July 21, 2026, 6:30 PM
+
+The Week 8 meeting was moved to the weekend so the team could finish the remaining presentation slides before practicing. The team used Microsoft Teams chat on Tuesday to confirm progress, review final report status, discuss remaining presentation work, and keep everyone updated. This was sufficient for the Week 8 check-in because the main remaining task was presentation practice. The team agreed that practicing closer to the final presentation date would allow better preparation and a smoother run-through.
 Location: Team meeting and Microsoft Teams follow-up chat
+
 Planned attendees: Brittany, Garrett, Mike
 Absences: To be recorded after meeting
 
