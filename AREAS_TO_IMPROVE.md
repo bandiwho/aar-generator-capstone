@@ -41,7 +41,7 @@ Status key:
 - [x] Regenerate final technical and executive reports after the latest formatting fixes.
 - [x] Re-check Save as PDF output, downloaded HTML output, and owner-label formatting.
 - [ ] Push final documentation and code changes to GitHub after review.
-- [ ] Confirm no API key, `.env` file, terminal secret, or private configuration appears in screenshots or final materials.
+- [x] Confirm no API key, `.env` file, terminal secret, or private configuration appears in screenshots or final materials.
 - [ ] Keep backup screenshots and saved generated reports available during the presentation.
 
 ## 1. Final Demo Screenshots
@@ -54,7 +54,7 @@ Why this needed improvement: The Week 7 journal, final report, and presentation 
 
 ### Small Tasks
 
-- [ ] Decide which browser window size will be used for final screenshots.
+- [x] Decide which browser window size will be used for final screenshots.
 - [x] Open the prototype homepage and confirm the page loads cleanly.
 - [x] Capture a homepage screenshot.
 - [x] Open the report form page.
@@ -207,20 +207,18 @@ Why this needs improvement: The slides are mostly complete and already show the 
 - Speaking-role notes.
 - Slide review notes.
 
-## 5. Week 7 Journal
+## 5. Week 8 Final Report
 
 Owner: Brittany  
 Priority: High  
 Current status: Complete
 
-Why this needed improvement: The Week 7 journal needed clear evidence of progress, testing, blockers, lessons learned, contribution, and meeting attendance. The journal was prepared as a Word document for submission use, not as a GitHub Markdown draft.
+Why this needed improvement: The Week 8 journal needed clear evidence of progress, testing, blockers, lessons learned, contribution, and meeting attendance. The journal was prepared as a Word document for submission use, not as a GitHub Markdown draft.
 
 ### Small Tasks
 
-- [x] Start the Week 7 journal draft.
+- [x] Start the Week 8 journal draft.
 - [x] Add a signature page.
-- [x] Keep the Week 7 journal as a local-only DOCX draft.
-- [x] Confirm the Week 7 journal does not need to be uploaded to GitHub.
 - [x] Add milestones achieved this week.
 - [x] Add brief descriptions for each milestone.
 - [x] Add subtasks completed by Brittany.
@@ -232,20 +230,20 @@ Why this needed improvement: The Week 7 journal needed clear evidence of progres
 - [x] Add team contribution section.
 - [x] Add progress compared to plan.
 - [x] Add plan adjustments if needed.
-- [x] Add Week 7 blockers.
+- [x] Add Week 8 blockers.
 - [x] Add meeting attendance and meeting discussion summary.
 - [x] Confirm the signature page has Brittany, Garrett, and Mike.
 - [x] Confirm each signature line keeps `Date:` on the same line as `Signature:`.
 - [x] Review grammar and sentence clarity.
-- [~] Export the journal as a PDF.
-- [~] Confirm the PDF opens correctly.
-- [ ] Submit the PDF before Friday if possible.
-- [ ] If Friday is not possible, submit by the Sunday deadline.
+- [x] Export the journal as a PDF.
+- [x] Confirm the PDF opens correctly.
+- [x] Submit the PDF before Friday if possible.
+- [x] If Friday is not possible, submit by the Sunday deadline.
 
 ### Evidence Needed
 
-- Week 7 journal DOCX draft.
-- Week 7 journal PDF.
+- Week 8 journal DOCX draft.
+- Week 8 journal PDF.
 - Signature page.
 - Meeting log summary.
 - Screenshot evidence.
@@ -260,10 +258,10 @@ Why this needed improvement: Meeting notes prove attendance, planning, assigned 
 
 ### Small Tasks
 
-- [x] Add Week 7 meeting entry.
-- [x] Add planned Week 7 meeting topics.
-- [x] Add planned Week 7 owner assignments.
-- [x] Record exact Week 7 attendance.
+- [x] Add Week 8 meeting entry.
+- [x] Add planned Week 8 meeting topics.
+- [x] Add planned Week 8 owner assignments.
+- [x] Record exact Week 8 attendance.
 - [x] Record if anyone was absent.
 - [x] Record the meeting start time.
 - [~] Record the meeting end time.
@@ -279,7 +277,7 @@ Why this needed improvement: Meeting notes prove attendance, planning, assigned 
 
 ### Evidence Needed
 
-- Updated Week 7 meeting log.
+- Updated Week 8 meeting log.
 - Attendance record.
 - Owner assignments.
 - Blocker notes.
