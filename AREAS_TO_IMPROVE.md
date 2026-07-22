@@ -3,13 +3,13 @@
 Project: Security Incident Postmortem: Automated After-Action Report Generator  
 Course: CSC 482 Capstone Project II  
 Team members: Brittany, Garrett, Mike  
-Current focus: Week 7, July 13-19, 2026
+Current focus: Week 8, July 20-24, 2026
 
 ## Purpose
 
-This page tracks the detailed areas that still need improvement for Week 7. Week 7 is focused on final presentation preparation, demo practice, screenshots, journal evidence, backup materials, and final project polish. The goal is not to add large new features. The goal is to make the existing prototype, documentation, slides, and demo evidence clean enough for final review.
+This page tracks the detailed areas that still need improvement for Week 8. Week 8 is focused on final presentation polish, final demo practice, submission organization, GitHub readiness, and final quality review. The goal is not to add large new features. The goal is to keep the completed prototype stable and make the final presentation, report evidence, and demo materials clear enough for final grading.
 
-Each section below uses small checklist tasks so the team can clearly mark what is done, what is still in progress, and what needs to be discussed during the Week 7 meeting.
+Each section below uses small checklist tasks so the team can clearly mark what is done, what is still in progress, and what needs to be completed before the final presentation window.
 
 Status key:
 
@@ -17,17 +17,32 @@ Status key:
 - `[~]` In progress
 - `[x]` Done
 
-## Week 7 Priority Summary
+## Week 8 Priority Summary
 
 | Priority | Focus | Owner | Current Status | Why It Matters |
 |---|---|---|---|---|
-| 1 | Final demo screenshots | Brittany and Mike | Complete | Screenshots are available for the Week 7 journal, final report, and presentation backup. |
-| 2 | Speaking roles and demo script | Team | In progress | Each team member still needs to practice exactly what to explain during the final presentation. |
-| 3 | Backup generated report | Garrett and Brittany | Complete | A saved report is available in case the live demo has a problem. |
-| 4 | Frontend visual polish | Mike | Complete | The homepage, form, report display, navigation buttons, and export controls were polished for screenshots and demo use. |
-| 5 | Backend explanation and final demo data | Garrett | Complete | The selected demo incident works, and backend talking points are ready for presentation practice. |
-| 6 | Week 7 journal evidence | Brittany | Complete | The journal includes milestones, testing evidence, lessons learned, contributions, and signatures. |
-| 7 | GitHub readiness | Team | In progress | Final source files should still be pushed after documentation updates are finished and reviewed. |
+| 1 | Final presentation slides | Brittany and team | In progress | The deck is mostly complete and only needs a few remaining slides, final screenshots, speaker flow, and grammar review before practice. |
+| 2 | Live demo practice | Team | Not started | The team still needs a timed run-through so the live demo and speaking order feel organized. |
+| 3 | GitHub readiness | Team | In progress | Final source files and documentation should be pushed after the latest polish changes are reviewed. |
+| 4 | Final report package | Brittany | Complete | The final paper draft is written, signed, and aligned with final slides and demo evidence. |
+| 5 | Report export and formatting polish | Brittany and Garrett | In progress | PDF margins, owner labels, Open Questions styling, and downloaded report readability need final confirmation. |
+| 6 | Backend and frontend talking points | Garrett and Mike | In progress | Each teammate needs concise talking points that match their slides and the live demo. |
+| 7 | Backup demo materials | Team | Complete | Backup screenshots and generated reports are available if the live app, API, browser, or presentation machine has an issue. |
+
+## Week 8 Final Push Checklist
+
+- [~] Finalize the last few presentation slides, slide wording, screenshots, and visual consistency.
+- [~] Confirm Brittany, Mike, and Garrett's speaking order.
+- [ ] Practice the full presentation and live demo from start to finish.
+- [x] Confirm the phishing/Microsoft 365 account compromise scenario is the final demo incident.
+- [x] Confirm the app runs locally through `run_windows.ps1`.
+- [x] Confirm `Start_Demo.cmd` opens the app without starting duplicate server windows.
+- [x] Confirm latest automated tests pass.
+- [x] Regenerate final technical and executive reports after the latest formatting fixes.
+- [x] Re-check Save as PDF output, downloaded HTML output, and owner-label formatting.
+- [ ] Push final documentation and code changes to GitHub after review.
+- [ ] Confirm no API key, `.env` file, terminal secret, or private configuration appears in screenshots or final materials.
+- [ ] Keep backup screenshots and saved generated reports available during the presentation.
 
 ## 1. Final Demo Screenshots
 
@@ -39,7 +54,7 @@ Why this needed improvement: The Week 7 journal, final report, and presentation 
 
 ### Small Tasks
 
-- [x] Decide which browser window size will be used for final screenshots.
+- [ ] Decide which browser window size will be used for final screenshots.
 - [x] Open the prototype homepage and confirm the page loads cleanly.
 - [x] Capture a homepage screenshot.
 - [x] Open the report form page.
@@ -156,33 +171,33 @@ Owner: Brittany
 Priority: High  
 Current status: In progress
 
-Why this needs improvement: The slides need to clearly show the project problem, solution, prototype workflow, testing evidence, team roles, lessons learned, and remaining work. The slides should not be overloaded, and screenshots should be easy to read.
+Why this needs improvement: The slides are mostly complete and already show the project problem, solution, prototype workflow, testing evidence, team roles, lessons learned, and final status. Only a few slides and final review items remain before presentation practice.
 
 ### Small Tasks
 
 - [x] Create or update the Week 7 presentation draft.
-- [ ] Review the title slide for project name and team name.
-- [ ] Confirm the problem statement slide is clear.
-- [ ] Confirm the solution slide explains the AAR Generator in plain language.
-- [ ] Confirm the prototype workflow slide matches the actual app.
-- [ ] Confirm the technology stack slide is accurate.
-- [ ] Confirm the testing evidence slide matches actual testing.
-- [ ] Add final homepage screenshot.
-- [ ] Add final completed form screenshot.
-- [ ] Add final generated report screenshot.
-- [ ] Add final 5 Whys screenshot.
-- [ ] Add final recommendations screenshot.
-- [ ] Add final export-controls screenshot if space allows.
-- [ ] Confirm Brittany's speaking section is clear.
-- [ ] Confirm Garrett's speaking section is clear.
-- [ ] Confirm Mike's speaking section is clear.
-- [ ] Add or update lessons learned.
+- [x] Review the title slide for project name and team name.
+- [x] Confirm the problem statement slide is clear.
+- [x] Confirm the solution slide explains the AAR Generator in plain language.
+- [x] Confirm the prototype workflow slide matches the actual app.
+- [x] Confirm the technology stack slide is accurate.
+- [x] Confirm the testing evidence slide matches actual testing.
+- [x] Add final homepage screenshot.
+- [x] Add final completed form screenshot.
+- [x] Add final generated report screenshot.
+- [x] Add final 5 Whys screenshot.
+- [x] Add final recommendations screenshot.
+- [x] Add final export-controls screenshot if space allows.
+- [x] Confirm Brittany's speaking section is clear.
+- [~] Confirm Garrett's speaking section is clear.
+- [~] Confirm Mike's speaking section is clear.
+- [x] Add or update lessons learned.
 - [ ] Add backup demo note.
-- [ ] Check every slide for spelling and grammar.
-- [ ] Check every slide for text that is too small.
-- [ ] Check every slide for crowded content.
-- [ ] Check every slide for screenshots that are blurry.
-- [ ] Confirm no slide shows an API key or private configuration.
+- [~] Check every slide for spelling and grammar.
+- [~] Check every slide for text that is too small.
+- [~] Check every slide for crowded content.
+- [~] Check every slide for screenshots that are blurry.
+- [~] Confirm no slide shows an API key or private configuration.
 - [ ] Save the final deck in the required format.
 
 ### Evidence Needed
@@ -426,7 +441,7 @@ Owner: Brittany
 Priority: Medium  
 Current status: Complete
 
-Why this needed improvement: Week 7 prepared the team for Week 8 final report work by organizing project wording, testing evidence, contribution notes, meeting evidence, and screenshots before final submission week.
+Why this needed improvement: Week 7 prepared the team for Week 8 final report work by organizing project wording, testing evidence, contribution notes, meeting evidence, and screenshots before final submission week. The Week 8 final paper draft is now written and signed.
 
 ### Small Tasks
 
@@ -444,7 +459,9 @@ Why this needed improvement: Week 7 prepared the team for Week 8 final report wo
 - [x] Collect Garrett's contribution notes.
 - [x] Collect Mike's contribution notes.
 - [x] Collect meeting log evidence.
-- [~] Collect GitHub evidence.
+- [x] Collect GitHub evidence.
+- [x] Complete the final paper draft.
+- [x] Confirm Brittany, Garrett, and Mike signed the final paper draft.
 - [x] Identify missing final report content before Week 8 starts.
 
 ### Evidence Needed
@@ -459,7 +476,8 @@ Why this needed improvement: Week 7 prepared the team for Week 8 final report wo
 |---|---|---|---|
 | GitHub push/sync needs confirmation. | Team | Documentation and code updates may not be visible to teammates or instructor yet. | Check Git status, choose files to push, and confirm local-only DOCX drafts stay off GitHub. |
 | Presentation practice still needs to happen. | Team | The final presentation may feel unorganized without a full run-through. | Confirm Brittany, Garrett, and Mike's speaking sections and practice the demo from start to finish. |
-| Final presentation slides are still being reviewed. | Brittany and team | The deck may change after instructor feedback. | Finish slide edits, add final screenshots, and review grammar before final submission. |
+| Final presentation slides are still being reviewed. | Brittany and team | The deck is mostly complete, but a few slides and speaker sections still need polish. | Finish the last slides, review grammar, and complete a practice run before final submission. |
+| Final generated reports need final-use confirmation after formatting fixes. | Brittany and Garrett | Old downloaded reports may still show earlier formatting issues if reused. | Use the newest generated reports and keep backup screenshots ready for the demo. |
 
 ## 13. Done Criteria
 
@@ -470,12 +488,12 @@ An improvement can be marked complete when:
 - [ ] The evidence exists as a screenshot, saved report, test result, meeting note, slide, or journal section.
 - [ ] The result does not expose an API key, `.env` file, terminal secret, or private configuration.
 - [ ] The status is updated in the correct tracker file.
-- [ ] The task is included in the Week 7 journal if it supports the weekly assignment.
+- [ ] The task is included in the final presentation, final report, or final evidence package if it supports final submission.
 - [ ] The task is included in the final presentation or final report if it supports final submission.
 
 ## 14. Meeting Review Checklist
 
-Use this section during the Week 7 meeting.
+Use this section during Week 8 final review and demo practice.
 
 - [x] Did we select the final demo incident?
 - [x] Did we assign screenshot responsibilities?
@@ -484,6 +502,10 @@ Use this section during the Week 7 meeting.
 - [x] Did we confirm the homepage background image is ready?
 - [~] Did we confirm what files should go to GitHub?
 - [x] Did we confirm what files should stay local-only?
-- [x] Did we confirm the Week 7 journal evidence list?
+- [x] Did we confirm the final report and Week 7 journal evidence list?
 - [~] Did we choose a demo practice time?
 - [x] Did we identify anything that must wait until Week 8?
+- [x] Did we confirm the final presentation slide order?
+- [x] Did we confirm the final status slide wording?
+- [x] Did we regenerate final report outputs after formatting fixes?
+- [ ] Did we complete a timed practice run?

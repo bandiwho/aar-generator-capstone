@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Security Incident AAR Generator</title>
     <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/static/styles.css?v=final-demo-polish-1">
+    <link rel="stylesheet" href="/static/styles.css?v=final-demo-polish-5">
   </head>
   <body>
     <main class="layout">
@@ -534,10 +534,15 @@
       }
 
       @media print {
+        @page {
+          margin: 0.65in;
+        }
+
         body {
-          margin: 0;
-          max-width: none;
-          padding: 0;
+          margin: 0 auto;
+          max-width: 7.2in;
+          box-sizing: border-box;
+          padding: 0.35in;
           font-size: 11pt;
         }
       }
@@ -722,6 +727,13 @@
           appendInlineMarkdown(list.lastElementChild, text);
         }
 
+        function appendEvidenceToPreviousListItem(text) {
+          const evidence = document.createElement("p");
+          evidence.classList.add("open-question-evidence");
+          appendInlineMarkdown(evidence, text);
+          list.lastElementChild.appendChild(evidence);
+        }
+
         function appendListItem(text) {
           appendParagraph(container, paragraphLines);
           if (!list || list.tagName !== "UL") {
@@ -777,7 +789,7 @@
             }
             element.tabIndex = -1;
             container.appendChild(element);
-            activeHeading = heading[2].toLowerCase();
+            activeHeading = heading[2].toLowerCase().replace(/^\d+\.\s*/, "");
             return;
           }
 
@@ -812,6 +824,12 @@
             const item = document.createElement("li");
             appendInlineMarkdown(item, capitalizeListText(itemText));
             list.appendChild(item);
+            return;
+          }
+
+          const evidenceContinuation = line.match(/^\s*Evidence:\s+(.+)/i);
+          if (activeHeading === "open questions" && evidenceContinuation && list?.lastElementChild) {
+            appendEvidenceToPreviousListItem(`Evidence: ${evidenceContinuation[1]}`);
             return;
           }
 

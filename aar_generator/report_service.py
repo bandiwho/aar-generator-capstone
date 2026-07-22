@@ -138,6 +138,7 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _clean_report_markdown(report_markdown: str) -> str:
         report_markdown = ReportService._normalize_report_text(report_markdown)
+        report_markdown = ReportService._normalize_markdown_labels(report_markdown)
         report_markdown = ReportService._normalize_five_whys_heading_answers(report_markdown)
         report_markdown = ReportService._interleave_five_whys_answers(report_markdown)
         report_markdown = ReportService._pair_open_questions_with_evidence(report_markdown)
@@ -206,9 +207,81 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
         return report_text
 
     @staticmethod
+    def _normalize_markdown_labels(report_markdown: str) -> str:
+        report_markdown = re.sub(
+            r"(-\s+)\*\*([^?\n]+\?)\s*(?:\*\*)?Evidence:\s*(?:\*\*)?\s*",
+            r"\1\2\nEvidence: ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"(\?)\s*(?:\*\*)?Evidence:\s*(?:\*\*)?\s*",
+            r"\1\nEvidence: ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"(?<!\*)\bOwner:\s*\*\*\s*",
+            "**Owner:** ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"\*\*\s*Owner:\s*(?!\*\*)",
+            "**Owner:** ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"(?<!\*)\bEvidence:\s*\*\*\s*",
+            "Evidence: ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"\*\*\s*Evidence:\s*(?!\*\*)",
+            "Evidence: ",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"(\*\*Owner:\*\*\s+[^\n*]+)\*\*",
+            r"\1",
+            report_markdown,
+            flags=re.IGNORECASE,
+        )
+        report_markdown = re.sub(
+            r"^([-*]\s+)\*\*([^*\n:]+Evidence):\s*-\s+(.+)$",
+            r"\1**\2:** \3",
+            report_markdown,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+        report_markdown = re.sub(
+            r"^\*\*([^*\n:]+Evidence):\s*-\s+(.+)$",
+            r"**\1:** \2",
+            report_markdown,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+        report_markdown = "\n".join(
+            ReportService._strip_unpaired_evidence_bold_markers(line)
+            for line in report_markdown.splitlines()
+        )
+        report_markdown = report_markdown.replace(
+            "Why were detection and prevention controls not triggered earlier enough to stop mailbox actions?",
+            "Why did detection and prevention controls not trigger early enough to stop mailbox actions?",
+        )
+        return report_markdown
+
+    @staticmethod
+    def _strip_unpaired_evidence_bold_markers(line: str) -> str:
+        if "Evidence:" not in line or line.count("**") % 2 == 0:
+            return line
+        return line.replace("**", "")
+
+    @staticmethod
     def _interleave_five_whys_answers(report_markdown: str) -> str:
         section_pattern = re.compile(
-            r"(##\s+5 Whys Root Cause Analysis\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            r"(##\s+(?:\d+\.\s*)?5 Whys Root Cause Analysis\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
             re.IGNORECASE,
         )
 
@@ -262,7 +335,7 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _normalize_five_whys_heading_answers(report_markdown: str) -> str:
         section_pattern = re.compile(
-            r"(##\s+5 Whys Root Cause Analysis\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            r"(##\s+(?:\d+\.\s*)?5 Whys Root Cause Analysis\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
             re.IGNORECASE,
         )
         why_heading_pattern = re.compile(r"^#{3,4}\s+Why\s+(\d+):\s+(.+\?)$", re.IGNORECASE)
@@ -332,14 +405,14 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _pair_open_questions_with_evidence(report_markdown: str) -> str:
         section_pattern = re.compile(
-            r"(##\s+Open Questions\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            r"(##\s+(?:\d+\.\s*)?Open Questions\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
             re.IGNORECASE,
         )
 
         def rewrite_section(match: re.Match) -> str:
             heading = match.group(1)
             lines = [line.strip() for line in match.group(2).splitlines() if line.strip()]
-            question_pattern = re.compile(r"^[-*]\s+(.+\?)$")
+            question_pattern = re.compile(r"^[-*]\s+(?:\*\*)?(.+\?)(?:\*\*)?$")
             evidence_pattern = re.compile(r"^(?:[-*]\s+)?Evidence:\s+(.+)$", re.IGNORECASE)
             questions = []
 
@@ -404,7 +477,7 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
     @staticmethod
     def _attach_recommendation_owners(report_markdown: str) -> str:
         section_pattern = re.compile(
-            r"(##\s+Recommendations and Owners\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
+            r"(##\s+(?:\d+\.\s*)?Recommendations and Owners\s*\n+)([\s\S]*?)(?=\n##\s+|\Z)",
             re.IGNORECASE,
         )
         owner_pattern = re.compile(r"^(?:[-*]\s+)?(?:\*\*)?Owner:(?:\*\*)?\s+(.+)$", re.IGNORECASE)
