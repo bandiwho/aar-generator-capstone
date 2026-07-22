@@ -262,11 +262,21 @@ The final root cause should be confirmed from logs, timeline evidence, and remed
             report_markdown,
             flags=re.IGNORECASE | re.MULTILINE,
         )
+        report_markdown = "\n".join(
+            ReportService._strip_unpaired_evidence_bold_markers(line)
+            for line in report_markdown.splitlines()
+        )
         report_markdown = report_markdown.replace(
             "Why were detection and prevention controls not triggered earlier enough to stop mailbox actions?",
             "Why did detection and prevention controls not trigger early enough to stop mailbox actions?",
         )
         return report_markdown
+
+    @staticmethod
+    def _strip_unpaired_evidence_bold_markers(line: str) -> str:
+        if "Evidence:" not in line or line.count("**") % 2 == 0:
+            return line
+        return line.replace("**", "")
 
     @staticmethod
     def _interleave_five_whys_answers(report_markdown: str) -> str:
